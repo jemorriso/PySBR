@@ -1,5 +1,4 @@
 import json
-from datetime import datetime
 
 from pytz import timezone
 
@@ -16,22 +15,19 @@ class Utils:
             return json.load(f)
 
     @staticmethod
-    def date_to_epoch_time(date_, timezone_="US/Eastern"):
-        """Convert python date object to epoch time.
+    def datetime_to_timestamp(dt, tz="US/Eastern"):
+        """Convert python datetime object to epoch time.
 
         Note:
-            The datetime object is in UTC, so convert to timezone to ensure that the 24
-            hour period covers all the events for the given region.
+            The datetime object is naive, so localize using timezone.
 
         Args:
-            date_ (datetime.date): The date.
-            timezone_ (str, optional): The timezone to use (see pytz documentation).
-            Defaults to 'US/Eastern'.
+            dt (datetime.datetime): The datetime object.
+            tz (str, optional): The timezone to use (see pytz documentation for list of
+                available timezones). Defaults to 'US/Eastern'.
 
         Returns:
-            float: Timestamp representing midnight on the given date, for the given
-            timezone.
+            float: Timestamp for the given datetime, for the given timezone.
         """
-        dt = datetime(date_.year, date_.month, date_.day)
 
-        return timezone(timezone_).localize(dt).timestamp() * 1000
+        return timezone(tz).localize(dt).timestamp() * 1000
