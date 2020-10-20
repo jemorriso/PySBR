@@ -1,0 +1,5 @@
+{
+  "sportsbooks": ["Pinnacle", "Bet365", "SportsInteraction", "Bodog"],
+  "odds_type": "American",
+  "timezone": "Canada/Pacific"
+}

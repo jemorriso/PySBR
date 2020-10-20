@@ -26,14 +26,11 @@ class SBR:
     with open("json/sportsbooks.json") as f:
         sportsbooks = json.load(f)
 
-    def __init__(self, odds_type="decimal"):
-        """Initialize SBR class with convenience parameters.
+    def __init__(self):
+        """Initialize SBR class with user settings."""
 
-        Args:
-            odds_type (str, optional): 'decimal', 'american', or 'fractional' supported.
-            Defaults to 'decimal'.
-        """
-        self.odds_type = odds_type
+        with open("json/user.json") as f:
+            self.user = json.load(f)
 
     @classmethod
     def _parse_response(cls, response):
@@ -95,6 +92,30 @@ class SBR:
         """
 
     @classmethod
+    def get_events_by_date(cls, market_ids, league_id, date_):
+        query = gql(
+            f"""
+            query getEventsByLeagueGroup {{
+                eventsByDateByLeagueGroup(
+                    leagueGroups: [{{ mtid: 91, lid: 16, spid: 4 }}]
+                    hoursRange: 24
+                    showEmptyEvents: true
+                    startDate: {1603004400000}
+                    timezoneOffset: 0
+                ) {{
+                    events {{
+                        eid
+                    }}
+                }}
+            }}
+        """
+        )
+        # params = {"date": 1603004400000}
+        # result = SBR.client.execute(query, variable_values=params)
+        result = SBR.client.execute(query)
+        pass
+
+    @classmethod
     def get_league_markets(cls, league_id):
         """Get the market type ids available on a particular league.
 
@@ -145,29 +166,3 @@ class SBR:
             gql(q.substitute(**{"mtids": market_ids, "spids": [sport_id]}))
         )
         return result["marketTypesById"]
-
-    # TODO: implement using eventsByDateNew instead of below query
-    @classmethod
-    def get_events_by_date(cls, market_ids, league_id, date_):
-        # can't get float parameter to work, so use f-string instead
-        query = gql(
-            f"""
-            query getEventsByLeagueGroup {{
-                eventsByDateByLeagueGroup(
-                    leagueGroups: [{{ mtid: 91, lid: 16, spid: 4 }}]
-                    hoursRange: 24
-                    showEmptyEvents: true
-                    startDate: {1603004400000}
-                    timezoneOffset: 0
-                ) {{
-                    events {{
-                        eid
-                    }}
-                }}
-            }}
-        """
-        )
-        # params = {"date": 1603004400000}
-        # result = SBR.client.execute(query, variable_values=params)
-        result = SBR.client.execute(query)
-        pass
