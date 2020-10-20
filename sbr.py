@@ -1,4 +1,5 @@
 import json
+from string import Template
 
 from gql import gql, Client
 from gql.transport.requests import RequestsHTTPTransport
@@ -7,7 +8,14 @@ from utils import Utils
 
 
 class SBR:
-    """Functions for querying the SportsBookReview GraphQL endpoint."""
+    """Functions for querying the SportsBookReview GraphQL endpoint.
+
+    Note:
+        Queries are using Python Template strings rather than gql
+        variables due to issues passing in certain variables, where
+        they work when they are constants.
+
+    """
 
     _transport = RequestsHTTPTransport(
         url="https://www.sportsbookreview.com/ms-odds-v2/odds-v2-service"
@@ -52,6 +60,40 @@ class SBR:
         _recurse(response)
         return parsed
 
+    @staticmethod
+    def _detailed_event_fields():
+        return """
+            events {
+                des
+                cit
+                cou
+                es
+                dt
+                eid
+                st
+                participants {
+                    partid
+                    ih
+                    source {
+                        ... on Team {
+                            nam
+                            nn
+                            sn
+                            abbr
+                        }
+                    }
+                }
+            }
+        """
+
+    @staticmethod
+    def _simple_event_fields():
+        return """
+            events {
+                eid
+            }
+        """
+
     @classmethod
     def get_league_markets(cls, league_id):
         """Get the market type ids available on a particular league.
@@ -62,16 +104,16 @@ class SBR:
         Returns:
             list of int: The market ids for the league.
         """
-        query = gql(
+        q = Template(
             """
-            query getLeagueMarketIds($lids: [Int]) {
+            query getLeagueMarketIds {
                 leagueMarkets(lid: $lids) {
                     mtid
                 }
             }
         """
         )
-        result = SBR.client.execute(query, variable_values={"lids": [league_id]})
+        result = SBR.client.execute(gql(q.substitute(lids=[league_id])))
         parsed = SBR._parse_response(result)
         return parsed["mtid"]
 
@@ -87,9 +129,9 @@ class SBR:
         Returns:
             (list of dict): Each dictionary contains information about each market.
         """
-        query = gql(
+        q = Template(
             """
-            query getMarketTypesById($mtids: [Int], $spids: [Int]) {
+            query getMarketTypesById {
                 marketTypesById(mtid: $mtids, spid: $spids) {
                     mtid
                     spid
@@ -100,10 +142,11 @@ class SBR:
             """
         )
         result = SBR.client.execute(
-            query, variable_values={"mtids": market_ids, "spids": [sport_id]}
+            gql(q.substitute(**{"mtids": market_ids, "spids": [sport_id]}))
         )
         return result["marketTypesById"]
 
+    # TODO: implement using eventsByDateNew instead of below query
     @classmethod
     def get_events_by_date(cls, market_ids, league_id, date_):
         # can't get float parameter to work, so use f-string instead
