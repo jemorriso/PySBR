@@ -3,6 +3,10 @@ import json
 from utils import Utils
 
 
+def test_init(sbr):
+    pass
+
+
 def test_get_league_markets(sbr):
     assert len(sbr.get_league_markets(16)) > 0
 

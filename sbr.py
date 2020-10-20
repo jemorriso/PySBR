@@ -12,10 +12,11 @@ class SBR:
     _transport = RequestsHTTPTransport(
         url="https://www.sportsbookreview.com/ms-odds-v2/odds-v2-service"
     )
-    with open("schema.json") as f:
-        _schema = f.read()
     # client = Client(transport=_transport, fetch_schema_from_transport=True)
     client = Client(transport=_transport, fetch_schema_from_transport=False)
+
+    with open("json/sportsbooks.json") as f:
+        sportsbooks = json.load(f)
 
     def __init__(self, odds_type="decimal"):
         """Initialize SBR class with convenience parameters.
