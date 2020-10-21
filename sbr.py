@@ -1,5 +1,6 @@
 import json
 from string import Template
+from inspect import cleandoc
 
 from gql import gql, Client
 from gql.transport.requests import RequestsHTTPTransport
@@ -32,8 +33,8 @@ class SBR:
         with open("json/user.json") as f:
             self.user = json.load(f)
 
-    @classmethod
-    def _parse_response(cls, response):
+    @staticmethod
+    def _parse_response(response):
         """Take query result and parse it into a dictionary of lists.
 
         Args:
@@ -56,6 +57,62 @@ class SBR:
         parsed = {}
         _recurse(response)
         return parsed
+
+    # @staticmethod
+    # def _build_fields_str(d, i=0):
+    #     # f-string expression part cannot include a backslash
+    #     tab = "    "
+    #     s = ""
+
+    #     def _recurse(x, i):
+    #         if type(x) is dict:
+    #             for k, v in x.items():
+    #                 # I don't know why it is forcing me to use 'nonlocal' keyword
+    #                 nonlocal s
+    #                 s += f"{tab*i}{k} {{\n"
+    #                 _recurse(v, i + 1)
+    #                 s += f"{tab*i}}}\n"
+    #         elif type(x) is list:
+    #             for el in x:
+    #                 if type(el) is dict:
+    #                     _recurse(el, i)
+    #                 else:
+    #                     s += f"{tab*i}{el}\n"
+
+    #     _recurse(d, i)
+    #     # trim first and last newline
+    #     return s.strip()
+
+    # @staticmethod
+    # def _build_args_str(d, i=0):
+    #     # f-string expression part cannot include a backslash
+    #     tab = "    "
+    #     s = ""
+
+    #     def _recurse(x, i):
+    #         if type(x) is dict:
+    #             nonlocal s
+    #             s += "{\n"
+    #             for k, v in x.items():
+    #                 s += f"{tab*i}{k}: "
+    #                 if type(v) is dict or type(v) is list:
+    #                     _recurse(v, i + 1)
+    #                 else:
+    #                     s += f"{v}\n"
+    #             s += f"{tab*i}}}\n"
+    #         elif type(x) is list:
+    #             s += "[\n"
+    #             for el in x:
+    #                 if type(el) is dict or type(el) is list:
+    #                     _recurse(el, i)
+    #                 else:
+    #                     s += f"{tab*i}{el}\n"
+    #             s += f"{tab*i}]\n"
+
+    #     _recurse(d, i)
+    #     # trim whitespace, and then first and last lines, which contain unnecessary
+    #     # braces... then remove unnecessary first tab :(
+    #     return "\n".join(s.rstrip().split("\n")[1:-1]).lstrip()
 
     @staticmethod
     def _detailed_event_fields():
@@ -91,29 +148,107 @@ class SBR:
             }
         """
 
-    @classmethod
-    def get_events_by_date(cls, market_ids, league_id, date_):
-        query = gql(
-            f"""
-            query getEventsByLeagueGroup {{
-                eventsByDateByLeagueGroup(
-                    leagueGroups: [{{ mtid: 91, lid: 16, spid: 4 }}]
-                    hoursRange: 24
-                    showEmptyEvents: true
-                    startDate: {1603004400000}
-                    timezoneOffset: 0
-                ) {{
-                    events {{
-                        eid
-                    }}
-                }}
-            }}
-        """
+    @staticmethod
+    def _build_query_string(q_name, q_fields, q_args=None):
+        return Template(
+            cleandoc(
+                """
+                query {
+                    $q_name(
+                        $q_args
+                    ) {
+                        $q_fields
+                    }
+                }
+            """
+            )
+        ).substitute(
+            **{
+                "q_name": q_name,
+                "q_args": "" if q_args is None else q_args,
+                "q_fields": q_fields,
+            }
         )
-        # params = {"date": 1603004400000}
-        # result = SBR.client.execute(query, variable_values=params)
-        result = SBR.client.execute(query)
-        pass
+
+    @classmethod
+    def _execute_query(cls):
+        return SBR.client.execute(gql(q))
+
+    # @classmethod
+    # def _events_range_execute(cls, lid, s, e, fields):
+    #     return SBR.client.execute(
+    #         gql(
+    #             Template(
+    #                 """
+    #             query getEventsV2 {
+    #                 eventsV2(
+    #                     lid: $lids
+    #                     dt: {
+    #                         between: [$start, $end]
+    #                     }
+    #                 ) {
+    #                     $fields
+    #                 }
+    #             }
+    #             """
+    #             ).substitute(
+    #                 **{
+    #                     "lids": [lid],
+    #                     "start": s,
+    #                     "end": e,
+    #                     "fields": fields,
+    #                 }
+    #             )
+    #         )
+    #     )
+
+    @classmethod
+    def get_events_by_date_range_detailed(cls, league_id, start_dt, end_dt):
+        q = SBR._build_query_string(
+            "eventsV2",
+            SBR._detailed_event_fields(),
+            q_args=Template(
+                """
+                "lid:": $lids,
+                "dt:": {
+                    "between": {
+                        [
+                            $start,
+                            $end
+                        ]
+                    }
+                }
+            """
+            ).substitute(
+                {
+                    "lids": [league_id],
+                    "start": Utils.datetime_to_timestamp(start_dt),
+                    "end": Utils.datetime_to_timestamp(end_dt),
+                }
+            ),
+        )
+        result = SBR._execute_query(q)
+        return result["eventsV2"]
+
+    @classmethod
+    def get_events_by_date_range(cls, league_id, start_dt, end_dt):
+        result = SBR._execute_query(
+            "eventsV2",
+            SBR._simple_event_fields(),
+            q_args={
+                "lid": [league_id],
+                "dt": {
+                    "between": [
+                        Utils.datetime_to_timestamp(start_dt),
+                        Utils.datetime_to_timestamp(end_dt),
+                    ]
+                },
+            },
+        )
+        # result = SBR._events_range_execute(
+        #     league_id, start_dt, end_dt, SBR._simple_event_fields()
+        # )
+        return result["eventsV2"]
 
     @classmethod
     def get_league_markets(cls, league_id):
