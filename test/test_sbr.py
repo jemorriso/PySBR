@@ -32,29 +32,29 @@ def test_build_query_string(sbr):
     )
 
 
-def test_query_execute(sbr):
-    q_name = "eventsByDateNew"
-    q_args = {"lid": [16], "startDate": 1602979200000, "hoursRange": 25}
-    q_fields = {
-        "events": [
-            "des",
-            "cit",
-            "cou",
-            "es",
-            "dt",
-            "eid",
-            "st",
-            {
-                "participants": [
-                    "partid",
-                    "ih",
-                    {"source": {"...on Team": ["nam", "nn", "sn", "abbr"]}},
-                ]
-            },
-        ]
-    }
+# def test_query_execute(sbr):
+#     q_name = "eventsByDateNew"
+#     q_args = {"lid": [16], "startDate": 1602979200000, "hoursRange": 25}
+#     q_fields = {
+#         "events": [
+#             "des",
+#             "cit",
+#             "cou",
+#             "es",
+#             "dt",
+#             "eid",
+#             "st",
+#             {
+#                 "participants": [
+#                     "partid",
+#                     "ih",
+#                     {"source": {"...on Team": ["nam", "nn", "sn", "abbr"]}},
+#                 ]
+#             },
+#         ]
+#     }
 
-    assert sbr._query_execute(q_name, q_fields, q_args) is not None
+#     assert sbr._query_execute(q_name, q_fields, q_args) is not None
 
 
 def test_get_events_by_date_range_detailed(sbr):

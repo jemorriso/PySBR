@@ -144,6 +144,43 @@ class SBR:
         """
         return SBR.client.execute(gql(Template(q).substitute(subs)))
 
+    @classmethod
+    def get_league_markets(cls, league_id):
+        """Get the market type ids available on a particular league.
+
+        Args:
+            league_id (int): The SBR league id
+
+        Returns:
+            list of int: The market ids for the league.
+        """
+        result = SBR._execute_query(
+            SBR._build_query_string("leagueMarkets", "mtid", "lid: $lids"),
+            {"lids": [league_id]},
+        )
+        parsed = SBR._parse_response(result)
+        return parsed["mtid"]
+
+    @classmethod
+    def get_market_types_by_id(cls, market_ids, sport_id):
+        """Get information about market types for a particular sport.
+
+        Args:
+            market_ids (list of int): Market ids to get information about.
+            sport_id (int): The sport id for the sport you are interested in. This
+            is necessary because market ids are the same across sports.
+
+        Returns:
+            list of dict: Each dictionary contains information about each market.
+        """
+        result = SBR._execute_query(
+            SBR._build_query_string(
+                "marketTypesById", "mtid, spid, nam, des", "mtid: $mtids, spid: $spids"
+            ),
+            {"mtids": market_ids, "spids": [sport_id]},
+        )
+        return result["marketTypesById"]
+
     #     @classmethod
     #     def get_events_by_date_range_detailed(cls, league_id, start_dt, end_dt):
     #         q = SBR._build_query_string(
@@ -191,39 +228,3 @@ class SBR:
     #         #     league_id, start_dt, end_dt, SBR._simple_event_fields()
     #         # )
     #         return result["eventsV2"]
-
-    @classmethod
-    def get_league_markets(cls, league_id):
-        """Get the market type ids available on a particular league.
-
-        Args:
-            league_id (int): The SBR league id
-
-        Returns:
-            list of int: The market ids for the league.
-        """
-        result = SBR.client.execute(
-            SBR._build_query_string("leagueMarkets", "mtid", "lid: $lids")
-        )
-        parsed = SBR._parse_response(result)
-        return parsed["mtid"]
-
-    @classmethod
-    def get_market_types_by_id(cls, market_ids, sport_id):
-        """Get information about market types for a particular sport.
-
-        Args:
-            market_ids (list of int): Market ids to get information about.
-            sport_id (int): The sport id for the sport you are interested in. This
-            is necessary because market ids are the same across sports.
-
-        Returns:
-            list of dict: Each dictionary contains information about each market.
-        """
-        result = SBR._execute_query(
-            SBR._build_query_string(
-                "marketTypesById", "mtid, spid, nam, des", "mtid: $mtids, spid: $spids"
-            ),
-            {"mtids": market_ids, "spids": [sport_id]},
-        )
-        return result["marketTypesById"]
