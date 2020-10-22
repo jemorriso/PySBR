@@ -1,7 +1,7 @@
 import json
 from string import Template
 
-from gql import gql, Client
+from gql import Client, gql
 from gql.transport.requests import RequestsHTTPTransport
 
 from utils import Utils
@@ -32,8 +32,8 @@ class SBR:
         with open("json/user.json") as f:
             self.user = json.load(f)
 
-    @classmethod
-    def _parse_response(cls, response):
+    @staticmethod
+    def _parse_response(response):
         """Take query result and parse it into a dictionary of lists.
 
         Args:
@@ -59,7 +59,8 @@ class SBR:
 
     @staticmethod
     def _detailed_event_fields():
-        return """
+        return Utils.str_format(
+            """
             events {
                 des
                 cit
@@ -82,38 +83,114 @@ class SBR:
                 }
             }
         """
+        )
+
+    #     @staticmethod
+    #     def _simple_event_fields():
+    #         return Utils.str_format(
+    #             """
+    #             events {
+    #                 eid
+    #             }
+    #         """
+    #         )
 
     @staticmethod
-    def _simple_event_fields():
-        return """
-            events {
-                eid
-            }
+    def _build_query_string(q_name, q_fields, q_args=None):
+        """Build up the GraphQL query string.
+
+        Args:
+            q_name (str): The name of the query object to be queried.
+            q_fields (str): The fields to return.
+            q_args (str, optional): The arg names to pass to the query. Defaults to
+                None.
+
+        Returns:
+            str: The query string ready to be substituted using Template.substitute()
         """
+        return Template(
+            Utils.str_format(
+                """
+                query {
+                    $q_name(
+                        $q_args
+                    ) {
+                        $q_fields
+                    }
+                }
+            """
+            )
+        ).substitute(
+            **{
+                "q_name": q_name,
+                "q_args": ""
+                if q_args is None
+                else Utils.str_format(q_args, indent_=2, dedent_l1=True),
+                "q_fields": Utils.str_format(q_fields, indent_=2, dedent_l1=True),
+            }
+        )
 
     @classmethod
-    def get_events_by_date(cls, market_ids, league_id, date_):
-        query = gql(
-            f"""
-            query getEventsByLeagueGroup {{
-                eventsByDateByLeagueGroup(
-                    leagueGroups: [{{ mtid: 91, lid: 16, spid: 4 }}]
-                    hoursRange: 24
-                    showEmptyEvents: true
-                    startDate: {1603004400000}
-                    timezoneOffset: 0
-                ) {{
-                    events {{
-                        eid
-                    }}
-                }}
-            }}
+    def _execute_query(cls, q, subs):
+        """Execute a GraphQL query.
+
+        Args:
+            q (str): The query string.
+            subs (dict): The substitutions to make. Each key must match a Template
+                placeholder, with the value being what gets substituted into the string.
+
+        Returns:
+            dict: The result of the query.
         """
-        )
-        # params = {"date": 1603004400000}
-        # result = SBR.client.execute(query, variable_values=params)
-        result = SBR.client.execute(query)
-        pass
+        return SBR.client.execute(gql(Template(q).substitute(subs)))
+
+    #     @classmethod
+    #     def get_events_by_date_range_detailed(cls, league_id, start_dt, end_dt):
+    #         q = SBR._build_query_string(
+    #             "eventsV2",
+    #             SBR._detailed_event_fields(),
+    #             q_args=Template(
+    #                 """
+    #                 "lid:": $lids,
+    #                 "dt:": {
+    #                     "between": {
+    #                         [
+    #                             $start,
+    #                             $end
+    #                         ]
+    #                     }
+    #                 }
+    #             """
+    #             ).substitute(
+    #                 {
+    #                     "lids": [league_id],
+    #                     "start": Utils.datetime_to_timestamp(start_dt),
+    #                     "end": Utils.datetime_to_timestamp(end_dt),
+    #                 }
+    #             ),
+    #         )
+    #         result = SBR._execute_query(q)
+    #         return result["eventsV2"]
+
+    #     @classmethod
+    #     def get_events_by_date_range(cls, league_id, start_dt, end_dt):
+    #         result = SBR._execute_query(
+    #             "eventsV2",
+    #             SBR._simple_event_fields(),
+    #             q_args={
+    #                 "lid": [league_id],
+    #                 "dt": {
+    #                     "between": [
+    #                         Utils.datetime_to_timestamp(start_dt),
+    #                         Utils.datetime_to_timestamp(end_dt),
+    #                     ]
+    #                 },
+    #             },
+    #         )
+    #         # result = SBR._events_range_execute(
+    #         #     league_id, start_dt, end_dt, SBR._simple_event_fields()
+    #         # )
+    #         return result["eventsV2"]
 
     @classmethod
     def get_league_markets(cls, league_id):
@@ -125,16 +202,9 @@ class SBR:
         Returns:
             list of int: The market ids for the league.
         """
-        q = Template(
-            """
-            query getLeagueMarketIds {
-                leagueMarkets(lid: $lids) {
-                    mtid
-                }
-            }
-        """
+        result = SBR.client.execute(
+            SBR._build_query_string("leagueMarkets", "mtid", "lid: $lids")
         )
-        result = SBR.client.execute(gql(q.substitute(lids=[league_id])))
         parsed = SBR._parse_response(result)
         return parsed["mtid"]
 
@@ -148,21 +218,12 @@ class SBR:
             is necessary because market ids are the same across sports.
 
         Returns:
-            (list of dict): Each dictionary contains information about each market.
+            list of dict: Each dictionary contains information about each market.
         """
-        q = Template(
-            """
-            query getMarketTypesById {
-                marketTypesById(mtid: $mtids, spid: $spids) {
-                    mtid
-                    spid
-                    nam
-                    des
-                }
-            }
-            """
-        )
-        result = SBR.client.execute(
-            gql(q.substitute(**{"mtids": market_ids, "spids": [sport_id]}))
+        result = SBR._execute_query(
+            SBR._build_query_string(
+                "marketTypesById", "mtid, spid, nam, des", "mtid: $mtids, spid: $spids"
+            ),
+            {"mtids": market_ids, "spids": [sport_id]},
         )
         return result["marketTypesById"]
