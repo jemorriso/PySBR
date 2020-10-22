@@ -1,4 +1,6 @@
 import json
+from inspect import cleandoc
+from textwrap import indent
 
 from pytz import timezone
 
@@ -13,6 +15,26 @@ class Utils:
     def json_to_dict(path):
         with open(path) as f:
             return json.load(f)
+
+    @staticmethod
+    def str_format(s, indent_=0, dedent_l1=False):
+        """Format multiline string.
+
+        Args:
+            s (str): The string to format.
+            indent_ (int, optional): Number of tabs to indent. Defaults to 0.
+            dedent_l1 (bool, optional): Set line 1 indentation to 0. Defaults to False.
+
+        Returns:
+            str: The formatted string.
+        """
+        tab = "    "
+        s = indent(cleandoc(s), tab * indent_)
+        if dedent_l1:
+            lines = s.split("\n")
+            lines[0] = lines[0].lstrip()
+            s = "\n".join(lines)
+        return s
 
     @staticmethod
     def datetime_to_timestamp(dt, tz="US/Eastern"):
