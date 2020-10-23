@@ -59,6 +59,7 @@ class SBR:
 
     @staticmethod
     def _detailed_event_fields():
+        """Return the event fields for detailed event queries."""
         return Utils.str_format(
             """
             events {
@@ -85,15 +86,62 @@ class SBR:
         """
         )
 
-    #     @staticmethod
-    #     def _simple_event_fields():
-    #         return Utils.str_format(
-    #             """
-    #             events {
-    #                 eid
-    #             }
-    #         """
-    #         )
+    @staticmethod
+    def _simple_event_fields():
+        """Return the event fields for simple event queries."""
+        return Utils.str_format(
+            """
+            events {
+                eid
+            }
+        """
+        )
+
+    @staticmethod
+    def _date_range_args():
+        """Return the args string for date range queries."""
+        return Utils.str_format(
+            """
+            "lid": $lids,
+                "dt": {
+                    "between": {
+                        [
+                            $start,
+                            $end
+                        ]
+                    }
+                }
+            """
+        )
+
+    @staticmethod
+    def _date_args():
+        return Utils.str_format(
+            """
+            "lid": $ lids,
+            "startDate: $dt,
+            "hoursRange": 24
+            """
+        )
+
+    @staticmethod
+    def _participant_args():
+        return Utils.str_format(
+            """
+            "partid": $partids,
+            "seid": $seid
+            """
+        )
+
+    @staticmethod
+    def _matchup_args():
+        return Utils.str_format(
+            """
+            "participantId1: $partid1,
+            "participantId2: $partid2,
+            "limit": $limit
+            """
+        )
 
     @staticmethod
     def _build_query_string(q_name, q_fields, q_args=None):
@@ -181,8 +229,113 @@ class SBR:
         )
         return result["marketTypesById"]
 
-    #     @classmethod
-    #     def get_events_by_date_range_detailed(cls, league_id, start_dt, end_dt):
+    @classmethod
+    def _get_events_by_date_range(
+        cls, league_id, start_dt, end_dt, fields, is_simple=False
+    ):
+        result = SBR._execute_query(
+            SBR._build_query_string("eventsV2", fields, SBR._date_range_args()),
+            {
+                "lids": [league_id],
+                "start": Utils.datetime_to_timestamp(start_dt),
+                "end": Utils.datetime_to_timestamp(end_dt),
+            },
+        )
+        if is_simple:
+            result = SBR._parse_response(result)
+        return result["eventsV2"]
+
+    @classmethod
+    def get_events_by_date_range_detailed(cls, league_id, start_dt, end_dt):
+        return SBR._get_events_by_date_range(
+            league_id, start_dt, end_dt, SBR._detailed_event_fields()
+        )
+
+    @classmethod
+    def get_events_by_date_range(cls, league_id, start_dt, end_dt):
+        return SBR._get_events_by_date_range(
+            league_id, start_dt, end_dt, SBR._simple_event_fields(), is_simple=True
+        )
+
+    @classmethod
+    def _get_events_by_date(cls, league_id, dt, fields, is_simple=False):
+        result = SBR._execute_query(
+            SBR._build_query_string("eventsByDateNew", fields, SBR._date_args()),
+            {
+                "lids": [league_id],
+                "start": Utils.datetime_to_timestamp(dt),
+            },
+        )
+        if is_simple:
+            result = SBR._parse_response(result)
+        return result["eventsByDateNew"]
+
+    @classmethod
+    def get_events_by_date_detailed(cls, league_id, dt):
+        return SBR._get_events_by_date(league_id, dt, SBR._detailed_event_fields())
+
+    @classmethod
+    def get_events_by_date(cls, league_id, dt):
+        return SBR._get_events_by_date(
+            league_id, dt, SBR._simple_event_fields(), is_simple=True
+        )
+
+    @classmethod
+    def _get_events_by_participants(
+        cls, participant_ids, season_id, fields, is_simple=False
+    ):
+        result = SBR._execute_query(
+            SBR._build_query_string(
+                "eventsInfoByParticipant", fields, SBR._date_args()
+            ),
+            {"partids": participant_ids, "seid": season_id},
+        )
+        if is_simple:
+            result = SBR._parse_response(result)
+        return result["eventsByDateNew"]
+
+    @classmethod
+    def get_events_by_participants_detailed(cls, participant_ids, season_id):
+        return SBR._get_events_by_participants(
+            participant_ids, season_id, SBR._detailed_event_fields()
+        )
+
+    @classmethod
+    def get_events_by_participants(cls, participant_ids, season_id):
+        return SBR._get_events_by_participants(
+            participant_ids, season_id, SBR._simple_event_fields(), is_simple=True
+        )
+
+    @classmethod
+    def _get_events_by_matchup(
+        cls, participant_id1, participant_id2, limit, fields, is_simple=False
+    ):
+        result = SBR._execute_query(
+            SBR._build_query_string(
+                "lastMatchupsByParticipants", fields, SBR._matchup_args()
+            ),
+            {"partid1": participant_id1, "partid2": participant_id2, "limit": limit},
+        )
+        if is_simple:
+            result = SBR._parse_response(result)
+        return result["eventsByDateNew"]
+
+    @classmethod
+    def get_events_by_matchup_detailed(cls, participant_id1, participant_id2, limit):
+        return SBR._get_events_by_matchup(
+            participant_id1, participant_id2, limit, SBR._detailed_event_fields()
+        )
+
+    @classmethod
+    def get_events_by_matchup(cls, participant_id1, participant_id2, limit):
+        return SBR._get_events_by_matchup(
+            participant_id1,
+            participant_id2,
+            limit,
+            SBR._simple_event_fields(),
+            is_simple=True,
+        )
+
     #         q = SBR._build_query_string(
     #             "eventsV2",
     #             SBR._detailed_event_fields(),

@@ -1,6 +1,7 @@
 import json
 from inspect import cleandoc
 from textwrap import indent
+from datetime import datetime
 
 from pytz import timezone
 
@@ -52,4 +53,9 @@ class Utils:
             float: Timestamp for the given datetime, for the given timezone.
         """
 
-        return timezone(tz).localize(dt).timestamp() * 1000
+        # TODO: make sure it still works
+        return int(timezone(tz).localize(dt).timestamp() * 1000)
+
+    @staticmethod
+    def timestamp_to_datetime(ts, tz="US/Eastern"):
+        return timezone(tz).localize(datetime.fromtimestamp(ts / 1000))

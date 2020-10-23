@@ -2,6 +2,7 @@ from pytest import fixture
 
 from sbr import SBR
 from nfl import NFL
+from utils import Utils
 
 
 @fixture
@@ -12,3 +13,8 @@ def sbr():
 @fixture
 def nfl():
     return NFL()
+
+
+@fixture
+def utils():
+    return Utils()
