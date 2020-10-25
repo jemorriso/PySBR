@@ -7,6 +7,9 @@ verify_ssl = true
 flake8 = "*"
 black = "*"
 pytest = "*"
+vcrpy = "*"
+pytest-cov = "*"
+pysbr = {editable = true, path = "."}
 
 [packages]
 gql = "*"
