@@ -4,8 +4,73 @@ import requests
 
 
 class TestQuery:
-    def test_build_query(self):
-        assert True
+    def test_build_query(self, utils, query):
+        events = utils.str_format(
+            """
+            events {
+                des
+                cit
+                cou
+                es
+                dt
+                eid
+                st
+                participants {
+                    partid
+                    ih
+                    source {
+                        ... on Team {
+                            nam
+                            nn
+                            sn
+                            abbr
+                        }
+                    }
+                }
+            }
+        """
+        )
+        args = utils.str_format(
+            """
+            "lid": $ lids,
+            "startDate: $dt,
+            "hoursRange": 24
+            """
+        )
+        q_string = query._build_query_string("eventsByDateNew", events, args)
+        assert q_string == utils.str_format(
+            """
+            query {
+                eventsByDateNew(
+                    "lid": $ lids,
+                    "startDate: $dt,
+                    "hoursRange": 24
+                ) {
+                    events {
+                        des
+                        cit
+                        cou
+                        es
+                        dt
+                        eid
+                        st
+                        participants {
+                            partid
+                            ih
+                            source {
+                                ... on Team {
+                                    nam
+                                    nn
+                                    sn
+                                    abbr
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            """
+        )
 
     @vcr.use_cassette("tests/cassettes/test_cassette.yaml")
     def test_cassete(self):
