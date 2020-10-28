@@ -1,0 +1,40 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.24.0
+    method: GET
+    uri: https://countries.trevorblades.com/
+  response:
+    body:
+      string: GET query missing.
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '18'
+      Content-Type:
+      - text/html; charset=utf-8
+      Date:
+      - Wed, 28 Oct 2020 19:52:00 GMT
+      Etag:
+      - W/"12-7JEJwpG8g89ii7CR/6hhfN27Q+k"
+      Server:
+      - Cowboy
+      Via:
+      - 1.1 vegur
+      X-Powered-By:
+      - Express
+    status:
+      code: 400
+      message: Bad Request
+version: 1
