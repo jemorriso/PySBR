@@ -22,5 +22,5 @@ jobs:
       - run:
           name: run tests
           command: |
-            pipenv run flake8
+            pipenv run flake8 --max-line-length 88
             pipenv run pytest -v --cov pysbr
