@@ -14,6 +14,7 @@ pysbr = {editable = true, path = "."}
 [packages]
 gql = "*"
 pytz = "*"
+pyyaml = "*"
 
 [requires]
 python_version = "3.8"

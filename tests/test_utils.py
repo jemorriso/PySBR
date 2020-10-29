@@ -41,3 +41,14 @@ class TestUtils:
         else:
             dt = utils.timestamp_to_datetime(ts * 1000)
         assert dt == expected
+
+    @mark.parametrize(("fname", "expected"), [("arguments", True), ("foo", False)])
+    def test_load_yaml(self, utils, fname, expected):
+        found = False
+        path = utils.build_yaml_path(fname)
+        try:
+            utils.load_yaml(path)
+            found = True
+        except FileNotFoundError:
+            pass
+        assert found == expected

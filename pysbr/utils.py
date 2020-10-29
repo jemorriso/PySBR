@@ -2,8 +2,10 @@ import json
 from inspect import cleandoc
 from textwrap import indent
 from datetime import datetime
+from pathlib import Path
 
 from pytz import timezone, utc
+import yaml
 
 
 class Utils:
@@ -16,6 +18,31 @@ class Utils:
     def json_to_dict(path):
         with open(path) as f:
             return json.load(f)
+
+    @staticmethod
+    def load_yaml(path):
+        """[summary]
+
+        Args:
+            path ([type]): [description]
+
+        Returns:
+            [type]: [description]
+
+        Raises:
+            FileNotFoundError
+        """
+        with open(path) as f:
+            return yaml.full_load(f)
+
+    @staticmethod
+    def get_source_dir():
+        return Path(__file__).parent
+
+    @staticmethod
+    def build_yaml_path(fname):
+        # TODO: use constant for yaml dir
+        return Utils.get_source_dir().joinpath(f"config/{fname}.yaml")
 
     @staticmethod
     def str_format(s, indent_=0, dedent_l1=False):
