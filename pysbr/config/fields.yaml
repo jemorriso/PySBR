@@ -1,0 +1,22 @@
+event: |
+  events {
+      des
+      cit
+      cou
+      es
+      dt
+      eid
+      st
+      participants {
+          partid
+          ih
+          source {
+              ... on Team {
+                  nam
+                  nn
+                  sn
+                  abbr
+              }
+          }
+      }
+  }

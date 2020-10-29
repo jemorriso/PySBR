@@ -1,0 +1,12 @@
+- Event:
+    event_id: eid
+    city: cit
+    datetime: dt
+    description: des
+    country: cou
+    game_state: es
+    stadium_type: st
+
+- Participant:
+    participant_id: partid
+    is_home: ih

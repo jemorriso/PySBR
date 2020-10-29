@@ -121,3 +121,18 @@ class TestQuery:
             "test_execute_query",
         )
         assert result["eventsByDateNew"]["events"][0]["eid"] == 4143517
+
+    @mark.parametrize(
+        ("fn", "k", "expected"),
+        [("args", "date", True), ("fields", "event", True), ("fields", "foo", False)],
+    )
+    def test_get_yaml(self, query, fn, k, expected):
+        is_key = True
+        try:
+            if fn == "args":
+                query._get_args(k)
+            else:
+                query._get_fields(k)
+        except KeyError:
+            is_key = False
+        assert is_key == expected

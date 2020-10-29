@@ -12,16 +12,17 @@ class Query:
     # with open("schema.graphql") as source:
     #     document = parse(source.read())
     # schema = build_ast_schema(document)
+    args_file = "arguments.yaml"
+    fields_file = "fields.yaml"
 
     def __init__(self):
+        self._raw = None
 
-        self._transport = RequestsHTTPTransport(
+        transport = RequestsHTTPTransport(
             url="https://www.sportsbookreview.com/ms-odds-v2/odds-v2-service"
         )
         # client = Client(transport=_transport, fetch_schema_from_transport=True)
-        self.client = Client(
-            transport=self._transport, fetch_schema_from_transport=False
-        )
+        self.client = Client(transport=transport, fetch_schema_from_transport=False)
 
     @staticmethod
     def _build_query_string(q_name, q_fields, q_args=None):
@@ -58,15 +59,40 @@ class Query:
             }
         )
 
-    def _execute_query(self, q, subs):
-        """execute a graphql query.
+    def _get_val_from_yaml(self, fname, k):
+        """[summary]
 
-        args:
-            q (str): the query string.
-            subs (dict): the substitutions to make. each key must match a template
+        Args:
+            fname ([type]): [description]
+            type ([type]): [description]
+
+        Returns:
+            [type]: [description]
+
+        Raises:
+            NameError: If value of k is not a key in the loaded dictionary.
+        """
+        return Utils.load_yaml((Utils.build_yaml_path(fname)))[k]
+
+    def _get_args(self, k):
+        return self._get_val_from_yaml("arguments", k)
+
+    def _get_fields(self, k):
+        return self._get_val_from_yaml("fields", k)
+
+    def _execute_query(self, q, subs):
+        """Execute a graphql query.
+
+        Args:
+            q (str): The query string.
+            subs (dict): The substitutions to make. Each key must match a template
                 placeholder, with the value being what gets substituted into the string.
 
-        returns:
-            dict: the result of the query.
+        Returns:
+            dict: The result of the query.
         """
         return self.client.execute(gql(Template(q).substitute(subs)))
+
+    def _build_and_execute_query(self, q_name, q_fields, q_args=None, q_args_vals=None):
+        q_string = self._build_query_string(q_name, q_fields, q_args)
+        self._execute_query(q_string, q_args_vals)

@@ -1,0 +1,4 @@
+date: |
+  lid: $lids,
+  startDate: $dt,
+  hoursRange": 24
