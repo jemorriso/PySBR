@@ -1,5 +1,8 @@
+from string import Template
+from unittest.mock import patch
+
 from pytest import fixture
-from gql import Client
+from gql import Client, gql
 from gql.transport.requests import RequestsHTTPTransport
 import vcr
 
@@ -19,6 +22,25 @@ def use_cassette():
     # factory function pattern mentioned in Pytest.fixture docs
     def fn(name):
         return vcr.use_cassette(f"tests/cassettes/{name}.yaml")
+
+    return fn
+
+
+@fixture
+def execute_with_cassette(use_cassette):
+    def fn(q, subs, client, cassette_name):
+        with use_cassette(cassette_name):
+            return client.execute(gql(Template(q).substitute(subs)))
+
+    return fn
+
+
+@fixture
+def patched_execute(execute_with_cassette, query):
+    def fn(q, subs, cassette_name):
+        with patch.object(query, "_execute_query", execute_with_cassette):
+            result = query._execute_query(q, subs, query.client, cassette_name)
+            return result
 
     return fn
 
