@@ -65,7 +65,7 @@ class Utils:
         return s
 
     @staticmethod
-    def datetime_to_timestamp(dt, tz="US/Eastern"):
+    def datetime_to_timestamp(dt, tz=None):
         """Convert python datetime object to epoch time.
 
         Note:
@@ -74,24 +74,25 @@ class Utils:
         Args:
             dt (datetime.datetime): The datetime object.
             tz (str, optional): The timezone to use (see pytz documentation for list of
-                available timezones). Defaults to 'US/Eastern'.
+                available timezones). If None, uses system timezone. Defaults to None.
 
         Returns:
             float: Timestamp for the given datetime, for the given timezone.
         """
-        return int(timezone(tz).localize(dt).timestamp() * 1000)
+        aware_dt = timezone(tz).localize(dt) if tz is not None else dt.astimezone()
+        return int(aware_dt.timestamp() * 1000)
 
     @staticmethod
-    def timestamp_to_datetime(ts, tz="US/Eastern"):
+    def timestamp_to_datetime(ts, tz=None):
         """Convert epoch timestamp to aware datetime object.
 
         Args:
             ts (int): The timestamp.
             tz (str, optional): The timezone to use (see pytz documentation for list of
-                available timezones). Defaults to 'US/Eastern'.
+                available timezones). If None, uses system timezone. Defaults to None.
 
         Returns:
             datetime.datetime: The timezone aware datetime object.
         """
         utc_dt = utc.localize(datetime.utcfromtimestamp(ts / 1000))
-        return utc_dt.astimezone(timezone(tz))
+        return utc_dt.astimezone(timezone(tz) if tz is not None else None)
