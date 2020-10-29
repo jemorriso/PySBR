@@ -25,6 +25,23 @@ class Query:
         self.client = Client(transport=transport, fetch_schema_from_transport=False)
 
     @staticmethod
+    def _build_args(arg_str, arg_vals):
+        """Build the argument string that gets inserted into a query.
+
+        Args:
+            arg_str (str): The arguments template string.
+            arg_vals (dict): The substitutions to make. Each key must match a template
+                placeholder, with the value being what gets substituted into the string.
+
+        Returns:
+            str: The argument string, with values inserted for each argument.
+        """
+        if arg_str is not None and arg_vals is not None:
+            return Template(arg_str).substitute(arg_vals)
+        else:
+            return None
+
+    @staticmethod
     def _build_query_string(q_name, q_fields, q_args=None):
         """Build up the GraphQL query string.
 
@@ -80,19 +97,21 @@ class Query:
     def _get_fields(self, k):
         return self._get_val_from_yaml("fields", k)
 
-    def _execute_query(self, q, subs):
+    def _execute_query(self, q):
         """Execute a graphql query.
 
         Args:
             q (str): The query string.
-            subs (dict): The substitutions to make. Each key must match a template
-                placeholder, with the value being what gets substituted into the string.
 
         Returns:
             dict: The result of the query.
         """
-        return self.client.execute(gql(Template(q).substitute(subs)))
+        return self.client.execute(gql(q))
 
-    def _build_and_execute_query(self, q_name, q_fields, q_args=None, q_args_vals=None):
-        q_string = self._build_query_string(q_name, q_fields, q_args)
-        self._execute_query(q_string, q_args_vals)
+    def _build_and_execute_query(
+        self, q_name, q_fields, q_arg_str=None, q_arg_vals=None
+    ):
+        q_string = self._build_query_string(
+            q_name, q_fields, self._build_args(q_arg_str, q_arg_vals)
+        )
+        self._execute_query(q_string)

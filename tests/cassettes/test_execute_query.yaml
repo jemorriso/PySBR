@@ -34,7 +34,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 28 Oct 2020 22:01:03 GMT
+      - Thu, 29 Oct 2020 21:02:30 GMT
       Keep-Alive:
       - timeout=20
       Server:
@@ -60,11 +60,11 @@ interactions:
       X-Country-Name:
       - Canada
       X-DIS-Request-ID:
-      - d0f2e20ed38e3d1e33f2474b422330ed
+      - b472d571288f0c216673ec9712880f65
       X-Proxy-Host:
       - www.sportsbookreview.com
       X-Varnish:
-      - '130242075'
+      - '137737410'
     status:
       code: 200
       message: OK

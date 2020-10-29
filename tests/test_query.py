@@ -105,19 +105,22 @@ class TestQuery:
             }
         """
         )
-        q_args = utils.str_format(
+        q_arg_str = utils.str_format(
             """
             lid: $lids,
             startDate: $dt,
             hoursRange: 24
             """
         )
-        result = patched_execute(
-            query._build_query_string("eventsByDateNew", q_fields, q_args),
+        q_arg_str = query._build_args(
+            q_arg_str,
             {
                 "lids": [16],
                 "dt": utils.datetime_to_timestamp(dt),
             },
+        )
+        result = patched_execute(
+            query._build_query_string("eventsByDateNew", q_fields, q_arg_str),
             "test_execute_query",
         )
         assert result["eventsByDateNew"]["events"][0]["eid"] == 4143517
