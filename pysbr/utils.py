@@ -65,8 +65,8 @@ class Utils:
         return s
 
     @staticmethod
-    def datetime_to_timestamp(dt, tz=None):
-        """Convert python datetime object to epoch time.
+    def datetime_to_timestamp_aware(dt, tz=None):
+        """**DEPRECATED** Convert python datetime object to epoch time.
 
         Note:
             The datetime object is naive, so localize using timezone.
@@ -79,12 +79,13 @@ class Utils:
         Returns:
             float: Timestamp for the given datetime, for the given timezone.
         """
-        aware_dt = timezone(tz).localize(dt) if tz is not None else dt.astimezone()
-        return int(aware_dt.timestamp() * 1000)
+        if dt.tzinfo is None:
+            dt = timezone(tz).localize(dt) if tz is not None else dt.astimezone()
+        return int(dt.timestamp() * 1000)
 
     @staticmethod
-    def timestamp_to_datetime(ts, tz=None):
-        """Convert epoch timestamp to aware datetime object.
+    def timestamp_to_datetime_aware(ts, tz=None):
+        """**DEPRECATED** Convert epoch timestamp to aware datetime object.
 
         Args:
             ts (int): The timestamp.
@@ -96,3 +97,11 @@ class Utils:
         """
         utc_dt = utc.localize(datetime.utcfromtimestamp(ts / 1000))
         return utc_dt.astimezone(timezone(tz) if tz is not None else None)
+
+    @staticmethod
+    def datetime_to_timestamp(dt):
+        return int(dt.timestamp() * 1000)
+
+    @staticmethod
+    def timestamp_to_datetime(ts):
+        return datetime.fromtimestamp(ts / 1000).astimezone()
