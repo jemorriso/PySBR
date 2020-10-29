@@ -1,5 +1,7 @@
-# from pysbr.queries.query import Query
 import requests
+from datetime import datetime
+
+from pytest import mark
 from gql import gql
 
 
@@ -93,28 +95,29 @@ class TestQuery:
             """
         )
 
-    # @mark.parametrize("dt_str", ["2020-10-29"])
-    # def test_execute_query(self, utils, query, dt_str):
-    #     dt = datetime.strptime(dt_str, "%Y-%m-%d")
-    #     q_fields = utils.str_format(
-    #         """
-    #         events {
-    #             eid
-    #         }
-    #     """
-    #     )
-    #     q_args = utils.str_format(
-    #         """
-    #         "lid": $ lids,
-    #         "startDate: $dt,
-    #         "hoursRange": 24
-    #         """
-    #     )
-    #     result = query._execute_query(
-    #         query._build_query_string("eventsV2", q_fields, q_args),
-    #         {
-    #             "lids": [16],
-    #             "start": utils.datetime_to_timestamp(dt),
-    #         },
-    #     )
-    # assert result is not None
+    @mark.parametrize("dt_str", ["2020-10-29"])
+    def test_execute_query(self, utils, query, patched_execute, dt_str):
+        dt = datetime.strptime(dt_str, "%Y-%m-%d")
+        q_fields = utils.str_format(
+            """
+            events {
+                eid
+            }
+        """
+        )
+        q_args = utils.str_format(
+            """
+            lid: $lids,
+            startDate: $dt,
+            hoursRange: 24
+            """
+        )
+        result = patched_execute(
+            query._build_query_string("eventsByDateNew", q_fields, q_args),
+            {
+                "lids": [16],
+                "dt": utils.datetime_to_timestamp(dt),
+            },
+            "test_execute_query",
+        )
+        assert result["eventsByDateNew"]["events"][0]["eid"] == 4143517

@@ -49,7 +49,7 @@ class Query:
             """
             )
         ).substitute(
-            **{
+            {
                 "q_name": q_name,
                 "q_args": ""
                 if q_args is None
