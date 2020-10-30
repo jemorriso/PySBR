@@ -1,8 +1,8 @@
 from datetime import datetime
 
 from pytz import timezone
-
 from pytest import mark
+from tzlocal import get_localzone
 
 
 class TestUtils:
@@ -11,7 +11,6 @@ class TestUtils:
         [
             ("2020-10-20, 9:00", "Canada/Pacific", 1603209600),
             ("2020-10-20, 9:00", "Canada/Eastern", 1603198800),
-            ("2020-10-20, 9:00", None, 1603209600),
             ("2020-10-21, 21:15", "Canada/Pacific", 1603340100),
         ],
     )
@@ -25,15 +24,14 @@ class TestUtils:
         [
             ("2020-10-20, 9:00", "Canada/Pacific", 1603209600),
             ("2020-10-20, 9:00", "Canada/Eastern", 1603198800),
-            ("2020-10-20, 9:00", None, 1603209600),
             ("2020-10-21, 21:15", "Canada/Pacific", 1603340100),
         ],
     )
     def test_timestamp_to_datetime_aware(self, utils, ts, tz, expected_str):
         e_naive = datetime.strptime(expected_str, "%Y-%m-%d, %H:%M")
-        expected = (
-            timezone(tz).localize(e_naive) if tz is not None else e_naive.astimezone()
-        )
+        if tz is None:
+            tz = str(get_localzone())
+        expected = timezone(tz).localize(e_naive)
         dt = utils.timestamp_to_datetime_aware(ts * 1000)
         assert dt == expected
 
@@ -58,10 +56,10 @@ class TestUtils:
         ],
     )
     def test_timestamp_to_datetime(self, utils, ts, tz, expected_str):
-        expected = datetime.strptime(expected_str, "%Y-%m-%d, %H:%M").astimezone(
-            timezone(tz)
+        expected = timezone(tz).localize(
+            datetime.strptime(expected_str, "%Y-%m-%d, %H:%M")
         )
-        dt = utils.timestamp_to_datetime(ts * 1000)
+        dt = utils.timestamp_to_datetime(ts * 1000).astimezone(timezone(tz))
         assert dt == expected
 
     @mark.parametrize(("fname", "expected"), [("arguments", True), ("foo", False)])

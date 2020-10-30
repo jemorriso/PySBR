@@ -10,6 +10,7 @@ pytest = "*"
 vcrpy = "*"
 pytest-cov = "*"
 pysbr = {editable = true, path = "."}
+tzlocal = "*"
 
 [packages]
 gql = "*"

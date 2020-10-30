@@ -5,6 +5,8 @@ jobs:
     # code runs inside this docker image, using python 3.9
     docker:
       - image: circleci/python:3.8.6
+        # environment:
+        #   TZ: 'UTC'
 
     # this is the default value
     working_directory: ~/project
