@@ -1,4 +1,4 @@
 date: |
   lid: $lids,
-  startDate: $dt,
-  hoursRange": 24
+  startDate: $timestamp,
+  hoursRange: 24

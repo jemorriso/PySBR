@@ -108,7 +108,7 @@ class TestQuery:
         q_arg_str = utils.str_format(
             """
             lid: $lids,
-            startDate: $dt,
+            startDate: $timestamp,
             hoursRange: 24
             """
         )
@@ -116,12 +116,13 @@ class TestQuery:
             q_arg_str,
             {
                 "lids": [16],
-                "dt": utils.datetime_to_timestamp(dt),
+                "timestamp": utils.datetime_to_timestamp_aware(dt),
             },
         )
         result = patched_execute(
             query._build_query_string("eventsByDateNew", q_fields, q_arg_str),
             "test_execute_query",
+            query,
         )
         assert result["eventsByDateNew"]["events"][0]["eid"] == 4143517
 
@@ -139,3 +140,15 @@ class TestQuery:
         except KeyError:
             is_key = False
         assert is_key == expected
+
+    @mark.parametrize(
+        ("league_id", "dt_str", "cassette_name", "expected"),
+        [(16, "2020-10-29", "test_events_by_date_1", 1)],
+    )
+    def test_events_by_date(
+        self, events_by_date, league_id, dt_str, cassette_name, expected
+    ):
+        dt = datetime.strptime(dt_str, "%Y-%m-%d")
+        e = events_by_date(league_id, dt, cassette_name)
+
+        assert len(e._raw) == expected

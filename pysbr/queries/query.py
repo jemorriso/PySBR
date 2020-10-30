@@ -25,19 +25,19 @@ class Query:
         self.client = Client(transport=transport, fetch_schema_from_transport=False)
 
     @staticmethod
-    def _build_args(arg_str, arg_vals):
+    def _build_args(arg_str, args):
         """Build the argument string that gets inserted into a query.
 
         Args:
             arg_str (str): The arguments template string.
-            arg_vals (dict): The substitutions to make. Each key must match a template
+            args (dict): The substitutions to make. Each key must match a template
                 placeholder, with the value being what gets substituted into the string.
 
         Returns:
             str: The argument string, with values inserted for each argument.
         """
-        if arg_str is not None and arg_vals is not None:
-            return Template(arg_str).substitute(arg_vals)
+        if arg_str is not None and args is not None:
+            return Template(arg_str).substitute(args)
         else:
             return None
 
@@ -108,10 +108,8 @@ class Query:
         """
         return self.client.execute(gql(q))
 
-    def _build_and_execute_query(
-        self, q_name, q_fields, q_arg_str=None, q_arg_vals=None
-    ):
+    def _build_and_execute_query(self, q_name, q_fields, q_arg_str=None, q_args=None):
         q_string = self._build_query_string(
-            q_name, q_fields, self._build_args(q_arg_str, q_arg_vals)
+            q_name, q_fields, self._build_args(q_arg_str, q_args)
         )
-        self._execute_query(q_string)
+        return self._execute_query(q_string)
