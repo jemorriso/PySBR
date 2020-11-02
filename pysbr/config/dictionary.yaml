@@ -1,0 +1,78 @@
+# common
+nam: name # e.g. N.Y. Jets
+des: description
+sn: short name
+
+# sport
+spid: sport id
+
+# league
+lid: league id
+
+# event
+eid: event id
+cit: city
+cou: country
+es: event status
+dt: datetime
+st: stadium type
+
+# participant
+partid: participant id
+ih: is home
+
+# participant group
+partgid: participant group id
+nam: name
+
+# team
+nn: nickname
+cit: location
+tmid: team id
+abbr: abbreviation
+sta: stadium type
+cou: country
+conid: conference id
+conname: conference name
+divid: division id
+divname: division name
+
+# player
+fn: first name
+lnam: last name
+
+# event group
+egid: event group id
+nam: name
+alias: alias
+
+# markets
+mtid: market id
+mtids: market ids
+
+# sportsbook
+sbid: sportsbook id
+paid: provider account id
+
+# consensus
+wag: wagers
+perc: percentage
+tim: datetime
+
+# search event
+date: datetime
+league: league
+sport: sport
+did: domain id
+
+# line history
+lines: lines
+
+# league hierarchy
+teamId: team id
+seasonId: season id
+leagueId: league id
+id: id
+name: name
+shortname: short name
+favoriteshortname: favorite short name
