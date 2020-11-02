@@ -12,8 +12,6 @@ class Query:
     # with open("schema.graphql") as source:
     #     document = parse(source.read())
     # schema = build_ast_schema(document)
-    args_file = "arguments.yaml"
-    fields_file = "fields.yaml"
 
     def __init__(self):
         self._raw = None
@@ -42,7 +40,7 @@ class Query:
             return None
 
     @staticmethod
-    def _build_query_string(q_name, q_fields, q_args=None):
+    def _build_query_string(q_name, q_fields=None, q_args=None):
         """Build up the GraphQL query string.
 
         Args:
@@ -60,9 +58,7 @@ class Query:
                 query {
                     $q_name(
                         $q_args
-                    ) {
-                        $q_fields
-                    }
+                    ) $q_fields
                 }
             """
             )
@@ -72,11 +68,22 @@ class Query:
                 "q_args": ""
                 if q_args is None
                 else Utils.str_format(q_args, indent_=2, dedent_l1=True),
-                "q_fields": Utils.str_format(q_fields, indent_=2, dedent_l1=True),
+                "q_fields": ""
+                if q_fields is None
+                else Utils.str_format(q_fields, indent_=1, dedent_l1=True),
             }
         )
 
-    def _get_val_from_yaml(self, fname, k):
+    # @staticmethod
+    # def _get_league_from_id(id):
+    #     return Utils.load_yaml(
+    #       Utils.build_yaml_path("conversions")
+    #     )["ids_to_leagues"][
+    #         id
+    #     ]
+
+    @staticmethod
+    def _get_val_from_yaml(fname, k):
         """[summary]
 
         Args:
@@ -108,8 +115,18 @@ class Query:
         """
         return self.client.execute(gql(q))
 
-    def _build_and_execute_query(self, q_name, q_fields, q_arg_str=None, q_args=None):
+    def _build_and_execute_query(
+        self, q_name, q_fields=None, q_arg_str=None, q_args=None
+    ):
         q_string = self._build_query_string(
             q_name, q_fields, self._build_args(q_arg_str, q_args)
         )
         return self._execute_query(q_string)
+
+    def list(self):
+        # clean response using dictionary
+        pass
+
+    def dataframe(self):
+        # use cleaned response, and flatten it into a dataframe
+        pass
