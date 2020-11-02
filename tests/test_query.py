@@ -30,23 +30,25 @@ class TestQuery:
     def test_build_query(self, utils, query):
         events = utils.str_format(
             """
-            events {
-                des
-                cit
-                cou
-                es
-                dt
-                eid
-                st
-                participants {
-                    partid
-                    ih
-                    source {
-                        ... on Team {
-                            nam
-                            nn
-                            sn
-                            abbr
+            {
+                events {
+                    des
+                    cit
+                    cou
+                    es
+                    dt
+                    eid
+                    st
+                    participants {
+                        partid
+                        ih
+                        source {
+                            ... on Team {
+                                nam
+                                nn
+                                sn
+                                abbr
+                            }
                         }
                     }
                 }
@@ -100,8 +102,10 @@ class TestQuery:
         dt = datetime.strptime(dt_str, "%Y-%m-%d")
         q_fields = utils.str_format(
             """
-            events {
-                eid
+            {
+                events {
+                    eid
+                }
             }
         """
         )
@@ -152,3 +156,8 @@ class TestQuery:
         e = events_by_date(league_id, dt, cassette_name)
 
         assert len(e._raw) == expected
+
+    # def test_league_hierarchy(self, league_hierarchy, league_id, cassette_name):
+    # def test_league_hierarchy(self, league_hierarchy):
+    #     league = league_hierarchy(16, "test_league_hierarchy1")
+    #     assert league is not None
