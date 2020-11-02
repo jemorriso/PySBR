@@ -8,6 +8,7 @@ import vcr
 from pysbr.queries.query import Query
 from pysbr.utils import Utils
 from pysbr.queries.eventsbydate import EventsByDate
+from pysbr.queries.leaguehierarchy import LeagueHierarchy
 
 
 class TestEventsByDate(EventsByDate):
@@ -15,6 +16,16 @@ class TestEventsByDate(EventsByDate):
         self.cassette_name = cassette_name
         self.patch_fn = patch_fn
         super().__init__(league_id, dt)
+
+    def _build_and_execute_query(self, *args):
+        return self.patch_fn(self)
+
+
+class TestLeagueHierarchy(LeagueHierarchy):
+    def __init__(self, league_id, patch_fn, cassette_name):
+        self.cassette_name = cassette_name
+        self.patch_fn = patch_fn
+        super().__init__(league_id)
 
     def _build_and_execute_query(self, *args):
         return self.patch_fn(self)
@@ -40,7 +51,11 @@ def use_cassette():
 def execute_with_cassette(use_cassette):
     def fn(q, client, cassette_name):
         with use_cassette(cassette_name):
-            return client.execute(gql(q))
+            result = client.execute(gql(q))
+        path = Utils.build_yaml_path(cassette_name, "tests/graphql_responses")
+        if not path.exists():
+            Utils.dump_yaml(result, path)
+        return result
 
     return fn
 
@@ -92,6 +107,16 @@ def events_by_date(build_and_execute_with_cassette):
     def fn(league_id, dt, cassette_name):
         return TestEventsByDate(
             league_id, dt, build_and_execute_with_cassette, cassette_name
+        )
+
+    return fn
+
+
+@fixture
+def league_hierarchy(build_and_execute_with_cassette):
+    def fn(league_id, cassette_name):
+        return TestLeagueHierarchy(
+            league_id, build_and_execute_with_cassette, cassette_name
         )
 
     return fn
