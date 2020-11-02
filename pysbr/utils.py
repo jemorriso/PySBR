@@ -36,13 +36,18 @@ class Utils:
             return yaml.full_load(f)
 
     @staticmethod
-    def get_source_dir():
-        return Path(__file__).parent
+    def dump_yaml(d, path):
+        with open(path, "w") as f:
+            yaml.dump(d, f)
 
     @staticmethod
-    def build_yaml_path(fname):
+    def get_project_root():
+        return Path(__file__).parent.parent
+
+    @staticmethod
+    def build_yaml_path(fname, subpath="pysbr/config"):
         # TODO: use constant for yaml dir
-        return Utils.get_source_dir().joinpath(f"config/{fname}.yaml")
+        return Utils.get_project_root().joinpath(f"{subpath}/{fname}.yaml")
 
     @staticmethod
     def str_format(s, indent_=0, dedent_l1=False):
