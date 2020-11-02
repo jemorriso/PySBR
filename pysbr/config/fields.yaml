@@ -1,22 +1,193 @@
 event: |
-  events {
-      des
-      cit
-      cou
-      es
-      dt
-      eid
-      st
-      participants {
-          partid
-          ih
-          source {
-              ... on Team {
-                  nam
-                  nn
-                  sn
-                  abbr
+  {
+      events {
+          des
+          cit
+          cou
+          es
+          dt
+          eid
+          st
+          participants {
+              partid
+              ih
+              source {
+                  ... on Team {
+                      nam
+                      nn
+                      sn
+                      abbr
+                      cit
+                  }
+                  ... on Player {
+                      fn
+                      lnam
+                  }
+                  ... on ParticipantGroup {
+                      partgid
+                      nam
+                      participants {
+                          partid
+                          ih
+                          source {
+                              ... on Player {
+                                  fn
+                                  lnam
+                              }
+                              ... on Team {
+                                  nam
+                                  nn
+                                  sn
+                                  abbr
+                                  cit
+                              }
+                          }
+                      }
+                  }
               }
           }
+          eventGroup {
+              egid
+              nam
+              alias
+          }
       }
+  }
+
+consensus: |
+  {
+      eid
+      mtid
+      partid
+      sbid
+      paid
+      wag
+      perc
+      tim
+  }
+
+line_history: |
+  {
+      lines
+  }
+
+league_market: |
+  {
+      mtid
+  }
+
+markets_by_id: |
+  {
+      mtid
+      spid
+      nam
+      des
+  }
+
+market_types: |
+  {
+      mtids
+  }
+
+leagues: |
+  {
+      lid
+      nam
+      spid
+      sn
+  }
+
+event_group: |
+  {
+      egid
+      nam
+      alias
+  }
+
+sportsbooks: |
+  {
+      sbid
+      paid
+      nam
+  }
+
+search_event: |
+  {
+      des
+      date
+      league
+      sport
+      spid
+      eid
+      searchParticipants {
+          nam
+          lnam
+          fn
+          nn
+          sn
+          abbr
+      }
+      eventParticipants
+      lid
+  }
+
+search_league: |
+  {
+      searchLeague {
+          did
+          lid
+          nam
+          rid
+          spid
+          sn
+          region {
+              nam
+              sn
+          }
+      }
+  }
+
+search_sport: |
+  {
+      searchSport {
+          did
+          spid
+          nam
+      }
+  }
+
+league_hierarchy: |
+  {
+      teamId
+      seasonId
+      leagueId
+      conference {
+          id
+          name
+          shortname
+          favoriteshortname
+      }
+      division {
+          id
+          name
+          shortname
+          favoriteshortname
+      }
+  }
+
+team: |
+  {
+      tmid
+      lid
+      nam
+      nn
+      sn
+      abbr
+      cit
+      sta
+      cou
+      conid
+      divid
+      divname
+      conname
   }

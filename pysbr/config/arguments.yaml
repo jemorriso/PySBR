@@ -2,3 +2,79 @@ date: |
   lid: $lids,
   startDate: $timestamp,
   hoursRange: 24
+
+date_range: |
+  lid: $lids,
+  dt: {
+      between: {
+          [
+              $start,
+              $end
+          ]
+      }
+  }
+
+league_id: |
+  lid: $lid
+
+league_ids: |
+  lid: $lids
+
+event_id: |
+  eid: $eid
+
+event_ids: |
+  eid: $eids
+
+market_ids: |
+  mtid: $mtids,
+  spid: $spids
+
+participants: |
+  partid: $partids,
+  seid: $seid
+
+matchup: |
+  participantId1: $partid1,
+  participantId2: $partid2,
+  limit: $limit,
+  seids: $seids
+
+event_group: |
+  lid: $lid,
+  mtid: $mtid,
+  egid: $egid,
+  seid: $seid
+
+lines: |
+  eid: $eids,
+  mtid: $mtids
+
+line_history: |
+  eid: $eid,
+  mtid: $mtid,
+  paid: $paid,
+  partid: $partids
+
+sportsbooks: |
+  sbids: $sbids,
+  did: 1
+  sitid: 1,
+  enabled: true
+
+query: |
+  query: $query
+
+multiple_search: |
+  query: $query,
+  did: 0
+
+search_sport: |
+  query: $query,
+  did: 1
+
+league_hierarchy: |
+  leagueIds: $lids
+
+team_id: |
+  tmid: $tmid
