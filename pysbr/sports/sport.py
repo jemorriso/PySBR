@@ -72,8 +72,12 @@ class Sport:
             else:
                 old_t = t
                 if isinstance(t, str):
-                    t = ("full game", old_t)
-                t = (t[0].lower(), t[1].lower())
+                    t = ["full game", t]
+                t = list(t)
+                try:
+                    t = [x.lower() for x in t]
+                except AttributeError:
+                    raise AttributeError("Search components must be ints or strings.")
                 try:
                     t[0] = search_dict[t[0]]
                 except KeyError:
@@ -87,6 +91,8 @@ class Sport:
                     ids.append(self._markets[t[0]][t[1]])
                 except KeyError:
                     raise ValueError(f"Could not find market {old_t}")
+        # TODO: need to handle case where they resolve to same ID, because I don't
+        # think it will work for the query?
         return ids
 
 
@@ -138,8 +144,9 @@ class TeamSport(Sport):
                             found = True
                             id = v[t]
                         else:
-                            # TODO
-                            raise ValueError(f"Search term {old_t} is ambiguous")
+                            # TODO - could I raise a warning instead?
+                            # raise ValueError(f"Search term {old_t} is ambiguous")
+                            pass
                 if not found:
                     raise ValueError(f"Could not find team {old_t}")
                 else:
