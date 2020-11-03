@@ -9,6 +9,9 @@ from pysbr.queries.query import Query
 from pysbr.utils import Utils
 from pysbr.queries.eventsbydate import EventsByDate
 from pysbr.queries.leaguehierarchy import LeagueHierarchy
+from pysbr.sports.nfl import NFL
+from pysbr.sports.ncaaf import NCAAF
+from pysbr.sports.atp import ATP
 
 
 class TestEventsByDate(EventsByDate):
@@ -29,6 +32,21 @@ class TestLeagueHierarchy(LeagueHierarchy):
 
     def _build_and_execute_query(self, *args):
         return self.patch_fn(self)
+
+
+@fixture
+def nfl():
+    return NFL()
+
+
+@fixture
+def ncaaf():
+    return NCAAF()
+
+
+@fixture
+def atp():
+    return ATP()
 
 
 def gql_client(url):
