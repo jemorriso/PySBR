@@ -11,6 +11,7 @@ vcrpy = "*"
 pytest-cov = "*"
 pysbr = {editable = true, path = "."}
 tzlocal = "*"
+pytest-lazy-fixture = "*"
 
 [packages]
 gql = "*"
