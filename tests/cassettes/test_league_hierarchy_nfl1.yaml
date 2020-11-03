@@ -1,0 +1,82 @@
+interactions:
+- request:
+    body: '{"query": "{\n  leagueHierarchy(leagueIds: [16]) {\n    teamId\n    seasonId\n    leagueId\n    conference
+      {\n      id\n      name\n      shortname\n      favoriteshortname\n    }\n    division
+      {\n      id\n      name\n      shortname\n      favoriteshortname\n    }\n  }\n}\n"}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '278'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.24.0
+    method: POST
+    uri: https://www.sportsbookreview.com/ms-odds-v2/odds-v2-service
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA82YT2vCMBiHv8rIuQebvLHV2xgb28XLBh7GGKHGGagptFUY4nef3T8UmaxB8/6O
+        SUh4+pyevhsxM60R440orXlb2Xtna1MXi3cxft6I1prlw0yMU52OEtFY01S+W+tsoJLvG5/nw0QU
+        lZ/b2vrCdq+5bjcR3ix3S3F9dyN29xdV3R7szM26ql1r9078qiy3iZi5tWtc5X82/mbJdS75WOQA
+        x8shC7OXFMhLCuRFAnmRQF4UkBcF5IWAvBCQFw3kRQN5GQJ5GQJ5yYC8ZEBeciAvOZAXoN6VQL2r
+        gHpXAfWu6tW73f39977YaJ/tamqb9hjwdXr7+HSC8hQVs6FehRfNEFvrXeyLehVjNM9A7agC2lH+
+        skyOWCZnY/mfl4uxBLRjHBZmLwHtGIeF2UtAO8ZhYfYS0I5xWHi9UEA7xmFh9hIwK43DwuwlYFYa
+        h4XZS8CsNA4Ls5eAWWkcFmYvQL1LQL1LQL1LQL1LQL1LQL1LQL1LQL1LQL1LQL2rgXpXw/RutvtX
+        6yUmzojqCItzRpWPdMY7MHvZbj8A51Qa4xskAAA=
+    headers:
+      Accept-Ranges:
+      - bytes
+      Access-Control-Allow-Origin:
+      - '*'
+      Age:
+      - '0'
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '428'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 03 Nov 2020 22:08:46 GMT
+      Keep-Alive:
+      - timeout=20
+      Server:
+      - nginx/1.16.1
+      Set-Cookie:
+      - x_geo_cookie_value=CA, ;Domain=sportsbookreview.com;Path=/;Max-Age=43200
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      X-Cache:
+      - Miss
+      X-Cache-Hits:
+      - '0'
+      X-Cacheable:
+      - Not Cacheable
+      X-City-Code:
+      - ''
+      X-City-Name:
+      - British Columbia
+      X-Country-Code:
+      - CA
+      X-Country-Name:
+      - Canada
+      X-DIS-Request-ID:
+      - aadd5b2b399527cc4b273e278996995e
+      X-Proxy-Host:
+      - www.sportsbookreview.com
+      X-Varnish:
+      - '184041427'
+    status:
+      code: 200
+      message: OK
+version: 1

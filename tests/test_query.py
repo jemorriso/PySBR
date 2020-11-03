@@ -2,6 +2,7 @@ import requests
 from datetime import datetime
 
 from pytest import mark
+from pytest_lazyfixture import lazy_fixture
 from gql import gql
 
 
@@ -157,7 +158,20 @@ class TestQuery:
 
         assert len(e._raw) == expected
 
-    # def test_league_hierarchy(self, league_hierarchy, league_id, cassette_name):
-    # def test_league_hierarchy(self, league_hierarchy):
-    #     league = league_hierarchy(16, "test_league_hierarchy1")
-    #     assert league is not None
+    @mark.parametrize(
+        "league, cassette_name, expected",
+        [
+            # expected len is double teams because playoffs, then +1 for some
+            # mystery reason
+            (lazy_fixture("nfl"), "test_league_hierarchy_nfl1", 65),
+            # this one is weird too, length is 1024, where 507 seasonIds == 5627, and
+            # 517 seasonIds == 8583, but there are only 130 teams
+            (lazy_fixture("ncaaf"), "test_league_hierarchy_ncaaf1", 1024),
+            (lazy_fixture("atp"), "test_league_hierarchy_atp1", 0),
+        ],
+    )
+    def test_league_hierarchy(self, league_hierarchy, league, cassette_name, expected):
+        id = league.league_id
+        lh = league_hierarchy(id, cassette_name)
+
+        assert len(lh._raw["leagueHierarchy"]) == expected
