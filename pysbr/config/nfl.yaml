@@ -1,0 +1,200 @@
+lid: 16
+nam: National Football League
+sn: NFL
+alias: NFL
+
+# current season id: 8582
+
+teams:
+  - abbr: PIT
+    sbr abbreviation: PIT
+    tmid: 1519
+    nam: Pittsburgh
+    nn: Steelers
+    cit: Pittsburgh
+  - abbr: CLE
+    sbr abbreviation: CLE
+    tmid: 1520
+    nam: Cleveland
+    nn: Browns
+    cit: Cleveland
+  - abbr: BAL
+    sbr abbreviation: BAL
+    tmid: 1521
+    nam: Baltimore
+    nn: Ravens
+    cit: Baltimore
+  - abbr: CIN
+    sbr abbreviation: CIN
+    tmid: 1522
+    nam: Cincinnati
+    nn: Bengals
+    cit: Cincinnati
+  - abbr: NYJ
+    sbr abbreviation: NYJ
+    tmid: 1523
+    nam: N.Y. Jets
+    nn: Jets
+    cit: New York
+  - abbr: MIA
+    sbr abbreviation: MIA
+    tmid: 1524
+    nam: Miami
+    nn: Dolphins
+    cit: Miami
+  - abbr: NE
+    sbr abbreviation: NE
+    tmid: 1525
+    nam: New England
+    nn: Patriots
+    cit: New England
+  - abbr: BUF
+    sbr abbreviation: BUF
+    tmid: 1526
+    nam: Buffalo
+    nn: Bills
+    cit: Buffalo
+  - abbr: IND
+    sbr abbreviation: IND
+    tmid: 1527
+    nam: Indianapolis
+    nn: Colts
+    cit: Indianapolis
+  - abbr: TEN
+    sbr abbreviation: TEN
+    tmid: 1528
+    nam: Tennessee
+    nn: Titans
+    cit: Tennessee
+  - abbr: JAX
+    sbr abbreviation: JAC
+    tmid: 1529
+    nam: Jacksonville
+    nn: Jaguars
+    cit: Jacksonville
+  - abbr: HOU
+    sbr abbreviation: HOU
+    tmid: 1530
+    nam: Houston
+    nn: Texans
+    cit: Houston
+  - abbr: KC
+    sbr abbreviation: KC
+    tmid: 1531
+    nam: Kansas City
+    nn: Chiefs
+    cit: Kansas City
+  - abbr: LV
+    sbr abbreviation: LV
+    tmid: 1533
+    nam: Las Vegas
+    nn: Raiders
+    cit: Las Vegas
+  - abbr: DEN
+    sbr abbreviation: DEN
+    tmid: 1534
+    nam: Denver
+    nn: Broncos
+    cit: Denver
+  - abbr: NYG
+    sbr abbreviation: NYG
+    tmid: 1535
+    nam: N.Y. Giants
+    nn: Giants
+    cit: New York
+  - abbr: PHI
+    sbr abbreviation: PHI
+    tmid: 1536
+    nam: Philadelphia
+    nn: Eagles
+    cit: Philadelphia
+  - abbr: WAS
+    sbr abbreviation: WAS
+    tmid: 1537
+    nam: Washington
+    nn: Football Team
+    cit: Washington
+  - abbr: DAL
+    sbr abbreviation: DAL
+    tmid: 1538
+    nam: Dallas
+    nn: Cowboys
+    cit: Dallas
+  - abbr: DET
+    sbr abbreviation: DET
+    tmid: 1539
+    nam: Detroit
+    nn: Lions
+    cit: Detroit
+  - abbr: CHI
+    sbr abbreviation: CHI
+    tmid: 1540
+    nam: Chicago
+    nn: Bears
+    cit: Chicago
+  - abbr: MIN
+    sbr abbreviation: MIN
+    tmid: 1541
+    nam: Minnesota
+    nn: Vikings
+    cit: Minnesota
+  - abbr: GB
+    sbr abbreviation: GB
+    tmid: 1542
+    nam: Green Bay
+    nn: Packers
+    cit: Green Bay
+  - abbr: NO
+    sbr abbreviation: NO
+    tmid: 1543
+    nam: New Orleans
+    nn: Saints
+    cit: New Orleans
+  - abbr: TB
+    sbr abbreviation: TB
+    tmid: 1544
+    nam: Tampa Bay
+    nn: Buccaneers
+    cit: Tampa Bay
+  - abbr: CAR
+    sbr abbreviation: CAR
+    tmid: 1545
+    nam: Carolina
+    nn: Panthers
+    cit: Carolina
+  - abbr: ATL
+    sbr abbreviation: ATL
+    tmid: 1546
+    nam: Atlanta
+    nn: Falcons
+    cit: Atlanta
+  - abbr: SF
+    sbr abbreviation: SF
+    tmid: 1547
+    nam: San Francisco
+    nn: 49ers
+    cit: San Francisco
+  - abbr: SEA
+    sbr abbreviation: SEA
+    tmid: 1548
+    nam: Seattle
+    nn: Seahawks
+    cit: Seattle
+  - abbr: ARI
+    sbr abbreviation: ARI
+    tmid: 1549
+    nam: Arizona
+    nn: Cardinals
+    cit: Arizona
+  - abbr: LA
+    sbr abbreviation: LA
+    tmid: 1550
+    nam: L.A. Rams
+    nn: Rams
+    cit: Los Angeles
+  - abbr: LAC
+    sbr abbreviation: LAC
+    tmid: 75380
+    nam: L.A. Chargers
+    nn: Chargers
+    cit: Los Angeles

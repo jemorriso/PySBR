@@ -46,9 +46,16 @@ egid: event group id
 nam: name
 alias: alias
 
-# markets
+# market
 mtid: market id
 mtids: market ids
+url: url
+
+# market group
+mtgid: market group id
+
+# market types
+marketTypes: market types
 
 # sportsbook
 sbid: sportsbook id

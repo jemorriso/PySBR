@@ -1,0 +1,17 @@
+fg: full-game
+1h: 1st-half
+2h: 2nd-half
+1q: 1st-quarter
+2q: 2nd-quarter
+3q: 3rd-quarter
+4q: 4th-quarter
+fut: futures
+# these ones are unverified
+1p: 1st-period
+2p: 2nd-period
+3p: 3rd-period
+
+ps: pointspread
+ml: money-line
+tot: totals
+ou: totals
