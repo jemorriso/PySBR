@@ -147,7 +147,7 @@ class TestQuery:
 
     @mark.parametrize(
         ("league_id", "dt_str", "cassette_name", "expected"),
-        [(16, "2020-10-29", "test_events_by_date_1", 1)],
+        [(16, "2020-10-29", "test_events_by_date1", 1)],
     )
     def test_events_by_date(
         self, events_by_date, league_id, dt_str, cassette_name, expected

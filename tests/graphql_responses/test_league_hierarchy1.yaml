@@ -1,0 +1,590 @@
+leagueHierarchy:
+- conference:
+    favoriteshortname: null
+    id: 1
+    name: AFC
+    shortname: AFC
+  division: null
+  leagueId: 16
+  seasonId: 5703
+  teamId: 1519
+- conference:
+    favoriteshortname: null
+    id: 1
+    name: AFC
+    shortname: AFC
+  division: null
+  leagueId: 16
+  seasonId: 8582
+  teamId: 1519
+- conference:
+    favoriteshortname: null
+    id: 1
+    name: AFC
+    shortname: AFC
+  division: null
+  leagueId: 16
+  seasonId: 5703
+  teamId: 1520
+- conference:
+    favoriteshortname: null
+    id: 1
+    name: AFC
+    shortname: AFC
+  division: null
+  leagueId: 16
+  seasonId: 8582
+  teamId: 1520
+- conference:
+    favoriteshortname: null
+    id: 1
+    name: AFC
+    shortname: AFC
+  division: null
+  leagueId: 16
+  seasonId: 5703
+  teamId: 1521
+- conference:
+    favoriteshortname: null
+    id: 1
+    name: AFC
+    shortname: AFC
+  division: null
+  leagueId: 16
+  seasonId: 8582
+  teamId: 1521
+- conference:
+    favoriteshortname: null
+    id: 1
+    name: AFC
+    shortname: AFC
+  division: null
+  leagueId: 16
+  seasonId: 5703
+  teamId: 1522
+- conference:
+    favoriteshortname: null
+    id: 1
+    name: AFC
+    shortname: AFC
+  division: null
+  leagueId: 16
+  seasonId: 8582
+  teamId: 1522
+- conference:
+    favoriteshortname: null
+    id: 1
+    name: AFC
+    shortname: AFC
+  division: null
+  leagueId: 16
+  seasonId: 5703
+  teamId: 1523
+- conference:
+    favoriteshortname: null
+    id: 1
+    name: AFC
+    shortname: AFC
+  division: null
+  leagueId: 16
+  seasonId: 8582
+  teamId: 1523
+- conference:
+    favoriteshortname: null
+    id: 1
+    name: AFC
+    shortname: AFC
+  division: null
+  leagueId: 16
+  seasonId: 5703
+  teamId: 1524
+- conference:
+    favoriteshortname: null
+    id: 1
+    name: AFC
+    shortname: AFC
+  division: null
+  leagueId: 16
+  seasonId: 8582
+  teamId: 1524
+- conference:
+    favoriteshortname: null
+    id: 1
+    name: AFC
+    shortname: AFC
+  division: null
+  leagueId: 16
+  seasonId: 5703
+  teamId: 1525
+- conference:
+    favoriteshortname: null
+    id: 1
+    name: AFC
+    shortname: AFC
+  division: null
+  leagueId: 16
+  seasonId: 8582
+  teamId: 1525
+- conference:
+    favoriteshortname: null
+    id: 1
+    name: AFC
+    shortname: AFC
+  division: null
+  leagueId: 16
+  seasonId: 5703
+  teamId: 1526
+- conference:
+    favoriteshortname: null
+    id: 1
+    name: AFC
+    shortname: AFC
+  division: null
+  leagueId: 16
+  seasonId: 8582
+  teamId: 1526
+- conference:
+    favoriteshortname: null
+    id: 1
+    name: AFC
+    shortname: AFC
+  division: null
+  leagueId: 16
+  seasonId: 5703
+  teamId: 1527
+- conference:
+    favoriteshortname: null
+    id: 1
+    name: AFC
+    shortname: AFC
+  division: null
+  leagueId: 16
+  seasonId: 8582
+  teamId: 1527
+- conference:
+    favoriteshortname: null
+    id: 1
+    name: AFC
+    shortname: AFC
+  division: null
+  leagueId: 16
+  seasonId: 5703
+  teamId: 1528
+- conference:
+    favoriteshortname: null
+    id: 1
+    name: AFC
+    shortname: AFC
+  division: null
+  leagueId: 16
+  seasonId: 8582
+  teamId: 1528
+- conference:
+    favoriteshortname: null
+    id: 1
+    name: AFC
+    shortname: AFC
+  division: null
+  leagueId: 16
+  seasonId: 5703
+  teamId: 1529
+- conference:
+    favoriteshortname: null
+    id: 1
+    name: AFC
+    shortname: AFC
+  division: null
+  leagueId: 16
+  seasonId: 8582
+  teamId: 1529
+- conference:
+    favoriteshortname: null
+    id: 1
+    name: AFC
+    shortname: AFC
+  division: null
+  leagueId: 16
+  seasonId: 5703
+  teamId: 1530
+- conference:
+    favoriteshortname: null
+    id: 1
+    name: AFC
+    shortname: AFC
+  division: null
+  leagueId: 16
+  seasonId: 8582
+  teamId: 1530
+- conference: null
+  division:
+    favoriteshortname: null
+    id: 4
+    name: AFC West
+    shortname: AFC_WEST
+  leagueId: 16
+  seasonId: 5703
+  teamId: 1531
+- conference:
+    favoriteshortname: null
+    id: 1
+    name: AFC
+    shortname: AFC
+  division: null
+  leagueId: 16
+  seasonId: 8582
+  teamId: 1531
+- conference: null
+  division:
+    favoriteshortname: null
+    id: 4
+    name: AFC West
+    shortname: AFC_WEST
+  leagueId: 16
+  seasonId: 5703
+  teamId: 1533
+- conference:
+    favoriteshortname: null
+    id: 1
+    name: AFC
+    shortname: AFC
+  division:
+    favoriteshortname: null
+    id: 4
+    name: AFC West
+    shortname: AFC_WEST
+  leagueId: 16
+  seasonId: 8582
+  teamId: 1533
+- conference: null
+  division:
+    favoriteshortname: null
+    id: 4
+    name: AFC West
+    shortname: AFC_WEST
+  leagueId: 16
+  seasonId: 5703
+  teamId: 1534
+- conference:
+    favoriteshortname: null
+    id: 1
+    name: AFC
+    shortname: AFC
+  division: null
+  leagueId: 16
+  seasonId: 8582
+  teamId: 1534
+- conference:
+    favoriteshortname: null
+    id: 2
+    name: NFC
+    shortname: NFC
+  division: null
+  leagueId: 16
+  seasonId: 5703
+  teamId: 1535
+- conference:
+    favoriteshortname: null
+    id: 2
+    name: NFC
+    shortname: NFC
+  division: null
+  leagueId: 16
+  seasonId: 8582
+  teamId: 1535
+- conference:
+    favoriteshortname: null
+    id: 2
+    name: NFC
+    shortname: NFC
+  division: null
+  leagueId: 16
+  seasonId: 5703
+  teamId: 1536
+- conference:
+    favoriteshortname: null
+    id: 2
+    name: NFC
+    shortname: NFC
+  division: null
+  leagueId: 16
+  seasonId: 8582
+  teamId: 1536
+- conference:
+    favoriteshortname: null
+    id: 2
+    name: NFC
+    shortname: NFC
+  division: null
+  leagueId: 16
+  seasonId: 5703
+  teamId: 1537
+- conference:
+    favoriteshortname: null
+    id: 2
+    name: NFC
+    shortname: NFC
+  division: null
+  leagueId: 16
+  seasonId: 8582
+  teamId: 1537
+- conference:
+    favoriteshortname: null
+    id: 2
+    name: NFC
+    shortname: NFC
+  division: null
+  leagueId: 16
+  seasonId: 5703
+  teamId: 1538
+- conference:
+    favoriteshortname: null
+    id: 2
+    name: NFC
+    shortname: NFC
+  division: null
+  leagueId: 16
+  seasonId: 8582
+  teamId: 1538
+- conference:
+    favoriteshortname: null
+    id: 2
+    name: NFC
+    shortname: NFC
+  division: null
+  leagueId: 16
+  seasonId: 5703
+  teamId: 1539
+- conference:
+    favoriteshortname: null
+    id: 2
+    name: NFC
+    shortname: NFC
+  division: null
+  leagueId: 16
+  seasonId: 8582
+  teamId: 1539
+- conference:
+    favoriteshortname: null
+    id: 2
+    name: NFC
+    shortname: NFC
+  division: null
+  leagueId: 16
+  seasonId: 5703
+  teamId: 1540
+- conference:
+    favoriteshortname: null
+    id: 2
+    name: NFC
+    shortname: NFC
+  division: null
+  leagueId: 16
+  seasonId: 8582
+  teamId: 1540
+- conference:
+    favoriteshortname: null
+    id: 2
+    name: NFC
+    shortname: NFC
+  division: null
+  leagueId: 16
+  seasonId: 5703
+  teamId: 1541
+- conference:
+    favoriteshortname: null
+    id: 2
+    name: NFC
+    shortname: NFC
+  division: null
+  leagueId: 16
+  seasonId: 8582
+  teamId: 1541
+- conference:
+    favoriteshortname: null
+    id: 2
+    name: NFC
+    shortname: NFC
+  division: null
+  leagueId: 16
+  seasonId: 5703
+  teamId: 1542
+- conference:
+    favoriteshortname: null
+    id: 2
+    name: NFC
+    shortname: NFC
+  division: null
+  leagueId: 16
+  seasonId: 8582
+  teamId: 1542
+- conference:
+    favoriteshortname: null
+    id: 2
+    name: NFC
+    shortname: NFC
+  division: null
+  leagueId: 16
+  seasonId: 5703
+  teamId: 1543
+- conference:
+    favoriteshortname: null
+    id: 2
+    name: NFC
+    shortname: NFC
+  division: null
+  leagueId: 16
+  seasonId: 8582
+  teamId: 1543
+- conference:
+    favoriteshortname: null
+    id: 2
+    name: NFC
+    shortname: NFC
+  division: null
+  leagueId: 16
+  seasonId: 5703
+  teamId: 1544
+- conference:
+    favoriteshortname: null
+    id: 2
+    name: NFC
+    shortname: NFC
+  division: null
+  leagueId: 16
+  seasonId: 8582
+  teamId: 1544
+- conference:
+    favoriteshortname: null
+    id: 2
+    name: NFC
+    shortname: NFC
+  division: null
+  leagueId: 16
+  seasonId: 5703
+  teamId: 1545
+- conference:
+    favoriteshortname: null
+    id: 2
+    name: NFC
+    shortname: NFC
+  division: null
+  leagueId: 16
+  seasonId: 8582
+  teamId: 1545
+- conference:
+    favoriteshortname: null
+    id: 2
+    name: NFC
+    shortname: NFC
+  division: null
+  leagueId: 16
+  seasonId: 5703
+  teamId: 1546
+- conference:
+    favoriteshortname: null
+    id: 2
+    name: NFC
+    shortname: NFC
+  division: null
+  leagueId: 16
+  seasonId: 8582
+  teamId: 1546
+- conference:
+    favoriteshortname: null
+    id: 2
+    name: NFC
+    shortname: NFC
+  division: null
+  leagueId: 16
+  seasonId: 5703
+  teamId: 1547
+- conference:
+    favoriteshortname: null
+    id: 2
+    name: NFC
+    shortname: NFC
+  division: null
+  leagueId: 16
+  seasonId: 8582
+  teamId: 1547
+- conference:
+    favoriteshortname: null
+    id: 2
+    name: NFC
+    shortname: NFC
+  division: null
+  leagueId: 16
+  seasonId: 5703
+  teamId: 1548
+- conference:
+    favoriteshortname: null
+    id: 2
+    name: NFC
+    shortname: NFC
+  division: null
+  leagueId: 16
+  seasonId: 8582
+  teamId: 1548
+- conference:
+    favoriteshortname: null
+    id: 2
+    name: NFC
+    shortname: NFC
+  division: null
+  leagueId: 16
+  seasonId: 5703
+  teamId: 1549
+- conference:
+    favoriteshortname: null
+    id: 2
+    name: NFC
+    shortname: NFC
+  division: null
+  leagueId: 16
+  seasonId: 8582
+  teamId: 1549
+- conference:
+    favoriteshortname: null
+    id: 2
+    name: NFC
+    shortname: NFC
+  division: null
+  leagueId: 16
+  seasonId: 5703
+  teamId: 1550
+- conference:
+    favoriteshortname: null
+    id: 2
+    name: NFC
+    shortname: NFC
+  division: null
+  leagueId: 16
+  seasonId: 8582
+  teamId: 1550
+- conference: null
+  division:
+    favoriteshortname: null
+    id: 4
+    name: AFC West
+    shortname: AFC_WEST
+  leagueId: 16
+  seasonId: 5703
+  teamId: 75380
+- conference:
+    favoriteshortname: null
+    id: 1
+    name: AFC
+    shortname: AFC
+  division: null
+  leagueId: 16
+  seasonId: 8582
+  teamId: 75380
+- conference:
+    favoriteshortname: null
+    id: 1
+    name: AFC
+    shortname: AFC
+  division: null
+  leagueId: 16
+  seasonId: 8582
+  teamId: 89574

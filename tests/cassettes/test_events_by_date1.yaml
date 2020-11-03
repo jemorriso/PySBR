@@ -1,0 +1,80 @@
+interactions:
+- request:
+    body: '{"query": "{\n  eventsByDateNew(lid: [16], startDate: 1603954800000, hoursRange:
+      24) {\n    events {\n      des\n      cit\n      cou\n      es\n      dt\n      eid\n      st\n      participants
+      {\n        partid\n        ih\n        source {\n          ... on Team {\n            nam\n            nn\n            sn\n            abbr\n            cit\n          }\n          ...
+      on Player {\n            fn\n            lnam\n          }\n          ... on
+      ParticipantGroup {\n            partgid\n            nam\n            participants
+      {\n              partid\n              ih\n              source {\n                ...
+      on Player {\n                  fn\n                  lnam\n                }\n                ...
+      on Team {\n                  nam\n                  nn\n                  sn\n                  abbr\n                  cit\n                }\n              }\n            }\n          }\n        }\n      }\n      eventGroup
+      {\n        egid\n        nam\n        alias\n      }\n    }\n  }\n}\n"}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1022'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.24.0
+    method: POST
+    uri: https://www.sportsbookreview.com/ms-odds-v2/odds-v2-service
+  response:
+    body:
+      string: '{"data":{"eventsByDateNew":{"events":[{"des":"Atlanta Falcons@Carolina
+        Panthers","cit":"Charlotte","cou":"USA","es":"complete","dt":1604017200000,"eid":4143517,"st":"outdoor","participants":[{"partid":1545,"ih":true,"source":{"nam":"Carolina","nn":"Panthers","sn":"Carolina","abbr":"CAR","cit":"Carolina"}},{"partid":1546,"ih":false,"source":{"nam":"Atlanta","nn":"Falcons","sn":"Atlanta","abbr":"ATL","cit":"Atlanta"}}],"eventGroup":{"egid":17,"nam":"REG
+        Week 8","alias":"Week 8"}}]}}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Access-Control-Allow-Origin:
+      - '*'
+      Age:
+      - '0'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '486'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 02 Nov 2020 09:04:50 GMT
+      Keep-Alive:
+      - timeout=20
+      Server:
+      - nginx/1.16.1
+      Set-Cookie:
+      - x_geo_cookie_value=CA, ;Domain=sportsbookreview.com;Path=/;Max-Age=43200
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      X-Cache:
+      - Miss
+      X-Cache-Hits:
+      - '0'
+      X-Cacheable:
+      - Not Cacheable
+      X-City-Code:
+      - ''
+      X-City-Name:
+      - British Columbia
+      X-Country-Code:
+      - CA
+      X-Country-Name:
+      - Canada
+      X-DIS-Request-ID:
+      - 7f4a28db1b543b86534bf238e399774f
+      X-Proxy-Host:
+      - www.sportsbookreview.com
+      X-Varnish:
+      - '159597364'
+    status:
+      code: 200
+      message: OK
+version: 1

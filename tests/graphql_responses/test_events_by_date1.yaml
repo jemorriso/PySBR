@@ -1,0 +1,30 @@
+eventsByDateNew:
+  events:
+  - cit: Charlotte
+    cou: USA
+    des: Atlanta Falcons@Carolina Panthers
+    dt: 1604017200000
+    eid: 4143517
+    es: complete
+    eventGroup:
+      alias: Week 8
+      egid: 17
+      nam: REG Week 8
+    participants:
+    - ih: true
+      partid: 1545
+      source:
+        abbr: CAR
+        cit: Carolina
+        nam: Carolina
+        nn: Panthers
+        sn: Carolina
+    - ih: false
+      partid: 1546
+      source:
+        abbr: ATL
+        cit: Atlanta
+        nam: Atlanta
+        nn: Falcons
+        sn: Atlanta
+    st: outdoor

@@ -1,8 +1,8 @@
 interactions:
 - request:
-    body: '{"query": "{\n  eventsByDateNew(lid: [16], startDate: 1603954800000, hoursRange:
-      24) {\n    events {\n      des\n      cit\n      cou\n      es\n      dt\n      eid\n      st\n      participants
-      {\n        partid\n        ih\n        source {\n          ... on Team {\n            nam\n            nn\n            sn\n            abbr\n          }\n        }\n      }\n    }\n  }\n}\n"}'
+    body: '{"query": "{\n  leagueHierarchy(leagueIds: [16]) {\n    teamId\n    seasonId\n    leagueId\n    conference
+      {\n      id\n      name\n      shortname\n      favoriteshortname\n    }\n    division
+      {\n      id\n      name\n      shortname\n      favoriteshortname\n    }\n  }\n}\n"}'
     headers:
       Accept:
       - '*/*'
@@ -11,7 +11,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '386'
+      - '278'
       Content-Type:
       - application/json
       User-Agent:
@@ -20,8 +20,15 @@ interactions:
     uri: https://www.sportsbookreview.com/ms-odds-v2/odds-v2-service
   response:
     body:
-      string: '{"data":{"eventsByDateNew":{"events":[{"des":"Atlanta Falcons@Carolina
-        Panthers","cit":"Charlotte","cou":"USA","es":"in-progress","dt":1604017200000,"eid":4143517,"st":"outdoor","participants":[{"partid":1545,"ih":true,"source":{"nam":"Carolina","nn":"Panthers","sn":"Carolina","abbr":"CAR"}},{"partid":1546,"ih":false,"source":{"nam":"Atlanta","nn":"Falcons","sn":"Atlanta","abbr":"ATL"}}]}]}}}'
+      string: !!binary |
+        H4sIAAAAAAAAA82YT2vCMBiHv8rIuQebvLHV2xgb28XLBh7GGKHGGagptFUY4nef3T8UmaxB8/6O
+        SUh4+pyevhsxM60R440orXlb2Xtna1MXi3cxft6I1prlw0yMU52OEtFY01S+W+tsoJLvG5/nw0QU
+        lZ/b2vrCdq+5bjcR3ix3S3F9dyN29xdV3R7szM26ql1r9078qiy3iZi5tWtc5X82/mbJdS75WOQA
+        x8shC7OXFMhLCuRFAnmRQF4UkBcF5IWAvBCQFw3kRQN5GQJ5GQJ5yYC8ZEBeciAvOZAXoN6VQL2r
+        gHpXAfWu6tW73f39977YaJ/tamqb9hjwdXr7+HSC8hQVs6FehRfNEFvrXeyLehVjNM9A7agC2lH+
+        skyOWCZnY/mfl4uxBLRjHBZmLwHtGIeF2UtAO8ZhYfYS0I5xWHi9UEA7xmFh9hIwK43DwuwlYFYa
+        h4XZS8CsNA4Ls5eAWWkcFmYvQL1LQL1LQL1LQL1LQL1LQL1LQL1LQL1LQL1LQL2rgXpXw/RutvtX
+        6yUmzojqCItzRpWPdMY7MHvZbj8A51Qa4xskAAA=
     headers:
       Accept-Ranges:
       - bytes
@@ -31,12 +38,14 @@ interactions:
       - '0'
       Connection:
       - keep-alive
+      Content-Encoding:
+      - gzip
       Content-Length:
-      - '395'
+      - '428'
       Content-Type:
       - application/json
       Date:
-      - Fri, 30 Oct 2020 01:39:54 GMT
+      - Mon, 02 Nov 2020 06:29:54 GMT
       Keep-Alive:
       - timeout=20
       Server:
@@ -62,11 +71,11 @@ interactions:
       X-Country-Name:
       - Canada
       X-DIS-Request-ID:
-      - 1d1566b3d9f2bf2f4354e90ec95f178f
+      - b6eee99658063217776004e0b7f7ba5a
       X-Proxy-Host:
       - www.sportsbookreview.com
       X-Varnish:
-      - '138536068'
+      - '156790778'
     status:
       code: 200
       message: OK
