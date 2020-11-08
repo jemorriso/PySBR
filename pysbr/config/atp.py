@@ -1,4 +1,4 @@
-from pysbr.sports.sport import Sport
+from pysbr.config.sport import Sport
 
 
 class ATP(Sport):

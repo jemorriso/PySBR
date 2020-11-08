@@ -1,13 +1,14 @@
 from pysbr.utils import Utils
+from pysbr.config.config import Config
 
 
-class Sport:
+class Sport(Config):
     def __init__(self, sport_config, league_config):
 
-        t = self._get_translation_dict()
+        super().__init__()
 
         d = Utils.load_yaml(Utils.build_yaml_path(sport_config))
-        self._translate_dict(d, t)
+        self._translate_dict(d, self.translations)
         self._sport = d
 
         self.sport_id = d["sport id"]
@@ -15,7 +16,7 @@ class Sport:
         self._markets = self._build_markets(d["markets"])
 
         d = Utils.load_yaml(Utils.build_yaml_path(league_config))
-        self._translate_dict(d, t)
+        self._translate_dict(d, self.translations)
         self._league = d
 
         # assign instance variables for each of the top level dictionary elements
@@ -26,29 +27,6 @@ class Sport:
 
     def _get_translation_dict(self):
         return Utils.load_yaml(Utils.build_yaml_path("dictionary"))
-
-    def _translate_dict(self, d, t):
-        def _recurse(el):
-            if isinstance(el, dict):
-                # MUST cast to list to avoid RuntimeError because d.pop()
-                for k in list(el.keys()):
-                    try:
-                        old_k = k
-                        k = t[k]
-
-                        el[k] = el.pop(old_k)
-                    except KeyError:
-                        pass
-                    v = el[k]
-                    if isinstance(v, dict) or isinstance(v, list):
-                        _recurse(v)
-                    elif isinstance(v, str):
-                        el[k] = v.lower()
-            elif isinstance(el, list):
-                for x in el:
-                    _recurse(x)
-
-        _recurse(d)
 
     def _build_markets(self, m):
         markets = {}

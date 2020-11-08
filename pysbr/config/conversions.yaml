@@ -1,0 +1,16 @@
+ids_to_leagues:
+  16: NFL,
+  6: NCAAF
+
+eid: event_id
+des: description
+cit: city
+cou: country
+es: event_status
+dt: datetime
+st: stadium_type
+partid: participant_id
+ih: is_home
+nam: name
+nn: nickname
+sn: di

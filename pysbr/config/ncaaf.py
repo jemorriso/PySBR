@@ -1,4 +1,4 @@
-from pysbr.sports.sport import TeamSport
+from pysbr.config.sport import TeamSport
 
 
 class NCAAF(TeamSport):
