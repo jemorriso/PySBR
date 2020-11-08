@@ -1,136 +1,171 @@
+# short name value is not from SBR, I named them
 sportsbooks:
   - sbid: 1157
     paid: 63
     nam: 10Bet
+    short name: 10Bet
 
   - sbid: 1625
     paid: 66
     nam: 1Vice
+    short name: 1Vice
 
   - sbid: 19
     paid: 3
     nam: 5Dimes
+    short name: 5Dimes
 
   - sbid: 1439
     paid: 40
     nam: 888Sport
+    short name: 888Sport
 
   - sbid: 43
     paid: 5
     nam: Bet365
+    short name: Bet365
 
   - sbid: 45
     paid: 74
     nam: BetAtHome
+    short name: BetAtHome
 
   - sbid: 1601
     paid: 75
     nam: BetClic
+    short name: BetClic
 
   - sbid: 1279
     paid: 86
     nam: BetFred
+    short name: BetFred
 
   - sbid: 1096
     paid: 8
     nam: BetOnline
+    short name: BetOnline
 
   - sbid: 1274
     paid: 71
     nam: BetWay
+    short name: BetWay
 
   - sbid: 92
     paid: 9
     nam: Bodog Sportsbook
+    short name: Bodog
 
   - sbid: 93
     paid: 10
     nam: Bookmaker
+    short name: Bookmaker
 
   - sbid: 1618
     paid: 9
     nam: Bovada
+    short name: Bovada
 
   - sbid: 1696
     paid: 93
     nam: Cloudbet
+    short name: Cloudbet
 
   - sbid: 394
     paid: 77
     nam: Coral
+    short name: Coral
 
   - sbid: 1602
     paid: 65
     nam: GTbets
+    short name: GTbets
 
   - sbid: 1681
     paid: 80
     nam: Guts
+    short name: Guts
 
   - sbid: 169
     paid: 44
     nam: Heritage Sports
+    short name: Heritage
 
   - sbid: 180
     paid: 29
     nam: Intertops
+    short name: Intertops
 
   - sbid: 182
     paid: 73
     nam: Interwetten
+    short name: Interwetten
 
   - sbid: 1275
     paid: 16
     nam: JustBet
+    short name: JustBet
 
   - sbid: 192
     paid: 43
     nam: Ladbrokes
+    short name: Ladbrokes
 
   - sbid: 626
     paid: 18
     nam: Matchbook
+    short name: Matchbook
 
   - sbid: 238
     paid: 20
     nam: Pinnacle
+    short name: Pinnacle
 
   - sbid: 1611
     paid: 52
     nam: SBOBet
+    short name: SBOBet
 
   - sbid: 274
     paid: 84
     nam: Skybook
+    short name: Skybook
 
   - sbid: 283
     paid: 68
     nam: SportingBet
+    short name: SportingBet
 
   - sbid: 289
     paid: 8
     nam: SportsBetting
+    short name: SportsBetting
 
   - sbid: 1137
     paid: 81
     nam: StanJames
+    short name: StanJames
 
   - sbid: 227
     paid: 22
     nam: The Greek Sportsbook
+    short name: The Greek
 
   - sbid: 1567
     paid: 57
     nam: TitanBet
+    short name: TitanBet
 
   - sbid: 1459
     paid: 76
     nam: Unibet
+    short name: Unibet
 
   - sbid: 349
     paid: 36
     nam: William Hill
+    short name: William Hill
 
   - sbid: 1673
     paid: 69
     nam: Winner.com
+    short name: Winner.com
