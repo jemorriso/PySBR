@@ -10,9 +10,10 @@ from pysbr.utils import Utils
 from pysbr.queries.eventsbydate import EventsByDate
 from pysbr.queries.leaguehierarchy import LeagueHierarchy
 from pysbr.queries.team import Team
-from pysbr.sports.nfl import NFL
-from pysbr.sports.ncaaf import NCAAF
-from pysbr.sports.atp import ATP
+from pysbr.config.nfl import NFL
+from pysbr.config.ncaaf import NCAAF
+from pysbr.config.atp import ATP
+from pysbr.config.sportsbook import Sportsbook
 
 
 class TestEventsByDate(EventsByDate):
@@ -45,6 +46,16 @@ class TestTeam(Team):
         return self.patch_fn(self)
 
 
+# class TestSportsbooks(Team):
+#     def __init__(self, sportsbook_ids, patch_fn, cassette_name):
+#         self.cassette_name = cassette_name
+#         self.patch_fn = patch_fn
+#         super().__init__(sportsbook_ids)
+
+#     def _build_and_execute_query(self, *args):
+#         return self.patch_fn(self)
+
+
 @fixture
 def nfl():
     return NFL()
@@ -58,6 +69,11 @@ def ncaaf():
 @fixture
 def atp():
     return ATP()
+
+
+@fixture
+def sportsbook():
+    return Sportsbook()
 
 
 def gql_client(url):
@@ -157,3 +173,13 @@ def team(build_and_execute_with_cassette):
         return TestTeam(team_id, build_and_execute_with_cassette, cassette_name)
 
     return fn
+
+
+# @fixture
+# def sportsbooks(build_and_execute_with_cassette):
+#     def fn(sportsbook_ids, cassette_name):
+#         return TestSportsbooks(
+#             sportsbook_ids, build_and_execute_with_cassette, cassette_name
+#         )
+
+#     return fn
