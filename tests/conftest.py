@@ -9,6 +9,7 @@ from pysbr.queries.query import Query
 from pysbr.utils import Utils
 from pysbr.queries.eventsbydate import EventsByDate
 from pysbr.queries.leaguehierarchy import LeagueHierarchy
+from pysbr.queries.team import Team
 from pysbr.sports.nfl import NFL
 from pysbr.sports.ncaaf import NCAAF
 from pysbr.sports.atp import ATP
@@ -29,6 +30,16 @@ class TestLeagueHierarchy(LeagueHierarchy):
         self.cassette_name = cassette_name
         self.patch_fn = patch_fn
         super().__init__(league_id)
+
+    def _build_and_execute_query(self, *args):
+        return self.patch_fn(self)
+
+
+class TestTeam(Team):
+    def __init__(self, team_id, patch_fn, cassette_name):
+        self.cassette_name = cassette_name
+        self.patch_fn = patch_fn
+        super().__init__(team_id)
 
     def _build_and_execute_query(self, *args):
         return self.patch_fn(self)
@@ -136,5 +147,13 @@ def league_hierarchy(build_and_execute_with_cassette):
         return TestLeagueHierarchy(
             league_id, build_and_execute_with_cassette, cassette_name
         )
+
+    return fn
+
+
+@fixture
+def team(build_and_execute_with_cassette):
+    def fn(team_id, cassette_name):
+        return TestTeam(team_id, build_and_execute_with_cassette, cassette_name)
 
     return fn

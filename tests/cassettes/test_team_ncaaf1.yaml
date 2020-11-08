@@ -1,0 +1,72 @@
+interactions:
+- request:
+    body: '{"query": "{\n  team(tmid: 423) {\n    tmid\n    lid\n    nam\n    nn\n    sn\n    abbr\n    cit\n    sta\n    cou\n    conid\n    divid\n    divname\n    conname\n  }\n}\n"}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '174'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.24.0
+    method: POST
+    uri: https://www.sportsbookreview.com/ms-odds-v2/odds-v2-service
+  response:
+    body:
+      string: '{"data":{"team":{"tmid":423,"lid":6,"nam":"Fresno State","nn":"Bulldogs","sn":"Fresno
+        State","abbr":"FRE","cit":"","sta":"","cou":"USA","conid":420,"divid":182,"divname":"I-A","conname":"Mountain
+        West"}}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Access-Control-Allow-Origin:
+      - '*'
+      Age:
+      - '0'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '204'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 08 Nov 2020 21:21:54 GMT
+      Keep-Alive:
+      - timeout=20
+      Server:
+      - nginx/1.16.1
+      Set-Cookie:
+      - x_geo_cookie_value=CA, ;Domain=sportsbookreview.com;Path=/;Max-Age=43200
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      X-Cache:
+      - Miss
+      X-Cache-Hits:
+      - '0'
+      X-Cacheable:
+      - Not Cacheable
+      X-City-Code:
+      - ''
+      X-City-Name:
+      - British Columbia
+      X-Country-Code:
+      - CA
+      X-Country-Name:
+      - Canada
+      X-DIS-Request-ID:
+      - 83db60ef2a44a95448a8babc609ad1ab
+      X-Proxy-Host:
+      - www.sportsbookreview.com
+      X-Varnish:
+      - '244519603'
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,71 @@
+interactions:
+- request:
+    body: '{"query": "{\n  team(tmid: 1519) {\n    tmid\n    lid\n    nam\n    nn\n    sn\n    abbr\n    cit\n    sta\n    cou\n    conid\n    divid\n    divname\n    conname\n  }\n}\n"}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '175'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.24.0
+    method: POST
+    uri: https://www.sportsbookreview.com/ms-odds-v2/odds-v2-service
+  response:
+    body:
+      string: '{"data":{"team":{"tmid":1519,"lid":16,"nam":"Pittsburgh","nn":"Steelers","sn":"Pittsburgh","abbr":"PIT","cit":"Pittsburgh","sta":"PA","cou":"USA","conid":357,"divid":114,"divname":"AFC
+        North","conname":"AFC"}}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Access-Control-Allow-Origin:
+      - '*'
+      Age:
+      - '0'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '210'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 03 Nov 2020 22:53:52 GMT
+      Keep-Alive:
+      - timeout=20
+      Server:
+      - nginx/1.16.1
+      Set-Cookie:
+      - x_geo_cookie_value=CA, ;Domain=sportsbookreview.com;Path=/;Max-Age=43200
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      X-Cache:
+      - Miss
+      X-Cache-Hits:
+      - '0'
+      X-Cacheable:
+      - Not Cacheable
+      X-City-Code:
+      - ''
+      X-City-Name:
+      - British Columbia
+      X-Country-Code:
+      - CA
+      X-Country-Name:
+      - Canada
+      X-DIS-Request-ID:
+      - ec6d2837fa1fbe4ddbaa5ce69a462a39
+      X-Proxy-Host:
+      - www.sportsbookreview.com
+      X-Varnish:
+      - '198198676'
+    status:
+      code: 200
+      message: OK
+version: 1

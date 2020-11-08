@@ -175,3 +175,19 @@ class TestQuery:
         lh = league_hierarchy(id, cassette_name)
 
         assert len(lh._raw["leagueHierarchy"]) == expected
+
+    @mark.parametrize(
+        "league, teams, cassette_name, expected",
+        [
+            (lazy_fixture("nfl"), ["pit"], "test_team_nfl1", "Steelers"),
+            (lazy_fixture("ncaaf"), ["fre"], "test_team_ncaaf1", "Bulldogs"),
+        ],
+    )
+    def test_team(self, team, league, teams, cassette_name, expected):
+        # id = league.league_id
+        # get team id
+        id = league.team_ids(teams)[0]
+
+        t = team(id, cassette_name)
+
+        assert t._raw["team"]["nn"] == expected
