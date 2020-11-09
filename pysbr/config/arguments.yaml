@@ -6,12 +6,10 @@ date: |
 date_range: |
   lid: $lids,
   dt: {
-      between: {
-          [
+      between: [
               $start,
               $end
           ]
-      }
   }
 
 league_id: |

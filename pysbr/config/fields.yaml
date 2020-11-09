@@ -102,6 +102,8 @@ event_group: |
       egid
       nam
       alias
+      sdt
+      edt
   }
 
 sportsbooks: |
