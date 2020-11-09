@@ -81,7 +81,6 @@ markets_by_id: |
       mtid
       spid
       nam
-      des
   }
 
 market_types: |
