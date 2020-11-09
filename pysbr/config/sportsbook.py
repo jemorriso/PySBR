@@ -17,7 +17,7 @@ class Sportsbook(Config):
         for k in ["name", "short name"]:
             sportsbooks[k] = {}
             for x in s:
-                sportsbooks[k][x[k]] = x["provider account id"]
+                sportsbooks[k][x[k]] = x["sportsbook id"]
 
         return sportsbooks
 
