@@ -239,3 +239,42 @@ class TestQuery:
             elif event["alias"] == alias:
                 found = True
         assert found
+
+    @mark.parametrize(
+        "league, market_ids, cassette_name, expected",
+        [
+            (
+                lazy_fixture("nfl"),
+                [91, 92],
+                "test_markets_by_market_ids_football1",
+                True,
+            ),
+            (
+                lazy_fixture("atp"),
+                [126, 395, 396],
+                "test_markets_by_market_ids_tennis1",
+                True,
+            ),
+        ],
+    )
+    def test_markets_by_market_ids(
+        self, markets_by_market_ids, league, market_ids, cassette_name, expected
+    ):
+        id = league.sport_id
+        m = markets_by_market_ids(market_ids, id, cassette_name)
+
+        found = True
+        for id in market_ids:
+            if (
+                len(
+                    [
+                        market
+                        for market in m._raw["marketTypesById"]
+                        if market["mtid"] == id
+                    ]
+                )
+                == 0
+            ):
+                found = False
+
+        assert found == expected

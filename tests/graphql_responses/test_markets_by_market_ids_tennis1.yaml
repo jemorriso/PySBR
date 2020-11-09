@@ -1,0 +1,10 @@
+marketTypesById:
+- mtid: 126
+  nam: 2way
+  spid: 8
+- mtid: 395
+  nam: Point Spread
+  spid: 8
+- mtid: 396
+  nam: American Total
+  spid: 8
