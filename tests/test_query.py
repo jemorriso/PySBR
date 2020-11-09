@@ -184,10 +184,25 @@ class TestQuery:
         ],
     )
     def test_team(self, team, league, teams, cassette_name, expected):
-        # id = league.league_id
-        # get team id
         id = league.team_ids(teams)[0]
-
         t = team(id, cassette_name)
 
         assert t._raw["team"]["nn"] == expected
+
+    @mark.parametrize(
+        "sportsbook_names, cassette_name, expected",
+        [
+            (
+                ["pinnacle", "bet365"],
+                "test_sportbook1",
+                ["Pinnacle", "Bet365"],
+            ),
+        ],
+    )
+    def test_sportsbooks(
+        self, sportsbooks, sportsbook, sportsbook_names, cassette_name, expected
+    ):
+        ids = sportsbook.sportsbook_ids(sportsbook_names)
+        s = sportsbooks(ids, cassette_name)
+        for i, x in enumerate(s._raw["sportsbooks"]):
+            assert x["nam"] in expected

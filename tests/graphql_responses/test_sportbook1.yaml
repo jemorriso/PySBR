@@ -1,0 +1,7 @@
+sportsbooks:
+- nam: Bet365
+  paid: 5
+  sbid: 43
+- nam: Pinnacle
+  paid: 20
+  sbid: 238
