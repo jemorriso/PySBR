@@ -14,6 +14,7 @@ from pysbr.queries.sportsbooks import Sportsbooks
 from pysbr.queries.eventgroupsbyleague import EventGroupsByLeague
 from pysbr.queries.marketsbymarketids import MarketsByMarketIds
 from pysbr.queries.leaguemarkets import LeagueMarkets
+from pysbr.queries.leaguesbyleagueids import LeaguesByLeagueIds
 from pysbr.config.nfl import NFL
 from pysbr.config.ncaaf import NCAAF
 from pysbr.config.atp import ATP
@@ -85,6 +86,16 @@ class TestLeagueMarkets(LeagueMarkets):
         self.cassette_name = cassette_name
         self.patch_fn = patch_fn
         super().__init__(league_id)
+
+    def _build_and_execute_query(self, *args):
+        return self.patch_fn(self)
+
+
+class TestLeaguesByLeagueIds(LeaguesByLeagueIds):
+    def __init__(self, league_ids, patch_fn, cassette_name):
+        self.cassette_name = cassette_name
+        self.patch_fn = patch_fn
+        super().__init__(league_ids)
 
     def _build_and_execute_query(self, *args):
         return self.patch_fn(self)
@@ -249,6 +260,18 @@ def league_markets(build_and_execute_with_cassette):
     def fn(league_id, cassette_name):
         return TestLeagueMarkets(
             league_id,
+            build_and_execute_with_cassette,
+            cassette_name,
+        )
+
+    return fn
+
+
+@fixture
+def leagues_by_league_ids(build_and_execute_with_cassette):
+    def fn(league_ids, cassette_name):
+        return TestLeaguesByLeagueIds(
+            league_ids,
             build_and_execute_with_cassette,
             cassette_name,
         )

@@ -1,0 +1,13 @@
+leagues:
+- lid: 6
+  nam: NCAA Football
+  sn: NCAAF
+  spid: 4
+- lid: 16
+  nam: National Football League
+  sn: NFL
+  spid: 4
+- lid: 23
+  nam: ATP
+  sn: ATP
+  spid: 8

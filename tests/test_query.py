@@ -297,3 +297,18 @@ class TestQuery:
                 found.append(market["mtid"])
 
         assert set(found) == set(expected)
+
+    @mark.parametrize(
+        "league_ids, cassette_name, expected",
+        [([23, 6, 16], "test_leagues_by_league_ids1", ["ATP", "NCAAF", "NFL"])],
+    )
+    def test_leagues_by_league_ids(
+        self, leagues_by_league_ids, league_ids, cassette_name, expected
+    ):
+        l_ = leagues_by_league_ids(league_ids, cassette_name)
+
+        found = []
+        for league in l_._raw["leagues"]:
+            found.append(league["sn"])
+
+        assert set(found) == set(expected)
