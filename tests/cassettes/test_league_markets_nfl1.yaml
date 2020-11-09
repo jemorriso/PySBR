@@ -1,0 +1,77 @@
+interactions:
+- request:
+    body: '{"query": "{\n  leagueMarkets(lid: [16]) {\n    lid\n    mtid\n  }\n}\n"}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '73'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.24.0
+    method: POST
+    uri: https://www.sportsbookreview.com/ms-odds-v2/odds-v2-service
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA22TO27EMAxE76J6C9LkUJLvkBMEKQysESw2aRKnWvju2dR5nTCQhvOhHu26HVtb
+        H+1j395/9pft674f3219fSK3a1u9Lu3z+DvN8/IPWxzAEQR2ACc9nwuBxDmJ041I3USoG6EL3hUF
+        4IUMNQgd5MwxLh84bRaVYMS7GBeGDCMBDackIyj1CHIcSdMi8a7IRQiVYfMxkXdSDmnUW+LuJOab
+        Rr2lkd7E7UujdNLIWxp5S+w4cauV5EIiDRJpkEiD8AeocFpRDirUgH9IRY7VUUOnNtVRWac21VFv
+        R72dlNXT8dt5/gJWmsrOZwUAAA==
+    headers:
+      Accept-Ranges:
+      - bytes
+      Access-Control-Allow-Origin:
+      - '*'
+      Age:
+      - '0'
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '247'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 09 Nov 2020 21:00:11 GMT
+      Keep-Alive:
+      - timeout=20
+      Server:
+      - nginx/1.16.1
+      Set-Cookie:
+      - x_geo_cookie_value=CA, ;Domain=sportsbookreview.com;Path=/;Max-Age=43200
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      X-Cache:
+      - Miss
+      X-Cache-Hits:
+      - '0'
+      X-Cacheable:
+      - Not Cacheable
+      X-City-Code:
+      - ''
+      X-City-Name:
+      - British Columbia
+      X-Country-Code:
+      - CA
+      X-Country-Name:
+      - Canada
+      X-DIS-Request-ID:
+      - d6cd7ab215550c215b573680566c98b9
+      X-Proxy-Host:
+      - www.sportsbookreview.com
+      X-Varnish:
+      - '243722752'
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -278,3 +278,22 @@ class TestQuery:
                 found = False
 
         assert found == expected
+
+    @mark.parametrize(
+        "league, cassette_name, expected",
+        [
+            (lazy_fixture("nfl"), "test_league_markets_nfl1", [92, 93, 97]),
+            (lazy_fixture("ncaaf"), "test_league_markets_ncaaf1", [92, 93, 97]),
+            (lazy_fixture("atp"), "test_league_markets_atp1", [133, 134]),
+        ],
+    )
+    def test_league_markets(self, league_markets, league, cassette_name, expected):
+        id = league.league_id
+        m = league_markets(id, cassette_name)
+
+        found = []
+        for market in m._raw["leagueMarkets"]:
+            if market["mtid"] in expected:
+                found.append(market["mtid"])
+
+        assert set(found) == set(expected)

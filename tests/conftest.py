@@ -4,7 +4,6 @@ from pytest import fixture
 from gql import Client, gql
 from gql.transport.requests import RequestsHTTPTransport
 import vcr
-from yaml.error import Mark
 
 from pysbr.queries.query import Query
 from pysbr.utils import Utils
@@ -14,6 +13,7 @@ from pysbr.queries.team import Team
 from pysbr.queries.sportsbooks import Sportsbooks
 from pysbr.queries.eventgroupsbyleague import EventGroupsByLeague
 from pysbr.queries.marketsbymarketids import MarketsByMarketIds
+from pysbr.queries.leaguemarkets import LeagueMarkets
 from pysbr.config.nfl import NFL
 from pysbr.config.ncaaf import NCAAF
 from pysbr.config.atp import ATP
@@ -75,6 +75,16 @@ class TestMarketsByMarketIds(MarketsByMarketIds):
         self.cassette_name = cassette_name
         self.patch_fn = patch_fn
         super().__init__(market_ids, sport_id)
+
+    def _build_and_execute_query(self, *args):
+        return self.patch_fn(self)
+
+
+class TestLeagueMarkets(LeagueMarkets):
+    def __init__(self, league_id, patch_fn, cassette_name):
+        self.cassette_name = cassette_name
+        self.patch_fn = patch_fn
+        super().__init__(league_id)
 
     def _build_and_execute_query(self, *args):
         return self.patch_fn(self)
@@ -227,6 +237,18 @@ def markets_by_market_ids(build_and_execute_with_cassette):
         return TestMarketsByMarketIds(
             market_ids,
             sport_id,
+            build_and_execute_with_cassette,
+            cassette_name,
+        )
+
+    return fn
+
+
+@fixture
+def league_markets(build_and_execute_with_cassette):
+    def fn(league_id, cassette_name):
+        return TestLeagueMarkets(
+            league_id,
             build_and_execute_with_cassette,
             cassette_name,
         )

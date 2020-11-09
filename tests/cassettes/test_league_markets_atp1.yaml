@@ -1,0 +1,70 @@
+interactions:
+- request:
+    body: '{"query": "{\n  leagueMarkets(lid: [23]) {\n    lid\n    mtid\n  }\n}\n"}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '73'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.24.0
+    method: POST
+    uri: https://www.sportsbookreview.com/ms-odds-v2/odds-v2-service
+  response:
+    body:
+      string: '{"data":{"leagueMarkets":[{"lid":23,"mtid":2},{"lid":23,"mtid":126},{"lid":23,"mtid":133},{"lid":23,"mtid":134},{"lid":23,"mtid":138},{"lid":23,"mtid":174},{"lid":23,"mtid":204},{"lid":23,"mtid":205},{"lid":23,"mtid":279},{"lid":23,"mtid":311},{"lid":23,"mtid":395},{"lid":23,"mtid":396},{"lid":23,"mtid":434},{"lid":23,"mtid":439},{"lid":23,"mtid":440},{"lid":23,"mtid":648},{"lid":23,"mtid":649},{"lid":23,"mtid":650},{"lid":23,"mtid":651},{"lid":23,"mtid":652},{"lid":23,"mtid":653},{"lid":23,"mtid":679},{"lid":23,"mtid":719},{"lid":23,"mtid":720},{"lid":23,"mtid":721},{"lid":23,"mtid":723}]}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Access-Control-Allow-Origin:
+      - '*'
+      Age:
+      - '0'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '598'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 09 Nov 2020 21:07:22 GMT
+      Keep-Alive:
+      - timeout=20
+      Server:
+      - nginx/1.16.1
+      Set-Cookie:
+      - x_geo_cookie_value=CA, ;Domain=sportsbookreview.com;Path=/;Max-Age=43200
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      X-Cache:
+      - Miss
+      X-Cache-Hits:
+      - '0'
+      X-Cacheable:
+      - Not Cacheable
+      X-City-Code:
+      - ''
+      X-City-Name:
+      - British Columbia
+      X-Country-Code:
+      - CA
+      X-Country-Name:
+      - Canada
+      X-DIS-Request-ID:
+      - f787232274ffa5b4581a6e527c783d44
+      X-Proxy-Host:
+      - www.sportsbookreview.com
+      X-Varnish:
+      - '238720061'
+    status:
+      code: 200
+      message: OK
+version: 1
