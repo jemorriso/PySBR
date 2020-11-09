@@ -1,0 +1,91 @@
+eventGroupsByLeague:
+- alias: Week 1
+  edt: 1504569600000
+  egid: 33
+  nam: REG Week 1
+  sdt: 1503763200000
+- alias: Week 2
+  edt: 1505012400000
+  egid: 34
+  nam: REG Week 2
+  sdt: 1504825200000
+- alias: Week 3
+  edt: 1505615400000
+  egid: 35
+  nam: REG Week 3
+  sdt: 1505433600000
+- alias: Week 4
+  edt: 1537675200000
+  egid: 36
+  nam: REG Week 4
+  sdt: 1537486200000
+- alias: Week 5
+  edt: 1601769600000
+  egid: 37
+  nam: REG Week 5
+  sdt: 1601679600000
+- alias: Week 6
+  edt: 1602378000000
+  egid: 38
+  nam: REG Week 6
+  sdt: 1602113400000
+- alias: Week 7
+  edt: 1539484200000
+  egid: 39
+  nam: REG Week 7
+  sdt: 1539129600000
+- alias: Week 8
+  edt: 1571594400000
+  egid: 40
+  nam: REG Week 8
+  sdt: 1571270400000
+- alias: Week 9
+  edt: 1604197800000
+  egid: 41
+  nam: REG Week 9
+  sdt: 1604014200000
+- alias: Week 10
+  edt: 1509849900000
+  egid: 42
+  nam: REG Week 10
+  sdt: 1509494400000
+- alias: Week 11
+  edt: 1541907000000
+  egid: 43
+  nam: REG Week 11
+  sdt: 1541550600000
+- alias: Week 12
+  edt: 1542513600000
+  egid: 44
+  nam: REG Week 12
+  sdt: 1542150000000
+- alias: Week 13
+  edt: 1511666100000
+  egid: 45
+  nam: REG Week 13
+  sdt: 1511308800000
+- alias: Week 14
+  edt: 1575178200000
+  egid: 46
+  nam: REG Week 14
+  sdt: 1574809200000
+- alias: Week 15
+  edt: 1575770400000
+  egid: 47
+  nam: REG Week 15
+  sdt: 1575680400000
+- alias: Week 16
+  edt: 1576367999000
+  egid: 48
+  nam: Week 16
+  sdt: 1576353600000
+- alias: Bowls
+  edt: 1578357000000
+  egid: 12789
+  nam: Bowls
+  sdt: 1576868400000
+- alias: Championship
+  edt: 1515459600000
+  egid: 14908
+  nam: CFP National Championship
+  sdt: 1515459600000

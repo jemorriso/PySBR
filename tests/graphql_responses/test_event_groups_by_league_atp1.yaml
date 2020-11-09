@@ -1,0 +1,1811 @@
+eventGroupsByLeague:
+- alias: null
+  edt: 1515196800000
+  egid: 1013
+  nam: Doha, Qatar
+  sdt: 1514592000000
+- alias: null
+  edt: 1483833600000
+  egid: 1019
+  nam: Brisbane, Australia
+  sdt: 1483142400000
+- alias: null
+  edt: 1492300800000
+  egid: 1021
+  nam: ATP Challenger Mexico City, Mexico Men Singles
+  sdt: 1491609600000
+- alias: null
+  edt: 1492300800000
+  egid: 1027
+  nam: Houston, USA, Doubles
+  sdt: 1491782400000
+- alias: null
+  edt: 1483833600000
+  egid: 1028
+  nam: Chennai, India
+  sdt: 1483142400000
+- alias: null
+  edt: 1555804800000
+  egid: 1031
+  nam: Monte Carlo, Monaco
+  sdt: 1555113600000
+- alias: null
+  edt: 1524355200000
+  egid: 1036
+  nam: Monte Carlo, Monaco, Doubles
+  sdt: 1523750400000
+- alias: null
+  edt: 1547337600000
+  egid: 1037
+  nam: Sydney, Australia
+  sdt: 1546560000000
+- alias: null
+  edt: 1461456000000
+  egid: 1043
+  nam: Bucharest, Romania, Doubles
+  sdt: 1460937600000
+- alias: null
+  edt: 1493510400000
+  egid: 1047
+  nam: ITF Men Sharm El Sheikh, Egypt Men Double
+  sdt: 1492819200000
+- alias: null
+  edt: 1515801600000
+  egid: 1049
+  nam: Auckland, New Zealand
+  sdt: 1515110400000
+- alias: null
+  edt: 1524960000000
+  egid: 1051
+  nam: ITF Switzerland F2, Men Singles
+  sdt: 1524268800000
+- alias: null
+  edt: 1557014400000
+  egid: 1056
+  nam: Munich, Germany
+  sdt: 1556323200000
+- alias: null
+  edt: 1462060800000
+  egid: 1060
+  nam: ATP Challenger Changsha, China Men Singles
+  sdt: 1461542400000
+- alias: null
+  edt: 1557014400000
+  egid: 1072
+  nam: Estoril, Portugal
+  sdt: 1556323200000
+- alias: null
+  edt: 1557014400000
+  egid: 1075
+  nam: ITF Italy F19, Men Doubles
+  sdt: 1556496000000
+- alias: null
+  edt: 1557619200000
+  egid: 1080
+  nam: ATP Challenger Changsha, China Men Double
+  sdt: 1556928000000
+- alias: null
+  edt: 1557619200000
+  egid: 1089
+  nam: Madrid, Spain, Doubles
+  sdt: 1557014400000
+- alias: null
+  edt: 1526774400000
+  egid: 1092
+  nam: ITF Women St. Poelten, Austria Women Double
+  sdt: 1525996800000
+- alias: null
+  edt: 1558224000000
+  egid: 1100
+  nam: ATP Challenger Potchefstroom, South Africa Men Singles
+  sdt: 1557619200000
+- alias: null
+  edt: 1487462400000
+  egid: 1123
+  nam: Buenos Aires, Argentina, Doubles
+  sdt: 1486944000000
+- alias: null
+  edt: 1521331200000
+  egid: 1131
+  nam: ITF Italy 38A, Women Doubles
+  sdt: 1520208000000
+- alias: null
+  edt: 1552780800000
+  egid: 1139
+  nam: Indian Wells, USA
+  sdt: 1551744000000
+- alias: null
+  edt: 1458432000000
+  egid: 1144
+  nam: Indian Wells, USA, Doubles
+  sdt: 1457481600000
+- alias: null
+  edt: 1463875200000
+  egid: 1149
+  nam: ATP Challenger Olimpia, Brazil Men Singles
+  sdt: 1463270400000
+- alias: null
+  edt: 1553990400000
+  egid: 1152
+  nam: Miami, USA, Qualifying
+  sdt: 1552867200000
+- alias: null
+  edt: 1487462400000
+  egid: 1153
+  nam: Memphis, USA
+  sdt: 1486771200000
+- alias: null
+  edt: 1561766400000
+  egid: 1154
+  nam: Antalya, Turkey, Qualifying
+  sdt: 1561161600000
+- alias: null
+  edt: 1522540800000
+  egid: 1161
+  nam: Miami, USA
+  sdt: 1521244800000
+- alias: null
+  edt: 1530316800000
+  egid: 1165
+  nam: Antalya, Turkey
+  sdt: 1529712000000
+- alias: null
+  edt: 1491091200000
+  egid: 1166
+  nam: Miami, USA, Doubles
+  sdt: 1490227200000
+- alias: null
+  edt: 1519516800000
+  egid: 1171
+  nam: Marseille, France
+  sdt: 1518825600000
+- alias: null
+  edt: 1561680000000
+  egid: 1175
+  nam: Antalya, Turkey, Doubles
+  sdt: 1561248000000
+- alias: null
+  edt: 1500854400000
+  egid: 1184
+  nam: Newport, USA, Qualifying
+  sdt: 1500076800000
+- alias: null
+  edt: 1500854400000
+  egid: 1190
+  nam: ITF USA F22, Men Doubles
+  sdt: 1500076800000
+- alias: null
+  edt: 1487462400000
+  egid: 1191
+  nam: Buenos Aires, Argentina
+  sdt: 1486771200000
+- alias: null
+  edt: 1498348800000
+  egid: 1193
+  nam: ITF Russia F2, Men Singles
+  sdt: 1497657600000
+- alias: null
+  edt: 1466294400000
+  egid: 1198
+  nam: Halle, Germany, Doubles
+  sdt: 1465776000000
+- alias: null
+  edt: 1468713600000
+  egid: 1199
+  nam: Newport, USA, Doubles
+  sdt: 1468195200000
+- alias: null
+  edt: 1529798400000
+  egid: 1204
+  nam: ITF Russia F2, Men Doubles
+  sdt: 1529107200000
+- alias: null
+  edt: 1520035200000
+  egid: 1209
+  nam: ITF Spain 02A, Women Doubles
+  sdt: 1519430400000
+- alias: null
+  edt: 1561248000000
+  egid: 1210
+  nam: ATP Challenger Matsuyama, Japan Men Double
+  sdt: 1560556800000
+- alias: null
+  edt: 1532217600000
+  egid: 1211
+  nam: Bastad, Sweden, Qualifying
+  sdt: 1531526400000
+- alias: null
+  edt: 1523750400000
+  egid: 1213
+  nam: Houston, USA, Qualifying
+  sdt: 1523059200000
+- alias: null
+  edt: 1500768000000
+  egid: 1220
+  nam: ITF Women Trnava, Slovakia Women Singles
+  sdt: 1500076800000
+- alias: null
+  edt: 1551571200000
+  egid: 1224
+  nam: Acapulco, Mexico
+  sdt: 1550880000000
+- alias: null
+  edt: 1530316800000
+  egid: 1230
+  nam: Eastbourne, Great Britain
+  sdt: 1529712000000
+- alias: null
+  edt: 1500768000000
+  egid: 1231
+  nam: Bastad, Sweden, Doubles
+  sdt: 1500249600000
+- alias: null
+  edt: 1561680000000
+  egid: 1238
+  nam: ATP Challenger Split, Croatia Men Doubles
+  sdt: 1561334400000
+- alias: null
+  edt: 1500768000000
+  egid: 1241
+  nam: Umag, Croatia, Qualifying
+  sdt: 1500076800000
+- alias: null
+  edt: 1519516800000
+  egid: 1243
+  nam: ITF Italy 38A, Women Singles
+  sdt: 1518825600000
+- alias: null
+  edt: 1500768000000
+  egid: 1252
+  nam: Umag, Croatia
+  sdt: 1500076800000
+- alias: null
+  edt: 1531612800000
+  egid: 1256
+  nam: ITF Women Johannesburg, South Africa Women Singles
+  sdt: 1529884800000
+- alias: null
+  edt: 1532217600000
+  egid: 1263
+  nam: Umag, Croatia, Doubles
+  sdt: 1531699200000
+- alias: null
+  edt: 1468108800000
+  egid: 1264
+  nam: Wimbledon, London, Great Britain, Doubles
+  sdt: 1466467200000
+- alias: null
+  edt: 1493510400000
+  egid: 1270
+  nam: ITF Tunisia F30, Men Doubles
+  sdt: 1492819200000
+- alias: null
+  edt: 1500163200000
+  egid: 1274
+  nam: ITF Czech Republic 11A, Women Doubles
+  sdt: 1499040000000
+- alias: null
+  edt: 1532822400000
+  egid: 1275
+  nam: Gstaad, Switzerland, Qualifying
+  sdt: 1532131200000
+- alias: null
+  edt: 1497744000000
+  egid: 1281
+  nam: ITF Women Trnava, Slovakia Women Double
+  sdt: 1497052800000
+- alias: null
+  edt: 1501372800000
+  egid: 1285
+  nam: WTA 125K Limoges, France Women Doubles
+  sdt: 1500681600000
+- alias: null
+  edt: 1560643200000
+  egid: 1287
+  nam: Stuttgart, Germany, Doubles
+  sdt: 1560124800000
+- alias: null
+  edt: 1501372800000
+  egid: 1292
+  nam: Gstaad, Switzerland, Doubles
+  sdt: 1500854400000
+- alias: null
+  edt: 1501372800000
+  egid: 1301
+  nam: ITF Turkey 07A, Women Singles
+  sdt: 1500681600000
+- alias: null
+  edt: 1532822400000
+  egid: 1309
+  nam: Hamburg, Germany
+  sdt: 1532131200000
+- alias: null
+  edt: 1494115200000
+  egid: 1315
+  nam: Munich, Germany, Qualifying
+  sdt: 1493424000000
+- alias: null
+  edt: 1468713600000
+  egid: 1317
+  nam: Hamburg, Germany, Doubles
+  sdt: 1468022400000
+- alias: null
+  edt: 1501372800000
+  egid: 1323
+  nam: ITF Turkey 07A, Women Doubles
+  sdt: 1500681600000
+- alias: null
+  edt: 1501372800000
+  egid: 1332
+  nam: WTA 125K Limoges, France Women Singles
+  sdt: 1500681600000
+- alias: null
+  edt: 1501372800000
+  egid: 1338
+  nam: Atlanta, USA, Doubles
+  sdt: 1500854400000
+- alias: null
+  edt: 1494115200000
+  egid: 1342
+  nam: Istanbul, Turkey, Qualifying
+  sdt: 1493424000000
+- alias: null
+  edt: 1533427200000
+  egid: 1349
+  nam: Washington, USA, Qualifying
+  sdt: 1532736000000
+- alias: null
+  edt: 1525564800000
+  egid: 1350
+  nam: Istanbul, Turkey
+  sdt: 1524873600000
+- alias: null
+  edt: 1533427200000
+  egid: 1358
+  nam: Washington, USA
+  sdt: 1532736000000
+- alias: null
+  edt: 1525564800000
+  egid: 1362
+  nam: Istanbul, Turkey, Doubles
+  sdt: 1525046400000
+- alias: null
+  edt: 1501977600000
+  egid: 1369
+  nam: Washington, USA, Doubles
+  sdt: 1501459200000
+- alias: null
+  edt: 1557619200000
+  egid: 1372
+  nam: Madrid, Spain, Qualifying
+  sdt: 1556928000000
+- alias: null
+  edt: 1501891200000
+  egid: 1375
+  nam: Los Cabos, Mexico, Qualifying
+  sdt: 1501286400000
+- alias: null
+  edt: 1533340800000
+  egid: 1384
+  nam: Los Cabos, Mexico
+  sdt: 1532736000000
+- alias: null
+  edt: 1501891200000
+  egid: 1393
+  nam: Los Cabos, Mexico, Doubles
+  sdt: 1501459200000
+- alias: null
+  edt: 1533340800000
+  egid: 1396
+  nam: Kitzbuhel, Austria
+  sdt: 1532736000000
+- alias: null
+  edt: 1533340800000
+  egid: 1403
+  nam: ITF Mexico F16, Men Singles
+  sdt: 1532736000000
+- alias: null
+  edt: 1501891200000
+  egid: 1404
+  nam: ITF Mexico F16, Men Doubles
+  sdt: 1501459200000
+- alias: null
+  edt: 1495324800000
+  egid: 1407
+  nam: Rome, Italy, Qualifying
+  sdt: 1494633600000
+- alias: null
+  edt: 1502582400000
+  egid: 1432
+  nam: Montreal, Canada, Qualifying
+  sdt: 1501804800000
+- alias: null
+  edt: 1502582400000
+  egid: 1437
+  nam: Montreal, Canada
+  sdt: 1501804800000
+- alias: null
+  edt: 1534032000000
+  egid: 1445
+  nam: Toronto, Canada
+  sdt: 1533340800000
+- alias: null
+  edt: 1502582400000
+  egid: 1446
+  nam: ITF Tunisia F43, Men Doubles
+  sdt: 1502064000000
+- alias: null
+  edt: null
+  egid: 1449
+  nam: Roland Garros Paris, France
+  sdt: null
+- alias: null
+  edt: 1503187200000
+  egid: 1454
+  nam: Cincinnati, USA, Qualifying
+  sdt: 1502323200000
+- alias: null
+  edt: 1469923200000
+  egid: 1456
+  nam: Toronto, Canada, Doubles
+  sdt: 1469404800000
+- alias: null
+  edt: 1534636800000
+  egid: 1462
+  nam: Cincinnati, USA
+  sdt: 1533945600000
+- alias: null
+  edt: 1558742400000
+  egid: 1469
+  nam: Geneva, Switzerland, Qualifying
+  sdt: 1558137600000
+- alias: null
+  edt: 1534636800000
+  egid: 1473
+  nam: Cincinnati, USA, Doubles
+  sdt: 1534032000000
+- alias: null
+  edt: 1495929600000
+  egid: 1480
+  nam: Geneva, Switzerland
+  sdt: 1495238400000
+- alias: null
+  edt: 1503705600000
+  egid: 1484
+  nam: Winston Salem, USA
+  sdt: 1503100800000
+- alias: null
+  edt: 1535155200000
+  egid: 1485
+  nam: Winston Salem, USA, Qualifying
+  sdt: 1534550400000
+- alias: null
+  edt: 1463875200000
+  egid: 1490
+  nam: Geneva, Switzerland, Doubles
+  sdt: 1463270400000
+- alias: null
+  edt: 1503705600000
+  egid: 1492
+  nam: Winston Salem, USA, Doubles
+  sdt: 1503187200000
+- alias: null
+  edt: 1497744000000
+  egid: 1504
+  nam: ITF Women Santa Margherita Di Pula, Italy Women Double
+  sdt: 1497052800000
+- alias: null
+  edt: 1537660800000
+  egid: 1517
+  nam: St. Petersburg, Russia, Qualifying
+  sdt: 1536969600000
+- alias: null
+  edt: 1506211200000
+  egid: 1523
+  nam: ITF India 01A, Women Singles
+  sdt: 1505520000000
+- alias: null
+  edt: 1506211200000
+  egid: 1531
+  nam: St. Petersburg, Russia, Doubles
+  sdt: 1505692800000
+- alias: null
+  edt: 1537660800000
+  egid: 1534
+  nam: ITF Men Santa Tecla, El Salvador Men Double
+  sdt: 1536969600000
+- alias: null
+  edt: 1506211200000
+  egid: 1541
+  nam: ITF Brazil 04A, Women Singles
+  sdt: 1505520000000
+- alias: null
+  edt: 1529193600000
+  egid: 1542
+  nam: s-Hertogenbosch, Netherlands, Qualifying
+  sdt: 1528502400000
+- alias: null
+  edt: 1537660800000
+  egid: 1543
+  nam: ITF Brazil 04A, Women Doubles
+  sdt: 1537142400000
+- alias: null
+  edt: 1465689600000
+  egid: 1565
+  nam: s-Hertogenbosch, Netherlands, Doubles
+  sdt: 1465171200000
+- alias: null
+  edt: 1538265600000
+  egid: 1575
+  nam: Chengdu, China, Qualifying
+  sdt: 1537574400000
+- alias: null
+  edt: 1497744000000
+  egid: 1578
+  nam: Stuttgart, Germany, Qualifying
+  sdt: 1497052800000
+- alias: null
+  edt: 1506816000000
+  egid: 1588
+  nam: Chengdu, China
+  sdt: 1506124800000
+- alias: null
+  edt: 1475366400000
+  egid: 1599
+  nam: Chengdu, China, Doubles
+  sdt: 1474848000000
+- alias: null
+  edt: 1538265600000
+  egid: 1610
+  nam: Shenzhen, China, Qualifying
+  sdt: 1537574400000
+- alias: null
+  edt: 1538870400000
+  egid: 1614
+  nam: ITF USA F23, Men Doubles
+  sdt: 1538179200000
+- alias: null
+  edt: 1529798400000
+  egid: 1617
+  nam: ITF Georgia F3, Men Singles
+  sdt: 1529107200000
+- alias: null
+  edt: 1538265600000
+  egid: 1622
+  nam: Shenzhen, China
+  sdt: 1537574400000
+- alias: null
+  edt: 1475971200000
+  egid: 1625
+  nam: Beijing, China, Doubles
+  sdt: 1475452800000
+- alias: null
+  edt: 1506816000000
+  egid: 1630
+  nam: Shenzhen, China, Doubles
+  sdt: 1506297600000
+- alias: null
+  edt: 1507420800000
+  egid: 1638
+  nam: Tokyo, Japan
+  sdt: 1506729600000
+- alias: null
+  edt: 1538870400000
+  egid: 1641
+  nam: Beijing, China, Qualifying
+  sdt: 1538179200000
+- alias: null
+  edt: 1507420800000
+  egid: 1645
+  nam: ITF Women Nicholasville, USA Women Double
+  sdt: 1506902400000
+- alias: null
+  edt: 1529798400000
+  egid: 1653
+  nam: ATP Challenger Matsuyama, Japan Men Singles
+  sdt: 1529107200000
+- alias: null
+  edt: 1539475200000
+  egid: 1657
+  nam: Shanghai, China
+  sdt: 1538784000000
+- alias: null
+  edt: 1508112000000
+  egid: 1666
+  nam: Shanghai, China, Doubles
+  sdt: 1507420800000
+- alias: null
+  edt: 1509235200000
+  egid: 1674
+  nam: Vienna, Austria
+  sdt: 1508544000000
+- alias: null
+  edt: 1538870400000
+  egid: 1678
+  nam: ITF Women Nicholasville, USA Women Singles
+  sdt: 1538179200000
+- alias: null
+  edt: 1540684800000
+  egid: 1694
+  nam: Vienna, Austria, Doubles
+  sdt: 1539993600000
+- alias: null
+  edt: 1540080000000
+  egid: 1708
+  nam: ITF Women Petange, Luxembourg Women Singles
+  sdt: 1539388800000
+- alias: null
+  edt: 1466899200000
+  egid: 1713
+  nam: Nottingham, Great Britain, Doubles
+  sdt: 1466380800000
+- alias: null
+  edt: 1508112000000
+  egid: 1719
+  nam: Shanghai, China, Qualifying
+  sdt: 1507334400000
+- alias: null
+  edt: 1508630400000
+  egid: 1721
+  nam: Stockholm, Sweden, Doubles
+  sdt: 1508112000000
+- alias: null
+  edt: 1563062400000
+  egid: 1726
+  nam: Wimbledon, London, GB, Qualifying, 1st - 2nd Round
+  sdt: 1561334400000
+- alias: null
+  edt: 1508630400000
+  egid: 1732
+  nam: ITF Women Petange, Luxembourg Women Double
+  sdt: 1507852800000
+- alias: null
+  edt: 1531612800000
+  egid: 1739
+  nam: Wimbledon, London, GB, Qualifying, 3rd Round
+  sdt: 1529884800000
+- alias: null
+  edt: 1477180800000
+  egid: 1744
+  nam: Moscow, Russia, Doubles
+  sdt: 1476662400000
+- alias: null
+  edt: 1508630400000
+  egid: 1755
+  nam: Moscow, Russia, Qualifying
+  sdt: 1507852800000
+- alias: null
+  edt: 1531612800000
+  egid: 1764
+  nam: ITF Australia 03A, Women Singles
+  sdt: 1529884800000
+- alias: null
+  edt: 1509235200000
+  egid: 1782
+  nam: ITF Men Oliveira de Azemeis, Portugal Men Singles
+  sdt: 1508544000000
+- alias: null
+  edt: 1509235200000
+  egid: 1789
+  nam: Basel, Switzerland, Doubles
+  sdt: 1508716800000
+- alias: null
+  edt: 1508630400000
+  egid: 1790
+  nam: Antwerp, Belgium, Qualifying
+  sdt: 1507939200000
+- alias: null
+  edt: 1509840000000
+  egid: 1799
+  nam: ITF Men Oliveira de Azemeis, Portugal Men Double
+  sdt: 1508976000000
+- alias: null
+  edt: 1508630400000
+  egid: 1804
+  nam: Antwerp, Belgium
+  sdt: 1507939200000
+- alias: null
+  edt: 1509840000000
+  egid: 1809
+  nam: Paris, France, Doubles
+  sdt: 1509321600000
+- alias: null
+  edt: 1540080000000
+  egid: 1816
+  nam: Antwerp, Belgium, Doubles
+  sdt: 1539561600000
+- alias: null
+  edt: 1540080000000
+  egid: 1830
+  nam: ITF India 02A, Women Doubles
+  sdt: 1539388800000
+- alias: null
+  edt: 1540684800000
+  egid: 1870
+  nam: Basel, Switzerland, Qualifying
+  sdt: 1539993600000
+- alias: null
+  edt: 1540684800000
+  egid: 1900
+  nam: Vienna, Austria, Qualifying
+  sdt: 1539993600000
+- alias: null
+  edt: 1528588800000
+  egid: 1931
+  nam: ITF Turkey F32, Men Singles
+  sdt: 1526860800000
+- alias: null
+  edt: 1541894400000
+  egid: 1961
+  nam: Next Gen Finals Milan, Italy, Group A
+  sdt: 1541116800000
+- alias: null
+  edt: 1541894400000
+  egid: 1978
+  nam: Next Gen Finals Milan, Italy, Group B
+  sdt: 1541116800000
+- alias: null
+  edt: 1534032000000
+  egid: 1983
+  nam: Toronto, Canada, Qualifying
+  sdt: 1533340800000
+- alias: null
+  edt: 1541894400000
+  egid: 1993
+  nam: Next Gen Finals Milan, Italy
+  sdt: 1541116800000
+- alias: null
+  edt: 1511136000000
+  egid: 2005
+  nam: Tour Finals London, GB, Group Pete Sampras
+  sdt: 1510444800000
+- alias: null
+  edt: 1511136000000
+  egid: 2020
+  nam: Tour Finals London, GB, Group Boris Becker
+  sdt: 1510444800000
+- alias: null
+  edt: null
+  egid: 2031
+  nam: ITF Portugal 07A, Women Doubles
+  sdt: null
+- alias: null
+  edt: 1542499200000
+  egid: 2034
+  nam: Tour Finals London, Great Britain
+  sdt: 1541894400000
+- alias: null
+  edt: 1511136000000
+  egid: 2046
+  nam: Tour Finals London, GB, Doubles, Gr Woodbridge/Woo
+  sdt: 1510444800000
+- alias: null
+  edt: 1483833600000
+  egid: 2054
+  nam: ITF Japan 18A, Women Singles
+  sdt: 1483315200000
+- alias: null
+  edt: 1511136000000
+  egid: 2058
+  nam: Tour Finals London, GB, Doubles, Gr. Eltingh/Haarh
+  sdt: 1510444800000
+- alias: null
+  edt: 1511136000000
+  egid: 2069
+  nam: Tour Finals London, Great Britain, Doubles
+  sdt: 1510444800000
+- alias: null
+  edt: 1515196800000
+  egid: 2075
+  nam: ITF Thailand F2, Men Doubles
+  sdt: 1514764800000
+- alias: null
+  edt: 1495929600000
+  egid: 2085
+  nam: Lyon, France
+  sdt: 1495238400000
+- alias: null
+  edt: 1547251200000
+  egid: 2100
+  nam: ITF Portugal 11A, Women Singles
+  sdt: 1546732800000
+- alias: null
+  edt: 1558742400000
+  egid: 2103
+  nam: Lyon, France, Doubles
+  sdt: 1558224000000
+- alias: null
+  edt: 1547251200000
+  egid: 2119
+  nam: ITF Portugal 11A, Women Doubles
+  sdt: 1546732800000
+- alias: null
+  edt: 1548633600000
+  egid: 2137
+  nam: ITF Tunisia 46A, Women Doubles
+  sdt: 1546819200000
+- alias: null
+  edt: 1548633600000
+  egid: 2150
+  nam: ITF France F12, Men Doubles
+  sdt: 1546819200000
+- alias: null
+  edt: 1548633600000
+  egid: 2162
+  nam: ITF Tunisia 46A, Women Singles
+  sdt: 1547424000000
+- alias: null
+  edt: 1485648000000
+  egid: 2171
+  nam: Australian Open, Melbourne, Australia, Mixed
+  sdt: 1484524800000
+- alias: null
+  edt: 1549843200000
+  egid: 2179
+  nam: Montpellier, France
+  sdt: 1549065600000
+- alias: null
+  edt: 1518307200000
+  egid: 2185
+  nam: Montpellier, France, Doubles
+  sdt: 1517788800000
+- alias: null
+  edt: 1472342400000
+  egid: 2212
+  nam: Winston-Salem, USA, Doubles
+  sdt: 1471824000000
+- alias: null
+  edt: 1536451200000
+  egid: 2224
+  nam: US Open, New York, USA, Qualifying
+  sdt: 1534809600000
+- alias: null
+  edt: 1505001600000
+  egid: 2232
+  nam: US Open, New York, USA
+  sdt: 1503360000000
+- alias: null
+  edt: 1518912000000
+  egid: 2238
+  nam: Rotterdam, Netherlands
+  sdt: 1518220800000
+- alias: null
+  edt: 1492905600000
+  egid: 2241
+  nam: Monte Carlo, Monaco, Qualifying
+  sdt: 1492214400000
+- alias: null
+  edt: 1473552000000
+  egid: 2243
+  nam: US Open, New York, USA, Doubles
+  sdt: 1472428800000
+- alias: null
+  edt: 1487462400000
+  egid: 2251
+  nam: ITF Women Oldenzaal, Netherlands Women Double
+  sdt: 1486771200000
+- alias: null
+  edt: 1505001600000
+  egid: 2256
+  nam: US Open, New York, USA, Mixed
+  sdt: 1503878400000
+- alias: null
+  edt: 1520121600000
+  egid: 2262
+  nam: Sao Paulo, Brazil
+  sdt: 1519430400000
+- alias: null
+  edt: 1551571200000
+  egid: 2270
+  nam: ITF Spain F19, Men Singles
+  sdt: 1551052800000
+- alias: null
+  edt: 1487462400000
+  egid: 2309
+  nam: Memphis, USA, Doubles
+  sdt: 1486944000000
+- alias: null
+  edt: 1519516800000
+  egid: 2327
+  nam: Marseille, France, Doubles
+  sdt: 1518998400000
+- alias: null
+  edt: 1551484800000
+  egid: 2370
+  nam: Dubai, UAE, Doubles
+  sdt: 1550880000000
+- alias: null
+  edt: 1551571200000
+  egid: 2387
+  nam: ITF Egypt F18, Men Doubles
+  sdt: 1550880000000
+- alias: null
+  edt: 1488067200000
+  egid: 2408
+  nam: ITF Egypt F18, Men Singles
+  sdt: 1487548800000
+- alias: null
+  edt: null
+  egid: 2477
+  nam: Barcelona Doubles, Spain
+  sdt: null
+- alias: null
+  edt: 1525564800000
+  egid: 2676
+  nam: Estoril, Portugal, Qualifying
+  sdt: 1524873600000
+- alias: null
+  edt: 1483833600000
+  egid: 2742
+  nam: Brisbane, Australia, Qualifying
+  sdt: 1483142400000
+- alias: null
+  edt: null
+  egid: 2765
+  nam: Juniors AO, Melbourne, Australia Women Double
+  sdt: null
+- alias: null
+  edt: 1483747200000
+  egid: 2781
+  nam: Doha, Qatar, Qualifying
+  sdt: 1483142400000
+- alias: null
+  edt: 1484438400000
+  egid: 2807
+  nam: ITF Mexico 28A, Women Doubles
+  sdt: 1483660800000
+- alias: null
+  edt: 1484352000000
+  egid: 2829
+  nam: ITF Turkey F21, Men Doubles
+  sdt: 1483660800000
+- alias: null
+  edt: 1518307200000
+  egid: 2866
+  nam: Montpellier, France, Qualifying
+  sdt: 1517616000000
+- alias: null
+  edt: 1549756800000
+  egid: 2882
+  nam: Sofia, Bulgaria, Qualifying
+  sdt: 1549065600000
+- alias: null
+  edt: 1486857600000
+  egid: 2893
+  nam: Sofia, Bulgaria
+  sdt: 1486166400000
+- alias: null
+  edt: 1518307200000
+  egid: 2900
+  nam: Sofia, Bulgaria, Doubles
+  sdt: 1517788800000
+- alias: null
+  edt: 1518307200000
+  egid: 2909
+  nam: Quito, Ecuador, Qualifying
+  sdt: 1517616000000
+- alias: null
+  edt: 1518307200000
+  egid: 2917
+  nam: Quito, Ecuador
+  sdt: 1517616000000
+- alias: null
+  edt: 1518307200000
+  egid: 2925
+  nam: Quito, Ecuador, Doubles
+  sdt: 1517788800000
+- alias: null
+  edt: 1487462400000
+  egid: 2932
+  nam: Buenos Aires, Argentina, Qualifying
+  sdt: 1486771200000
+- alias: null
+  edt: 1487462400000
+  egid: 2953
+  nam: Memphis, USA, Qualifying
+  sdt: 1486771200000
+- alias: null
+  edt: 1550448000000
+  egid: 2970
+  nam: Rotterdam, Netherlands, Qualifying
+  sdt: 1549670400000
+- alias: null
+  edt: 1488067200000
+  egid: 3002
+  nam: Rio de Janeiro, Brazil, Qualifying
+  sdt: 1487376000000
+- alias: null
+  edt: 1488067200000
+  egid: 3008
+  nam: Rio de Janeiro, Brazil
+  sdt: 1487376000000
+- alias: null
+  edt: 1550966400000
+  egid: 3018
+  nam: Rio de Janeiro, Brazil, Doubles
+  sdt: 1550275200000
+- alias: null
+  edt: 1551052800000
+  egid: 3027
+  nam: Delray Beach, USA, Qualifying
+  sdt: 1550275200000
+- alias: null
+  edt: 1488067200000
+  egid: 3044
+  nam: Marseille, France, Qualifying
+  sdt: 1487462400000
+- alias: null
+  edt: 1551571200000
+  egid: 3061
+  nam: ITF Greece F1, Men Doubles
+  sdt: 1550880000000
+- alias: null
+  edt: 1488672000000
+  egid: 3089
+  nam: Sao Paulo, Brazil, Qualifying
+  sdt: 1487980800000
+- alias: null
+  edt: 1551484800000
+  egid: 3113
+  nam: ITF Greece F1, Men Singles
+  sdt: 1550880000000
+- alias: null
+  edt: 1555200000000
+  egid: 3179
+  nam: Marrakech, Morocco, Qualifying
+  sdt: 1554595200000
+- alias: null
+  edt: 1555200000000
+  egid: 3186
+  nam: Marrakech, Morocco
+  sdt: 1554595200000
+- alias: null
+  edt: 1555200000000
+  egid: 3193
+  nam: Marrakech, Morocco, Doubles
+  sdt: 1554681600000
+- alias: null
+  edt: 1542499200000
+  egid: 3329
+  nam: Tour Finals London, Great Britain, Guga Kuerten
+  sdt: 1541894400000
+- alias: null
+  edt: 1542499200000
+  egid: 3336
+  nam: Tour Finals London, Great Britain, Lleyton Hewitt
+  sdt: 1541894400000
+- alias: null
+  edt: 1497139200000
+  egid: 3416
+  nam: Paris, France, Qualifying
+  sdt: 1495411200000
+- alias: null
+  edt: 1497139200000
+  egid: 3418
+  nam: French Open, Paris, France
+  sdt: 1495411200000
+- alias: null
+  edt: 1465084800000
+  egid: 3425
+  nam: French Open, Paris, France, Doubles
+  sdt: 1463875200000
+- alias: null
+  edt: 1528588800000
+  egid: 3435
+  nam: French Open, Paris, France, Mixed
+  sdt: 1527379200000
+- alias: null
+  edt: 1530316800000
+  egid: 3692
+  nam: ATP Challenger Split, Croatia Men Singles
+  sdt: 1529712000000
+- alias: null
+  edt: null
+  egid: 4006
+  nam: Tour Finals London, GB, Doubles, Gr Fleming/McEnro
+  sdt: null
+- alias: null
+  edt: null
+  egid: 4009
+  nam: Tour Finals London, GB, Doubles, Gr Edberg/Jarryd
+  sdt: null
+- alias: null
+  edt: 1471132800000
+  egid: 4053
+  nam: Olympic Tournament Rio de Janeiro, Brazil, Doubles
+  sdt: 1470441600000
+- alias: null
+  edt: 1512259200000
+  egid: 4078
+  nam: Australian Open Asia-Pacific Wildcard Playoff
+  sdt: 1511827200000
+- alias: null
+  edt: 1480809600000
+  egid: 4085
+  nam: Australian Open Asia-Pacific Wildcard PO, Doubles
+  sdt: 1480464000000
+- alias: null
+  edt: 1542499200000
+  egid: 4136
+  nam: Tour Finals London, GB, Doubles, Knowles/Nestor
+  sdt: 1541894400000
+- alias: null
+  edt: 1542499200000
+  egid: 4144
+  nam: Tour Finals London, GB, Doubles, Llodra/Santoro
+  sdt: 1541894400000
+- alias: null
+  edt: 1544918400000
+  egid: 4189
+  nam: Australian Open Australian Wildcard Playoff
+  sdt: 1544313600000
+- alias: null
+  edt: 1493510400000
+  egid: 4547
+  nam: Budapest, Hungary, Qualifying
+  sdt: 1492819200000
+- alias: null
+  edt: 1556409600000
+  egid: 4555
+  nam: Budapest, Hungary
+  sdt: 1555718400000
+- alias: null
+  edt: 1556409600000
+  egid: 4564
+  nam: Budapest, Hungary, Doubles
+  sdt: 1555891200000
+- alias: null
+  edt: 1527292800000
+  egid: 4673
+  nam: Lyon, France, Qualifying
+  sdt: 1526688000000
+- alias: null
+  edt: 1488067200000
+  egid: 4745
+  nam: Rio de Janeiro, Brazil, Doubles, Qualifying
+  sdt: 1487376000000
+- alias: null
+  edt: 1512259200000
+  egid: 6819
+  nam: Australian Open Asia-Pacific Wildcard PO, Qualification
+  sdt: 1511827200000
+- alias: null
+  edt: 1540684800000
+  egid: 7170
+  nam: Vienna, Austria, Doubles, Qualifying
+  sdt: 1539993600000
+- alias: null
+  edt: 1540684800000
+  egid: 7171
+  nam: Basel, Switzerland, Doubles, Qualifying
+  sdt: 1539993600000
+- alias: null
+  edt: null
+  egid: 7199
+  nam: Pune, India, Qualifying
+  sdt: null
+- alias: null
+  edt: 1515196800000
+  egid: 7201
+  nam: Pune, India, Doubles
+  sdt: 1514764800000
+- alias: null
+  edt: 1515196800000
+  egid: 7204
+  nam: Pune, India
+  sdt: 1514592000000
+- alias: null
+  edt: 1550361600000
+  egid: 7211
+  nam: Rotterdam, Netherlands, Doubles, Qualifying
+  sdt: 1549670400000
+- alias: null
+  edt: 1518912000000
+  egid: 7213
+  nam: New York, USA, Qualifying
+  sdt: 1518220800000
+- alias: null
+  edt: 1518912000000
+  egid: 7216
+  nam: New York, USA, Doubles
+  sdt: 1518393600000
+- alias: null
+  edt: 1550448000000
+  egid: 7219
+  nam: New York, USA
+  sdt: 1549670400000
+- alias: null
+  edt: 1551571200000
+  egid: 7221
+  nam: Acapulco, Mexico, Doubles, Qualifying
+  sdt: 1550880000000
+- alias: null
+  edt: 1551484800000
+  egid: 7222
+  nam: Dubai, UAE, Doubles, Qualifying
+  sdt: 1550880000000
+- alias: null
+  edt: 1556409600000
+  egid: 7229
+  nam: Barcelona, Spain, Doubles, Qualifying
+  sdt: 1555718400000
+- alias: null
+  edt: 1561248000000
+  egid: 7236
+  nam: Halle, Germany, Doubles, Qualifying
+  sdt: 1560556800000
+- alias: null
+  edt: 1561248000000
+  egid: 7237
+  nam: London, Great Britain, Doubles, Qualifying
+  sdt: 1560556800000
+- alias: null
+  edt: 1532822400000
+  egid: 7238
+  nam: Hamburg, Germany, Doubles, Qualifying
+  sdt: 1532131200000
+- alias: null
+  edt: 1533427200000
+  egid: 7239
+  nam: Washington, USA, Doubles, Qualifying
+  sdt: 1532736000000
+- alias: null
+  edt: 1538870400000
+  egid: 7240
+  nam: Beijing, China, Doubles, Qualifying
+  sdt: 1538179200000
+- alias: null
+  edt: 1541894400000
+  egid: 12237
+  nam: Next Gen Finals Milan, Italy, Qualification
+  sdt: 1541116800000
+- alias: null
+  edt: 1549843200000
+  egid: 12910
+  nam: Cordoba, Argentina, Qualifying
+  sdt: 1549065600000
+- alias: null
+  edt: 1549756800000
+  egid: 12911
+  nam: Cordoba, Argentina, Doubles
+  sdt: 1549238400000
+- alias: null
+  edt: 1549843200000
+  egid: 12912
+  nam: Cordoba, Argentina
+  sdt: 1549065600000
+- alias: null
+  edt: 1599955200000
+  egid: 18935
+  nam: US Open Men Singles
+  sdt: 1598832000000
+- alias: null
+  edt: 1567728000000
+  egid: 18936
+  nam: US Open Men Double
+  sdt: 1566950400000
+- alias: null
+  edt: 1567814400000
+  egid: 18939
+  nam: US Open Mixed Double
+  sdt: 1566950400000
+- alias: null
+  edt: 1572134400000
+  egid: 18940
+  nam: ATP Basel, Switzerland Men Singles
+  sdt: 1571443200000
+- alias: null
+  edt: 1572134400000
+  egid: 18941
+  nam: ATP Basel, Switzerland Men Doubles
+  sdt: 1571443200000
+- alias: null
+  edt: 1604793600000
+  egid: 18942
+  nam: ATP Paris, France Men Singles
+  sdt: 1604102400000
+- alias: null
+  edt: 1604793600000
+  egid: 18943
+  nam: ATP Paris, France Men Doubles
+  sdt: 1604275200000
+- alias: null
+  edt: 1563667200000
+  egid: 18946
+  nam: ATP Newport, USA Men Singles
+  sdt: 1563062400000
+- alias: null
+  edt: 1563667200000
+  egid: 18947
+  nam: ATP Newport, USA Men Double
+  sdt: 1563148800000
+- alias: null
+  edt: 1563667200000
+  egid: 18948
+  nam: ATP Bastad, Sweden Men Singles
+  sdt: 1563062400000
+- alias: null
+  edt: 1563667200000
+  egid: 18949
+  nam: ATP Bastad, Sweden Men Double
+  sdt: 1563148800000
+- alias: null
+  edt: 1601164800000
+  egid: 18952
+  nam: ATP Hamburg, Germany Men Singles
+  sdt: 1600473600000
+- alias: null
+  edt: 1564272000000
+  egid: 18953
+  nam: ATP Hamburg, Germany Men Doubles
+  sdt: 1563580800000
+- alias: null
+  edt: 1564272000000
+  egid: 18956
+  nam: ATP Gstaad, Switzerland Men Singles
+  sdt: 1563580800000
+- alias: null
+  edt: 1564272000000
+  egid: 18957
+  nam: ATP Gstaad, Switzerland Men Double
+  sdt: 1563753600000
+- alias: null
+  edt: 1563667200000
+  egid: 18958
+  nam: ATP Umag, Croatia Men Singles
+  sdt: 1563062400000
+- alias: null
+  edt: 1563580800000
+  egid: 18959
+  nam: ATP Umag, Croatia Men Double
+  sdt: 1563148800000
+- alias: null
+  edt: 1564876800000
+  egid: 18960
+  nam: ATP Washington, USA Men Singles
+  sdt: 1564185600000
+- alias: null
+  edt: 1564876800000
+  egid: 18961
+  nam: ATP Washington, USA Men Double
+  sdt: 1564185600000
+- alias: null
+  edt: 1598659200000
+  egid: 18962
+  nam: ATP Cincinnati, USA Men Singles
+  sdt: 1597881600000
+- alias: null
+  edt: 1566086400000
+  egid: 18963
+  nam: ATP Cincinnati, USA Men Double
+  sdt: 1565481600000
+- alias: null
+  edt: 1569110400000
+  egid: 18966
+  nam: ATP Metz, France Men Singles
+  sdt: 1568505600000
+- alias: null
+  edt: 1569110400000
+  egid: 18967
+  nam: ATP Metz, France Men Double
+  sdt: 1568592000000
+- alias: null
+  edt: 1570320000000
+  egid: 18970
+  nam: ATP Beijing, China Men Singles
+  sdt: 1569628800000
+- alias: null
+  edt: 1570320000000
+  egid: 18971
+  nam: ATP Beijing, China Men Double
+  sdt: 1569628800000
+- alias: null
+  edt: 1570320000000
+  egid: 18972
+  nam: ATP Tokyo, Japan Men Singles
+  sdt: 1569628800000
+- alias: null
+  edt: 1570320000000
+  egid: 18973
+  nam: ATP Tokyo, Japan Men Double
+  sdt: 1569628800000
+- alias: null
+  edt: 1571529600000
+  egid: 18982
+  nam: ATP Moscow, Russia Men Singles
+  sdt: 1570838400000
+- alias: null
+  edt: 1571443200000
+  egid: 18983
+  nam: ATP Moscow, Russia Men Doubles
+  sdt: 1571011200000
+- alias: null
+  edt: 1570924800000
+  egid: 18986
+  nam: ATP Shanghai, China Men Singles
+  sdt: 1570233600000
+- alias: null
+  edt: 1570924800000
+  egid: 18987
+  nam: ATP Shanghai, China Men Double
+  sdt: 1570320000000
+- alias: null
+  edt: 1571529600000
+  egid: 18988
+  nam: ATP Stockholm, Sweden Men Singles
+  sdt: 1570838400000
+- alias: null
+  edt: 1571529600000
+  egid: 18989
+  nam: ATP Stockholm, Sweden Men Doubles
+  sdt: 1571011200000
+- alias: null
+  edt: 1572134400000
+  egid: 18990
+  nam: ATP Vienna, Austria Men Singles
+  sdt: 1571443200000
+- alias: null
+  edt: 1604188800000
+  egid: 18991
+  nam: ATP Vienna, Austria Men Double
+  sdt: 1603497600000
+- alias: null
+  edt: 1602979200000
+  egid: 18992
+  nam: ATP St. Petersburg, Russia Men Singles
+  sdt: 1602288000000
+- alias: null
+  edt: 1569110400000
+  egid: 18993
+  nam: ATP St. Petersburg, Russia Men Doubles
+  sdt: 1568592000000
+- alias: null
+  edt: 1599955200000
+  egid: 18994
+  nam: ATP Kitzbuhel, Austria Men Singles
+  sdt: 1599436800000
+- alias: null
+  edt: 1564790400000
+  egid: 18995
+  nam: ATP Kitzbuhel, Austria Men Doubles
+  sdt: 1564358400000
+- alias: null
+  edt: 1564272000000
+  egid: 18996
+  nam: ATP Atlanta, USA Men Singles
+  sdt: 1563580800000
+- alias: null
+  edt: 1564272000000
+  egid: 18997
+  nam: ATP Atlanta, USA Men Double
+  sdt: 1563753600000
+- alias: null
+  edt: 1566604800000
+  egid: 19022
+  nam: ATP Winston Salem, USA Men Singles
+  sdt: 1566000000000
+- alias: null
+  edt: 1566518400000
+  egid: 19023
+  nam: ATP Winston Salem, USA Men Double
+  sdt: 1566086400000
+- alias: null
+  edt: 1565481600000
+  egid: 19030
+  nam: ATP Montreal, Canada Men Singles
+  sdt: 1564790400000
+- alias: null
+  edt: 1565481600000
+  egid: 19031
+  nam: ATP Montreal, Canada Men Double
+  sdt: 1564963200000
+- alias: null
+  edt: 1564790400000
+  egid: 19055
+  nam: ATP Los Cabos, Mexico Men Singles
+  sdt: 1564185600000
+- alias: null
+  edt: 1564790400000
+  egid: 19056
+  nam: ATP Los Cabos, Mexico Men Double
+  sdt: 1564358400000
+- alias: null
+  edt: 1571529600000
+  egid: 19057
+  nam: ATP Antwerp, Belgium Men Singles
+  sdt: 1570924800000
+- alias: null
+  edt: 1603584000000
+  egid: 19058
+  nam: ATP Antwerp, Belgium Men Doubles
+  sdt: 1603065600000
+- alias: null
+  edt: 1569715200000
+  egid: 19068
+  nam: ATP Chengdu, China Men Singles
+  sdt: 1569024000000
+- alias: null
+  edt: 1569715200000
+  egid: 19069
+  nam: ATP Chengdu, China Men Double
+  sdt: 1569196800000
+- alias: null
+  edt: 1573257600000
+  egid: 19070
+  nam: Next Gen ATP Finals Men Singles
+  sdt: 1572912000000
+- alias: null
+  edt: 1573948800000
+  egid: 19119
+  nam: ATP World Tour Finals Men Singles
+  sdt: 1573344000000
+- alias: null
+  edt: 1573948800000
+  egid: 19120
+  nam: ATP World Tour Finals Men Doubles
+  sdt: 1573344000000
+- alias: null
+  edt: 1569715200000
+  egid: 19139
+  nam: ATP Zhuhai, China Men Singles
+  sdt: 1569024000000
+- alias: null
+  edt: 1569715200000
+  egid: 19140
+  nam: ATP Zhuhai, China Men Doubles
+  sdt: 1569196800000
+- alias: null
+  edt: 1578787200000
+  egid: 23491
+  nam: ATP Cup
+  sdt: 1577923200000
+- alias: null
+  edt: 1580601600000
+  egid: 23633
+  nam: Australian Open Men Doubles
+  sdt: 1579651200000
+- alias: null
+  edt: 1580515200000
+  egid: 23634
+  nam: Australian Open Mixed Doubles
+  sdt: 1579824000000
+- alias: null
+  edt: 1578700800000
+  egid: 23635
+  nam: ATP Doha, Qatar Men Singles
+  sdt: 1578096000000
+- alias: null
+  edt: 1578700800000
+  egid: 23636
+  nam: ATP Doha, Qatar Men Double
+  sdt: 1578268800000
+- alias: null
+  edt: 1579305600000
+  egid: 23637
+  nam: ATP Auckland, New Zealand Men Singles
+  sdt: 1578700800000
+- alias: null
+  edt: 1579305600000
+  egid: 23638
+  nam: ATP Auckland, New Zealand Men Double
+  sdt: 1578873600000
+- alias: null
+  edt: 1581206400000
+  egid: 23639
+  nam: ATP Montpellier, France Men Singles
+  sdt: 1580601600000
+- alias: null
+  edt: 1581206400000
+  egid: 23640
+  nam: ATP Montpellier, France Men Double
+  sdt: 1580688000000
+- alias: null
+  edt: 1581206400000
+  egid: 23656
+  nam: ATP Pune, India Men Singles
+  sdt: 1580515200000
+- alias: null
+  edt: 1581206400000
+  egid: 23657
+  nam: ATP Pune, India Men Double
+  sdt: 1580688000000
+- alias: null
+  edt: 1581206400000
+  egid: 23662
+  nam: ATP Cordoba, Argentina Men Singles
+  sdt: 1580515200000
+- alias: null
+  edt: 1581206400000
+  egid: 23663
+  nam: ATP Cordoba, Argentina Men Double
+  sdt: 1580688000000
+- alias: null
+  edt: 1579305600000
+  egid: 23668
+  nam: ATP Adelaide, Australia Men Singles
+  sdt: 1578614400000
+- alias: null
+  edt: 1579305600000
+  egid: 23669
+  nam: ATP Adelaide, Australia Men Double
+  sdt: 1578787200000
+- alias: null
+  edt: 1575763200000
+  egid: 23760
+  nam: AO Asia-Pacific Wildcard Playoff Men Singles
+  sdt: 1575331200000
+- alias: null
+  edt: 1575676800000
+  egid: 23761
+  nam: AO Asia-Pacific Wildcard Playoff Men Doubles
+  sdt: 1575331200000
+- alias: null
+  edt: 1580601600000
+  egid: 23847
+  nam: Australian Open Men Singles
+  sdt: 1578960000000
+- alias: null
+  edt: 1602374400000
+  egid: 23848
+  nam: French Open Men Singles
+  sdt: 1600646400000
+- alias: null
+  edt: 1602288000000
+  egid: 23849
+  nam: French Open Men Doubles
+  sdt: 1601337600000
+- alias: null
+  edt: 1582934400000
+  egid: 23851
+  nam: ATP Dubai, UAE Men Singles
+  sdt: 1582329600000
+- alias: null
+  edt: 1582934400000
+  egid: 23852
+  nam: ATP Dubai, UAE Men Double
+  sdt: 1582329600000
+- alias: null
+  edt: 1581811200000
+  egid: 23853
+  nam: ATP Rotterdam, Netherlands Men Singles
+  sdt: 1581120000000
+- alias: null
+  edt: 1581811200000
+  egid: 23854
+  nam: ATP Rotterdam, Netherlands Men Double
+  sdt: 1581120000000
+- alias: null
+  edt: 1582934400000
+  egid: 23855
+  nam: ATP Acapulco, Mexico Men Singles
+  sdt: 1582329600000
+- alias: null
+  edt: 1582934400000
+  egid: 23856
+  nam: ATP Acapulco, Mexico Men Double
+  sdt: 1582329600000
+- alias: null
+  edt: 1582416000000
+  egid: 23857
+  nam: ATP Marseille, France Men Singles
+  sdt: 1581811200000
+- alias: null
+  edt: 1582416000000
+  egid: 23858
+  nam: ATP Marseille, France Men Double
+  sdt: 1581897600000
+- alias: null
+  edt: 1581811200000
+  egid: 23859
+  nam: ATP Buenos Aires, Argentina Men Singles
+  sdt: 1581120000000
+- alias: null
+  edt: 1581811200000
+  egid: 23860
+  nam: ATP Buenos Aires, Argentina Men Double
+  sdt: 1581292800000
+- alias: null
+  edt: 1582416000000
+  egid: 23861
+  nam: ATP Delray Beach, USA Men Singles
+  sdt: 1581724800000
+- alias: null
+  edt: 1582416000000
+  egid: 23862
+  nam: ATP Delray Beach, USA Men Double
+  sdt: 1581897600000
+- alias: null
+  edt: 1581811200000
+  egid: 23872
+  nam: ATP New York, USA Men Singles
+  sdt: 1581206400000
+- alias: null
+  edt: 1581811200000
+  egid: 23874
+  nam: ATP New York, USA Men Double
+  sdt: 1581292800000
+- alias: null
+  edt: 1600646400000
+  egid: 23875
+  nam: ATP Rome, Italy Men Singles
+  sdt: 1599868800000
+- alias: null
+  edt: 1600560000000
+  egid: 23876
+  nam: ATP Rome, Italy Men Doubles
+  sdt: 1600128000000
+- alias: null
+  edt: 1583020800000
+  egid: 23898
+  nam: ATP Santiago, Chile Men Singles
+  sdt: 1582329600000
+- alias: null
+  edt: 1582934400000
+  egid: 23899
+  nam: ATP Santiago, Chile Men Double
+  sdt: 1582502400000
+- alias: null
+  edt: 1582502400000
+  egid: 23902
+  nam: ATP Rio de Janeiro, Brazil Men Singles
+  sdt: 1581724800000
+- alias: null
+  edt: 1582502400000
+  egid: 23903
+  nam: ATP Rio de Janeiro, Brazil Men Double
+  sdt: 1581724800000
+- alias: null
+  edt: 1605312000000
+  egid: 23908
+  nam: ATP Sofia, Bulgaria Men Singles
+  sdt: 1604707200000
+- alias: null
+  edt: 1605312000000
+  egid: 23909
+  nam: ATP Sofia, Bulgaria Men Doubles
+  sdt: 1604793600000
+- alias: null
+  edt: 1576368000000
+  egid: 24011
+  nam: AO Australian Wildcard Playoff Men Singles
+  sdt: 1575849600000
+- alias: null
+  edt: 1602979200000
+  egid: 29342
+  nam: ATP Cologne, Germany Men Singles
+  sdt: 1602288000000
+- alias: null
+  edt: 1602892800000
+  egid: 29343
+  nam: ATP Cologne, Germany Men Doubles
+  sdt: 1602460800000
+- alias: null
+  edt: 1603584000000
+  egid: 29344
+  nam: ATP Cologne II, Germany Men Doubles
+  sdt: 1603065600000
+- alias: null
+  edt: 1603584000000
+  egid: 29345
+  nam: ATP Cologne II, Germany Men Singles
+  sdt: 1602892800000
+- alias: null
+  edt: 1602979200000
+  egid: 29346
+  nam: ATP Sardinia, Italy Men Singles
+  sdt: 1602288000000
+- alias: null
+  edt: 1602979200000
+  egid: 29347
+  nam: ATP Sardinia, Italy Men Doubles
+  sdt: 1602460800000
+- alias: null
+  edt: 1604188800000
+  egid: 29348
+  nam: ATP Nur-Sultan, Kazakhstan Men Singles
+  sdt: 1603584000000
+- alias: null
+  edt: 1604188800000
+  egid: 29349
+  nam: ATP Nur-Sultan, Kazakhstan Men Doubles
+  sdt: 1603670400000

@@ -11,6 +11,7 @@ from pysbr.queries.eventsbydate import EventsByDate
 from pysbr.queries.leaguehierarchy import LeagueHierarchy
 from pysbr.queries.team import Team
 from pysbr.queries.sportsbooks import Sportsbooks
+from pysbr.queries.eventgroupsbyleague import EventGroupsByLeague
 from pysbr.config.nfl import NFL
 from pysbr.config.ncaaf import NCAAF
 from pysbr.config.atp import ATP
@@ -52,6 +53,16 @@ class TestSportsbooks(Sportsbooks):
         self.cassette_name = cassette_name
         self.patch_fn = patch_fn
         super().__init__(sportsbook_ids)
+
+    def _build_and_execute_query(self, *args):
+        return self.patch_fn(self)
+
+
+class TestEventGroupsByLeague(EventGroupsByLeague):
+    def __init__(self, league_id, patch_fn, cassette_name):
+        self.cassette_name = cassette_name
+        self.patch_fn = patch_fn
+        super().__init__(league_id)
 
     def _build_and_execute_query(self, *args):
         return self.patch_fn(self)
@@ -181,6 +192,18 @@ def sportsbooks(build_and_execute_with_cassette):
     def fn(sportsbook_ids, cassette_name):
         return TestSportsbooks(
             sportsbook_ids, build_and_execute_with_cassette, cassette_name
+        )
+
+    return fn
+
+
+@fixture
+def event_groups_by_league(build_and_execute_with_cassette):
+    def fn(league_id, cassette_name):
+        return TestEventGroupsByLeague(
+            league_id,
+            build_and_execute_with_cassette,
+            cassette_name,
         )
 
     return fn

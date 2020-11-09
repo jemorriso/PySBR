@@ -1,0 +1,136 @@
+eventGroupsByLeague:
+- alias: Pre Week 1
+  edt: 1565485200000
+  egid: 2
+  nam: PRE Week 1
+  sdt: 1565305200000
+- alias: Pre Week 2
+  edt: 1566259200000
+  egid: 3
+  nam: PRE Week 2
+  sdt: 1565910000000
+- alias: Pre Week 3
+  edt: 1598832000000
+  egid: 4
+  nam: PRE Week 3
+  sdt: 1598571000000
+- alias: Pre Week 4
+  edt: 1504231200000
+  egid: 5
+  nam: PRE Week 4
+  sdt: 1504220400000
+- alias: Week 1
+  edt: 1568082000000
+  egid: 10
+  nam: REG Week 1
+  sdt: 1567729200000
+- alias: Week 2
+  edt: 1600733700000
+  egid: 11
+  nam: REG Week 2
+  sdt: 1600388400000
+- alias: Week 3
+  edt: 1601338500000
+  egid: 12
+  nam: REG Week 3
+  sdt: 1600993200000
+- alias: Week 4
+  edt: 1601946000000
+  egid: 13
+  nam: REG Week 4
+  sdt: 1601598000000
+- alias: Week 5
+  edt: 1539044100000
+  egid: 14
+  nam: REG Week 5
+  sdt: 1538698800000
+- alias: Week 6
+  edt: 1508200200000
+  egid: 15
+  nam: REG Week 6
+  sdt: 1507854300000
+- alias: Week 7
+  edt: 1603757700000
+  egid: 16
+  nam: REG Week 7
+  sdt: 1603412400000
+- alias: Week 8
+  edt: 1604366100000
+  egid: 17
+  nam: REG Week 8
+  sdt: 1604017200000
+- alias: Week 9
+  edt: 1572916500000
+  egid: 18
+  nam: REG Week 9
+  sdt: 1572567600000
+- alias: Week 10
+  edt: 1542071700000
+  egid: 19
+  nam: REG Week 10
+  sdt: 1541726400000
+- alias: Week 11
+  edt: 1511227800000
+  egid: 20
+  nam: REG Week 11
+  sdt: 1510881900000
+- alias: Week 12
+  edt: 1543281300000
+  egid: 21
+  nam: REG Week 12
+  sdt: 1542907800000
+- alias: Week 13
+  edt: 1543886100000
+  egid: 22
+  nam: REG Week 13
+  sdt: 1543540800000
+- alias: Week 14
+  edt: 1513042200000
+  egid: 23
+  nam: REG Week 14
+  sdt: 1512696300000
+- alias: Week 15
+  edt: 1608599700000
+  egid: 24
+  nam: REG Week 15
+  sdt: 1608254400000
+- alias: Week 16
+  edt: 1514251800000
+  egid: 25
+  nam: REG Week 16
+  sdt: 1514064600000
+- alias: Week 17
+  edt: 1577668800000
+  egid: 26
+  nam: REG Week 17
+  sdt: 1577642400000
+- alias: Wild Card
+  edt: null
+  egid: 28
+  nam: PST Week 1
+  sdt: null
+- alias: Divisional
+  edt: null
+  egid: 29
+  nam: PST Week 2
+  sdt: null
+- alias: Championship
+  edt: null
+  egid: 30
+  nam: PST Week 3
+  sdt: null
+- alias: Super Bowl
+  edt: 1549236600000
+  egid: 31
+  nam: PST Week 4
+  sdt: 1549236600000
+- alias: Hall of Fame
+  edt: 1501804800000
+  egid: 20162
+  nam: HOF
+  sdt: 1501804800000
+- alias: Pro Bowl
+  edt: 1548619200000
+  egid: 20941
+  nam: PST Week Pro Bowl
+  sdt: 1548619200000

@@ -206,3 +206,36 @@ class TestQuery:
         s = sportsbooks(ids, cassette_name)
         for i, x in enumerate(s._raw["sportsbooks"]):
             assert x["nam"] in expected
+
+    @mark.parametrize(
+        "league, cassette_name, alias",
+        [
+            (
+                lazy_fixture("nfl"),
+                "test_event_groups_by_league_nfl1",
+                "Week 1",
+            ),
+            (
+                lazy_fixture("ncaaf"),
+                "test_event_groups_by_league_ncaaf1",
+                "Week 1",
+            ),
+            (
+                lazy_fixture("atp"),
+                "test_event_groups_by_league_atp1",
+                "Miami, USA",
+            ),
+        ],
+    )
+    def test_event_groups_by_league(
+        self, event_groups_by_league, league, cassette_name, alias
+    ):
+        id = league.league_id
+        e = event_groups_by_league(id, cassette_name)
+        found = False
+        for event in e._raw["eventGroupsByLeague"]:
+            if event["nam"] == alias:
+                found = True
+            elif event["alias"] == alias:
+                found = True
+        assert found
