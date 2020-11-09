@@ -52,26 +52,31 @@ class Query:
         Returns:
             str: The query string ready to be substituted using Template.substitute()
         """
-        return Template(
-            Utils.str_format(
-                """
+        return (
+            Template(
+                Utils.str_format(
+                    """
                 query {
                     $q_name(
                         $q_args
                     ) $q_fields
                 }
             """
+                )
+            ).substitute(
+                {
+                    "q_name": q_name,
+                    "q_args": ""
+                    if q_args is None
+                    else Utils.str_format(q_args, indent_=2, dedent_l1=True),
+                    "q_fields": ""
+                    if q_fields is None
+                    else Utils.str_format(q_fields, indent_=1, dedent_l1=True),
+                }
             )
-        ).substitute(
-            {
-                "q_name": q_name,
-                "q_args": ""
-                if q_args is None
-                else Utils.str_format(q_args, indent_=2, dedent_l1=True),
-                "q_fields": ""
-                if q_fields is None
-                else Utils.str_format(q_fields, indent_=1, dedent_l1=True),
-            }
+            # graphql query will not accept single quotes, but Template string by
+            # default uses single quotes
+            .replace("'", '"')
         )
 
     # @staticmethod
