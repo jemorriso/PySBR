@@ -1,6 +1,7 @@
 event: |
   {
       events {
+          lid
           des
           cit
           cou
@@ -81,6 +82,7 @@ markets_by_id: |
       mtid
       spid
       nam
+      des
   }
 
 market_types: |
@@ -98,6 +100,7 @@ leagues: |
 
 event_group: |
   {
+      lid
       egid
       nam
       alias
