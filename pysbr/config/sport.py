@@ -4,7 +4,6 @@ from pysbr.config.config import Config
 
 class Sport(Config):
     def __init__(self, sport_config, league_config):
-
         super().__init__()
 
         d = Utils.load_yaml(Utils.build_yaml_path(sport_config))
