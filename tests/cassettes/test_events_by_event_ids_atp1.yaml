@@ -1,0 +1,81 @@
+interactions:
+- request:
+    body: '{"query": "{\n  eventsV2(eid: [4279749, 4278815]) {\n    events {\n      lid\n      des\n      cit\n      cou\n      es\n      dt\n      eid\n      st\n      participants
+      {\n        partid\n        ih\n        source {\n          ... on Team {\n            nam\n            nn\n            sn\n            abbr\n            cit\n          }\n          ...
+      on Player {\n            fn\n            lnam\n          }\n          ... on
+      ParticipantGroup {\n            partgid\n            nam\n            participants
+      {\n              partid\n              ih\n              source {\n                ...
+      on Player {\n                  fn\n                  lnam\n                }\n                ...
+      on Team {\n                  nam\n                  nn\n                  sn\n                  abbr\n                  cit\n                }\n              }\n            }\n          }\n        }\n      }\n      eventGroup
+      {\n        egid\n        nam\n        alias\n      }\n    }\n  }\n}\n"}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '998'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.24.0
+    method: POST
+    uri: https://www.sportsbookreview.com/ms-odds-v2/odds-v2-service
+  response:
+    body:
+      string: '{"data":{"eventsV2":{"events":[{"lid":23,"des":"Andujar, Pablo@Gerasimov,
+        Egor","cit":"UDF","cou":"UDF","es":"canceled","dt":1604916000000,"eid":4278815,"st":"Undefined","participants":[{"partid":28628,"ih":true,"source":{"fn":"Egor","lnam":"Gerasimov"}},{"partid":54311,"ih":false,"source":{"fn":"Pablo","lnam":"Andujar"}}],"eventGroup":{"egid":23908,"nam":"ATP
+        Sofia, Bulgaria Men Singles","alias":null}},{"lid":23,"des":"Basilashvili,
+        Nikoloz@Huesler, Marc-Andrea","cit":"","cou":"","es":"complete","dt":1604916000000,"eid":4279749,"st":"Undefined","participants":[{"partid":29420,"ih":false,"source":{"fn":"Nikoloz","lnam":"Basilashvili"}},{"partid":117793,"ih":true,"source":{"fn":"Marc-Andrea","lnam":"Huesler"}}],"eventGroup":{"egid":23908,"nam":"ATP
+        Sofia, Bulgaria Men Singles","alias":null}}]}}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Access-Control-Allow-Origin:
+      - '*'
+      Age:
+      - '0'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '805'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 10 Nov 2020 01:15:22 GMT
+      Keep-Alive:
+      - timeout=20
+      Server:
+      - nginx/1.16.1
+      Set-Cookie:
+      - x_geo_cookie_value=CA, ;Domain=sportsbookreview.com;Path=/;Max-Age=43200
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      X-Cache:
+      - Miss
+      X-Cache-Hits:
+      - '0'
+      X-Cacheable:
+      - Not Cacheable
+      X-City-Code:
+      - ''
+      X-City-Name:
+      - British Columbia
+      X-Country-Code:
+      - CA
+      X-Country-Name:
+      - Canada
+      X-DIS-Request-ID:
+      - 92f0cabb16da56993034ac21c2deeb73
+      X-Proxy-Host:
+      - www.sportsbookreview.com
+      X-Varnish:
+      - '244636329'
+    status:
+      code: 200
+      message: OK
+version: 1

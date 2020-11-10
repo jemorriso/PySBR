@@ -1,0 +1,60 @@
+eventsV2:
+  events:
+  - cit: Landover
+    cou: USA
+    des: Baltimore Ravens@Washington Football Team
+    dt: 1601830800000
+    eid: 4143483
+    es: complete
+    eventGroup:
+      alias: Week 4
+      egid: 13
+      nam: REG Week 4
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1521
+      source:
+        abbr: BAL
+        cit: Baltimore
+        nam: Baltimore
+        nn: Ravens
+        sn: Baltimore
+    - ih: true
+      partid: 1537
+      source:
+        abbr: WAS
+        cit: Washington
+        nam: Washington
+        nn: Football Team
+        sn: Washington
+    st: outdoor
+  - cit: Charlotte
+    cou: USA
+    des: Arizona Cardinals@Carolina Panthers
+    dt: 1601830800000
+    eid: 4143486
+    es: complete
+    eventGroup:
+      alias: Week 4
+      egid: 13
+      nam: REG Week 4
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1545
+      source:
+        abbr: CAR
+        cit: Carolina
+        nam: Carolina
+        nn: Panthers
+        sn: Carolina
+    - ih: false
+      partid: 1549
+      source:
+        abbr: ARI
+        cit: Arizona
+        nam: Arizona
+        nn: Cardinals
+        sn: Arizona
+    st: outdoor

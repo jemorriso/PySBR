@@ -377,3 +377,25 @@ class TestQuery:
         e = event_markets(event_id, cassette_name)
 
         assert expected in e._raw["eventMarkets"]["mtids"]
+
+    @mark.parametrize(
+        "event_ids, cassette_name, expected",
+        [
+            ([4143400, 4143532], "test_events_by_event_ids_nfl1", [4143400, 4143532]),
+            ([4143486, 4143483], "test_events_by_event_ids_nfl2", [4143486, 4143483]),
+            ([4143486, 4143532], "test_events_by_event_ids_nfl3", [4143486, 4143532]),
+            ([4279749, 4278815], "test_events_by_event_ids_atp1", [4279749, 4278815]),
+            (
+                [4279749, 4143483, 4253502],
+                "test_events_by_event_ids_sport1",
+                [4279749, 4143483, 4253502],
+            ),
+        ],
+    )
+    def test_events_by_event_ids(
+        self, events_by_event_ids, event_ids, cassette_name, expected
+    ):
+        e = events_by_event_ids(event_ids, cassette_name)
+
+        for id in expected:
+            assert len([x for x in e._raw["eventsV2"]["events"] if x["eid"] == id]) == 1

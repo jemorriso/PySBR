@@ -1,0 +1,60 @@
+eventsV2:
+  events:
+  - cit: Charlotte
+    cou: USA
+    des: Arizona Cardinals@Carolina Panthers
+    dt: 1601830800000
+    eid: 4143486
+    es: complete
+    eventGroup:
+      alias: Week 4
+      egid: 13
+      nam: REG Week 4
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1545
+      source:
+        abbr: CAR
+        cit: Carolina
+        nam: Carolina
+        nn: Panthers
+        sn: Carolina
+    - ih: false
+      partid: 1549
+      source:
+        abbr: ARI
+        cit: Arizona
+        nam: Arizona
+        nn: Cardinals
+        sn: Arizona
+    st: outdoor
+  - cit: Cleveland
+    cou: USA
+    des: Houston Texans@Cleveland Browns
+    dt: 1605463200000
+    eid: 4143532
+    es: scheduled
+    eventGroup:
+      alias: Week 10
+      egid: 19
+      nam: REG Week 10
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1520
+      source:
+        abbr: CLE
+        cit: Cleveland
+        nam: Cleveland
+        nn: Browns
+        sn: Cleveland
+    - ih: false
+      partid: 1530
+      source:
+        abbr: HOU
+        cit: Houston
+        nam: Houston
+        nn: Texans
+        sn: Houston
+    st: outdoor

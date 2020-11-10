@@ -1,0 +1,83 @@
+eventsV2:
+  events:
+  - cit: Landover
+    cou: USA
+    des: Baltimore Ravens@Washington Football Team
+    dt: 1601830800000
+    eid: 4143483
+    es: complete
+    eventGroup:
+      alias: Week 4
+      egid: 13
+      nam: REG Week 4
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1521
+      source:
+        abbr: BAL
+        cit: Baltimore
+        nam: Baltimore
+        nn: Ravens
+        sn: Baltimore
+    - ih: true
+      partid: 1537
+      source:
+        abbr: WAS
+        cit: Washington
+        nam: Washington
+        nn: Football Team
+        sn: Washington
+    st: outdoor
+  - cit: Fort Lauderdale
+    cou: USA
+    des: Houston Dynamo@Inter Miami CF
+    dt: 1602363600000
+    eid: 4253502
+    es: complete
+    eventGroup:
+      alias: null
+      egid: 3057
+      nam: Major League Soccer
+    lid: 4
+    participants:
+    - ih: false
+      partid: 57100
+      source:
+        abbr: HOU
+        cit: ''
+        nam: Houston Dynamo
+        nn: ''
+        sn: null
+    - ih: true
+      partid: 415550
+      source:
+        abbr: MIA
+        cit: ''
+        nam: Inter Miami CF
+        nn: ''
+        sn: null
+    st: Undefined
+  - cit: ''
+    cou: ''
+    des: Basilashvili, Nikoloz@Huesler, Marc-Andrea
+    dt: 1604916000000
+    eid: 4279749
+    es: complete
+    eventGroup:
+      alias: null
+      egid: 23908
+      nam: ATP Sofia, Bulgaria Men Singles
+    lid: 23
+    participants:
+    - ih: false
+      partid: 29420
+      source:
+        fn: Nikoloz
+        lnam: Basilashvili
+    - ih: true
+      partid: 117793
+      source:
+        fn: Marc-Andrea
+        lnam: Huesler
+    st: Undefined
