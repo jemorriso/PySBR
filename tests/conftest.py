@@ -24,6 +24,7 @@ from pysbr.queries.eventsbyparticipants import EventsByParticipants
 from pysbr.queries.eventsbydaterange import EventsByDateRange
 from pysbr.queries.eventsbyeventgroup import EventsByEventGroup
 from pysbr.queries.eventsbymatchup import EventsByMatchup
+from pysbr.queries.openinglines import OpeningLines
 from pysbr.config.nfl import NFL
 from pysbr.config.ncaaf import NCAAF
 from pysbr.config.atp import ATP
@@ -206,6 +207,22 @@ class TestEventsByMatchup(EventsByMatchup):
         super().__init__(participant_id1, participant_id2, count)
 
     def _build_and_execute_query(self, *args):
+        return self.patch_fn(self)
+
+
+class TestOpeningLines(OpeningLines):
+    def __init__(
+        self,
+        event_ids,
+        market_ids,
+        patch_fn,
+        cassette_name,
+    ):
+        self.cassette_name = cassette_name
+        self.patch_fn = patch_fn
+        super().__init__(event_ids, market_ids)
+
+    def _build_and_execute_query(self, *args, **kwargs):
         return self.patch_fn(self)
 
 
@@ -495,6 +512,19 @@ def events_by_matchup(build_and_execute_with_cassette):
             participant_id1,
             participant_id2,
             count,
+            build_and_execute_with_cassette,
+            cassette_name,
+        )
+
+    return fn
+
+
+@fixture
+def opening_lines(build_and_execute_with_cassette):
+    def fn(event_ids, market_ids, cassette_name):
+        return TestOpeningLines(
+            event_ids,
+            market_ids,
             build_and_execute_with_cassette,
             cassette_name,
         )
