@@ -1,0 +1,6 @@
+multipleSearch:
+  searchSport:
+  - nam: soccer
+    spid: 2
+  - nam: football
+    spid: 4

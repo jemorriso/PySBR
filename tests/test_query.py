@@ -331,3 +331,20 @@ class TestQuery:
                 return True
 
         assert False
+
+    @mark.parametrize(
+        "search_term, cassette_name, expected",
+        [
+            ("football", "test_search_sports_football1", 4),
+            ("soccer", "test_search_sports_soccer1", 2),
+            ("tennis", "test_search_sports_tennis1", 8),
+        ],
+    )
+    def test_search_sports(self, search_sports, search_term, cassette_name, expected):
+        s = search_sports(search_term, cassette_name)
+
+        for sport in s._raw["multipleSearch"]["searchSport"]:
+            if sport["spid"] == expected:
+                return True
+
+        assert False
