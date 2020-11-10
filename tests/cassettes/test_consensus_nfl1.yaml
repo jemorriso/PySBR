@@ -1,0 +1,71 @@
+interactions:
+- request:
+    body: '{"query": "{\n  consensus(eid: [4143394, 4143395], mtid: [401, 83, 402])
+      {\n    eid\n    mtid\n    partid\n    sbid\n    paid\n    wag\n    perc\n    tim\n  }\n}\n"}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '165'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.24.0
+    method: POST
+    uri: https://www.sportsbookreview.com/ms-odds-v2/odds-v2-service
+  response:
+    body:
+      string: '{"data":{"consensus":[{"eid":4143395,"mtid":83,"partid":1540,"sbid":19,"paid":3,"wag":0,"perc":0,"tim":1604954897000},{"eid":4143395,"mtid":83,"partid":1541,"sbid":19,"paid":3,"wag":100,"perc":100,"tim":1604947562000},{"eid":4143395,"mtid":401,"partid":1540,"sbid":19,"paid":3,"wag":220,"perc":52,"tim":1604954897000},{"eid":4143395,"mtid":401,"partid":1541,"sbid":19,"paid":3,"wag":200,"perc":48,"tim":1604947562000},{"eid":4143394,"mtid":401,"partid":1537,"sbid":19,"paid":3,"wag":0,"perc":0,"tim":1604783697000},{"eid":4143394,"mtid":401,"partid":1539,"sbid":19,"paid":3,"wag":20,"perc":100,"tim":1604783697000},{"eid":4143395,"mtid":402,"partid":15143,"sbid":19,"paid":3,"wag":0,"perc":0,"tim":1604954897000},{"eid":4143395,"mtid":402,"partid":15144,"sbid":19,"paid":3,"wag":40,"perc":100,"tim":1604954897000}]}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Access-Control-Allow-Origin:
+      - '*'
+      Age:
+      - '0'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '816'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 10 Nov 2020 06:40:37 GMT
+      Keep-Alive:
+      - timeout=20
+      Server:
+      - nginx/1.16.1
+      Set-Cookie:
+      - x_geo_cookie_value=CA, ;Domain=sportsbookreview.com;Path=/;Max-Age=43200
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      X-Cache:
+      - Miss
+      X-Cache-Hits:
+      - '0'
+      X-Cacheable:
+      - Not Cacheable
+      X-City-Code:
+      - ''
+      X-City-Name:
+      - British Columbia
+      X-Country-Code:
+      - CA
+      X-Country-Name:
+      - Canada
+      X-DIS-Request-ID:
+      - 96c336a31c9d71462052961a0b9da64d
+      X-Proxy-Host:
+      - www.sportsbookreview.com
+      X-Varnish:
+      - '246105721'
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -27,6 +27,7 @@ from pysbr.queries.eventsbymatchup import EventsByMatchup
 from pysbr.queries.openinglines import OpeningLines
 from pysbr.queries.currentlines import CurrentLines
 from pysbr.queries.bestlines import BestLines
+from pysbr.queries.consensus import Consensus
 from pysbr.config.nfl import NFL
 from pysbr.config.ncaaf import NCAAF
 from pysbr.config.atp import ATP
@@ -245,6 +246,22 @@ class TestCurrentLines(CurrentLines):
 
 
 class TestBestLines(BestLines):
+    def __init__(
+        self,
+        event_ids,
+        market_ids,
+        patch_fn,
+        cassette_name,
+    ):
+        self.cassette_name = cassette_name
+        self.patch_fn = patch_fn
+        super().__init__(event_ids, market_ids)
+
+    def _build_and_execute_query(self, *args, **kwargs):
+        return self.patch_fn(self)
+
+
+class TestConsensus(Consensus):
     def __init__(
         self,
         event_ids,
@@ -583,6 +600,19 @@ def current_lines(build_and_execute_with_cassette):
 def best_lines(build_and_execute_with_cassette):
     def fn(event_ids, market_ids, cassette_name):
         return TestBestLines(
+            event_ids,
+            market_ids,
+            build_and_execute_with_cassette,
+            cassette_name,
+        )
+
+    return fn
+
+
+@fixture
+def consensus(build_and_execute_with_cassette):
+    def fn(event_ids, market_ids, cassette_name):
+        return TestConsensus(
             event_ids,
             market_ids,
             build_and_execute_with_cassette,

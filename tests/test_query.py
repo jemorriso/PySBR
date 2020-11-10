@@ -594,3 +594,24 @@ class TestQuery:
 
         for id in event_ids + market_ids:
             assert id in ids
+
+    @mark.parametrize(
+        "event_ids, market_ids, cassette_name, expected",
+        [
+            ([4143394, 4143395], [401, 83, 402], "test_consensus_nfl1", True),
+            ([4278815, 4279749], [126, 395, 396], "test_consensus_atp1", False),
+        ],
+    )
+    def test_consensus(self, consensus, event_ids, market_ids, cassette_name, expected):
+        c = consensus(event_ids, market_ids, cassette_name)
+
+        ids = []
+        for line in c._raw["consensus"]:
+            ids.append(line["eid"])
+            ids.append(line["mtid"])
+
+        if expected:
+            for id in event_ids + market_ids:
+                assert id in ids
+        else:
+            assert len(c._raw["consensus"]) == 0
