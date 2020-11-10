@@ -60,15 +60,15 @@ sportsbooks: |
   sitid: 1,
   enabled: true
 
-query: |
-  query: $query
+search_event: |
+  query: $search_term
 
 multiple_search: |
-  query: $query,
+  query: $search_term,
   did: 0
 
 search_sport: |
-  query: $query,
+  query: $search_term,
   did: 1
 
 league_hierarchy: |
