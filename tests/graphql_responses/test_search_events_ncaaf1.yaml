@@ -1,0 +1,47 @@
+searchEvent:
+- date: '2020-11-12T01:00:00.000Z'
+  des: Toledo@Western Michigan
+  eid: 4260018
+  eventParticipants: '[{"eid":4260018,"partid":1209,"psid":1209,"ih":false,"rot":119,"source":{"tmid":1209,"lid":6,"nam":"Toledo","nn":"Rockets","sn":"Toledo","abbr":"TOL"},"nam":"Toledo"},{"eid":4260018,"partid":1213,"psid":1213,"ih":true,"rot":120,"source":{"tmid":1213,"lid":6,"nam":"Western
+    Michigan","nn":"Broncos","sn":"Western Michigan","abbr":"WMC"},"nam":"Western
+    Michigan"}]'
+  league: NCAAF
+  lid: 6
+  searchParticipants:
+  - abbr: TOL
+    fn: ''
+    lnam: ''
+    nam: Toledo
+    nn: Rockets
+    sn: Toledo
+  - abbr: WMC
+    fn: ''
+    lnam: ''
+    nam: Western Michigan
+    nn: Broncos
+    sn: Western Michigan
+  spid: '4'
+  sport: football
+- date: '2020-11-10T10:15:00.000Z'
+  des: Toledo Bague, Pol@Roca Batalla, Oriol
+  eid: 4279803
+  eventParticipants: '[{"eid":4279803,"partid":28608,"psid":215102,"ih":true,"rot":0,"source":{"pid":215102,"fn":"Oriol","lnam":"Roca
+    Batalla"},"nam":"Oriol Roca Batalla"},{"eid":4279803,"partid":46085,"psid":216980,"ih":false,"rot":0,"source":{"pid":216980,"fn":"Pol","lnam":"Toledo
+    Bague"},"nam":"Pol Toledo Bague"}]'
+  league: ITF Men
+  lid: 1783
+  searchParticipants:
+  - abbr: ''
+    fn: Oriol
+    lnam: Roca Batalla
+    nam: ''
+    nn: ''
+    sn: ''
+  - abbr: ''
+    fn: Pol
+    lnam: Toledo Bague
+    nam: ''
+    nn: ''
+    sn: ''
+  spid: '8'
+  sport: tennis

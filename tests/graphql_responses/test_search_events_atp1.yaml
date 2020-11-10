@@ -1,0 +1,24 @@
+searchEvent:
+- date: '2020-11-11T10:00:00.000Z'
+  des: Auger-Aliassime, Felix@Caruso, Salvatore
+  eid: 4279927
+  eventParticipants: '[{"eid":4279927,"partid":29189,"psid":216113,"ih":true,"rot":18012,"source":{"pid":216113,"fn":"Salvatore","lnam":"Caruso"},"nam":"Salvatore
+    Caruso"},{"eid":4279927,"partid":43314,"psid":216450,"ih":false,"rot":18011,"source":{"pid":216450,"fn":"Felix","lnam":"Auger-Aliassime"},"nam":"Felix
+    Auger-Aliassime"}]'
+  league: ATP
+  lid: 23
+  searchParticipants:
+  - abbr: ''
+    fn: Salvatore
+    lnam: Caruso
+    nam: ''
+    nn: ''
+    sn: ''
+  - abbr: ''
+    fn: Felix
+    lnam: Auger-Aliassime
+    nam: ''
+    nn: ''
+    sn: ''
+  spid: '8'
+  sport: tennis

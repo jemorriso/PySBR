@@ -1,0 +1,73 @@
+interactions:
+- request:
+    body: '{"query": "{\n  searchEvent(query: [\"Auger-Aliassime\"]) {\n    des\n    date\n    league\n    sport\n    spid\n    eid\n    searchParticipants
+      {\n      nam\n      lnam\n      fn\n      nn\n      sn\n      abbr\n    }\n    eventParticipants\n    lid\n  }\n}\n"}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '262'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.24.0
+    method: POST
+    uri: https://www.sportsbookreview.com/ms-odds-v2/odds-v2-service
+  response:
+    body:
+      string: '{"data":{"searchEvent":[{"des":"Auger-Aliassime, Felix@Caruso, Salvatore","date":"2020-11-11T10:00:00.000Z","league":"ATP","sport":"tennis","spid":"8","eid":4279927,"searchParticipants":[{"nam":"","lnam":"Caruso","fn":"Salvatore","nn":"","sn":"","abbr":""},{"nam":"","lnam":"Auger-Aliassime","fn":"Felix","nn":"","sn":"","abbr":""}],"eventParticipants":"[{\"eid\":4279927,\"partid\":29189,\"psid\":216113,\"ih\":true,\"rot\":18012,\"source\":{\"pid\":216113,\"fn\":\"Salvatore\",\"lnam\":\"Caruso\"},\"nam\":\"Salvatore
+        Caruso\"},{\"eid\":4279927,\"partid\":43314,\"psid\":216450,\"ih\":false,\"rot\":18011,\"source\":{\"pid\":216450,\"fn\":\"Felix\",\"lnam\":\"Auger-Aliassime\"},\"nam\":\"Felix
+        Auger-Aliassime\"}]","lid":23}]}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Access-Control-Allow-Origin:
+      - '*'
+      Age:
+      - '0'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '730'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 09 Nov 2020 22:45:45 GMT
+      Keep-Alive:
+      - timeout=20
+      Server:
+      - nginx/1.16.1
+      Set-Cookie:
+      - x_geo_cookie_value=CA, ;Domain=sportsbookreview.com;Path=/;Max-Age=43200
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      X-Cache:
+      - Miss
+      X-Cache-Hits:
+      - '0'
+      X-Cacheable:
+      - Not Cacheable
+      X-City-Code:
+      - ''
+      X-City-Name:
+      - British Columbia
+      X-Country-Code:
+      - CA
+      X-Country-Name:
+      - Canada
+      X-DIS-Request-ID:
+      - 3eaca761ba0a1d633ded8243e8506ba8
+      X-Proxy-Host:
+      - www.sportsbookreview.com
+      X-Varnish:
+      - '246616062'
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,24 @@
+searchEvent:
+- date: '2020-11-12T01:00:00.000Z'
+  des: Toledo@Western Michigan
+  eid: 4260018
+  eventParticipants: '[{"eid":4260018,"partid":1209,"psid":1209,"ih":false,"rot":119,"source":{"tmid":1209,"lid":6,"nam":"Toledo","nn":"Rockets","sn":"Toledo","abbr":"TOL"},"nam":"Toledo"},{"eid":4260018,"partid":1213,"psid":1213,"ih":true,"rot":120,"source":{"tmid":1213,"lid":6,"nam":"Western
+    Michigan","nn":"Broncos","sn":"Western Michigan","abbr":"WMC"},"nam":"Western
+    Michigan"}]'
+  league: NCAAF
+  lid: 6
+  searchParticipants:
+  - abbr: TOL
+    fn: ''
+    lnam: ''
+    nam: Toledo
+    nn: Rockets
+    sn: Toledo
+  - abbr: WMC
+    fn: ''
+    lnam: ''
+    nam: Western Michigan
+    nn: Broncos
+    sn: Western Michigan
+  spid: '4'
+  sport: football

@@ -1,0 +1,74 @@
+interactions:
+- request:
+    body: '{"query": "{\n  searchEvent(query: [\"Rockets\"]) {\n    des\n    date\n    league\n    sport\n    spid\n    eid\n    searchParticipants
+      {\n      nam\n      lnam\n      fn\n      nn\n      sn\n      abbr\n    }\n    eventParticipants\n    lid\n  }\n}\n"}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '254'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.24.0
+    method: POST
+    uri: https://www.sportsbookreview.com/ms-odds-v2/odds-v2-service
+  response:
+    body:
+      string: '{"data":{"searchEvent":[{"des":"Toledo@Western Michigan","date":"2020-11-12T01:00:00.000Z","league":"NCAAF","sport":"football","spid":"4","eid":4260018,"searchParticipants":[{"nam":"Toledo","lnam":"","fn":"","nn":"Rockets","sn":"Toledo","abbr":"TOL"},{"nam":"Western
+        Michigan","lnam":"","fn":"","nn":"Broncos","sn":"Western Michigan","abbr":"WMC"}],"eventParticipants":"[{\"eid\":4260018,\"partid\":1209,\"psid\":1209,\"ih\":false,\"rot\":119,\"source\":{\"tmid\":1209,\"lid\":6,\"nam\":\"Toledo\",\"nn\":\"Rockets\",\"sn\":\"Toledo\",\"abbr\":\"TOL\"},\"nam\":\"Toledo\"},{\"eid\":4260018,\"partid\":1213,\"psid\":1213,\"ih\":true,\"rot\":120,\"source\":{\"tmid\":1213,\"lid\":6,\"nam\":\"Western
+        Michigan\",\"nn\":\"Broncos\",\"sn\":\"Western Michigan\",\"abbr\":\"WMC\"},\"nam\":\"Western
+        Michigan\"}]","lid":6}]}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Access-Control-Allow-Origin:
+      - '*'
+      Age:
+      - '0'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '817'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 09 Nov 2020 22:45:44 GMT
+      Keep-Alive:
+      - timeout=20
+      Server:
+      - nginx/1.16.1
+      Set-Cookie:
+      - x_geo_cookie_value=CA, ;Domain=sportsbookreview.com;Path=/;Max-Age=43200
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      X-Cache:
+      - Miss
+      X-Cache-Hits:
+      - '0'
+      X-Cacheable:
+      - Not Cacheable
+      X-City-Code:
+      - ''
+      X-City-Name:
+      - British Columbia
+      X-Country-Code:
+      - CA
+      X-Country-Name:
+      - Canada
+      X-DIS-Request-ID:
+      - ed1dc2fca2b8c1e196ea84c6e118dd36
+      X-Proxy-Host:
+      - www.sportsbookreview.com
+      X-Varnish:
+      - '240869970'
+    status:
+      code: 200
+      message: OK
+version: 1

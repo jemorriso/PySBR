@@ -1,0 +1,113 @@
+searchEvent:
+- date: '2020-11-10T01:15:00.000Z'
+  des: New England Patriots@N.Y. Jets
+  eid: 4143526
+  eventParticipants: '[{"eid":4143526,"partid":1523,"psid":1523,"ih":true,"rot":476,"source":{"tmid":1523,"lid":16,"nam":"N.Y.
+    Jets","nn":"Jets","sn":"New York","abbr":"NYJ"},"nam":"N.Y. Jets"},{"eid":4143526,"partid":1525,"psid":1525,"ih":false,"rot":475,"source":{"tmid":1525,"lid":16,"nam":"New
+    England","nn":"Patriots","sn":"New England","abbr":"NE"},"nam":"New England"}]'
+  league: NFL
+  lid: 16
+  searchParticipants:
+  - abbr: NYJ
+    fn: ''
+    lnam: ''
+    nam: N.Y. Jets
+    nn: Jets
+    sn: New York
+  - abbr: NE
+    fn: ''
+    lnam: ''
+    nam: New England
+    nn: Patriots
+    sn: New England
+  spid: '4'
+  sport: football
+- date: '2020-11-16T01:20:00.000Z'
+  des: Baltimore Ravens@New England Patriots
+  eid: 4143535
+  eventParticipants: '[{"eid":4143535,"partid":1521,"psid":1521,"ih":false,"rot":0,"source":{"tmid":1521,"lid":16,"nam":"Baltimore","nn":"Ravens","sn":"Baltimore","abbr":"BAL"},"nam":"Baltimore"},{"eid":4143535,"partid":1525,"psid":1525,"ih":true,"rot":0,"source":{"tmid":1525,"lid":16,"nam":"New
+    England","nn":"Patriots","sn":"New England","abbr":"NE"},"nam":"New England"}]'
+  league: NFL
+  lid: 16
+  searchParticipants:
+  - abbr: BAL
+    fn: ''
+    lnam: ''
+    nam: Baltimore
+    nn: Ravens
+    sn: Baltimore
+  - abbr: NE
+    fn: ''
+    lnam: ''
+    nam: New England
+    nn: Patriots
+    sn: New England
+  spid: '4'
+  sport: football
+- date: '2020-11-22T18:00:00.000Z'
+  des: New England Patriots@Houston Texans
+  eid: 4143537
+  eventParticipants: '[{"eid":4143537,"partid":1525,"psid":1525,"ih":false,"rot":0,"source":{"tmid":1525,"lid":16,"nam":"New
+    England","nn":"Patriots","sn":"New England","abbr":"NE"},"nam":"New England"},{"eid":4143537,"partid":1530,"psid":1530,"ih":true,"rot":0,"source":{"tmid":1530,"lid":16,"nam":"Houston","nn":"Texans","sn":"Houston","abbr":"HOU"},"nam":"Houston"}]'
+  league: NFL
+  lid: 16
+  searchParticipants:
+  - abbr: NE
+    fn: ''
+    lnam: ''
+    nam: New England
+    nn: Patriots
+    sn: New England
+  - abbr: HOU
+    fn: ''
+    lnam: ''
+    nam: Houston
+    nn: Texans
+    sn: Houston
+  spid: null
+  sport: null
+- date: '2020-11-29T18:00:00.000Z'
+  des: Arizona Cardinals@New England Patriots
+  eid: 4143552
+  eventParticipants: '[{"eid":4143552,"partid":1525,"psid":1525,"ih":true,"rot":0,"source":{"tmid":1525,"lid":16,"nam":"New
+    England","nn":"Patriots","sn":"New England","abbr":"NE"},"nam":"New England"},{"eid":4143552,"partid":1549,"psid":1549,"ih":false,"rot":0,"source":{"tmid":1549,"lid":16,"nam":"Arizona","nn":"Cardinals","sn":"Arizona","abbr":"ARI"},"nam":"Arizona"}]'
+  league: NFL
+  lid: 16
+  searchParticipants:
+  - abbr: NE
+    fn: ''
+    lnam: ''
+    nam: New England
+    nn: Patriots
+    sn: New England
+  - abbr: ARI
+    fn: ''
+    lnam: ''
+    nam: Arizona
+    nn: Cardinals
+    sn: Arizona
+  spid: null
+  sport: null
+- date: '2020-12-06T21:25:00.000Z'
+  des: New England Patriots@Los Angeles Chargers
+  eid: 4143558
+  eventParticipants: '[{"eid":4143558,"partid":1525,"psid":1525,"ih":false,"rot":0,"source":{"tmid":1525,"lid":16,"nam":"New
+    England","nn":"Patriots","sn":"New England","abbr":"NE"},"nam":"New England"},{"eid":4143558,"partid":75380,"psid":75380,"ih":true,"rot":0,"source":{"tmid":75380,"lid":16,"nam":"L.A.
+    Chargers","nn":"Chargers","sn":"Los Angeles","abbr":"LAC"},"nam":"L.A. Chargers"}]'
+  league: NFL
+  lid: 16
+  searchParticipants:
+  - abbr: NE
+    fn: ''
+    lnam: ''
+    nam: New England
+    nn: Patriots
+    sn: New England
+  - abbr: LAC
+    fn: ''
+    lnam: ''
+    nam: L.A. Chargers
+    nn: Chargers
+    sn: Los Angeles
+  spid: null
+  sport: null

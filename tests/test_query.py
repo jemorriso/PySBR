@@ -312,3 +312,22 @@ class TestQuery:
             found.append(league["sn"])
 
         assert set(found) == set(expected)
+
+    @mark.parametrize(
+        "search_term, cassette_name, expected",
+        [
+            ("Patriots", "test_search_events_nfl1", 4143526),
+            ("Toledo", "test_search_events_ncaaf1", 4260018),
+            ("Rockets", "test_search_events_ncaaf2", 4260018),
+            ("Auger-Aliassime", "test_search_events_atp1", 4279927),
+            ("Caruso", "test_search_events_atp2", 4279927),
+        ],
+    )
+    def test_search_events(self, search_events, search_term, cassette_name, expected):
+        s = search_events(search_term, cassette_name)
+
+        for event in s._raw["searchEvent"]:
+            if event["eid"] == expected:
+                return True
+
+        assert False
