@@ -155,7 +155,6 @@ search_league: |
 search_sport: |
   {
       searchSport {
-          did
           spid
           nam
       }
