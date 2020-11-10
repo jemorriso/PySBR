@@ -1,0 +1,110 @@
+interactions:
+- request:
+    body: '{"query": "{\n  currentLines(eid: [4278815, 4279749], mtid: [126, 395,
+      396])\n}\n"}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '83'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.24.0
+    method: POST
+    uri: https://www.sportsbookreview.com/ms-odds-v2/odds-v2-service
+  response:
+    body:
+      string: !!binary |
+        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
+        /fb2PwYrhUaWOwAA
+    headers:
+      Accept-Ranges:
+      - bytes
+      Access-Control-Allow-Origin:
+      - '*'
+      Age:
+      - '0'
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '2064'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 10 Nov 2020 06:32:10 GMT
+      Keep-Alive:
+      - timeout=20
+      Server:
+      - nginx/1.16.1
+      Set-Cookie:
+      - x_geo_cookie_value=CA, ;Domain=sportsbookreview.com;Path=/;Max-Age=43200
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      X-Cache:
+      - Miss
+      X-Cache-Hits:
+      - '0'
+      X-Cacheable:
+      - Not Cacheable
+      X-City-Code:
+      - ''
+      X-City-Name:
+      - British Columbia
+      X-Country-Code:
+      - CA
+      X-Country-Name:
+      - Canada
+      X-DIS-Request-ID:
+      - 87c828fbb02fff8d6463105da5741dd1
+      X-Proxy-Host:
+      - www.sportsbookreview.com
+      X-Varnish:
+      - '247504724'
+    status:
+      code: 200
+      message: OK
+version: 1
