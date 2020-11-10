@@ -1,0 +1,233 @@
+eventsInfoByParticipant:
+- events:
+  - cit: ''
+    cou: ''
+    des: Ivashka, Ilya@Klizan, Martin
+    dt: 1603621800000
+    eid: 4272066
+    es: complete
+    eventGroup:
+      alias: null
+      egid: 20239
+      nam: ATP Challenger Istanbul, Turkey Men Singles
+    lid: 573
+    participants:
+    - ih: true
+      partid: 5562
+      source:
+        fn: Martin
+        lnam: Klizan
+    - ih: false
+      partid: 42003
+      source:
+        fn: Ilya
+        lnam: Ivashka
+    st: Undefined
+  - cit: ''
+    cou: ''
+    des: Klizan, Martin@Rosenkranz, Mats
+    dt: 1604314500000
+    eid: 4275890
+    es: complete
+    eventGroup:
+      alias: null
+      egid: 20228
+      nam: ATP Challenger Eckental, Germany Men Singles
+    lid: 573
+    participants:
+    - ih: false
+      partid: 5562
+      source:
+        fn: Martin
+        lnam: Klizan
+    - ih: true
+      partid: 180490
+      source:
+        fn: Mats
+        lnam: Rosenkranz
+    st: Undefined
+  - cit: ''
+    cou: ''
+    des: Klizan, Martin@Purcell, Max
+    dt: 1604743200000
+    eid: 4278790
+    es: complete
+    eventGroup:
+      alias: null
+      egid: 23908
+      nam: ATP Sofia, Bulgaria Men Singles
+    lid: 23
+    participants:
+    - ih: false
+      partid: 5562
+      source:
+        fn: Martin
+        lnam: Klizan
+    - ih: true
+      partid: 52451
+      source:
+        fn: Max
+        lnam: Purcell
+    st: Undefined
+  - cit: ''
+    cou: ''
+    des: Klizan, Martin@Daniel, Taro
+    dt: 1604833200000
+    eid: 4279140
+    es: complete
+    eventGroup:
+      alias: null
+      egid: 23908
+      nam: ATP Sofia, Bulgaria Men Singles
+    lid: 23
+    participants:
+    - ih: false
+      partid: 5562
+      source:
+        fn: Martin
+        lnam: Klizan
+    - ih: true
+      partid: 28613
+      source:
+        fn: Taro
+        lnam: Daniel
+    st: Undefined
+  - cit: ''
+    cou: ''
+    des: Mannarino, Adrian@Klizan, Martin
+    dt: 1604923800000
+    eid: 4279492
+    es: complete
+    eventGroup:
+      alias: null
+      egid: 23908
+      nam: ATP Sofia, Bulgaria Men Singles
+    lid: 23
+    participants:
+    - ih: true
+      partid: 5562
+      source:
+        fn: Martin
+        lnam: Klizan
+    - ih: false
+      partid: 5628
+      source:
+        fn: Adrian
+        lnam: Mannarino
+    st: Undefined
+- events:
+  - cit: ''
+    cou: ''
+    des: Millman, John@Mannarino, Adrian
+    dt: 1604224800000
+    eid: 4275344
+    es: complete
+    eventGroup:
+      alias: null
+      egid: 29348
+      nam: ATP Nur-Sultan, Kazakhstan Men Singles
+    lid: 23
+    participants:
+    - ih: true
+      partid: 5628
+      source:
+        fn: Adrian
+        lnam: Mannarino
+    - ih: false
+      partid: 5662
+      source:
+        fn: John
+        lnam: Millman
+    st: Undefined
+  - cit: ''
+    cou: ''
+    des: Lajovic, Dusan@Mannarino, Adrian
+    dt: 1604415600000
+    eid: 4275862
+    es: complete
+    eventGroup:
+      alias: null
+      egid: 18942
+      nam: ATP Paris, France Men Singles
+    lid: 23
+    participants:
+    - ih: true
+      partid: 5628
+      source:
+        fn: Adrian
+        lnam: Mannarino
+    - ih: false
+      partid: 28503
+      source:
+        fn: Dusan
+        lnam: Lajovic
+    st: Undefined
+  - cit: ''
+    cou: ''
+    des: Mannarino, Adrian@Nishioka, Yoshihito
+    dt: 1604489700000
+    eid: 4277120
+    es: complete
+    eventGroup:
+      alias: null
+      egid: 18942
+      nam: ATP Paris, France Men Singles
+    lid: 23
+    participants:
+    - ih: false
+      partid: 5628
+      source:
+        fn: Adrian
+        lnam: Mannarino
+    - ih: true
+      partid: 28649
+      source:
+        fn: Yoshihito
+        lnam: Nishioka
+    st: Undefined
+  - cit: ''
+    cou: ''
+    des: Mannarino, Adrian@Zverev, Alexander
+    dt: 1604600100000
+    eid: 4277545
+    es: complete
+    eventGroup:
+      alias: null
+      egid: 18942
+      nam: ATP Paris, France Men Singles
+    lid: 23
+    participants:
+    - ih: false
+      partid: 5628
+      source:
+        fn: Adrian
+        lnam: Mannarino
+    - ih: true
+      partid: 29407
+      source:
+        fn: Alexander
+        lnam: Zverev
+    st: Undefined
+  - cit: ''
+    cou: ''
+    des: Mannarino, Adrian@Klizan, Martin
+    dt: 1604923800000
+    eid: 4279492
+    es: complete
+    eventGroup:
+      alias: null
+      egid: 23908
+      nam: ATP Sofia, Bulgaria Men Singles
+    lid: 23
+    participants:
+    - ih: true
+      partid: 5562
+      source:
+        fn: Martin
+        lnam: Klizan
+    - ih: false
+      partid: 5628
+      source:
+        fn: Adrian
+        lnam: Mannarino
+    st: Undefined

@@ -20,6 +20,7 @@ from pysbr.queries.searchsports import SearchSports
 from pysbr.queries.searchleagues import SearchLeagues
 from pysbr.queries.eventmarkets import EventMarkets
 from pysbr.queries.eventsbyeventids import EventsByEventIds
+from pysbr.queries.eventsbyparticipants import EventsByParticipants
 from pysbr.config.nfl import NFL
 from pysbr.config.ncaaf import NCAAF
 from pysbr.config.atp import ATP
@@ -151,6 +152,16 @@ class TestEventsByEventIds(EventsByEventIds):
         self.cassette_name = cassette_name
         self.patch_fn = patch_fn
         super().__init__(event_ids)
+
+    def _build_and_execute_query(self, *args):
+        return self.patch_fn(self)
+
+
+class TestEventsByParticipants(EventsByParticipants):
+    def __init__(self, participant_ids, patch_fn, cassette_name):
+        self.cassette_name = cassette_name
+        self.patch_fn = patch_fn
+        super().__init__(participant_ids)
 
     def _build_and_execute_query(self, *args):
         return self.patch_fn(self)
@@ -387,6 +398,18 @@ def events_by_event_ids(build_and_execute_with_cassette):
     def fn(event_ids, cassette_name):
         return TestEventsByEventIds(
             event_ids,
+            build_and_execute_with_cassette,
+            cassette_name,
+        )
+
+    return fn
+
+
+@fixture
+def events_by_participants(build_and_execute_with_cassette):
+    def fn(participant_ids, cassette_name):
+        return TestEventsByParticipants(
+            participant_ids,
             build_and_execute_with_cassette,
             cassette_name,
         )

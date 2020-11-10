@@ -1,0 +1,293 @@
+eventsInfoByParticipant:
+- events:
+  - cit: Foxborough
+    cou: USA
+    des: Las Vegas Raiders@New England Patriots
+    dt: 1601226000000
+    eid: 4143351
+    es: complete
+    eventGroup:
+      alias: Week 3
+      egid: 12
+      nam: REG Week 3
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1525
+      source:
+        abbr: NE
+        cit: New England
+        nam: New England
+        nn: Patriots
+        sn: New England
+    - ih: false
+      partid: 1533
+      source:
+        abbr: LV
+        cit: Las Vegas
+        nam: Las Vegas
+        nn: Raiders
+        sn: Las Vegas
+    st: outdoor
+  - cit: Foxborough
+    cou: USA
+    des: Denver Broncos@New England Patriots
+    dt: 1602536400000
+    eid: 4143366
+    es: complete
+    eventGroup:
+      alias: Week 6
+      egid: 15
+      nam: REG Week 6
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1525
+      source:
+        abbr: NE
+        cit: New England
+        nam: New England
+        nn: Patriots
+        sn: New England
+    - ih: false
+      partid: 1534
+      source:
+        abbr: DEN
+        cit: Denver
+        nam: Denver
+        nn: Broncos
+        sn: Denver
+    st: outdoor
+  - cit: Foxborough
+    cou: USA
+    des: San Francisco 49ers@New England Patriots
+    dt: 1603657500000
+    eid: 4143506
+    es: complete
+    eventGroup:
+      alias: Week 7
+      egid: 16
+      nam: REG Week 7
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1525
+      source:
+        abbr: NE
+        cit: New England
+        nam: New England
+        nn: Patriots
+        sn: New England
+    - ih: false
+      partid: 1547
+      source:
+        abbr: SF
+        cit: San Francisco
+        nam: San Francisco
+        nn: 49ers
+        sn: San Francisco
+    st: outdoor
+  - cit: Orchard Park
+    cou: USA
+    des: New England Patriots@Buffalo Bills
+    dt: 1604253600000
+    eid: 4143512
+    es: complete
+    eventGroup:
+      alias: Week 8
+      egid: 17
+      nam: REG Week 8
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1525
+      source:
+        abbr: NE
+        cit: New England
+        nam: New England
+        nn: Patriots
+        sn: New England
+    - ih: true
+      partid: 1526
+      source:
+        abbr: BUF
+        cit: Buffalo
+        nam: Buffalo
+        nn: Bills
+        sn: Buffalo
+    st: outdoor
+  - cit: Kansas City
+    cou: USA
+    des: New England Patriots@Kansas City Chiefs
+    dt: 1601939100000
+    eid: 4257889
+    es: complete
+    eventGroup:
+      alias: Week 4
+      egid: 13
+      nam: REG Week 4
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1525
+      source:
+        abbr: NE
+        cit: New England
+        nam: New England
+        nn: Patriots
+        sn: New England
+    - ih: true
+      partid: 1531
+      source:
+        abbr: KC
+        cit: Kansas City
+        nam: Kansas City
+        nn: Chiefs
+        sn: Kansas City
+    st: outdoor
+- events:
+  - cit: Houston
+    cou: USA
+    des: Minnesota Vikings@Houston Texans
+    dt: 1601830800000
+    eid: 4143362
+    es: complete
+    eventGroup:
+      alias: Week 4
+      egid: 13
+      nam: REG Week 4
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1530
+      source:
+        abbr: HOU
+        cit: Houston
+        nam: Houston
+        nn: Texans
+        sn: Houston
+    - ih: false
+      partid: 1541
+      source:
+        abbr: MIN
+        cit: Minnesota
+        nam: Minnesota
+        nn: Vikings
+        sn: Minnesota
+    st: retractable_dome
+  - cit: Nashville
+    cou: USA
+    des: Houston Texans@Tennessee Titans
+    dt: 1603040400000
+    eid: 4143374
+    es: complete
+    eventGroup:
+      alias: Week 6
+      egid: 15
+      nam: REG Week 6
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1528
+      source:
+        abbr: TEN
+        cit: Tennessee
+        nam: Tennessee
+        nn: Titans
+        sn: Tennessee
+    - ih: false
+      partid: 1530
+      source:
+        abbr: HOU
+        cit: Houston
+        nam: Houston
+        nn: Texans
+        sn: Houston
+    st: outdoor
+  - cit: Houston
+    cou: USA
+    des: Green Bay Packers@Houston Texans
+    dt: 1603645200000
+    eid: 4143381
+    es: complete
+    eventGroup:
+      alias: Week 7
+      egid: 16
+      nam: REG Week 7
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1530
+      source:
+        abbr: HOU
+        cit: Houston
+        nam: Houston
+        nn: Texans
+        sn: Houston
+    - ih: false
+      partid: 1542
+      source:
+        abbr: GB
+        cit: Green Bay
+        nam: Green Bay
+        nn: Packers
+        sn: Green Bay
+    st: retractable_dome
+  - cit: Houston
+    cou: USA
+    des: Jacksonville Jaguars@Houston Texans
+    dt: 1602435600000
+    eid: 4143494
+    es: complete
+    eventGroup:
+      alias: Week 5
+      egid: 14
+      nam: REG Week 5
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1529
+      source:
+        abbr: JAC
+        cit: Jacksonville
+        nam: Jacksonville
+        nn: Jaguars
+        sn: Jacksonville
+    - ih: true
+      partid: 1530
+      source:
+        abbr: HOU
+        cit: Houston
+        nam: Houston
+        nn: Texans
+        sn: Houston
+    st: retractable_dome
+  - cit: Jacksonville
+    cou: USA
+    des: Houston Texans@Jacksonville Jaguars
+    dt: 1604858400000
+    eid: 4143527
+    es: complete
+    eventGroup:
+      alias: Week 9
+      egid: 18
+      nam: REG Week 9
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1529
+      source:
+        abbr: JAC
+        cit: Jacksonville
+        nam: Jacksonville
+        nn: Jaguars
+        sn: Jacksonville
+    - ih: false
+      partid: 1530
+      source:
+        abbr: HOU
+        cit: Houston
+        nam: Houston
+        nn: Texans
+        sn: Houston
+    st: outdoor

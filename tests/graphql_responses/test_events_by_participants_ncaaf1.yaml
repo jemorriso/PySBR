@@ -1,0 +1,293 @@
+eventsInfoByParticipant:
+- events:
+  - cit: Dallas
+    cou: USA
+    des: Cincinnati@SMU
+    dt: 1603587600000
+    eid: 4089535
+    es: complete
+    eventGroup:
+      alias: Week 8
+      egid: 40
+      nam: REG Week 8
+    lid: 6
+    participants:
+    - ih: false
+      partid: 408
+      source:
+        abbr: CIN
+        cit: ''
+        nam: Cincinnati
+        nn: Bearcats
+        sn: Cincinnati
+    - ih: true
+      partid: 1175
+      source:
+        abbr: SMU
+        cit: ''
+        nam: SMU
+        nn: Mustangs
+        sn: SMU
+    st: artificial
+  - cit: 'Cincinnati '
+    cou: USA
+    des: Memphis@Cincinnati
+    dt: 1604160000000
+    eid: 4089542
+    es: complete
+    eventGroup:
+      alias: Week 9
+      egid: 41
+      nam: REG Week 9
+    lid: 6
+    participants:
+    - ih: true
+      partid: 408
+      source:
+        abbr: CIN
+        cit: ''
+        nam: Cincinnati
+        nn: Bearcats
+        sn: Cincinnati
+    - ih: false
+      partid: 1183
+      source:
+        abbr: MEM
+        cit: ''
+        nam: Memphis
+        nn: Tigers
+        sn: Memphis
+    st: artificial
+  - cit: 'Cincinnati '
+    cou: USA
+    des: South Florida@Cincinnati
+    dt: 1601753400000
+    eid: 4090074
+    es: complete
+    eventGroup:
+      alias: Week 5
+      egid: 37
+      nam: REG Week 5
+    lid: 6
+    participants:
+    - ih: true
+      partid: 408
+      source:
+        abbr: CIN
+        cit: ''
+        nam: Cincinnati
+        nn: Bearcats
+        sn: Cincinnati
+    - ih: false
+      partid: 412
+      source:
+        abbr: USF
+        cit: ''
+        nam: South Florida
+        nn: Bulls
+        sn: South Florida
+    st: artificial
+  - cit: 'Cincinnati '
+    cou: USA
+    des: Austin Peay@Cincinnati
+    dt: 1600531200000
+    eid: 4202797
+    es: complete
+    eventGroup:
+      alias: Week 3
+      egid: 35
+      nam: REG Week 3
+    lid: 6
+    participants:
+    - ih: true
+      partid: 408
+      source:
+        abbr: CIN
+        cit: ''
+        nam: Cincinnati
+        nn: Bearcats
+        sn: Cincinnati
+    - ih: false
+      partid: 1306
+      source:
+        abbr: APY
+        cit: ''
+        nam: Austin Peay
+        nn: Governors
+        sn: Austin Peay
+    st: artificial
+  - cit: 'Cincinnati '
+    cou: USA
+    des: Army@Cincinnati
+    dt: 1601148600000
+    eid: 4216105
+    es: complete
+    eventGroup:
+      alias: Week 4
+      egid: 36
+      nam: REG Week 4
+    lid: 6
+    participants:
+    - ih: true
+      partid: 408
+      source:
+        abbr: CIN
+        cit: ''
+        nam: Cincinnati
+        nn: Bearcats
+        sn: Cincinnati
+    - ih: false
+      partid: 464
+      source:
+        abbr: ARM
+        cit: ''
+        nam: Army
+        nn: Black Knights
+        sn: Army
+    st: artificial
+- events:
+  - cit: Morgantown
+    cou: USA
+    des: Baylor@West Virginia
+    dt: 1601740800000
+    eid: 4197771
+    es: complete
+    eventGroup:
+      alias: Week 5
+      egid: 37
+      nam: REG Week 5
+    lid: 6
+    participants:
+    - ih: true
+      partid: 407
+      source:
+        abbr: WVU
+        cit: ''
+        nam: West Virginia
+        nn: Mountaineers
+        sn: West Virginia
+    - ih: false
+      partid: 1200
+      source:
+        abbr: BAY
+        cit: ''
+        nam: Baylor
+        nn: Bears
+        sn: Baylor
+    st: artificial
+  - cit: Morgantown
+    cou: USA
+    des: Kansas@West Virginia
+    dt: 1602950400000
+    eid: 4197776
+    es: complete
+    eventGroup:
+      alias: Week 7
+      egid: 39
+      nam: REG Week 7
+    lid: 6
+    participants:
+    - ih: true
+      partid: 407
+      source:
+        abbr: WVU
+        cit: ''
+        nam: West Virginia
+        nn: Mountaineers
+        sn: West Virginia
+    - ih: false
+      partid: 1204
+      source:
+        abbr: KAN
+        cit: ''
+        nam: Kansas
+        nn: Jayhawks
+        sn: Kansas
+    st: artificial
+  - cit: Lubbock
+    cou: USA
+    des: West Virginia@Texas Tech
+    dt: 1603575000000
+    eid: 4197779
+    es: complete
+    eventGroup:
+      alias: Week 8
+      egid: 40
+      nam: REG Week 8
+    lid: 6
+    participants:
+    - ih: false
+      partid: 407
+      source:
+        abbr: WVU
+        cit: ''
+        nam: West Virginia
+        nn: Mountaineers
+        sn: West Virginia
+    - ih: true
+      partid: 1199
+      source:
+        abbr: TT
+        cit: ''
+        nam: Texas Tech
+        nn: Red Raiders
+        sn: Texas Tech
+    st: artificial
+  - cit: Morgantown
+    cou: USA
+    des: Kansas State@West Virginia
+    dt: 1604160000000
+    eid: 4197785
+    es: complete
+    eventGroup:
+      alias: Week 9
+      egid: 41
+      nam: REG Week 9
+    lid: 6
+    participants:
+    - ih: true
+      partid: 407
+      source:
+        abbr: WVU
+        cit: ''
+        nam: West Virginia
+        nn: Mountaineers
+        sn: West Virginia
+    - ih: false
+      partid: 1208
+      source:
+        abbr: KST
+        cit: ''
+        nam: Kansas State
+        nn: Wildcats
+        sn: Kansas State
+    st: artificial
+  - cit: Austin
+    cou: USA
+    des: West Virginia@Texas
+    dt: 1604768400000
+    eid: 4197789
+    es: complete
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: false
+      partid: 407
+      source:
+        abbr: WVU
+        cit: ''
+        nam: West Virginia
+        nn: Mountaineers
+        sn: West Virginia
+    - ih: true
+      partid: 1198
+      source:
+        abbr: TEX
+        cit: ''
+        nam: Texas
+        nn: Longhorns
+        sn: Texas
+    st: artificial
