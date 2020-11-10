@@ -79,14 +79,6 @@ class Query:
             .replace("'", '"')
         )
 
-    # @staticmethod
-    # def _get_league_from_id(id):
-    #     return Utils.load_yaml(
-    #       Utils.build_yaml_path("conversions")
-    #     )["ids_to_leagues"][
-    #         id
-    #     ]
-
     @staticmethod
     def _get_val_from_yaml(fname, k):
         """[summary]
