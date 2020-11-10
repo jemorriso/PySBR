@@ -139,7 +139,6 @@ search_event: |
 search_league: |
   {
       searchLeague {
-          did
           lid
           nam
           rid
