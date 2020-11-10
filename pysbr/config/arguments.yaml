@@ -35,7 +35,6 @@ matchup: |
   participantId1: $partid1,
   participantId2: $partid2,
   limit: $limit,
-  seids: $seids
 
 event_group: |
   lid: $lid,

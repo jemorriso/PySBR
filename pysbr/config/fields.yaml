@@ -2,12 +2,13 @@ event: |
   {
       events {
           lid
+          seid
+          eid
           des
           cit
           cou
           es
           dt
-          eid
           st
           participants {
               partid
