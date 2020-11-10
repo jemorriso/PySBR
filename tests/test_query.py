@@ -419,3 +419,50 @@ class TestQuery:
 
         for id in expected:
             assert id in events
+
+    @mark.parametrize(
+        ("league_id", "start_dt", "end_dt", "cassette_name", "expected"),
+        [
+            (
+                16,
+                "2020-10-29",
+                "2020-11-01",
+                "test_events_by_date_range_nfl1",
+                [4143517],
+            ),
+            (
+                16,
+                "2020-10-29",
+                "2020-11-08",
+                "test_events_by_date_range_nfl2",
+                [4143517],
+            ),
+            (
+                23,
+                "2020-11-09",
+                "2020-11-13",
+                "test_events_by_date_range_atp1",
+                [4278996],
+            ),
+            (
+                6,
+                "2020-11-07",
+                "2020-11-09",
+                "test_events_by_date_range_ncaaf1",
+                [4090357],
+            ),
+        ],
+    )
+    def test_events_by_date_range(
+        self, events_by_date_range, league_id, start_dt, end_dt, cassette_name, expected
+    ):
+        start = datetime.strptime(start_dt, "%Y-%m-%d")
+        end = datetime.strptime(end_dt, "%Y-%m-%d")
+        e = events_by_date_range(league_id, start, end, cassette_name)
+
+        events = []
+        for event in e._raw["eventsV2"]["events"]:
+            events.append(event["eid"])
+
+        for id in expected:
+            assert id in events

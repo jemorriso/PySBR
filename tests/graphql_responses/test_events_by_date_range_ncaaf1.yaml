@@ -1,0 +1,1452 @@
+eventsV2:
+  events:
+  - cit: Honolulu
+    cou: USA
+    des: New Mexico@Hawaii
+    dt: 1604808000000
+    eid: 4256474
+    es: complete
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: true
+      partid: 415
+      source:
+        abbr: HAW
+        cit: ''
+        nam: Hawaii
+        nn: Warriors
+        sn: Hawaii
+    - ih: false
+      partid: 430
+      source:
+        abbr: NM
+        cit: ''
+        nam: New Mexico
+        nn: Lobos
+        sn: New Mexico
+    st: artificial
+  - cit: Corvallis
+    cou: USA
+    des: Washington State@Oregon State
+    dt: 1604806200000
+    eid: 4257668
+    es: complete
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: true
+      partid: 444
+      source:
+        abbr: ORS
+        cit: ''
+        nam: Oregon State
+        nn: Beavers
+        sn: Oregon State
+    - ih: false
+      partid: 453
+      source:
+        abbr: WST
+        cit: ''
+        nam: Washington State
+        nn: Cougars
+        sn: Washington State
+    st: artificial
+  - cit: South Bend
+    cou: USA
+    des: Clemson@Notre Dame
+    dt: 1604795400000
+    eid: 4090035
+    es: complete
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: true
+      partid: 465
+      source:
+        abbr: ND
+        cit: ''
+        nam: Notre Dame
+        nn: Fighting Irish
+        sn: Notre Dame
+    - ih: false
+      partid: 1223
+      source:
+        abbr: CLE
+        cit: ''
+        nam: Clemson
+        nn: Tigers
+        sn: Clemson
+    st: artificial
+  - cit: Fayetteville
+    cou: USA
+    des: Tennessee@Arkansas
+    dt: 1604795400000
+    eid: 4205197
+    es: complete
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: false
+      partid: 1190
+      source:
+        abbr: TEN
+        cit: ''
+        nam: Tennessee
+        nn: Volunteers
+        sn: Tennessee
+    - ih: true
+      partid: 1192
+      source:
+        abbr: ARK
+        cit: ''
+        nam: Arkansas
+        nn: Razorbacks
+        sn: Arkansas
+    st: artificial
+  - cit: Columbia
+    cou: USA
+    des: Texas A&M@South Carolina
+    dt: 1604793600000
+    eid: 4205200
+    es: complete
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: true
+      partid: 1185
+      source:
+        abbr: SC
+        cit: ''
+        nam: South Carolina
+        nn: Gamecocks
+        sn: South Carolina
+    - ih: false
+      partid: 1202
+      source:
+        abbr: TXAM
+        cit: ''
+        nam: Texas A&M
+        nn: Aggies
+        sn: Texas A&M
+    st: Turf
+  - cit: 'Columbus '
+    cou: USA
+    des: Rutgers@Ohio State
+    dt: 1604795400000
+    eid: 4245091
+    es: complete
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: false
+      partid: 410
+      source:
+        abbr: RUT
+        cit: ''
+        nam: Rutgers
+        nn: Scarlet Knights
+        sn: Rutgers
+    - ih: true
+      partid: 439
+      source:
+        abbr: OSU
+        cit: ''
+        nam: Ohio State
+        nn: Buckeyes
+        sn: Ohio State
+    st: artificial
+  - cit: Eugene
+    cou: USA
+    des: Stanford@Oregon
+    dt: 1604795400000
+    eid: 4257666
+    es: complete
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: true
+      partid: 448
+      source:
+        abbr: ORE
+        cit: ''
+        nam: Oregon
+        nn: Ducks
+        sn: Oregon
+    - ih: false
+      partid: 451
+      source:
+        abbr: STA
+        cit: ''
+        nam: Stanford
+        nn: Cardinal
+        sn: Stanford
+    st: artificial
+  - cit: Boulder
+    cou: USA
+    des: UCLA@Colorado
+    dt: 1604793600000
+    eid: 4257670
+    es: complete
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: false
+      partid: 446
+      source:
+        abbr: UCLA
+        cit: ''
+        nam: UCLA
+        nn: Bruins
+        sn: UCLA
+    - ih: true
+      partid: 1207
+      source:
+        abbr: COL
+        cit: ''
+        nam: Colorado
+        nn: Buffaloes
+        sn: Colorado
+    st: Turf
+  - cit: Conway
+    cou: USA
+    des: South Alabama@Coastal Carolina
+    dt: 1604797200000
+    eid: 4092397
+    es: complete
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: true
+      partid: 1336
+      source:
+        abbr: CC
+        cit: ''
+        nam: Coastal Carolina
+        nn: Chanticleers
+        sn: Coastal Carolina
+    - ih: false
+      partid: 6786
+      source:
+        abbr: SAB
+        cit: ''
+        nam: South Alabama
+        nn: Jaguars
+        sn: South Alabama
+    st: artificial
+  - cit: Ames
+    cou: USA
+    des: Baylor@Iowa State
+    dt: 1604793600000
+    eid: 4197791
+    es: complete
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: false
+      partid: 1200
+      source:
+        abbr: BAY
+        cit: ''
+        nam: Baylor
+        nn: Bears
+        sn: Baylor
+    - ih: true
+      partid: 1206
+      source:
+        abbr: ISU
+        cit: ''
+        nam: Iowa State
+        nn: Cyclones
+        sn: Iowa State
+    st: Turf
+  - cit: Boca Raton
+    cou: USA
+    des: Western Kentucky@Florida Atlantic
+    dt: 1604790000000
+    eid: 4089548
+    es: complete
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: true
+      partid: 454
+      source:
+        abbr: FAU
+        cit: ''
+        nam: Florida Atlantic
+        nn: Owls
+        sn: Florida Atlantic
+    - ih: false
+      partid: 508
+      source:
+        abbr: WKY
+        cit: ''
+        nam: Western Kentucky
+        nn: Hilltoppers
+        sn: Western Kentucky
+    st: Turf
+  - cit: Berkeley
+    cou: USA
+    des: Washington@California
+    dt: 1604806200000
+    eid: 4257667
+    es: postponed
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: true
+      partid: 445
+      source:
+        abbr: CAL
+        cit: ''
+        nam: California
+        nn: Golden Bears
+        sn: California
+    - ih: false
+      partid: 449
+      source:
+        abbr: WAS
+        cit: ''
+        nam: Washington
+        nn: Huskies
+        sn: Washington
+    st: artificial
+  - cit: Abilene
+    cou: USA
+    des: Angelo State University@Abilene Christian
+    dt: 1604782800000
+    eid: 4227058
+    es: complete
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: true
+      partid: 7946
+      source:
+        abbr: ACU
+        cit: ''
+        nam: Abilene Christian
+        nn: Wildcats
+        sn: Abilene Christian
+    - ih: false
+      partid: 33457
+      source:
+        abbr: ASTU
+        cit: ''
+        nam: Angelo State University
+        nn: Rams
+        sn: Angelo State University
+    st: Turf
+  - cit: Tallahassee
+    cou: USA
+    des: Pittsburgh@Florida State
+    dt: 1604782800000
+    eid: 4219435
+    es: complete
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: false
+      partid: 414
+      source:
+        abbr: PIT
+        cit: ''
+        nam: Pittsburgh
+        nn: Panthers
+        sn: Pittsburgh
+    - ih: true
+      partid: 1225
+      source:
+        abbr: FSU
+        cit: ''
+        nam: Florida State
+        nn: Seminoles
+        sn: Florida State
+    st: Turf
+  - cit: Norman
+    cou: USA
+    des: Kansas@Oklahoma
+    dt: 1604781000000
+    eid: 4197788
+    es: complete
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: true
+      partid: 1197
+      source:
+        abbr: OKL
+        cit: ''
+        nam: Oklahoma
+        nn: Sooners
+        sn: Oklahoma
+    - ih: false
+      partid: 1204
+      source:
+        abbr: KAN
+        cit: ''
+        nam: Kansas
+        nn: Jayhawks
+        sn: Kansas
+    st: Turf
+  - cit: Charlottesville
+    cou: USA
+    des: Louisville@Virginia
+    dt: 1604797200000
+    eid: 4090096
+    es: postponed
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: false
+      partid: 409
+      source:
+        abbr: LOU
+        cit: ''
+        nam: Louisville
+        nn: Cardinals
+        sn: Louisville
+    - ih: true
+      partid: 1231
+      source:
+        abbr: UVA
+        cit: ''
+        nam: Virginia
+        nn: Cavaliers
+        sn: Virginia
+    st: Turf
+  - cit: Jacksonville
+    cou: USA
+    des: Florida@Georgia
+    dt: 1604781000000
+    eid: 4205199
+    es: complete
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: false
+      partid: 1186
+      source:
+        abbr: FLA
+        cit: ''
+        nam: Florida
+        nn: Gators
+        sn: Florida
+    - ih: true
+      partid: 1188
+      source:
+        abbr: UGA
+        cit: ''
+        nam: Georgia
+        nn: Bulldogs
+        sn: Georgia
+    st: Turf
+  - cit: Manhattan
+    cou: USA
+    des: Oklahoma State@Kansas State
+    dt: 1604782800000
+    eid: 4197790
+    es: complete
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: false
+      partid: 1201
+      source:
+        abbr: OKS
+        cit: ''
+        nam: Oklahoma State
+        nn: Cowboys
+        sn: Oklahoma State
+    - ih: true
+      partid: 1208
+      source:
+        abbr: KST
+        cit: ''
+        nam: Kansas State
+        nn: Wildcats
+        sn: Kansas State
+    st: artificial
+  - cit: Starkville
+    cou: USA
+    des: Vanderbilt@Mississippi State
+    dt: 1604781000000
+    eid: 4205198
+    es: complete
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: false
+      partid: 1187
+      source:
+        abbr: VAN
+        cit: ''
+        nam: Vanderbilt
+        nn: Commodores
+        sn: Vanderbilt
+    - ih: true
+      partid: 1193
+      source:
+        abbr: MSST
+        cit: ''
+        nam: Mississippi State
+        nn: Bulldogs
+        sn: Mississippi State
+    st: Turf
+  - cit: Fort Worth
+    cou: USA
+    des: Texas Tech@TCU
+    dt: 1604781000000
+    eid: 4197806
+    es: complete
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: true
+      partid: 426
+      source:
+        abbr: TCU
+        cit: ''
+        nam: TCU
+        nn: Horned Frogs
+        sn: TCU
+    - ih: false
+      partid: 1199
+      source:
+        abbr: TT
+        cit: ''
+        nam: Texas Tech
+        nn: Red Raiders
+        sn: Texas Tech
+    st: Turf
+  - cit: Las Vegas
+    cou: USA
+    des: Fresno State@UNLV
+    dt: 1604781000000
+    eid: 4256471
+    es: complete
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: false
+      partid: 423
+      source:
+        abbr: FRE
+        cit: ''
+        nam: Fresno State
+        nn: Bulldogs
+        sn: Fresno State
+    - ih: true
+      partid: 431
+      source:
+        abbr: UNLV
+        cit: ''
+        nam: UNLV
+        nn: Rebels
+        sn: UNLV
+    st: Turf
+  - cit: Champaign
+    cou: USA
+    des: Minnesota@Illinois
+    dt: 1604781000000
+    eid: 4245087
+    es: complete
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: true
+      partid: 440
+      source:
+        abbr: ILL
+        cit: ''
+        nam: Illinois
+        nn: Fighting Illini
+        sn: Illinois
+    - ih: false
+      partid: 441
+      source:
+        abbr: MIN
+        cit: ''
+        nam: Minnesota
+        nn: Golden Gophers
+        sn: Minnesota
+    st: artificial
+  - cit: 'Cincinnati '
+    cou: USA
+    des: Houston@Cincinnati
+    dt: 1604781000000
+    eid: 4089465
+    es: complete
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: true
+      partid: 408
+      source:
+        abbr: CIN
+        cit: ''
+        nam: Cincinnati
+        nn: Bearcats
+        sn: Cincinnati
+    - ih: false
+      partid: 1176
+      source:
+        abbr: HOU
+        cit: ''
+        nam: Houston
+        nn: Cougars
+        sn: Houston
+    st: artificial
+  - cit: University Park
+    cou: USA
+    des: Maryland@Penn State
+    dt: 1604781000000
+    eid: 4245088
+    es: complete
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: true
+      partid: 435
+      source:
+        abbr: PSU
+        cit: ''
+        nam: Penn State
+        nn: Nittany Lions
+        sn: Penn State
+    - ih: false
+      partid: 1222
+      source:
+        abbr: MAR
+        cit: ''
+        nam: Maryland
+        nn: Terrapins
+        sn: Maryland
+    st: Turf
+  - cit: Denton
+    cou: USA
+    des: Louisiana Tech@North Texas
+    dt: 1604793600000
+    eid: 4089546
+    es: postponed
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: false
+      partid: 418
+      source:
+        abbr: LT
+        cit: ''
+        nam: Louisiana Tech
+        nn: Bulldogs
+        sn: Louisiana Tech
+    - ih: true
+      partid: 456
+      source:
+        abbr: NTX
+        cit: ''
+        nam: North Texas
+        nn: Mean Green
+        sn: North Texas
+    st: artificial
+  - cit: San Marcos
+    cou: USA
+    des: Appalachian State@Texas State
+    dt: 1604779200000
+    eid: 4092395
+    es: complete
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: true
+      partid: 494
+      source:
+        abbr: TXST
+        cit: ''
+        nam: Texas State
+        nn: Bobcats
+        sn: Texas State
+    - ih: false
+      partid: 515
+      source:
+        abbr: APP
+        cit: ''
+        nam: Appalachian State
+        nn: Mountaineers
+        sn: Appalachian State
+    st: artificial
+  - cit: Huntington
+    cou: USA
+    des: Massachusetts@Marshall
+    dt: 1604777400000
+    eid: 4268622
+    es: complete
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: false
+      partid: 486
+      source:
+        abbr: UMASS
+        cit: ''
+        nam: Massachusetts
+        nn: Minutemen
+        sn: Massachusetts
+    - ih: true
+      partid: 1182
+      source:
+        abbr: MSH
+        cit: ''
+        nam: Marshall
+        nn: Thundering Herd
+        sn: Marshall
+    st: artificial
+  - cit: Richmond
+    cou: USA
+    des: Stephen F. Austin@Eastern Kentucky
+    dt: 1604779200000
+    eid: 4211572
+    es: complete
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: true
+      partid: 471
+      source:
+        abbr: EKY
+        cit: ''
+        nam: Eastern Kentucky
+        nn: Colonels
+        sn: Eastern Kentucky
+    - ih: false
+      partid: 512
+      source:
+        abbr: SAU
+        cit: ''
+        nam: Stephen F. Austin
+        nn: Lumberjacks
+        sn: Stephen F. Austin
+    st: artificial
+  - cit: Hattiesburg
+    cou: USA
+    des: North Alabama@Southern Miss
+    dt: 1604779200000
+    eid: 4208993
+    es: complete
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: true
+      partid: 1181
+      source:
+        abbr: USM
+        cit: ''
+        nam: Southern Miss
+        nn: Golden Eagles
+        sn: Southern Miss
+    - ih: false
+      partid: 7981
+      source:
+        abbr: UNA
+        cit: ''
+        nam: North Alabama
+        nn: Lions
+        sn: North Alabama
+    st: artificial
+  - cit: Memphis
+    cou: USA
+    des: South Florida@Memphis
+    dt: 1604768400000
+    eid: 4089549
+    es: complete
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: false
+      partid: 412
+      source:
+        abbr: USF
+        cit: ''
+        nam: South Florida
+        nn: Bulls
+        sn: South Florida
+    - ih: true
+      partid: 1183
+      source:
+        abbr: MEM
+        cit: ''
+        nam: Memphis
+        nn: Tigers
+        sn: Memphis
+    st: artificial
+  - cit: Syracuse
+    cou: USA
+    des: Boston College@Syracuse
+    dt: 1604775600000
+    eid: 4219433
+    es: complete
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: true
+      partid: 413
+      source:
+        abbr: SYR
+        cit: ''
+        nam: Syracuse
+        nn: Orange
+        sn: Syracuse
+    - ih: false
+      partid: 1226
+      source:
+        abbr: BC
+        cit: ''
+        nam: Boston College
+        nn: Eagles
+        sn: Boston College
+    st: artificial
+  - cit: Blacksburg
+    cou: USA
+    des: Liberty@Virginia Tech
+    dt: 1604768400000
+    eid: 4219434
+    es: complete
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: false
+      partid: 475
+      source:
+        abbr: LIB
+        cit: ''
+        nam: Liberty
+        nn: Flames
+        sn: Liberty
+    - ih: true
+      partid: 1227
+      source:
+        abbr: VT
+        cit: ''
+        nam: Virginia Tech
+        nn: Hokies
+        sn: Virginia Tech
+    st: Turf
+  - cit: Inglewood
+    cou: USA
+    des: Arizona State@USC
+    dt: 1604768400000
+    eid: 4257665
+    es: complete
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: true
+      partid: 450
+      source:
+        abbr: USC
+        cit: ''
+        nam: USC
+        nn: Trojans
+        sn: USC
+    - ih: false
+      partid: 452
+      source:
+        abbr: ASU
+        cit: ''
+        nam: Arizona State
+        nn: Sun Devils
+        sn: Arizona State
+    st: outdoor
+  - cit: Atlanta
+    cou: USA
+    des: Louisiana-Monroe@Georgia State
+    dt: 1604768400000
+    eid: 4092446
+    es: complete
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: false
+      partid: 460
+      source:
+        abbr: ULM
+        cit: ''
+        nam: Louisiana-Monroe
+        nn: Warhawks
+        sn: Louisiana-Monroe
+    - ih: true
+      partid: 2292
+      source:
+        abbr: GST
+        cit: ''
+        nam: Georgia State
+        nn: Panthers
+        sn: Georgia State
+    st: artificial
+  - cit: Statesboro
+    cou: USA
+    des: Troy@Georgia Southern
+    dt: 1604772000000
+    eid: 4092396
+    es: complete
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: false
+      partid: 461
+      source:
+        abbr: TRY
+        cit: ''
+        nam: Troy
+        nn: Trojans
+        sn: Troy
+    - ih: true
+      partid: 1346
+      source:
+        abbr: GSO
+        cit: ''
+        nam: Georgia Southern
+        nn: Eagles
+        sn: Georgia Southern
+    st: artificial
+  - cit: Bloomington
+    cou: USA
+    des: Michigan@Indiana
+    dt: 1604768400000
+    eid: 4245090
+    es: complete
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: true
+      partid: 434
+      source:
+        abbr: IU
+        cit: ''
+        nam: Indiana
+        nn: Hoosiers
+        sn: Indiana
+    - ih: false
+      partid: 438
+      source:
+        abbr: MICH
+        cit: ''
+        nam: Michigan
+        nn: Wolverines
+        sn: Michigan
+    st: artificial
+  - cit: Austin
+    cou: USA
+    des: West Virginia@Texas
+    dt: 1604768400000
+    eid: 4197789
+    es: complete
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: false
+      partid: 407
+      source:
+        abbr: WVU
+        cit: ''
+        nam: West Virginia
+        nn: Mountaineers
+        sn: West Virginia
+    - ih: true
+      partid: 1198
+      source:
+        abbr: TEX
+        cit: ''
+        nam: Texas
+        nn: Longhorns
+        sn: Texas
+    st: artificial
+  - cit: Iowa City
+    cou: USA
+    des: Michigan State@Iowa
+    dt: 1604768400000
+    eid: 4245093
+    es: complete
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: false
+      partid: 437
+      source:
+        abbr: MSU
+        cit: ''
+        nam: Michigan State
+        nn: Spartans
+        sn: Michigan State
+    - ih: true
+      partid: 442
+      source:
+        abbr: IOW
+        cit: ''
+        nam: Iowa
+        nn: Hawkeyes
+        sn: Iowa
+    st: artificial
+  - cit: El Paso
+    cou: USA
+    des: Florida International@UTEP
+    dt: 1604782800000
+    eid: 4089973
+    es: postponed
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: false
+      partid: 459
+      source:
+        abbr: FIU
+        cit: ''
+        nam: Florida International
+        nn: Golden Panthers
+        sn: Florida International
+    - ih: true
+      partid: 1173
+      source:
+        abbr: TEP
+        cit: ''
+        nam: UTEP
+        nn: Miners
+        sn: UTEP
+    st: artificial
+  - cit: Lafayette
+    cou: USA
+    des: Arkansas State@Louisiana-Lafayette
+    dt: 1604768400000
+    eid: 4092445
+    es: complete
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: true
+      partid: 455
+      source:
+        abbr: ULL
+        cit: ''
+        nam: Louisiana-Lafayette
+        nn: Ragin' Cajuns
+        sn: Louisiana-Lafayette
+    - ih: false
+      partid: 458
+      source:
+        abbr: ARKS
+        cit: ''
+        nam: Arkansas State
+        nn: Red Wolves
+        sn: Arkansas State
+    st: artificial
+  - cit: Greenville
+    cou: USA
+    des: Tulane@East Carolina
+    dt: 1604768400000
+    eid: 4089464
+    es: complete
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: false
+      partid: 1174
+      source:
+        abbr: TUL
+        cit: ''
+        nam: Tulane
+        nn: Green Wave
+        sn: Tulane
+    - ih: true
+      partid: 1179
+      source:
+        abbr: ECU
+        cit: ''
+        nam: East Carolina
+        nn: Pirates
+        sn: East Carolina
+    st: Turf
+  - cit: Durham
+    cou: USA
+    des: North Carolina@Duke
+    dt: 1604768400000
+    eid: 4219436
+    es: complete
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: false
+      partid: 1228
+      source:
+        abbr: NC
+        cit: ''
+        nam: North Carolina
+        nn: Tar Heels
+        sn: North Carolina
+    - ih: true
+      partid: 1229
+      source:
+        abbr: DUK
+        cit: ''
+        nam: Duke
+        nn: Blue Devils
+        sn: Duke
+    st: Turf
+  - cit: Philadelphia
+    cou: USA
+    des: SMU@Temple
+    dt: 1604768400000
+    eid: 4089544
+    es: complete
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: true
+      partid: 462
+      source:
+        abbr: TEM
+        cit: ''
+        nam: Temple
+        nn: Owls
+        sn: Temple
+    - ih: false
+      partid: 1175
+      source:
+        abbr: SMU
+        cit: ''
+        nam: SMU
+        nn: Mustangs
+        sn: SMU
+    st: artificial
+  - cit: Salt Lake City
+    cou: USA
+    des: Arizona@Utah
+    dt: 1604781000000
+    eid: 4257669
+    es: postponed
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: true
+      partid: 427
+      source:
+        abbr: UTH
+        cit: ''
+        nam: Utah
+        nn: Utes
+        sn: Utah
+    - ih: false
+      partid: 447
+      source:
+        abbr: ARI
+        cit: ''
+        nam: Arizona
+        nn: Wildcats
+        sn: Arizona
+    st: artificial
+  - cit: Madison
+    cou: USA
+    des: Purdue@Wisconsin
+    dt: 1604781000000
+    eid: 4245092
+    es: postponed
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: true
+      partid: 436
+      source:
+        abbr: WIS
+        cit: ''
+        nam: Wisconsin
+        nn: Badgers
+        sn: Wisconsin
+    - ih: false
+      partid: 443
+      source:
+        abbr: PUR
+        cit: ''
+        nam: Purdue
+        nn: Boilermakers
+        sn: Purdue
+    st: artificial
+  - cit: Murfreesboro
+    cou: USA
+    des: Charlotte@Middle Tennessee
+    dt: 1604781000000
+    eid: 4090032
+    es: postponed
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: true
+      partid: 457
+      source:
+        abbr: MTS
+        cit: ''
+        nam: Middle Tennessee
+        nn: Blue Raiders
+        sn: Middle Tennessee
+    - ih: false
+      partid: 9931
+      source:
+        abbr: CHA
+        cit: ''
+        nam: Charlotte
+        nn: 49ers
+        sn: Charlotte
+    st: artificial
+  - cit: Houston
+    cou: USA
+    des: UTSA@Rice
+    dt: 1604781000000
+    eid: 4089545
+    es: postponed
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: true
+      partid: 1178
+      source:
+        abbr: RICE
+        cit: ''
+        nam: Rice
+        nn: Owls
+        sn: Rice
+    - ih: false
+      partid: 7670
+      source:
+        abbr: UTSA
+        cit: ''
+        nam: UTSA
+        nn: Roadrunners
+        sn: UTSA
+    st: artificial
+  - cit: Evanston
+    cou: USA
+    des: Nebraska@Northwestern
+    dt: 1604768400000
+    eid: 4245089
+    es: complete
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: true
+      partid: 433
+      source:
+        abbr: NW
+        cit: ''
+        nam: Northwestern
+        nn: Wildcats
+        sn: Northwestern
+    - ih: false
+      partid: 1203
+      source:
+        abbr: NEB
+        cit: ''
+        nam: Nebraska
+        nn: Cornhuskers
+        sn: Nebraska
+    st: Turf
+  - cit: Annapolis
+    cou: USA
+    des: Tulsa@Navy
+    dt: 1604768400000
+    eid: 4090097
+    es: postponed
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: true
+      partid: 463
+      source:
+        abbr: NAV
+        cit: ''
+        nam: Navy
+        nn: Midshipmen
+        sn: Navy
+    - ih: false
+      partid: 1177
+      source:
+        abbr: TSA
+        cit: ''
+        nam: Tulsa
+        nn: Golden Hurricane
+        sn: Tulsa
+    st: artificial
+  - cit: West Point
+    cou: USA
+    des: Air Force@Army
+    dt: 1604766600000
+    eid: 4090357
+    es: postponed
+    eventGroup:
+      alias: Week 10
+      egid: 42
+      nam: REG Week 10
+    lid: 6
+    participants:
+    - ih: false
+      partid: 424
+      source:
+        abbr: AF
+        cit: ''
+        nam: Air Force
+        nn: Falcons
+        sn: Air Force
+    - ih: true
+      partid: 464
+      source:
+        abbr: ARM
+        cit: ''
+        nam: Army
+        nn: Black Knights
+        sn: Army
+    st: artificial

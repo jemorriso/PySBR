@@ -1,0 +1,437 @@
+eventsV2:
+  events:
+  - cit: Santa Clara
+    cou: USA
+    des: Green Bay Packers@San Francisco 49ers
+    dt: 1604625600000
+    eid: 4143392
+    es: complete
+    eventGroup:
+      alias: Week 9
+      egid: 18
+      nam: REG Week 9
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1542
+      source:
+        abbr: GB
+        cit: Green Bay
+        nam: Green Bay
+        nn: Packers
+        sn: Green Bay
+    - ih: true
+      partid: 1547
+      source:
+        abbr: SF
+        cit: San Francisco
+        nam: San Francisco
+        nn: 49ers
+        sn: San Francisco
+    st: outdoor
+  - cit: Charlotte
+    cou: USA
+    des: Atlanta Falcons@Carolina Panthers
+    dt: 1604017200000
+    eid: 4143517
+    es: complete
+    eventGroup:
+      alias: Week 8
+      egid: 17
+      nam: REG Week 8
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1545
+      source:
+        abbr: CAR
+        cit: Carolina
+        nam: Carolina
+        nn: Panthers
+        sn: Carolina
+    - ih: false
+      partid: 1546
+      source:
+        abbr: ATL
+        cit: Atlanta
+        nam: Atlanta
+        nn: Falcons
+        sn: Atlanta
+    st: outdoor
+  - cit: East Rutherford
+    cou: USA
+    des: Tampa Bay Buccaneers@N.Y. Giants
+    dt: 1604366100000
+    eid: 4143515
+    es: complete
+    eventGroup:
+      alias: Week 8
+      egid: 17
+      nam: REG Week 8
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1535
+      source:
+        abbr: NYG
+        cit: New York
+        nam: N.Y. Giants
+        nn: Giants
+        sn: New York
+    - ih: false
+      partid: 1544
+      source:
+        abbr: TB
+        cit: Tampa Bay
+        nam: Tampa Bay
+        nn: Buccaneers
+        sn: Tampa Bay
+    st: outdoor
+  - cit: Philadelphia
+    cou: USA
+    des: Dallas Cowboys@Philadelphia Eagles
+    dt: 1604280000000
+    eid: 4143513
+    es: complete
+    eventGroup:
+      alias: Week 8
+      egid: 17
+      nam: REG Week 8
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1536
+      source:
+        abbr: PHI
+        cit: Philadelphia
+        nam: Philadelphia
+        nn: Eagles
+        sn: Philadelphia
+    - ih: false
+      partid: 1538
+      source:
+        abbr: DAL
+        cit: Dallas
+        nam: Dallas
+        nn: Cowboys
+        sn: Dallas
+    st: artificial
+  - cit: Chicago
+    cou: USA
+    des: New Orleans Saints@Chicago Bears
+    dt: 1604265900000
+    eid: 4143519
+    es: complete
+    eventGroup:
+      alias: Week 8
+      egid: 17
+      nam: REG Week 8
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1540
+      source:
+        abbr: CHI
+        cit: Chicago
+        nam: Chicago
+        nn: Bears
+        sn: Chicago
+    - ih: false
+      partid: 1543
+      source:
+        abbr: 'NO'
+        cit: New Orleans
+        nam: New Orleans
+        nn: Saints
+        sn: New Orleans
+    st: outdoor
+  - cit: Denver
+    cou: USA
+    des: Los Angeles Chargers@Denver Broncos
+    dt: 1604264700000
+    eid: 4143540
+    es: complete
+    eventGroup:
+      alias: Week 8
+      egid: 17
+      nam: REG Week 8
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1534
+      source:
+        abbr: DEN
+        cit: Denver
+        nam: Denver
+        nn: Broncos
+        sn: Denver
+    - ih: false
+      partid: 75380
+      source:
+        abbr: LAC
+        cit: Los Angeles
+        nam: L.A. Chargers
+        nn: Chargers
+        sn: Los Angeles
+    st: outdoor
+  - cit: Seattle
+    cou: USA
+    des: San Francisco 49ers@Seattle Seahawks
+    dt: 1604265900000
+    eid: 4143520
+    es: complete
+    eventGroup:
+      alias: Week 8
+      egid: 17
+      nam: REG Week 8
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1547
+      source:
+        abbr: SF
+        cit: San Francisco
+        nam: San Francisco
+        nn: 49ers
+        sn: San Francisco
+    - ih: true
+      partid: 1548
+      source:
+        abbr: SEA
+        cit: Seattle
+        nam: Seattle
+        nn: Seahawks
+        sn: Seattle
+    st: outdoor
+  - cit: Miami Gardens
+    cou: USA
+    des: Los Angeles Rams@Miami Dolphins
+    dt: 1604253600000
+    eid: 4143510
+    es: complete
+    eventGroup:
+      alias: Week 8
+      egid: 17
+      nam: REG Week 8
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1524
+      source:
+        abbr: MIA
+        cit: Miami
+        nam: Miami
+        nn: Dolphins
+        sn: Miami
+    - ih: false
+      partid: 1550
+      source:
+        abbr: LA
+        cit: Los Angeles
+        nam: L.A. Rams
+        nn: Rams
+        sn: Los Angeles
+    st: outdoor
+  - cit: Baltimore
+    cou: USA
+    des: Pittsburgh Steelers@Baltimore Ravens
+    dt: 1604253600000
+    eid: 4143383
+    es: complete
+    eventGroup:
+      alias: Week 8
+      egid: 17
+      nam: REG Week 8
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1519
+      source:
+        abbr: PIT
+        cit: Pittsburgh
+        nam: Pittsburgh
+        nn: Steelers
+        sn: Pittsburgh
+    - ih: true
+      partid: 1521
+      source:
+        abbr: BAL
+        cit: Baltimore
+        nam: Baltimore
+        nn: Ravens
+        sn: Baltimore
+    st: outdoor
+  - cit: Green Bay
+    cou: USA
+    des: Minnesota Vikings@Green Bay Packers
+    dt: 1604253600000
+    eid: 4143518
+    es: complete
+    eventGroup:
+      alias: Week 8
+      egid: 17
+      nam: REG Week 8
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1541
+      source:
+        abbr: MIN
+        cit: Minnesota
+        nam: Minnesota
+        nn: Vikings
+        sn: Minnesota
+    - ih: true
+      partid: 1542
+      source:
+        abbr: GB
+        cit: Green Bay
+        nam: Green Bay
+        nn: Packers
+        sn: Green Bay
+    st: outdoor
+  - cit: Cincinnati
+    cou: USA
+    des: Tennessee Titans@Cincinnati Bengals
+    dt: 1604253600000
+    eid: 4143509
+    es: complete
+    eventGroup:
+      alias: Week 8
+      egid: 17
+      nam: REG Week 8
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1522
+      source:
+        abbr: CIN
+        cit: Cincinnati
+        nam: Cincinnati
+        nn: Bengals
+        sn: Cincinnati
+    - ih: false
+      partid: 1528
+      source:
+        abbr: TEN
+        cit: Tennessee
+        nam: Tennessee
+        nn: Titans
+        sn: Tennessee
+    st: outdoor
+  - cit: Detroit
+    cou: USA
+    des: Indianapolis Colts@Detroit Lions
+    dt: 1604253600000
+    eid: 4143511
+    es: complete
+    eventGroup:
+      alias: Week 8
+      egid: 17
+      nam: REG Week 8
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1527
+      source:
+        abbr: IND
+        cit: Indianapolis
+        nam: Indianapolis
+        nn: Colts
+        sn: Indianapolis
+    - ih: true
+      partid: 1539
+      source:
+        abbr: DET
+        cit: Detroit
+        nam: Detroit
+        nn: Lions
+        sn: Detroit
+    st: dome
+  - cit: Kansas City
+    cou: USA
+    des: N.Y. Jets@Kansas City Chiefs
+    dt: 1604253600000
+    eid: 4143387
+    es: complete
+    eventGroup:
+      alias: Week 8
+      egid: 17
+      nam: REG Week 8
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1523
+      source:
+        abbr: NYJ
+        cit: New York
+        nam: N.Y. Jets
+        nn: Jets
+        sn: New York
+    - ih: true
+      partid: 1531
+      source:
+        abbr: KC
+        cit: Kansas City
+        nam: Kansas City
+        nn: Chiefs
+        sn: Kansas City
+    st: outdoor
+  - cit: Cleveland
+    cou: USA
+    des: Las Vegas Raiders@Cleveland Browns
+    dt: 1604253600000
+    eid: 4143514
+    es: complete
+    eventGroup:
+      alias: Week 8
+      egid: 17
+      nam: REG Week 8
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1520
+      source:
+        abbr: CLE
+        cit: Cleveland
+        nam: Cleveland
+        nn: Browns
+        sn: Cleveland
+    - ih: false
+      partid: 1533
+      source:
+        abbr: LV
+        cit: Las Vegas
+        nam: Las Vegas
+        nn: Raiders
+        sn: Las Vegas
+    st: outdoor
+  - cit: Orchard Park
+    cou: USA
+    des: New England Patriots@Buffalo Bills
+    dt: 1604253600000
+    eid: 4143512
+    es: complete
+    eventGroup:
+      alias: Week 8
+      egid: 17
+      nam: REG Week 8
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1525
+      source:
+        abbr: NE
+        cit: New England
+        nam: New England
+        nn: Patriots
+        sn: New England
+    - ih: true
+      partid: 1526
+      source:
+        abbr: BUF
+        cit: Buffalo
+        nam: Buffalo
+        nn: Bills
+        sn: Buffalo
+    st: outdoor
