@@ -1,0 +1,18 @@
+multipleSearch:
+  searchLeague:
+  - lid: 17
+    nam: LaLiga
+    region:
+      nam: Spain
+      sn: ES
+    rid: 7
+    sn: LALIGA
+    spid: 2
+  - lid: 384
+    nam: LaLiga 2
+    region:
+      nam: Spain
+      sn: ES
+    rid: 7
+    sn: ESP2
+    spid: 2

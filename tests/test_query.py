@@ -348,3 +348,20 @@ class TestQuery:
                 return True
 
         assert False
+
+    @mark.parametrize(
+        "search_term, cassette_name, expected",
+        [
+            ("nfl", "test_search_leagues_nfl1", 16),
+            ("national football league", "test_search_leagues_nfl2", 16),
+            ("laliga", "test_search_leagues_laliga1", 17),
+        ],
+    )
+    def test_search_leagues(self, search_leagues, search_term, cassette_name, expected):
+        s = search_leagues(search_term, cassette_name)
+
+        for league in s._raw["multipleSearch"]["searchLeague"]:
+            if league["lid"] == expected:
+                return True
+
+        assert False

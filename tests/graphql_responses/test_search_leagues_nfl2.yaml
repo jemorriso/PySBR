@@ -1,0 +1,26 @@
+multipleSearch:
+  searchLeague:
+  - lid: 16
+    nam: National Football League
+    region:
+      nam: USA
+      sn: US
+    rid: 1
+    sn: NFL
+    spid: 4
+  - lid: 1850
+    nam: National Football League
+    region:
+      nam: Rwanda
+      sn: rw
+    rid: 125
+    sn: ''
+    spid: 2
+  - lid: 327
+    nam: Football National League
+    region:
+      nam: Russia
+      sn: RU
+    rid: 88
+    sn: RUS2
+    spid: 2

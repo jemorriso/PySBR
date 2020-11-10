@@ -1,0 +1,10 @@
+multipleSearch:
+  searchLeague:
+  - lid: 16
+    nam: National Football League
+    region:
+      nam: USA
+      sn: US
+    rid: 1
+    sn: NFL
+    spid: 4
