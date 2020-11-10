@@ -1,0 +1,289 @@
+lineHistory:
+- lines:
+  - adj: 0
+    ap: -485
+    boid: 9227
+    bs: '&leagueid=192637&periodNumber=0'
+    dp: 0.1086
+    eid: 4278809
+    fpd: 0
+    fpn: 0
+    iof: false
+    lineid: 3055810915
+    mtid: 126
+    paid: 20
+    partid: 5452
+    pri: 1.2062
+    sequence: 8083265204
+    sid: null
+    tim: 1604992317000
+- lines:
+  - adj: 0
+    ap: -544
+    boid: 9227
+    bs: '&leagueid=192637&periodNumber=0'
+    dp: 0.018
+    eid: 4278809
+    fpd: 0
+    fpn: 0
+    iof: false
+    lineid: 3055748151
+    mtid: 126
+    paid: 20
+    partid: 5452
+    pri: 1.1838
+    sequence: 8083264577
+    sid: null
+    tim: 1604987326000
+- lines:
+  - adj: 0
+    ap: -554
+    boid: 9227
+    bs: '&leagueid=192637&periodNumber=0'
+    dp: -0.0089
+    eid: 4278809
+    fpd: 0
+    fpn: 0
+    iof: false
+    lineid: 3055681133
+    mtid: 126
+    paid: 20
+    partid: 5452
+    pri: 1.1805
+    sequence: 8083047872
+    sid: null
+    tim: 1604979749000
+- lines:
+  - adj: 0
+    ap: -549
+    boid: 9227
+    bs: '&leagueid=192637&periodNumber=0'
+    dp: 0.0159
+    eid: 4278809
+    fpd: 0
+    fpn: 0
+    iof: false
+    lineid: 3055618770
+    mtid: 126
+    paid: 20
+    partid: 5452
+    pri: 1.1821
+    sequence: 8082813021
+    sid: null
+    tim: 1604971084000
+- lines:
+  - adj: 0
+    ap: -558
+    boid: 9227
+    bs: '&leagueid=192637&periodNumber=0'
+    dp: 0.0446
+    eid: 4278809
+    fpd: 0
+    fpn: 0
+    iof: false
+    lineid: 3055598409
+    mtid: 126
+    paid: 20
+    partid: 5452
+    pri: 1.1792
+    sequence: 8082589689
+    sid: null
+    tim: 1604968471000
+- lines:
+  - adj: 0
+    ap: -584
+    boid: 9227
+    bs: '&leagueid=192637&periodNumber=0'
+    dp: 0.0134
+    eid: 4278809
+    fpd: 0
+    fpn: 0
+    iof: false
+    lineid: 3055524915
+    mtid: 126
+    paid: 20
+    partid: 5452
+    pri: 1.1712
+    sequence: 8082514783
+    sid: null
+    tim: 1604961085000
+- lines:
+  - adj: 0
+    ap: -592
+    boid: 9227
+    bs: '&leagueid=192637&periodNumber=0'
+    dp: -0.0847
+    eid: 4278809
+    fpd: 0
+    fpn: 0
+    iof: false
+    lineid: 3055445154
+    mtid: 126
+    paid: 20
+    partid: 5452
+    pri: 1.1689
+    sequence: 8082254646
+    sid: null
+    tim: 1604953816000
+- lines:
+  - adj: 0
+    ap: -546
+    boid: 9227
+    bs: '&leagueid=192637&periodNumber=0'
+    dp: -0.0071
+    eid: 4278809
+    fpd: 0
+    fpn: 0
+    iof: false
+    lineid: 3055332364
+    mtid: 126
+    paid: 20
+    partid: 5452
+    pri: 1.1832
+    sequence: 8081989412
+    sid: null
+    tim: 1604946533000
+- lines:
+  - adj: 0
+    ap: -542
+    boid: 9227
+    bs: '&leagueid=192637&periodNumber=0'
+    dp: 0.1073
+    eid: 4278809
+    fpd: 0
+    fpn: 0
+    iof: false
+    lineid: 3053472200
+    mtid: 126
+    paid: 20
+    partid: 5452
+    pri: 1.1845
+    sequence: 8081613650
+    sid: null
+    tim: 1604824303000
+- lines:
+  - adj: 0
+    ap: -607
+    boid: 9227
+    bs: '&leagueid=192637&periodNumber=0'
+    dp: -0.0225
+    eid: 4278809
+    fpd: 0
+    fpn: 0
+    iof: false
+    lineid: 3053446690
+    mtid: 126
+    paid: 20
+    partid: 5452
+    pri: 1.1647
+    sequence: 8075747134
+    sid: null
+    tim: 1604821821000
+- lines:
+  - adj: 0
+    ap: -594
+    boid: 9227
+    bs: '&leagueid=192637&periodNumber=0'
+    dp: 0.0695
+    eid: 4278809
+    fpd: 0
+    fpn: 0
+    iof: false
+    lineid: 3053411108
+    mtid: 126
+    paid: 20
+    partid: 5452
+    pri: 1.1684
+    sequence: 8075658166
+    sid: null
+    tim: 1604817825000
+- lines:
+  - adj: 0
+    ap: -638
+    boid: 9227
+    bs: '&leagueid=192637&periodNumber=0'
+    dp: -0.0083
+    eid: 4278809
+    fpd: 0
+    fpn: 0
+    iof: false
+    lineid: 3053306371
+    mtid: 126
+    paid: 20
+    partid: 5452
+    pri: 1.1567
+    sequence: 8075532062
+    sid: null
+    tim: 1604806501000
+- lines:
+  - adj: 0
+    ap: -633
+    boid: 9227
+    bs: '&leagueid=192637&periodNumber=0'
+    dp: 0.0323
+    eid: 4278809
+    fpd: 0
+    fpn: 0
+    iof: false
+    lineid: 3053235455
+    mtid: 126
+    paid: 20
+    partid: 5452
+    pri: 1.158
+    sequence: 8075161211
+    sid: null
+    tim: 1604796243000
+- lines:
+  - adj: 0
+    ap: -654
+    boid: 9227
+    bs: '&leagueid=192637&periodNumber=0'
+    dp: -0.0399
+    eid: 4278809
+    fpd: 0
+    fpn: 0
+    iof: false
+    lineid: 3053194009
+    mtid: 126
+    paid: 20
+    partid: 5452
+    pri: 1.1529
+    sequence: 8074915008
+    sid: null
+    tim: 1604791591000
+- lines:
+  - adj: 0
+    ap: -629
+    boid: 9227
+    bs: '&leagueid=192637&periodNumber=0'
+    dp: -0.0277
+    eid: 4278809
+    fpd: 0
+    fpn: 0
+    iof: false
+    lineid: 3053067370
+    mtid: 126
+    paid: 20
+    partid: 5452
+    pri: 1.159
+    sequence: 8074762171
+    sid: null
+    tim: 1604780055000
+- lines:
+  - adj: 0
+    ap: -612
+    boid: 9227
+    bs: '&leagueid=192637&periodNumber=0'
+    dp: 0
+    eid: 4278809
+    fpd: 0
+    fpn: 0
+    iof: false
+    lineid: 3052953951
+    mtid: 126
+    paid: 20
+    partid: 5452
+    pri: 1.1634
+    sequence: 8074324701
+    sid: null
+    tim: 1604771371000

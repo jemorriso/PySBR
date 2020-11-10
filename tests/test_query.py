@@ -615,3 +615,50 @@ class TestQuery:
                 assert id in ids
         else:
             assert len(c._raw["consensus"]) == 0
+
+    @mark.parametrize(
+        "event_id, market_id, sportsbook_id, participant_ids, cassette_name, expected",
+        [
+            (
+                4143532,
+                401,
+                20,
+                [1530, 1520],
+                "test_line_history_nfl1",
+                True,
+            ),
+            (
+                4278809,
+                126,
+                20,
+                [5452],
+                "test_line_history_atp1",
+                True,
+            ),
+        ],
+    )
+    def test_line_history(
+        self,
+        line_history,
+        event_id,
+        market_id,
+        sportsbook_id,
+        participant_ids,
+        cassette_name,
+        expected,
+    ):
+        h = line_history(
+            event_id, market_id, sportsbook_id, participant_ids, cassette_name
+        )
+
+        ids = []
+        for line in h._raw["lineHistory"][0]["lines"]:
+            ids.append(line["eid"])
+            ids.append(line["mtid"])
+            ids.append(line["paid"])
+
+        if expected:
+            for id in [event_id, market_id, sportsbook_id]:
+                assert id in ids
+        else:
+            assert len(h._raw["lineHistory"][0]["lines"]) == 0
