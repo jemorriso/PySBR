@@ -1,0 +1,116 @@
+lastMatchupsByParticipants:
+  events:
+  - cit: Santa Clara
+    cou: USA
+    des: Clemson@Alabama
+    dt: 1546909200000
+    eid: 3699994
+    es: complete
+    eventGroup:
+      alias: Championship
+      egid: 14908
+      nam: CFP National Championship
+    lid: 6
+    participants:
+    - ih: true
+      partid: 1196
+      source:
+        abbr: BAMA
+        cit: ''
+        nam: Alabama
+        nn: Crimson Tide
+        sn: Alabama
+    - ih: false
+      partid: 1223
+      source:
+        abbr: CLE
+        cit: ''
+        nam: Clemson
+        nn: Tigers
+        sn: Clemson
+    seid: 4416
+    st: Turf
+  - cit: New Orleans
+    cou: USA
+    des: Alabama@Clemson
+    dt: 1514857500000
+    eid: 3375178
+    es: complete
+    eventGroup:
+      alias: Bowls
+      egid: 12789
+      nam: Bowls
+    lid: 6
+    participants:
+    - ih: false
+      partid: 1196
+      source:
+        abbr: BAMA
+        cit: ''
+        nam: Alabama
+        nn: Crimson Tide
+        sn: Alabama
+    - ih: true
+      partid: 1223
+      source:
+        abbr: CLE
+        cit: ''
+        nam: Clemson
+        nn: Tigers
+        sn: Clemson
+    seid: 3499
+    st: artificial
+  - cit: Tampa
+    cou: USA
+    des: Clemson@Alabama
+    dt: 1484010000000
+    eid: 3131430
+    es: complete
+    eventGroup: null
+    lid: 6
+    participants:
+    - ih: true
+      partid: 1196
+      source:
+        abbr: BAMA
+        cit: ''
+        nam: Alabama
+        nn: Crimson Tide
+        sn: Alabama
+    - ih: false
+      partid: 1223
+      source:
+        abbr: CLE
+        cit: ''
+        nam: Clemson
+        nn: Tigers
+        sn: Clemson
+    seid: 2588
+    st: Turf
+  - cit: UDF
+    cou: UDF
+    des: Alabama@Clemson
+    dt: 1452562200000
+    eid: 2962383
+    es: complete
+    eventGroup: null
+    lid: 6
+    participants:
+    - ih: false
+      partid: 1196
+      source:
+        abbr: BAMA
+        cit: ''
+        nam: Alabama
+        nn: Crimson Tide
+        sn: Alabama
+    - ih: true
+      partid: 1223
+      source:
+        abbr: CLE
+        cit: ''
+        nam: Clemson
+        nn: Tigers
+        sn: Clemson
+    seid: 1236
+    st: Undefined

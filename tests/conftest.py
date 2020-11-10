@@ -23,6 +23,7 @@ from pysbr.queries.eventsbyeventids import EventsByEventIds
 from pysbr.queries.eventsbyparticipants import EventsByParticipants
 from pysbr.queries.eventsbydaterange import EventsByDateRange
 from pysbr.queries.eventsbyeventgroup import EventsByEventGroup
+from pysbr.queries.eventsbymatchup import EventsByMatchup
 from pysbr.config.nfl import NFL
 from pysbr.config.ncaaf import NCAAF
 from pysbr.config.atp import ATP
@@ -186,6 +187,23 @@ class TestEventsByEventGroup(EventsByEventGroup):
         self.cassette_name = cassette_name
         self.patch_fn = patch_fn
         super().__init__(league_id, event_group_id, season_id, market_id)
+
+    def _build_and_execute_query(self, *args):
+        return self.patch_fn(self)
+
+
+class TestEventsByMatchup(EventsByMatchup):
+    def __init__(
+        self,
+        participant_id1,
+        participant_id2,
+        count,
+        patch_fn,
+        cassette_name,
+    ):
+        self.cassette_name = cassette_name
+        self.patch_fn = patch_fn
+        super().__init__(participant_id1, participant_id2, count)
 
     def _build_and_execute_query(self, *args):
         return self.patch_fn(self)
@@ -463,6 +481,20 @@ def events_by_event_group(build_and_execute_with_cassette):
             event_group_id,
             season_id,
             market_id,
+            build_and_execute_with_cassette,
+            cassette_name,
+        )
+
+    return fn
+
+
+@fixture
+def events_by_matchup(build_and_execute_with_cassette):
+    def fn(participant_id1, participant_id2, count, cassette_name):
+        return TestEventsByMatchup(
+            participant_id1,
+            participant_id2,
+            count,
             build_and_execute_with_cassette,
             cassette_name,
         )

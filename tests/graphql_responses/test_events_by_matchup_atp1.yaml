@@ -1,0 +1,50 @@
+lastMatchupsByParticipants:
+  events:
+  - cit: ''
+    cou: ''
+    des: Mannarino, Adrian@Klizan, Martin
+    dt: 1604923800000
+    eid: 4279492
+    es: complete
+    eventGroup:
+      alias: null
+      egid: 23908
+      nam: ATP Sofia, Bulgaria Men Singles
+    lid: 23
+    participants:
+    - ih: true
+      partid: 5562
+      source:
+        fn: Martin
+        lnam: Klizan
+    - ih: false
+      partid: 5628
+      source:
+        fn: Adrian
+        lnam: Mannarino
+    seid: 5562
+    st: Undefined
+  - cit: UDF
+    cou: UDF
+    des: Martin Klizan@Adrian Mannarino
+    dt: 1557066900000
+    eid: 3789386
+    es: complete
+    eventGroup:
+      alias: null
+      egid: 1372
+      nam: Madrid, Spain, Qualifying
+    lid: 23
+    participants:
+    - ih: false
+      partid: 5562
+      source:
+        fn: Martin
+        lnam: Klizan
+    - ih: true
+      partid: 5628
+      source:
+        fn: Adrian
+        lnam: Mannarino
+    seid: 5563
+    st: Undefined

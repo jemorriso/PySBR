@@ -1,0 +1,89 @@
+lastMatchupsByParticipants:
+  events:
+  - cit: Houston
+    cou: USA
+    des: New England Patriots@Houston Texans
+    dt: 1575249600000
+    eid: 3778743
+    es: complete
+    eventGroup:
+      alias: Week 13
+      egid: 22
+      nam: REG Week 13
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1525
+      source:
+        abbr: NE
+        cit: New England
+        nam: New England
+        nn: Patriots
+        sn: New England
+    - ih: true
+      partid: 1530
+      source:
+        abbr: HOU
+        cit: Houston
+        nam: Houston
+        nn: Texans
+        sn: Houston
+    st: retractable_dome
+  - cit: Foxborough
+    cou: USA
+    des: Houston Texans@New England Patriots
+    dt: 1536512400000
+    eid: 3452658
+    es: complete
+    eventGroup:
+      alias: Week 1
+      egid: 10
+      nam: REG Week 1
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1525
+      source:
+        abbr: NE
+        cit: New England
+        nam: New England
+        nn: Patriots
+        sn: New England
+    - ih: false
+      partid: 1530
+      source:
+        abbr: HOU
+        cit: Houston
+        nam: Houston
+        nn: Texans
+        sn: Houston
+    st: outdoor
+  - cit: Foxborough
+    cou: USA
+    des: Houston Texans@New England Patriots
+    dt: 1506272400000
+    eid: 3193065
+    es: complete
+    eventGroup:
+      alias: Week 3
+      egid: 12
+      nam: REG Week 3
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1525
+      source:
+        abbr: NE
+        cit: New England
+        nam: New England
+        nn: Patriots
+        sn: New England
+    - ih: false
+      partid: 1530
+      source:
+        abbr: HOU
+        cit: Houston
+        nam: Houston
+        nn: Texans
+        sn: Houston
+    st: outdoor

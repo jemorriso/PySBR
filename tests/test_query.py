@@ -514,3 +514,29 @@ class TestQuery:
 
         for id in expected:
             assert id in events
+
+    @mark.parametrize(
+        "participant_id1, participant_id2, count, cassette_name, expected",
+        [
+            (1530, 1525, 3, "test_events_by_matchup_nfl1", [3778743]),
+            (1223, 1196, 10, "test_events_by_matchup_ncaaf1", [2962383]),
+            (5562, 5628, 10, "test_events_by_matchup_atp1", [4279492]),
+        ],
+    )
+    def test_events_by_matchup(
+        self,
+        events_by_matchup,
+        participant_id1,
+        participant_id2,
+        count,
+        cassette_name,
+        expected,
+    ):
+        e = events_by_matchup(participant_id1, participant_id2, count, cassette_name)
+
+        events = []
+        for event in e._raw["lastMatchupsByParticipants"]["events"]:
+            events.append(event["eid"])
+
+        for id in expected:
+            assert id in events
