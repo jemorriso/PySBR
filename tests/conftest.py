@@ -18,6 +18,7 @@ from pysbr.queries.leaguesbyleagueids import LeaguesByLeagueIds
 from pysbr.queries.searchevents import SearchEvents
 from pysbr.queries.searchsports import SearchSports
 from pysbr.queries.searchleagues import SearchLeagues
+from pysbr.queries.eventmarkets import EventMarkets
 from pysbr.config.nfl import NFL
 from pysbr.config.ncaaf import NCAAF
 from pysbr.config.atp import ATP
@@ -129,6 +130,16 @@ class TestSearchLeagues(SearchLeagues):
         self.cassette_name = cassette_name
         self.patch_fn = patch_fn
         super().__init__(search_term)
+
+    def _build_and_execute_query(self, *args):
+        return self.patch_fn(self)
+
+
+class TestEventMarkets(EventMarkets):
+    def __init__(self, event_id, patch_fn, cassette_name):
+        self.cassette_name = cassette_name
+        self.patch_fn = patch_fn
+        super().__init__(event_id)
 
     def _build_and_execute_query(self, *args):
         return self.patch_fn(self)
@@ -341,6 +352,18 @@ def search_leagues(build_and_execute_with_cassette):
     def fn(search_term, cassette_name):
         return TestSearchLeagues(
             search_term,
+            build_and_execute_with_cassette,
+            cassette_name,
+        )
+
+    return fn
+
+
+@fixture
+def event_markets(build_and_execute_with_cassette):
+    def fn(event_id, cassette_name):
+        return TestEventMarkets(
+            event_id,
             build_and_execute_with_cassette,
             cassette_name,
         )

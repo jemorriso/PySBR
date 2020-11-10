@@ -365,3 +365,15 @@ class TestQuery:
                 return True
 
         assert False
+
+    @mark.parametrize(
+        "event_id, cassette_name, expected",
+        [
+            (4279927, "test_event_markets_atp1", 126),
+            (4143396, "test_event_markets_nfl1", 401),
+        ],
+    )
+    def test_event_markets(self, event_markets, event_id, cassette_name, expected):
+        e = event_markets(event_id, cassette_name)
+
+        assert expected in e._raw["eventMarkets"]["mtids"]
