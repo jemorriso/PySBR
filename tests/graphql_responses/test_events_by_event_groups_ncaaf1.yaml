@@ -1,0 +1,1858 @@
+eventsByEventGroupV2:
+  events:
+  - cit: San Diego
+    cou: USA
+    des: Hawaii@San Diego State
+    dt: 1605387600000
+    eid: 4256476
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: false
+      partid: 415
+      source:
+        abbr: HAW
+        cit: ''
+        nam: Hawaii
+        nn: Warriors
+        sn: Hawaii
+    - ih: true
+      partid: 425
+      source:
+        abbr: SDSU
+        cit: ''
+        nam: San Diego State
+        nn: Aztecs
+        sn: San Diego State
+    st: Turf
+  - cit: Tempe
+    cou: USA
+    des: California@Arizona State
+    dt: 1605411000000
+    eid: 4257672
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: false
+      partid: 445
+      source:
+        abbr: CAL
+        cit: ''
+        nam: California
+        nn: Golden Bears
+        sn: California
+    - ih: true
+      partid: 452
+      source:
+        abbr: ASU
+        cit: ''
+        nam: Arizona State
+        nn: Sun Devils
+        sn: Arizona State
+    st: Turf
+  - cit: Seattle
+    cou: USA
+    des: Oregon State@Washington
+    dt: 1605412800000
+    eid: 4257675
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: false
+      partid: 444
+      source:
+        abbr: ORS
+        cit: ''
+        nam: Oregon State
+        nn: Beavers
+        sn: Oregon State
+    - ih: true
+      partid: 449
+      source:
+        abbr: WAS
+        cit: ''
+        nam: Washington
+        nn: Huskies
+        sn: Washington
+    st: artificial
+  - cit: Stanford
+    cou: USA
+    des: Colorado@Stanford
+    dt: 1605385800000
+    eid: 4257674
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: true
+      partid: 451
+      source:
+        abbr: STA
+        cit: ''
+        nam: Stanford
+        nn: Cardinal
+        sn: Stanford
+    - ih: false
+      partid: 1207
+      source:
+        abbr: COL
+        cit: ''
+        nam: Colorado
+        nn: Buffaloes
+        sn: Colorado
+    st: Turf
+  - cit: Tucson
+    cou: USA
+    des: USC@Arizona
+    dt: 1605385800000
+    eid: 4257673
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: true
+      partid: 447
+      source:
+        abbr: ARI
+        cit: ''
+        nam: Arizona
+        nn: Wildcats
+        sn: Arizona
+    - ih: false
+      partid: 450
+      source:
+        abbr: USC
+        cit: ''
+        nam: USC
+        nn: Trojans
+        sn: USC
+    st: artificial
+  - cit: Laramie
+    cou: USA
+    des: Air Force@Wyoming
+    dt: 1605409200000
+    eid: 4256475
+    es: suspended
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: false
+      partid: 424
+      source:
+        abbr: AF
+        cit: ''
+        nam: Air Force
+        nn: Falcons
+        sn: Air Force
+    - ih: true
+      partid: 429
+      source:
+        abbr: WYO
+        cit: ''
+        nam: Wyoming
+        nn: Cowboys
+        sn: Wyoming
+    st: artificial
+  - cit: San Jose
+    cou: USA
+    des: UNLV@San Jose State
+    dt: 1605411000000
+    eid: 4256477
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: true
+      partid: 422
+      source:
+        abbr: SJS
+        cit: ''
+        nam: San Jose State
+        nn: Spartans
+        sn: San Jose State
+    - ih: false
+      partid: 431
+      source:
+        abbr: UNLV
+        cit: ''
+        nam: UNLV
+        nn: Rebels
+        sn: UNLV
+    st: artificial
+  - cit: Boise
+    cou: USA
+    des: Colorado State@Boise State
+    dt: 1605229200000
+    eid: 4256480
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: true
+      partid: 419
+      source:
+        abbr: BOISE
+        cit: ''
+        nam: Boise State
+        nn: Broncos
+        sn: Boise State
+    - ih: false
+      partid: 428
+      source:
+        abbr: CSU
+        cit: ''
+        nam: Colorado State
+        nn: Rams
+        sn: Colorado State
+    st: artificial
+  - cit: Buffalo
+    cou: USA
+    des: Miami (OH)@Buffalo
+    dt: 1605056400000
+    eid: 4260013
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: true
+      partid: 1215
+      source:
+        abbr: BUF
+        cit: ''
+        nam: Buffalo
+        nn: Bulls
+        sn: Buffalo
+    - ih: false
+      partid: 1216
+      source:
+        abbr: MOH
+        cit: ''
+        nam: Miami (OH)
+        nn: RedHawks
+        sn: Miami (OH)
+    st: artificial
+  - cit: Athens
+    cou: USA
+    des: Akron@Ohio
+    dt: 1605052800000
+    eid: 4260015
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: true
+      partid: 1217
+      source:
+        abbr: OHI
+        cit: ''
+        nam: Ohio
+        nn: Bobcats
+        sn: Ohio
+    - ih: false
+      partid: 1218
+      source:
+        abbr: AKR
+        cit: ''
+        nam: Akron
+        nn: Zips
+        sn: Akron
+    st: artificial
+  - cit: DeKalb
+    cou: USA
+    des: Central Michigan@Northern Illinois
+    dt: 1605142800000
+    eid: 4260016
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: true
+      partid: 1211
+      source:
+        abbr: NIL
+        cit: ''
+        nam: Northern Illinois
+        nn: Huskies
+        sn: Northern Illinois
+    - ih: false
+      partid: 1212
+      source:
+        abbr: CMC
+        cit: ''
+        nam: Central Michigan
+        nn: Chippewas
+        sn: Central Michigan
+    st: artificial
+  - cit: Muncie
+    cou: USA
+    des: Eastern Michigan@Ball State
+    dt: 1605139200000
+    eid: 4260017
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: true
+      partid: 1210
+      source:
+        abbr: BALL
+        cit: ''
+        nam: Ball State
+        nn: Cardinals
+        sn: Ball State
+    - ih: false
+      partid: 1214
+      source:
+        abbr: EMC
+        cit: ''
+        nam: Eastern Michigan
+        nn: Eagles
+        sn: Eastern Michigan
+    st: artificial
+  - cit: 'Kalamazoo '
+    cou: USA
+    des: Toledo@Western Michigan
+    dt: 1605142800000
+    eid: 4260018
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: false
+      partid: 1209
+      source:
+        abbr: TOL
+        cit: ''
+        nam: Toledo
+        nn: Rockets
+        sn: Toledo
+    - ih: true
+      partid: 1213
+      source:
+        abbr: WMC
+        cit: ''
+        nam: Western Michigan
+        nn: Broncos
+        sn: Western Michigan
+    st: artificial
+  - cit: Bowling Green
+    cou: USA
+    des: Kent State@Bowling Green
+    dt: 1605054600000
+    eid: 4260014
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: true
+      partid: 1219
+      source:
+        abbr: BGN
+        cit: ''
+        nam: Bowling Green
+        nn: Falcons
+        sn: Bowling Green
+    - ih: false
+      partid: 1220
+      source:
+        abbr: KNT
+        cit: ''
+        nam: Kent State
+        nn: Golden Flashes
+        sn: Kent State
+    st: artificial
+  - cit: Logan
+    cou: USA
+    des: Fresno State@Utah State
+    dt: 1605382200000
+    eid: 4256479
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: true
+      partid: 416
+      source:
+        abbr: UTS
+        cit: ''
+        nam: Utah State
+        nn: Aggies
+        sn: Utah State
+    - ih: false
+      partid: 423
+      source:
+        abbr: FRE
+        cit: ''
+        nam: Fresno State
+        nn: Bulldogs
+        sn: Fresno State
+    st: artificial
+  - cit: Abilene
+    cou: USA
+    des: Arizona Christian@Abilene Christian
+    dt: 1605387600000
+    eid: 4276536
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: true
+      partid: 7946
+      source:
+        abbr: ACU
+        cit: ''
+        nam: Abilene Christian
+        nn: Wildcats
+        sn: Abilene Christian
+    - ih: false
+      partid: 334627
+      source:
+        abbr: ARC
+        cit: ''
+        nam: Arizona Christian
+        nn: Firestorm
+        sn: Arizona Christian
+    st: Turf
+  - cit: Las Vegas
+    cou: USA
+    des: Nevada@New Mexico
+    dt: 1605396600000
+    eid: 4256478
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: false
+      partid: 421
+      source:
+        abbr: NEV
+        cit: ''
+        nam: Nevada
+        nn: Wolf Pack
+        sn: Nevada
+    - ih: true
+      partid: 430
+      source:
+        abbr: NM
+        cit: ''
+        nam: New Mexico
+        nn: Lobos
+        sn: New Mexico
+    st: artificial
+  - cit: Charlotte
+    cou: USA
+    des: Gardner-Webb@Charlotte
+    dt: 1605373200000
+    eid: 4277351
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: false
+      partid: 1337
+      source:
+        abbr: GWB
+        cit: ''
+        nam: Gardner-Webb
+        nn: Runnin' Bulldogs
+        sn: Gardner-Webb
+    - ih: true
+      partid: 9931
+      source:
+        abbr: CHA
+        cit: ''
+        nam: Charlotte
+        nn: 49ers
+        sn: Charlotte
+    st: artificial
+  - cit: Charlottesville
+    cou: USA
+    des: Louisville@Virginia
+    dt: 1605385800000
+    eid: 4277923
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: false
+      partid: 409
+      source:
+        abbr: LOU
+        cit: ''
+        nam: Louisville
+        nn: Cardinals
+        sn: Louisville
+    - ih: true
+      partid: 1231
+      source:
+        abbr: UVA
+        cit: ''
+        nam: Virginia
+        nn: Cavaliers
+        sn: Virginia
+    st: Turf
+  - cit: Pasadena
+    cou: USA
+    des: Utah@UCLA
+    dt: 1605411000000
+    eid: 4257671
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: false
+      partid: 427
+      source:
+        abbr: UTH
+        cit: ''
+        nam: Utah
+        nn: Utes
+        sn: Utah
+    - ih: true
+      partid: 446
+      source:
+        abbr: UCLA
+        cit: ''
+        nam: UCLA
+        nn: Bruins
+        sn: UCLA
+    st: Turf
+  - cit: Pullman
+    cou: USA
+    des: Oregon@Washington State
+    dt: 1605398400000
+    eid: 4257676
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: false
+      partid: 448
+      source:
+        abbr: ORE
+        cit: ''
+        nam: Oregon
+        nn: Ducks
+        sn: Oregon
+    - ih: true
+      partid: 453
+      source:
+        abbr: WST
+        cit: ''
+        nam: Washington State
+        nn: Cougars
+        sn: Washington State
+    st: artificial
+  - cit: New Orleans
+    cou: USA
+    des: Army@Tulane
+    dt: 1605373200000
+    eid: 4089467
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: false
+      partid: 464
+      source:
+        abbr: ARM
+        cit: ''
+        nam: Army
+        nn: Black Knights
+        sn: Army
+    - ih: true
+      partid: 1174
+      source:
+        abbr: TUL
+        cit: ''
+        nam: Tulane
+        nn: Green Wave
+        sn: Tulane
+    st: artificial
+  - cit: Houston
+    cou: USA
+    des: South Florida@Houston
+    dt: 1605384000000
+    eid: 4089469
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: false
+      partid: 412
+      source:
+        abbr: USF
+        cit: ''
+        nam: South Florida
+        nn: Bulls
+        sn: South Florida
+    - ih: true
+      partid: 1176
+      source:
+        abbr: HOU
+        cit: ''
+        nam: Houston
+        nn: Cougars
+        sn: Houston
+    st: artificial
+  - cit: Birmingham
+    cou: USA
+    des: North Texas@UAB
+    dt: 1605384000000
+    eid: 4089553
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: false
+      partid: 456
+      source:
+        abbr: NTX
+        cit: ''
+        nam: North Texas
+        nn: Mean Green
+        sn: North Texas
+    - ih: true
+      partid: 75445
+      source:
+        abbr: UAB
+        cit: ''
+        nam: UAB
+        nn: Blazers
+        sn: UAB
+    st: artificial
+  - cit: Huntington
+    cou: USA
+    des: Middle Tennessee@Marshall
+    dt: 1605378600000
+    eid: 4089550
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: false
+      partid: 457
+      source:
+        abbr: MTS
+        cit: ''
+        nam: Middle Tennessee
+        nn: Blue Raiders
+        sn: Middle Tennessee
+    - ih: true
+      partid: 1182
+      source:
+        abbr: MSH
+        cit: ''
+        nam: Marshall
+        nn: Thundering Herd
+        sn: Marshall
+    st: artificial
+  - cit: Ruston
+    cou: USA
+    des: Rice@Louisiana Tech
+    dt: 1605385800000
+    eid: 4089551
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: true
+      partid: 418
+      source:
+        abbr: LT
+        cit: ''
+        nam: Louisiana Tech
+        nn: Bulldogs
+        sn: Louisiana Tech
+    - ih: false
+      partid: 1178
+      source:
+        abbr: RICE
+        cit: ''
+        nam: Rice
+        nn: Owls
+        sn: Rice
+    st: artificial
+  - cit: Annapolis
+    cou: USA
+    des: Memphis@Navy
+    dt: 1605385800000
+    eid: 4089554
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: true
+      partid: 463
+      source:
+        abbr: NAV
+        cit: ''
+        nam: Navy
+        nn: Midshipmen
+        sn: Navy
+    - ih: false
+      partid: 1183
+      source:
+        abbr: MEM
+        cit: ''
+        nam: Memphis
+        nn: Tigers
+        sn: Memphis
+    st: artificial
+  - cit: 'Tulsa '
+    cou: USA
+    des: SMU@Tulsa
+    dt: 1605398400000
+    eid: 4089552
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: false
+      partid: 1175
+      source:
+        abbr: SMU
+        cit: ''
+        nam: SMU
+        nn: Mustangs
+        sn: SMU
+    - ih: true
+      partid: 1177
+      source:
+        abbr: TSA
+        cit: ''
+        nam: Tulsa
+        nn: Golden Hurricane
+        sn: Tulsa
+    st: artificial
+  - cit: Orlando
+    cou: USA
+    des: Temple@UCF
+    dt: 1605400200000
+    eid: 4089555
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: false
+      partid: 462
+      source:
+        abbr: TEM
+        cit: ''
+        nam: Temple
+        nn: Owls
+        sn: Temple
+    - ih: true
+      partid: 1180
+      source:
+        abbr: UCF
+        cit: ''
+        nam: UCF
+        nn: Knights
+        sn: UCF
+    st: Turf
+  - cit: Miami
+    cou: USA
+    des: Florida Atlantic@Florida International
+    dt: 1605312000000
+    eid: 4089556
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: false
+      partid: 454
+      source:
+        abbr: FAU
+        cit: ''
+        nam: Florida Atlantic
+        nn: Owls
+        sn: Florida Atlantic
+    - ih: true
+      partid: 459
+      source:
+        abbr: FIU
+        cit: ''
+        nam: Florida International
+        nn: Golden Panthers
+        sn: Florida International
+    st: artificial
+  - cit: Bowling Green
+    cou: USA
+    des: Southern Miss@Western Kentucky
+    dt: 1605385800000
+    eid: 4089975
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: true
+      partid: 508
+      source:
+        abbr: WKY
+        cit: ''
+        nam: Western Kentucky
+        nn: Hilltoppers
+        sn: Western Kentucky
+    - ih: false
+      partid: 1181
+      source:
+        abbr: USM
+        cit: ''
+        nam: Southern Miss
+        nn: Golden Eagles
+        sn: Southern Miss
+    st: artificial
+  - cit: San Antonio
+    cou: USA
+    des: UTEP@UTSA
+    dt: 1605384000000
+    eid: 4089974
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: false
+      partid: 1173
+      source:
+        abbr: TEP
+        cit: ''
+        nam: UTEP
+        nn: Miners
+        sn: UTEP
+    - ih: true
+      partid: 7670
+      source:
+        abbr: UTSA
+        cit: ''
+        nam: UTSA
+        nn: Roadrunners
+        sn: UTSA
+    st: artificial
+  - cit: Blacksburg
+    cou: USA
+    des: Miami (FL)@Virginia Tech
+    dt: 1605373200000
+    eid: 4090104
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: true
+      partid: 1227
+      source:
+        abbr: VT
+        cit: ''
+        nam: Virginia Tech
+        nn: Hokies
+        sn: Virginia Tech
+    - ih: false
+      partid: 1230
+      source:
+        abbr: MFL
+        cit: ''
+        nam: Miami (FL)
+        nn: Hurricanes
+        sn: Miami (FL)
+    st: Turf
+  - cit: Lynchburg
+    cou: USA
+    des: Western Carolina@Liberty
+    dt: 1605373200000
+    eid: 4090359
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: true
+      partid: 475
+      source:
+        abbr: LIB
+        cit: ''
+        nam: Liberty
+        nn: Flames
+        sn: Liberty
+    - ih: false
+      partid: 482
+      source:
+        abbr: WC
+        cit: ''
+        nam: Western Carolina
+        nn: Catamounts
+        sn: Western Carolina
+    st: artificial
+  - cit: Statesboro
+    cou: USA
+    des: Texas State@Georgia Southern
+    dt: 1605385800000
+    eid: 4092399
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: false
+      partid: 494
+      source:
+        abbr: TXST
+        cit: ''
+        nam: Texas State
+        nn: Bobcats
+        sn: Texas State
+    - ih: true
+      partid: 1346
+      source:
+        abbr: GSO
+        cit: ''
+        nam: Georgia Southern
+        nn: Eagles
+        sn: Georgia Southern
+    st: artificial
+  - cit: Boone
+    cou: USA
+    des: Georgia State@Appalachian State
+    dt: 1605382200000
+    eid: 4092398
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: true
+      partid: 515
+      source:
+        abbr: APP
+        cit: ''
+        nam: Appalachian State
+        nn: Mountaineers
+        sn: Appalachian State
+    - ih: false
+      partid: 2292
+      source:
+        abbr: GST
+        cit: ''
+        nam: Georgia State
+        nn: Panthers
+        sn: Georgia State
+    st: artificial
+  - cit: Lafayette
+    cou: USA
+    des: South Alabama@Louisiana-Lafayette
+    dt: 1605380400000
+    eid: 4092447
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: true
+      partid: 455
+      source:
+        abbr: ULL
+        cit: ''
+        nam: Louisiana-Lafayette
+        nn: Ragin' Cajuns
+        sn: Louisiana-Lafayette
+    - ih: false
+      partid: 6786
+      source:
+        abbr: SAB
+        cit: ''
+        nam: South Alabama
+        nn: Jaguars
+        sn: South Alabama
+    st: artificial
+  - cit: Troy
+    cou: USA
+    des: Coastal Carolina@Troy
+    dt: 1605373200000
+    eid: 4092448
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: true
+      partid: 461
+      source:
+        abbr: TRY
+        cit: ''
+        nam: Troy
+        nn: Trojans
+        sn: Troy
+    - ih: false
+      partid: 1336
+      source:
+        abbr: CC
+        cit: ''
+        nam: Coastal Carolina
+        nn: Chanticleers
+        sn: Coastal Carolina
+    st: artificial
+  - cit: Jonesboro
+    cou: USA
+    des: Louisiana-Monroe@Arkansas State
+    dt: 1605384000000
+    eid: 4092449
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: true
+      partid: 458
+      source:
+        abbr: ARKS
+        cit: ''
+        nam: Arkansas State
+        nn: Red Wolves
+        sn: Arkansas State
+    - ih: false
+      partid: 460
+      source:
+        abbr: ULM
+        cit: ''
+        nam: Louisiana-Monroe
+        nn: Warhawks
+        sn: Louisiana-Monroe
+    st: artificial
+  - cit: Morgantown
+    cou: USA
+    des: TCU@West Virginia
+    dt: 1605373200000
+    eid: 4197807
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: true
+      partid: 407
+      source:
+        abbr: WVU
+        cit: ''
+        nam: West Virginia
+        nn: Mountaineers
+        sn: West Virginia
+    - ih: false
+      partid: 426
+      source:
+        abbr: TCU
+        cit: ''
+        nam: TCU
+        nn: Horned Frogs
+        sn: TCU
+    st: artificial
+  - cit: Lubbock
+    cou: USA
+    des: Baylor@Texas Tech
+    dt: 1605387600000
+    eid: 4197792
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: true
+      partid: 1199
+      source:
+        abbr: TT
+        cit: ''
+        nam: Texas Tech
+        nn: Red Raiders
+        sn: Texas Tech
+    - ih: false
+      partid: 1200
+      source:
+        abbr: BAY
+        cit: ''
+        nam: Baylor
+        nn: Bears
+        sn: Baylor
+    st: artificial
+  - cit: Columbia
+    cou: USA
+    des: Georgia@Missouri
+    dt: 1605373200000
+    eid: 4205222
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: false
+      partid: 1188
+      source:
+        abbr: UGA
+        cit: ''
+        nam: Georgia
+        nn: Bulldogs
+        sn: Georgia
+    - ih: true
+      partid: 1205
+      source:
+        abbr: MIZ
+        cit: ''
+        nam: Missouri
+        nn: Tigers
+        sn: Missouri
+    st: artificial
+  - cit: Oxford
+    cou: USA
+    des: South Carolina@Ole Miss
+    dt: 1605400200000
+    eid: 4205218
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: false
+      partid: 1185
+      source:
+        abbr: SC
+        cit: ''
+        nam: South Carolina
+        nn: Gamecocks
+        sn: South Carolina
+    - ih: true
+      partid: 1195
+      source:
+        abbr: MIS
+        cit: ''
+        nam: Ole Miss
+        nn: Rebels
+        sn: Ole Miss
+    st: artificial
+  - cit: Gainesville
+    cou: USA
+    des: Arkansas@Florida
+    dt: 1605398400000
+    eid: 4205219
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: true
+      partid: 1186
+      source:
+        abbr: FLA
+        cit: ''
+        nam: Florida
+        nn: Gators
+        sn: Florida
+    - ih: false
+      partid: 1192
+      source:
+        abbr: ARK
+        cit: ''
+        nam: Arkansas
+        nn: Razorbacks
+        sn: Arkansas
+    st: Turf
+  - cit: Lexington
+    cou: USA
+    des: Vanderbilt@Kentucky
+    dt: 1605373200000
+    eid: 4205221
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: false
+      partid: 1187
+      source:
+        abbr: VAN
+        cit: ''
+        nam: Vanderbilt
+        nn: Commodores
+        sn: Vanderbilt
+    - ih: true
+      partid: 1189
+      source:
+        abbr: KEN
+        cit: ''
+        nam: Kentucky
+        nn: Wildcats
+        sn: Kentucky
+    st: artificial
+  - cit: Knoxville
+    cou: USA
+    des: Texas A&M@Tennessee
+    dt: 1605385800000
+    eid: 4205223
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: true
+      partid: 1190
+      source:
+        abbr: TEN
+        cit: ''
+        nam: Tennessee
+        nn: Volunteers
+        sn: Tennessee
+    - ih: false
+      partid: 1202
+      source:
+        abbr: TXAM
+        cit: ''
+        nam: Texas A&M
+        nn: Aggies
+        sn: Texas A&M
+    st: Turf
+  - cit: Starkville
+    cou: USA
+    des: Auburn@Mississippi State
+    dt: 1605387600000
+    eid: 4205220
+    es: postponed
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: true
+      partid: 1193
+      source:
+        abbr: MSST
+        cit: ''
+        nam: Mississippi State
+        nn: Bulldogs
+        sn: Mississippi State
+    - ih: false
+      partid: 1194
+      source:
+        abbr: AUB
+        cit: ''
+        nam: Auburn
+        nn: Tigers
+        sn: Auburn
+    st: Turf
+  - cit: Atlanta
+    cou: USA
+    des: Pittsburgh@Georgia Tech
+    dt: 1605398400000
+    eid: 4219437
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: false
+      partid: 414
+      source:
+        abbr: PIT
+        cit: ''
+        nam: Pittsburgh
+        nn: Panthers
+        sn: Pittsburgh
+    - ih: true
+      partid: 1232
+      source:
+        abbr: GT
+        cit: ''
+        nam: Georgia Tech
+        nn: Yellow Jackets
+        sn: Georgia Tech
+    st: Turf
+  - cit: Raleigh
+    cou: USA
+    des: Florida State@North Carolina State
+    dt: 1605400200000
+    eid: 4219440
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: false
+      partid: 1225
+      source:
+        abbr: FSU
+        cit: ''
+        nam: Florida State
+        nn: Seminoles
+        sn: Florida State
+    - ih: true
+      partid: 53813
+      source:
+        abbr: NCST
+        cit: ''
+        nam: North Carolina State
+        nn: Wolfpack
+        sn: North Carolina State
+    st: Turf
+  - cit: Chestnut Hill
+    cou: USA
+    des: Notre Dame@Boston College
+    dt: 1605385800000
+    eid: 4219438
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: false
+      partid: 465
+      source:
+        abbr: ND
+        cit: ''
+        nam: Notre Dame
+        nn: Fighting Irish
+        sn: Notre Dame
+    - ih: true
+      partid: 1226
+      source:
+        abbr: BC
+        cit: ''
+        nam: Boston College
+        nn: Eagles
+        sn: Boston College
+    st: artificial
+  - cit: Chapel Hill
+    cou: USA
+    des: Wake Forest@North Carolina
+    dt: 1605373200000
+    eid: 4219441
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: false
+      partid: 1224
+      source:
+        abbr: WF
+        cit: ''
+        nam: Wake Forest
+        nn: Demon Deacons
+        sn: Wake Forest
+    - ih: true
+      partid: 1228
+      source:
+        abbr: NC
+        cit: ''
+        nam: North Carolina
+        nn: Tar Heels
+        sn: North Carolina
+    st: Turf
+  - cit: Charlottesville
+    cou: USA
+    des: Duke@Virginia
+    dt: 1605376800000
+    eid: 4219439
+    es: postponed
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: false
+      partid: 1229
+      source:
+        abbr: DUK
+        cit: ''
+        nam: Duke
+        nn: Blue Devils
+        sn: Duke
+    - ih: true
+      partid: 1231
+      source:
+        abbr: UVA
+        cit: ''
+        nam: Virginia
+        nn: Cavaliers
+        sn: Virginia
+    st: Turf
+  - cit: Baton Rouge
+    cou: USA
+    des: Alabama@LSU
+    dt: 1605394800000
+    eid: 4205224
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: true
+      partid: 1191
+      source:
+        abbr: LSU
+        cit: ''
+        nam: LSU
+        nn: Tigers
+        sn: LSU
+    - ih: false
+      partid: 1196
+      source:
+        abbr: BAMA
+        cit: ''
+        nam: Alabama
+        nn: Crimson Tide
+        sn: Alabama
+    st: Turf
+  - cit: Abilene
+    cou: USA
+    des: Arizona Christian@Abilene Christian
+    dt: 1605405600000
+    eid: 4227059
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: true
+      partid: 7946
+      source:
+        abbr: ACU
+        cit: ''
+        nam: Abilene Christian
+        nn: Wildcats
+        sn: Abilene Christian
+    - ih: false
+      partid: 334627
+      source:
+        abbr: ARC
+        cit: ''
+        nam: Arizona Christian
+        nn: Firestorm
+        sn: Arizona Christian
+    st: Turf
+  - cit: 'Cincinnati '
+    cou: USA
+    des: East Carolina@Cincinnati
+    dt: 1605313800000
+    eid: 4090102
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: true
+      partid: 408
+      source:
+        abbr: CIN
+        cit: ''
+        nam: Cincinnati
+        nn: Bearcats
+        sn: Cincinnati
+    - ih: false
+      partid: 1179
+      source:
+        abbr: ECU
+        cit: ''
+        nam: East Carolina
+        nn: Pirates
+        sn: East Carolina
+    st: artificial
+  - cit: Conway
+    cou: USA
+    des: Eastern Kentucky@Central Arkansas
+    dt: 1605387600000
+    eid: 4243607
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: false
+      partid: 471
+      source:
+        abbr: EKY
+        cit: ''
+        nam: Eastern Kentucky
+        nn: Colonels
+        sn: Eastern Kentucky
+    - ih: true
+      partid: 1330
+      source:
+        abbr: UCA
+        cit: ''
+        nam: Central Arkansas
+        nn: Bears
+        sn: Central Arkansas
+    st: artificial
+  - cit: Minneapolis
+    cou: USA
+    des: Iowa@Minnesota
+    dt: 1605312000000
+    eid: 4245100
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: true
+      partid: 441
+      source:
+        abbr: MIN
+        cit: ''
+        nam: Minnesota
+        nn: Golden Gophers
+        sn: Minnesota
+    - ih: false
+      partid: 442
+      source:
+        abbr: IOW
+        cit: ''
+        nam: Iowa
+        nn: Hawkeyes
+        sn: Iowa
+    st: artificial
+  - cit: 'Lincoln '
+    cou: USA
+    des: Penn State@Nebraska
+    dt: 1605373200000
+    eid: 4245094
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: false
+      partid: 435
+      source:
+        abbr: PSU
+        cit: ''
+        nam: Penn State
+        nn: Nittany Lions
+        sn: Penn State
+    - ih: true
+      partid: 1203
+      source:
+        abbr: NEB
+        cit: ''
+        nam: Nebraska
+        nn: Cornhuskers
+        sn: Nebraska
+    st: artificial
+  - cit: College Park
+    cou: USA
+    des: Ohio State@Maryland
+    dt: 1605385800000
+    eid: 4245096
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: false
+      partid: 439
+      source:
+        abbr: OSU
+        cit: ''
+        nam: Ohio State
+        nn: Buckeyes
+        sn: Ohio State
+    - ih: true
+      partid: 1222
+      source:
+        abbr: MAR
+        cit: ''
+        nam: Maryland
+        nn: Terrapins
+        sn: Maryland
+    st: artificial
+  - cit: East Lansing
+    cou: USA
+    des: Indiana@Michigan State
+    dt: 1605373200000
+    eid: 4245095
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: false
+      partid: 434
+      source:
+        abbr: IU
+        cit: ''
+        nam: Indiana
+        nn: Hoosiers
+        sn: Indiana
+    - ih: true
+      partid: 437
+      source:
+        abbr: MSU
+        cit: ''
+        nam: Michigan State
+        nn: Spartans
+        sn: Michigan State
+    st: Turf
+  - cit: Ann Arbor
+    cou: USA
+    des: Wisconsin@Michigan
+    dt: 1605400200000
+    eid: 4245097
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: false
+      partid: 436
+      source:
+        abbr: WIS
+        cit: ''
+        nam: Wisconsin
+        nn: Badgers
+        sn: Wisconsin
+    - ih: true
+      partid: 438
+      source:
+        abbr: MICH
+        cit: ''
+        nam: Michigan
+        nn: Wolverines
+        sn: Michigan
+    st: artificial
+  - cit: Piscataway
+    cou: USA
+    des: Illinois@Rutgers
+    dt: 1605373200000
+    eid: 4245098
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: true
+      partid: 410
+      source:
+        abbr: RUT
+        cit: ''
+        nam: Rutgers
+        nn: Scarlet Knights
+        sn: Rutgers
+    - ih: false
+      partid: 440
+      source:
+        abbr: ILL
+        cit: ''
+        nam: Illinois
+        nn: Fighting Illini
+        sn: Illinois
+    st: artificial
+  - cit: West Lafayette
+    cou: USA
+    des: Northwestern@Purdue
+    dt: 1605400200000
+    eid: 4245099
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: false
+      partid: 433
+      source:
+        abbr: NW
+        cit: ''
+        nam: Northwestern
+        nn: Wildcats
+        sn: Northwestern
+    - ih: true
+      partid: 443
+      source:
+        abbr: PUR
+        cit: ''
+        nam: Purdue
+        nn: Boilermakers
+        sn: Purdue
+    st: Turf
+  - cit: Nacogdoches
+    cou: USA
+    des: Pittsburg State@Stephen F. Austin
+    dt: 1605391200000
+    eid: 4245280
+    es: scheduled
+    eventGroup:
+      alias: Week 11
+      egid: 43
+      nam: REG Week 11
+    lid: 6
+    participants:
+    - ih: true
+      partid: 512
+      source:
+        abbr: SAU
+        cit: ''
+        nam: Stephen F. Austin
+        nn: Lumberjacks
+        sn: Stephen F. Austin
+    - ih: false
+      partid: 7996
+      source:
+        abbr: PITTST
+        cit: ''
+        nam: Pittsburg State
+        nn: Gorillas
+        sn: Pittsburg State
+    st: artificial

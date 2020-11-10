@@ -466,3 +466,51 @@ class TestQuery:
 
         for id in expected:
             assert id in events
+
+    @mark.parametrize(
+        "league, event_group_id, season_id, cassette_name, expected",
+        [
+            (
+                lazy_fixture("nfl"),
+                19,
+                8582,
+                "test_events_by_event_groups_nfl1",
+                [4143503],
+            ),
+            (
+                lazy_fixture("ncaaf"),
+                43,
+                8583,
+                "test_events_by_event_groups_ncaaf1",
+                [4260015],
+            ),
+            (
+                lazy_fixture("atp"),
+                23908,
+                5562,
+                "test_events_by_event_groups_atp1",
+                [4278811],
+            ),
+        ],
+    )
+    def test_events_by_event_group(
+        self,
+        events_by_event_group,
+        league,
+        event_group_id,
+        season_id,
+        cassette_name,
+        expected,
+    ):
+        league_id = league.league_id
+        market_id = league.default_market_id
+        e = events_by_event_group(
+            league_id, event_group_id, season_id, market_id, cassette_name
+        )
+
+        events = []
+        for event in e._raw["eventsByEventGroupV2"]["events"]:
+            events.append(event["eid"])
+
+        for id in expected:
+            assert id in events

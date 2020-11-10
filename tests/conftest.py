@@ -22,6 +22,7 @@ from pysbr.queries.eventmarkets import EventMarkets
 from pysbr.queries.eventsbyeventids import EventsByEventIds
 from pysbr.queries.eventsbyparticipants import EventsByParticipants
 from pysbr.queries.eventsbydaterange import EventsByDateRange
+from pysbr.queries.eventsbyeventgroup import EventsByEventGroup
 from pysbr.config.nfl import NFL
 from pysbr.config.ncaaf import NCAAF
 from pysbr.config.atp import ATP
@@ -173,6 +174,18 @@ class TestEventsByDateRange(EventsByDateRange):
         self.cassette_name = cassette_name
         self.patch_fn = patch_fn
         super().__init__(league_id, start, end)
+
+    def _build_and_execute_query(self, *args):
+        return self.patch_fn(self)
+
+
+class TestEventsByEventGroup(EventsByEventGroup):
+    def __init__(
+        self, league_id, event_group_id, season_id, market_id, patch_fn, cassette_name
+    ):
+        self.cassette_name = cassette_name
+        self.patch_fn = patch_fn
+        super().__init__(league_id, event_group_id, season_id, market_id)
 
     def _build_and_execute_query(self, *args):
         return self.patch_fn(self)
@@ -435,6 +448,21 @@ def events_by_date_range(build_and_execute_with_cassette):
             league_id,
             start,
             end,
+            build_and_execute_with_cassette,
+            cassette_name,
+        )
+
+    return fn
+
+
+@fixture
+def events_by_event_group(build_and_execute_with_cassette):
+    def fn(league_id, event_group_id, season_id, market_id, cassette_name):
+        return TestEventsByEventGroup(
+            league_id,
+            event_group_id,
+            season_id,
+            market_id,
             build_and_execute_with_cassette,
             cassette_name,
         )
