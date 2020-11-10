@@ -29,8 +29,7 @@ market_ids: |
   spid: $spids
 
 participants: |
-  partid: $partids,
-  seid: $seid
+  partid: $partids
 
 matchup: |
   participantId1: $partid1,
