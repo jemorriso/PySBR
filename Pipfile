@@ -12,11 +12,13 @@ pytest-cov = "*"
 pysbr = {editable = true, path = "."}
 tzlocal = "*"
 pytest-lazy-fixture = "*"
+pandasgui = "*"
 
 [packages]
 gql = "*"
 pytz = "*"
 pyyaml = "*"
+pandas = "*"
 
 [requires]
 python_version = "3.8"
