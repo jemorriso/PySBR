@@ -1,3 +1,6 @@
+############################################
+# Config translations (and some fields) 
+############################################
 # common
 nam: name # e.g. N.Y. Jets
 des: description
@@ -83,3 +86,12 @@ id: id
 name: name
 shortname: short name
 favoriteshortname: favorite short name
+
+############################################
+# Field translations
+############################################
+# lines
+adj: spread
+ap: american odds
+pri: decimal odds
+
