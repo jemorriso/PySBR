@@ -1,8 +1,10 @@
 from string import Template
+import copy
 
 # from graphql import build_ast_schema, parse
 from gql import Client, gql
 from gql.transport.requests import RequestsHTTPTransport
+import pandas as pd
 
 from pysbr.utils import Utils
 
@@ -15,6 +17,9 @@ class Query:
 
     def __init__(self):
         self._raw = None
+        self._subpath_keys = None
+        self._sublist_keys = None
+        self._id_key = None
 
         transport = RequestsHTTPTransport(
             url="https://www.sportsbookreview.com/ms-odds-v2/odds-v2-service"
@@ -120,10 +125,51 @@ class Query:
         )
         return self._execute_query(q_string)
 
+    def _find_data(self):
+        data = self._raw[self.name]
+        if self._subpath_keys is not None:
+            for k in self._subpath_keys:
+                data = data[k]
+
+        return data
+
+    def _translate_dict(self, data):
+        Utils.translate_dict(data, Utils.translation_dict())
+        return data
+
+    def _copy_and_translate_data(self):
+        data = copy.deepcopy(self._find_data())
+        return self._translate_dict(data)
+
+    # for queries returning ids call this function to process _raw and return ids only
+    def ids(self):
+        if self._id_key is None:
+            raise NotImplementedError(
+                f"{type(self).__name__} does not have a default return id type"
+            )
+
+        translated = self.list()
+        ids = []
+        for el in translated:
+            ids.append(el[self._id_key])
+
+        return ids
+
     def list(self):
-        # clean response using dictionary
-        pass
+        return self._copy_and_translate_data()
 
     def dataframe(self):
-        # use cleaned response, and flatten it into a dataframe
-        pass
+        data = self._copy_and_translate_data()
+
+        # Using sublist_keys instead of recursive method because there is a possibility
+        # of overwriting keys without realizing it if using recursive method
+        # The idea is that pd.json_normalize() doesn't work on sublists
+        if self._sublist_keys is not None:
+            for k in self._sublist_keys:
+                for el in data:
+                    for i, subel in enumerate(el[k]):
+                        new_key = f"{k}.{i+1}"
+                        el[new_key] = subel
+                    el.pop(k)
+
+        return pd.json_normalize(data)
