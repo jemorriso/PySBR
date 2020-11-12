@@ -125,14 +125,6 @@ search_event: |
       sport
       spid
       eid
-      searchParticipants {
-          nam
-          lnam
-          fn
-          nn
-          sn
-          abbr
-      }
       eventParticipants
       lid
   }

@@ -95,3 +95,10 @@ adj: spread
 ap: american odds
 pri: decimal odds
 
+# event group
+sdt: start datetime
+edt: end datetime
+
+# search event
+eventParticipants: event participants
+searchParticipants: search participants

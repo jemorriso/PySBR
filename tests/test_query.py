@@ -374,9 +374,14 @@ class TestQuery:
 
         for event in s._raw["searchEvent"]:
             if event["eid"] == expected:
-                return True
+                break
 
-        assert False
+        l_ = s.list()
+        ids = s.ids()
+        df = s.dataframe()
+        assert isinstance(l_, list)
+        assert isinstance(ids, list)
+        assert isinstance(df, pd.DataFrame)
 
     @mark.parametrize(
         "search_term, cassette_name, expected",
