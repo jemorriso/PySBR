@@ -12,3 +12,6 @@ class SearchLeagues(Query):
         self._raw = self._build_and_execute_query(
             self.name, self.fields, self.arg_str, self.args
         )
+
+        self._subpath_keys = ["searchLeague"]
+        self._id_key = "league id"

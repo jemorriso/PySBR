@@ -413,9 +413,14 @@ class TestQuery:
 
         for league in s._raw["multipleSearch"]["searchLeague"]:
             if league["lid"] == expected:
-                return True
+                break
 
-        assert False
+        l_ = s.list()
+        ids = s.ids()
+        df = s.dataframe()
+        assert isinstance(l_, list)
+        assert isinstance(ids, list)
+        assert isinstance(df, pd.DataFrame)
 
     @mark.parametrize(
         "event_id, cassette_name, expected",

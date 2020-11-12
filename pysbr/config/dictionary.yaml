@@ -102,3 +102,7 @@ edt: end datetime
 # search event
 eventParticipants: event participants
 searchParticipants: search participants
+
+# search league
+region: region
+rid: region id
