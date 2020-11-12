@@ -550,14 +550,18 @@ class TestQuery:
             assert id in events
 
     @mark.parametrize(
-        "event_ids, market_ids, cassette_name",
+        "event_ids, market_ids, provider_account_id, cassette_name",
         [
-            ([4143394, 4143395], [401, 83, 402], "test_opening_lines_nfl1"),
-            ([4278815, 4279749], [126, 395, 396], "test_opening_lines_atp1"),
+            ([4143394, 4143395], [401, 83, 402], None, "test_opening_lines_nfl1"),
+            ([4143378, 4143379], [401, 83, 402], 20, "test_opening_lines_nfl2"),
+            ([4278815, 4279749], [126, 395, 396], None, "test_opening_lines_atp1"),
+            ([4278815, 4277031], [126, 395, 396], 20, "test_opening_lines_atp2"),
         ],
     )
-    def test_opening_lines(self, opening_lines, event_ids, market_ids, cassette_name):
-        o = opening_lines(event_ids, market_ids, cassette_name)
+    def test_opening_lines(
+        self, opening_lines, event_ids, market_ids, provider_account_id, cassette_name
+    ):
+        o = opening_lines(event_ids, market_ids, provider_account_id, cassette_name)
 
         ids = []
         for line in o._raw["openingLines"]:

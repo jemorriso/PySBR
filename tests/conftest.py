@@ -219,12 +219,13 @@ class TestOpeningLines(OpeningLines):
         self,
         event_ids,
         market_ids,
+        provider_account_id,
         patch_fn,
         cassette_name,
     ):
         self.cassette_name = cassette_name
         self.patch_fn = patch_fn
-        super().__init__(event_ids, market_ids)
+        super().__init__(event_ids, market_ids, provider_account_id)
 
     def _build_and_execute_query(self, *args, **kwargs):
         return self.patch_fn(self)
@@ -596,10 +597,11 @@ def events_by_matchup(build_and_execute_with_cassette):
 
 @fixture
 def opening_lines(build_and_execute_with_cassette):
-    def fn(event_ids, market_ids, cassette_name):
+    def fn(event_ids, market_ids, provider_account_id, cassette_name):
         return TestOpeningLines(
             event_ids,
             market_ids,
+            provider_account_id,
             build_and_execute_with_cassette,
             cassette_name,
         )
