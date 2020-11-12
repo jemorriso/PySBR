@@ -153,10 +153,14 @@ class Query:
         for el in translated:
             ids.append(el[self._id_key])
 
-        return ids
+        return list(set(ids))
 
     def list(self):
-        return self._copy_and_translate_data()
+        data = self._copy_and_translate_data()
+        # Some queries return dictionaries. Enforce this method returning a list.
+        if isinstance(data, dict):
+            data = [data]
+        return data
 
     def dataframe(self):
         data = self._copy_and_translate_data()
