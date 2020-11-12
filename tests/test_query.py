@@ -4,6 +4,7 @@ from datetime import datetime
 from pytest import mark
 from pytest_lazyfixture import lazy_fixture
 from gql import gql
+import pandas as pd
 
 
 class TestQuery:
@@ -467,6 +468,13 @@ class TestQuery:
         for id in expected:
             assert id in events
 
+    #         l_ = e.list()
+    #         ids = e.ids()
+    #         df = e.dataframe()
+    #         assert isinstance(l_, list)
+    #         assert isinstance(ids, list)
+    #         assert isinstance(df, pd.DataFrame)
+
     @mark.parametrize(
         "league, event_group_id, season_id, cassette_name, expected",
         [
@@ -559,6 +567,11 @@ class TestQuery:
         for id in event_ids + market_ids:
             assert id in ids
 
+        l_ = o.list()
+        df = o.dataframe()
+        assert isinstance(l_, list)
+        assert isinstance(df, pd.DataFrame)
+
     @mark.parametrize(
         "event_ids, market_ids, cassette_name",
         [
@@ -577,11 +590,18 @@ class TestQuery:
         for id in event_ids + market_ids:
             assert id in ids
 
+        l_ = c.list()
+        df = c.dataframe()
+        assert isinstance(l_, list)
+        assert isinstance(df, pd.DataFrame)
+
     @mark.parametrize(
         "event_ids, market_ids, cassette_name",
         [
             ([4143394, 4143395], [401, 83, 402], "test_best_lines_nfl1"),
+            ([4143394, 4143395], None, "test_best_lines_nfl2"),
             ([4278815, 4279749], [126, 395, 396], "test_best_lines_atp1"),
+            ([4278815, 4279749], None, "test_best_lines_atp2"),
         ],
     )
     def test_best_lines(self, best_lines, event_ids, market_ids, cassette_name):
@@ -592,8 +612,13 @@ class TestQuery:
             ids.append(line["eid"])
             ids.append(line["mtid"])
 
-        for id in event_ids + market_ids:
+        for id in event_ids + market_ids if market_ids is not None else event_ids:
             assert id in ids
+
+        l_ = b.list()
+        df = b.dataframe()
+        assert isinstance(l_, list)
+        assert isinstance(df, pd.DataFrame)
 
     @mark.parametrize(
         "event_ids, market_ids, cassette_name, expected",
@@ -662,3 +687,8 @@ class TestQuery:
                 assert id in ids
         else:
             assert len(h._raw["lineHistory"][0]["lines"]) == 0
+
+        l_ = h.list()
+        df = h.dataframe()
+        assert isinstance(l_, list)
+        assert isinstance(df, pd.DataFrame)
