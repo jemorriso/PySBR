@@ -403,6 +403,11 @@ class TestQuery:
 
         assert expected in e._raw["eventMarkets"]["mtids"]
 
+        l_ = e.list()
+        df = e.dataframe()
+        assert isinstance(l_, list)
+        assert isinstance(df, pd.DataFrame)
+
     @mark.parametrize(
         "event_ids, cassette_name, expected",
         [
