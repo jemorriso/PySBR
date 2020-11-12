@@ -11,3 +11,5 @@ class MarketsByMarketIds(Query):
         self._raw = self._build_and_execute_query(
             self.name, self.fields, self.arg_str, self.args
         )
+
+        self._id_key = "market id"

@@ -306,6 +306,13 @@ class TestQuery:
 
         assert found == expected
 
+        l_ = m.list()
+        ids = m.ids()
+        df = m.dataframe()
+        assert isinstance(l_, list)
+        assert isinstance(ids, list)
+        assert isinstance(df, pd.DataFrame)
+
     @mark.parametrize(
         "league, cassette_name, expected",
         [
