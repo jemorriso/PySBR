@@ -1,7 +1,7 @@
-from pysbr.queries.query import Query
+from pysbr.queries.lines import Lines
 
 
-class BestLines(Query):
+class BestLines(Lines):
     def __init__(self, event_ids, market_ids):
         super().__init__()
         self.name = "bestLines"
