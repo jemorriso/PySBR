@@ -235,12 +235,17 @@ class TestCurrentLines(CurrentLines):
         self,
         event_ids,
         market_ids,
+        provider_account_ids,
         patch_fn,
         cassette_name,
     ):
         self.cassette_name = cassette_name
         self.patch_fn = patch_fn
-        super().__init__(event_ids, market_ids)
+        super().__init__(
+            event_ids,
+            market_ids,
+            provider_account_ids,
+        )
 
     def _build_and_execute_query(self, *args, **kwargs):
         return self.patch_fn(self)
@@ -604,10 +609,11 @@ def opening_lines(build_and_execute_with_cassette):
 
 @fixture
 def current_lines(build_and_execute_with_cassette):
-    def fn(event_ids, market_ids, cassette_name):
+    def fn(event_ids, market_ids, provider_account_ids, cassette_name):
         return TestCurrentLines(
             event_ids,
             market_ids,
+            provider_account_ids,
             build_and_execute_with_cassette,
             cassette_name,
         )

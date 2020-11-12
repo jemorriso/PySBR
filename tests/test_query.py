@@ -573,14 +573,18 @@ class TestQuery:
         assert isinstance(df, pd.DataFrame)
 
     @mark.parametrize(
-        "event_ids, market_ids, cassette_name",
+        "event_ids, market_ids, provider_account_ids, cassette_name",
         [
-            ([4143394, 4143395], [401, 83, 402], "test_current_lines_nfl1"),
-            ([4278815, 4279749], [126, 395, 396], "test_current_lines_atp1"),
+            ([4143394, 4143395], [401, 83, 402], None, "test_current_lines_nfl1"),
+            ([4143379, 4143378], [401, 83, 402], [5, 20], "test_current_lines_nfl2"),
+            ([4278815, 4279749], [126, 395, 396], None, "test_current_lines_atp1"),
+            ([4278815, 4277031], [126, 395, 396], [5, 20], "test_current_lines_atp2"),
         ],
     )
-    def test_current_lines(self, current_lines, event_ids, market_ids, cassette_name):
-        c = current_lines(event_ids, market_ids, cassette_name)
+    def test_current_lines(
+        self, current_lines, event_ids, market_ids, provider_account_ids, cassette_name
+    ):
+        c = current_lines(event_ids, market_ids, provider_account_ids, cassette_name)
 
         ids = []
         for line in c._raw["currentLines"]:
