@@ -131,13 +131,15 @@ class Utils:
                         k = t[k]
 
                         v = el.pop(old_k)
-                        if v in ["datetime"]:
-                            v = Utils.timestamp_to_datetime(v)
-                        el[k] = (
-                            v
-                            if k not in ["datetime"]
-                            else Utils.timestamp_to_iso_str(v)
-                        )
+                        # if v in ["datetime"]:
+                        # v = Utils.timestamp_to_datetime(v)
+                        if k not in ["datetime", "start datetime", "end datetime"]:
+                            el[k] = v
+                        else:
+                            try:
+                                el[k] = Utils.timestamp_to_iso_str(v)
+                            except TypeError:
+                                el[k] = v
                     except KeyError:
                         pass
                     v = el[k]
