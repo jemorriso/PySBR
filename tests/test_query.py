@@ -197,6 +197,11 @@ class TestQuery:
 
         assert t._raw["team"]["nn"] == expected
 
+        l_ = t.list()
+        df = t.dataframe()
+        assert isinstance(l_, list)
+        assert isinstance(df, pd.DataFrame)
+
     @mark.parametrize(
         "sportsbook_names, cassette_name, expected",
         [
@@ -320,6 +325,11 @@ class TestQuery:
             found.append(league["sn"])
 
         assert set(found) == set(expected)
+
+        list_ = l_.list()
+        df = l_.dataframe()
+        assert isinstance(list_, list)
+        assert isinstance(df, pd.DataFrame)
 
     @mark.parametrize(
         "search_term, cassette_name, expected",

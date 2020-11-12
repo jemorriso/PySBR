@@ -13,4 +13,4 @@ class LeagueHierarchy(Query):
             self.name, self.fields, self.arg_str, self.args
         )
 
-        self._id_key = "Team Id"
+        self._id_key = "team id"
