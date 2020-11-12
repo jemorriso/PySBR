@@ -253,6 +253,13 @@ class TestQuery:
                 found = True
         assert found
 
+        l_ = e.list()
+        ids = e.ids()
+        df = e.dataframe()
+        assert isinstance(l_, list)
+        assert isinstance(ids, list)
+        assert isinstance(df, pd.DataFrame)
+
     @mark.parametrize(
         "league, market_ids, cassette_name, expected",
         [
