@@ -177,6 +177,13 @@ class TestQuery:
 
         assert len(lh._raw["leagueHierarchy"]) == expected
 
+        l_ = lh.list()
+        ids = lh.ids()
+        df = lh.dataframe()
+        assert isinstance(l_, list)
+        assert isinstance(ids, list)
+        assert isinstance(df, pd.DataFrame)
+
     @mark.parametrize(
         "league, teams, cassette_name, expected",
         [
@@ -648,6 +655,11 @@ class TestQuery:
                 assert id in ids
         else:
             assert len(c._raw["consensus"]) == 0
+
+        l_ = c.list()
+        df = c.dataframe()
+        assert isinstance(l_, list)
+        assert isinstance(df, pd.DataFrame)
 
     @mark.parametrize(
         "event_id, market_id, sportsbook_id, participant_ids, cassette_name, expected",
