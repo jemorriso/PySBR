@@ -220,6 +220,13 @@ class TestQuery:
         for i, x in enumerate(s._raw["sportsbooks"]):
             assert x["nam"] in expected
 
+        l_ = s.list()
+        ids = s.ids()
+        df = s.dataframe()
+        assert isinstance(l_, list)
+        assert isinstance(ids, list)
+        assert isinstance(df, pd.DataFrame)
+
     @mark.parametrize(
         "league, cassette_name, alias",
         [
