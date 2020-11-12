@@ -609,6 +609,13 @@ class TestQuery:
         for id in expected:
             assert id in events
 
+        l_ = e.list()
+        ids = e.ids()
+        df = e.dataframe()
+        assert isinstance(l_, list)
+        assert isinstance(ids, list)
+        assert isinstance(df, pd.DataFrame)
+
     @mark.parametrize(
         "participant_id1, participant_id2, count, cassette_name, expected",
         [
