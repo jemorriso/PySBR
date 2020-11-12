@@ -175,5 +175,7 @@ class Query:
                         new_key = f"{k}.{i+1}"
                         el[new_key] = subel
                     el.pop(k)
-
-        return pd.json_normalize(data)
+        try:
+            return pd.json_normalize(data)
+        except AttributeError:
+            return pd.DataFrame(data)
