@@ -12,3 +12,15 @@ class EventsByParticipants(Query):
         self._raw = self._build_and_execute_query(
             self.name, self.fields, self.arg_str, self.args
         )
+
+        self._subpath_keys = ["events"]
+        self._sublist_keys = ["participants"]
+        self._id_key = "event id"
+
+    def _find_data(self):
+        data = self._raw[self.name]
+        cleaned_data = []
+        for participant in data:
+            cleaned_data.extend(participant["events"])
+
+        return cleaned_data
