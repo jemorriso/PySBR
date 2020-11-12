@@ -120,7 +120,7 @@ class Utils:
         return Utils.load_yaml(Utils.build_yaml_path("dictionary"))
 
     @staticmethod
-    def translate_dict(d, t, lower=False):
+    def translate_dict(d, t):
         def _recurse(el):
             if isinstance(el, dict):
                 # MUST cast to list to avoid RuntimeError because d.pop()
@@ -128,14 +128,14 @@ class Utils:
                     try:
                         old_k = k
                         # raises KeyError if no translation available
-                        k = t[k] if lower else t[k].title()
+                        k = t[k]
 
                         v = el.pop(old_k)
-                        if v in ["Datetime"]:
+                        if v in ["datetime"]:
                             v = Utils.timestamp_to_datetime(v)
                         el[k] = (
                             v
-                            if k not in ["Datetime"]
+                            if k not in ["datetime"]
                             else Utils.timestamp_to_iso_str(v)
                         )
                     except KeyError:
@@ -143,8 +143,6 @@ class Utils:
                     v = el[k]
                     if isinstance(v, dict) or isinstance(v, list):
                         _recurse(v)
-                    elif isinstance(v, str) and lower:
-                        el[k] = v.lower()
             elif isinstance(el, list):
                 for x in el:
                     _recurse(x)
