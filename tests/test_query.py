@@ -473,6 +473,13 @@ class TestQuery:
         for id in expected:
             assert len([x for x in e._raw["eventsV2"]["events"] if x["eid"] == id]) == 1
 
+        l_ = e.list()
+        ids = e.ids()
+        df = e.dataframe()
+        assert isinstance(l_, list)
+        assert isinstance(ids, list)
+        assert isinstance(df, pd.DataFrame)
+
     @mark.parametrize(
         "participant_ids, cassette_name, expected",
         [
