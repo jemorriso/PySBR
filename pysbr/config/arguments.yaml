@@ -46,6 +46,16 @@ lines: |
   eid: $eids,
   mtid: $mtids
 
+lines_2: |
+  eid: $eids,
+  mtid: $mtids,
+  paid: $paid
+
+lines_3: |
+  eid: $eids,
+  mtid: $mtids,
+  paid: $paids
+
 line_history: |
   eid: $eid,
   mtid: $mtid,
