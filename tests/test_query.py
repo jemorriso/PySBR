@@ -332,6 +332,13 @@ class TestQuery:
 
         assert set(found) == set(expected)
 
+        l_ = m.list()
+        ids = m.ids()
+        df = m.dataframe()
+        assert isinstance(l_, list)
+        assert isinstance(ids, list)
+        assert isinstance(df, pd.DataFrame)
+
     @mark.parametrize(
         "league_ids, cassette_name, expected",
         [([23, 6, 16], "test_leagues_by_league_ids1", ["ATP", "NCAAF", "NFL"])],
