@@ -483,15 +483,23 @@ class TestQuery:
     @mark.parametrize(
         "participant_ids, cassette_name, expected",
         [
-            ([1525, 1530], "test_events_by_participants_nfl1", [4143351, 4143527]),
-            ([407, 408], "test_events_by_participants_ncaaf1", [4089535, 4197789]),
-            ([5562, 5628], "test_events_by_participants_atp1", [4279492]),
+            (
+                [1525, 1530],
+                "test_events_by_participants_recent_nfl1",
+                [4143351, 4143527],
+            ),
+            (
+                [407, 408],
+                "test_events_by_participants_recent_ncaaf1",
+                [4089535, 4197789],
+            ),
+            ([5562, 5628], "test_events_by_participants_recent_atp1", [4279492]),
         ],
     )
-    def test_events_by_participants(
-        self, events_by_participants, participant_ids, cassette_name, expected
+    def test_events_by_participants_recent(
+        self, events_by_participants_recent, participant_ids, cassette_name, expected
     ):
-        e = events_by_participants(participant_ids, cassette_name)
+        e = events_by_participants_recent(participant_ids, cassette_name)
         events = []
         for t in e._raw["eventsInfoByParticipant"]:
             for event in t["events"]:

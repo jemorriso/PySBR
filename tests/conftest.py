@@ -20,7 +20,7 @@ from pysbr.queries.searchsports import SearchSports
 from pysbr.queries.searchleagues import SearchLeagues
 from pysbr.queries.eventmarkets import EventMarkets
 from pysbr.queries.eventsbyeventids import EventsByEventIds
-from pysbr.queries.eventsbyparticipants import EventsByParticipants
+from pysbr.queries.eventsbyparticipants import EventsByParticipantsRecent
 from pysbr.queries.eventsbydaterange import EventsByDateRange
 from pysbr.queries.eventsbyeventgroup import EventsByEventGroup
 from pysbr.queries.eventsbymatchup import EventsByMatchup
@@ -165,7 +165,7 @@ class TestEventsByEventIds(EventsByEventIds):
         return self.patch_fn(self)
 
 
-class TestEventsByParticipants(EventsByParticipants):
+class TestEventsByParticipantsRecent(EventsByParticipantsRecent):
     def __init__(self, participant_ids, patch_fn, cassette_name):
         self.cassette_name = cassette_name
         self.patch_fn = patch_fn
@@ -541,9 +541,9 @@ def events_by_event_ids(build_and_execute_with_cassette):
 
 
 @fixture
-def events_by_participants(build_and_execute_with_cassette):
+def events_by_participants_recent(build_and_execute_with_cassette):
     def fn(participant_ids, cassette_name):
-        return TestEventsByParticipants(
+        return TestEventsByParticipantsRecent(
             participant_ids,
             build_and_execute_with_cassette,
             cassette_name,

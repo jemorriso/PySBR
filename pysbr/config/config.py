@@ -8,6 +8,7 @@ class Config:
     def _get_translation_dict(self):
         return Utils.load_yaml(Utils.build_yaml_path("dictionary"))
 
+    # TODO: copy to utils
     def _translate_dict(self, d, t):
         def _recurse(el):
             if isinstance(el, dict):
