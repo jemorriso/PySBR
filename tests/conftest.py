@@ -20,7 +20,8 @@ from pysbr.queries.searchsports import SearchSports
 from pysbr.queries.searchleagues import SearchLeagues
 from pysbr.queries.eventmarkets import EventMarkets
 from pysbr.queries.eventsbyeventids import EventsByEventIds
-from pysbr.queries.eventsbyparticipants import EventsByParticipantsRecent
+from pysbr.queries.eventsbyparticipantsrecent import EventsByParticipantsRecent
+from pysbr.queries.eventsbyparticipants import EventsByParticipants
 from pysbr.queries.eventsbydaterange import EventsByDateRange
 from pysbr.queries.eventsbyeventgroup import EventsByEventGroup
 from pysbr.queries.eventsbymatchup import EventsByMatchup
@@ -173,6 +174,28 @@ class TestEventsByParticipantsRecent(EventsByParticipantsRecent):
 
     def _build_and_execute_query(self, *args):
         return self.patch_fn(self)
+
+
+class TestEventsByParticipants(EventsByParticipants):
+    def __init__(
+        self,
+        participant_ids,
+        start,
+        end,
+        league_id,
+        sport_id,
+        patch_fn,
+        cassette_name,
+        cassette_name2,
+    ):
+        self.cassette_name = cassette_name
+        self.cassette_name2 = cassette_name2
+        self.calls = 0
+        self.patch_fn = patch_fn
+        super().__init__(participant_ids, start, end, league_id, sport_id)
+
+    def _build_and_execute_query(self, *args):
+        return self.patch_fn(self, *args)
 
 
 class TestEventsByDateRange(EventsByDateRange):
@@ -364,11 +387,25 @@ def patched_execute(execute_with_cassette):
 @fixture
 def build_and_execute_with_cassette(execute_with_cassette):
     # this is implictly working as a patch function for Query._build_and_execute()
-    def fn(obj):
-        q_string = obj._build_query_string(
-            obj.name, obj.fields, obj._build_args(obj.arg_str, obj.args)
-        )
-        return execute_with_cassette(q_string, obj.client, obj.cassette_name)
+    def fn(obj, *args):
+        try:
+            q_string = obj._build_query_string(
+                obj.name, obj.fields, obj._build_args(obj.arg_str, obj.args)
+            )
+        except AttributeError:
+            q_string = obj._build_query_string(
+                args[0], args[1], obj._build_args(args[2], args[3])
+            )
+        try:
+            if obj.calls > 0:
+                cassette = obj.cassette_name2
+            else:
+                cassette = obj.cassette_name
+
+            obj.calls += 1
+        except AttributeError:
+            cassette = obj.cassette_name
+        return execute_with_cassette(q_string, obj.client, cassette)
 
     return fn
 
@@ -547,6 +584,25 @@ def events_by_participants_recent(build_and_execute_with_cassette):
             participant_ids,
             build_and_execute_with_cassette,
             cassette_name,
+        )
+
+    return fn
+
+
+@fixture
+def events_by_participants(build_and_execute_with_cassette):
+    def fn(
+        participant_ids, start, end, league_id, sport_id, cassette_name, cassette_name2
+    ):
+        return TestEventsByParticipants(
+            participant_ids,
+            start,
+            end,
+            league_id,
+            sport_id,
+            build_and_execute_with_cassette,
+            cassette_name,
+            cassette_name2,
         )
 
     return fn

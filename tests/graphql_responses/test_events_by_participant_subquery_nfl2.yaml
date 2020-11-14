@@ -1,0 +1,58 @@
+eventsV2:
+  events:
+  - eid: 4143400
+    participants:
+    - partid: 1527
+    - partid: 1528
+  - eid: 4143399
+    participants:
+    - partid: 1519
+    - partid: 1522
+  - eid: 4143398
+    participants:
+    - partid: 1535
+    - partid: 1536
+  - eid: 4143397
+    participants:
+    - partid: 1533
+    - partid: 1534
+  - eid: 4143396
+    participants:
+    - partid: 1529
+    - partid: 1542
+  - eid: 4143394
+    participants:
+    - partid: 1537
+    - partid: 1539
+  - eid: 4143535
+    participants:
+    - partid: 1521
+    - partid: 1525
+  - eid: 4143534
+    participants:
+    - partid: 1526
+    - partid: 1549
+  - eid: 4143532
+    participants:
+    - partid: 1520
+    - partid: 1530
+  - eid: 4143531
+    participants:
+    - partid: 1543
+    - partid: 1547
+  - eid: 4143530
+    participants:
+    - partid: 1548
+    - partid: 1550
+  - eid: 4143529
+    participants:
+    - partid: 1544
+    - partid: 1545
+  - eid: 4143526
+    participants:
+    - partid: 1523
+    - partid: 1525
+  - eid: 4143503
+    participants:
+    - partid: 1524
+    - partid: 75380

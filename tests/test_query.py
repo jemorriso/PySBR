@@ -516,6 +516,77 @@ class TestQuery:
         assert isinstance(df, pd.DataFrame)
 
     @mark.parametrize(
+        """participant_ids, start, end, league_id, sport_id, cassette_name,
+        cassette_name2, expected""",
+        [
+            (
+                [1530],
+                "2020-09-09",
+                "2020-11-16",
+                16,
+                None,
+                "test_events_by_participant_subquery_nfl1",
+                "test_events_by_participant_nfl1",
+                [4143362],
+            ),
+            (
+                [1529, 1530],
+                "2020-11-09",
+                "2020-11-16",
+                16,
+                None,
+                "test_events_by_participant_subquery_nfl2",
+                "test_events_by_participant_nfl2",
+                [4143396, 4143532],
+            ),
+            (
+                [1529, 1530],
+                "2020-11-09",
+                "2020-11-16",
+                None,
+                4,
+                "test_events_by_participant_subquery_football1",
+                "test_events_by_participant_football1",
+                [4143396, 4143532],
+            ),
+            (
+                [5755],
+                "2020-11-01",
+                "2020-11-16",
+                23,
+                None,
+                "test_events_by_participant_subquery_atp1",
+                "test_events_by_participant_atp1",
+                [4277037],
+            ),
+        ],
+    )
+    def test_events_by_participants(
+        self,
+        events_by_participants,
+        participant_ids,
+        start,
+        end,
+        league_id,
+        sport_id,
+        cassette_name,
+        cassette_name2,
+        expected,
+    ):
+        s_ = datetime.strptime(start, "%Y-%m-%d")
+        e_ = datetime.strptime(end, "%Y-%m-%d")
+        e = events_by_participants(
+            participant_ids, s_, e_, league_id, sport_id, cassette_name, cassette_name2
+        )
+
+        events = []
+        for event in e._raw["eventsV2"]["events"]:
+            events.append(event["eid"])
+
+        for id in expected:
+            assert id in events
+
+    @mark.parametrize(
         ("league_id", "start_dt", "end_dt", "cassette_name", "expected"),
         [
             (

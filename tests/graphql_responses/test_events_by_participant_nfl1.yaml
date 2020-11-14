@@ -1,0 +1,272 @@
+eventsV2:
+  events:
+  - cit: Pittsburgh
+    cou: USA
+    des: Houston Texans@Pittsburgh Steelers
+    dt: 1601226000000
+    eid: 4143348
+    es: complete
+    eventGroup:
+      alias: Week 3
+      egid: 12
+      nam: REG Week 3
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1519
+      source:
+        abbr: PIT
+        cit: Pittsburgh
+        nam: Pittsburgh
+        nn: Steelers
+        sn: Pittsburgh
+    - ih: false
+      partid: 1530
+      source:
+        abbr: HOU
+        cit: Houston
+        nam: Houston
+        nn: Texans
+        sn: Houston
+    seid: 8582
+    st: Turf
+  - cit: Houston
+    cou: USA
+    des: Minnesota Vikings@Houston Texans
+    dt: 1601830800000
+    eid: 4143362
+    es: complete
+    eventGroup:
+      alias: Week 4
+      egid: 13
+      nam: REG Week 4
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1530
+      source:
+        abbr: HOU
+        cit: Houston
+        nam: Houston
+        nn: Texans
+        sn: Houston
+    - ih: false
+      partid: 1541
+      source:
+        abbr: MIN
+        cit: Minnesota
+        nam: Minnesota
+        nn: Vikings
+        sn: Minnesota
+    seid: 8582
+    st: retractable_dome
+  - cit: Nashville
+    cou: USA
+    des: Houston Texans@Tennessee Titans
+    dt: 1603040400000
+    eid: 4143374
+    es: complete
+    eventGroup:
+      alias: Week 6
+      egid: 15
+      nam: REG Week 6
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1528
+      source:
+        abbr: TEN
+        cit: Tennessee
+        nam: Tennessee
+        nn: Titans
+        sn: Tennessee
+    - ih: false
+      partid: 1530
+      source:
+        abbr: HOU
+        cit: Houston
+        nam: Houston
+        nn: Texans
+        sn: Houston
+    seid: 8582
+    st: outdoor
+  - cit: Houston
+    cou: USA
+    des: Green Bay Packers@Houston Texans
+    dt: 1603645200000
+    eid: 4143381
+    es: complete
+    eventGroup:
+      alias: Week 7
+      egid: 16
+      nam: REG Week 7
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1530
+      source:
+        abbr: HOU
+        cit: Houston
+        nam: Houston
+        nn: Texans
+        sn: Houston
+    - ih: false
+      partid: 1542
+      source:
+        abbr: GB
+        cit: Green Bay
+        nam: Green Bay
+        nn: Packers
+        sn: Green Bay
+    seid: 8582
+    st: retractable_dome
+  - cit: Kansas City
+    cou: USA
+    des: Houston Texans@Kansas City Chiefs
+    dt: 1599783600000
+    eid: 4143454
+    es: complete
+    eventGroup:
+      alias: Week 1
+      egid: 10
+      nam: REG Week 1
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1530
+      source:
+        abbr: HOU
+        cit: Houston
+        nam: Houston
+        nn: Texans
+        sn: Houston
+    - ih: true
+      partid: 1531
+      source:
+        abbr: KC
+        cit: Kansas City
+        nam: Kansas City
+        nn: Chiefs
+        sn: Kansas City
+    seid: 8582
+    st: outdoor
+  - cit: Houston
+    cou: USA
+    des: Baltimore Ravens@Houston Texans
+    dt: 1600633500000
+    eid: 4143466
+    es: complete
+    eventGroup:
+      alias: Week 2
+      egid: 11
+      nam: REG Week 2
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1521
+      source:
+        abbr: BAL
+        cit: Baltimore
+        nam: Baltimore
+        nn: Ravens
+        sn: Baltimore
+    - ih: true
+      partid: 1530
+      source:
+        abbr: HOU
+        cit: Houston
+        nam: Houston
+        nn: Texans
+        sn: Houston
+    seid: 8582
+    st: retractable_dome
+  - cit: Houston
+    cou: USA
+    des: Jacksonville Jaguars@Houston Texans
+    dt: 1602435600000
+    eid: 4143494
+    es: complete
+    eventGroup:
+      alias: Week 5
+      egid: 14
+      nam: REG Week 5
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1529
+      source:
+        abbr: JAC
+        cit: Jacksonville
+        nam: Jacksonville
+        nn: Jaguars
+        sn: Jacksonville
+    - ih: true
+      partid: 1530
+      source:
+        abbr: HOU
+        cit: Houston
+        nam: Houston
+        nn: Texans
+        sn: Houston
+    seid: 8582
+    st: retractable_dome
+  - cit: Jacksonville
+    cou: USA
+    des: Houston Texans@Jacksonville Jaguars
+    dt: 1604858400000
+    eid: 4143527
+    es: complete
+    eventGroup:
+      alias: Week 9
+      egid: 18
+      nam: REG Week 9
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1529
+      source:
+        abbr: JAC
+        cit: Jacksonville
+        nam: Jacksonville
+        nn: Jaguars
+        sn: Jacksonville
+    - ih: false
+      partid: 1530
+      source:
+        abbr: HOU
+        cit: Houston
+        nam: Houston
+        nn: Texans
+        sn: Houston
+    seid: 8582
+    st: outdoor
+  - cit: Cleveland
+    cou: USA
+    des: Houston Texans@Cleveland Browns
+    dt: 1605463200000
+    eid: 4143532
+    es: scheduled
+    eventGroup:
+      alias: Week 10
+      egid: 19
+      nam: REG Week 10
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1520
+      source:
+        abbr: CLE
+        cit: Cleveland
+        nam: Cleveland
+        nn: Browns
+        sn: Cleveland
+    - ih: false
+      partid: 1530
+      source:
+        abbr: HOU
+        cit: Houston
+        nam: Houston
+        nn: Texans
+        sn: Houston
+    seid: 8582
+    st: outdoor

@@ -1,0 +1,97 @@
+interactions:
+- request:
+    body: '{"query": "{\n  eventsV2(eid: [4143466, 4143454, 4143381, 4143374, 4143362,
+      4143348, 4143532, 4143527, 4143494]) {\n    events {\n      lid\n      seid\n      eid\n      des\n      cit\n      cou\n      es\n      dt\n      st\n      participants
+      {\n        partid\n        ih\n        source {\n          ... on Team {\n            nam\n            nn\n            sn\n            abbr\n            cit\n          }\n          ...
+      on Player {\n            fn\n            lnam\n          }\n          ... on
+      ParticipantGroup {\n            partgid\n            nam\n            participants
+      {\n              partid\n              ih\n              source {\n                ...
+      on Player {\n                  fn\n                  lnam\n                }\n                ...
+      on Team {\n                  nam\n                  nn\n                  sn\n                  abbr\n                  cit\n                }\n              }\n            }\n          }\n        }\n      }\n      eventGroup
+      {\n        egid\n        nam\n        alias\n      }\n    }\n  }\n}\n"}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1073'
+      Content-Type:
+      - application/json
+      Cookie:
+      - x_geo_cookie_value=CA,
+      User-Agent:
+      - python-requests/2.25.0
+    method: POST
+    uri: https://www.sportsbookreview.com/ms-odds-v2/odds-v2-service
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA9WXXW+bMBiF/wrimgswhkCu2kRV+r2qS7uLaZoccBOrxI6w6VZV+e8zBAPha7TL
+        ui6RIuLX4RyfJ6+dvOghEkgfv+j4CVPB70F5rY+/vugRCfWx5Ro6x+mV53jA0LNLaEHbhp6hh1hO
+        1U9ZwgWj2hz/RJQf3RAh+CKJlyvts8A4wjHXDT0gQk4ta+kQS+TQ3edjeZ3dKGDrTYQFlu9DkWqb
+        FgCumT2kjfQG8yR+kOUNigUJyAYps9lA6texfEMnK30s4gTLD7EkDnC6MorWdQOUypGKR07rM9Bi
+        EadjZ/O2JWy3RlXZNnfKDyjiLdJ5TEp3l5ZSLYu55Omnu0JSFbfbb8aO0CxmySbjtcy0JZmdyO3J
+        TPuC8aNmp7eKCEpzzQcyu7+h6gJF9YpQijkTSLsnj4Qu+dE+54a7YUA92/SqQGMsYhQItIjw95Ct
+        cT9cFXE73EMkvEcUWr1Ei4iUYp6UkqzWc9Grs+tCtCx3g7UbYGEdLBwEdgQ72nWOUxccY21ORJXr
+        NeKrJxJFeBhZ24TyWSHLEhEyFvcDBV4f0MJbgVRZ5LRWzvOdn5T5luWP06hOg6db5+kO4ulZiucs
+        xphqE/Ss3aDgUe5kB2lU24UO+H8aFfQSLSJSinlSSrJaz0Vnk0KzrHZzdRtcR3WuoyFcodPVpxfy
+        BXFtSsSzNl0R/FCCrZSGwHV8f+TZ7qt79R3aZr9Nrb7v0P6iM8kilkxyf0IuezFtTa0brNkAa9XB
+        WoPAuq4CO0GRIGsWY+0WScnD9Kvp2rbz9n4F/SddYVlFvXOuoq6W86Anx5fFQspyx0b893aJLqxW
+        AyuoYwWDsPpFv57LPYUzmh2Z2jlaJuhAWzGAtuP+AVq/F23Vtoo6d6+yrk3JAz8/Lntpb8aHgQwb
+        kJ06ZGcIZAeMOjblNubtoQwiDaXwG35D9f7jeTe+/+DXlNcA7NcB+4MA26AD8DSSwhGioTaJ2Y9K
+        BxeFNrI8WOEwiXBYonWga4PXo+3tnaqHLNzCYxZutZzHO708aVnBxwHqN09bs3HcmukNttvtL9ds
+        HHPCEAAA
+    headers:
+      Accept-Ranges:
+      - bytes
+      Access-Control-Allow-Origin:
+      - '*'
+      Age:
+      - '0'
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '804'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 14 Nov 2020 01:58:00 GMT
+      Keep-Alive:
+      - timeout=20
+      Server:
+      - nginx/1.18.0
+      Set-Cookie:
+      - x_geo_cookie_value=CA, ;Domain=sportsbookreview.com;Path=/;Max-Age=43200
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      X-Cache:
+      - Miss
+      X-Cache-Hits:
+      - '0'
+      X-Cacheable:
+      - Not Cacheable
+      X-City-Code:
+      - ''
+      X-City-Name:
+      - British Columbia
+      X-Country-Code:
+      - CA
+      X-Country-Name:
+      - Canada
+      X-DIS-Request-ID:
+      - 479680568dd7c4d45aca19394e590f1c
+      X-Proxy-Host:
+      - www.sportsbookreview.com
+      X-Varnish:
+      - '259999663'
+    status:
+      code: 200
+      message: OK
+version: 1
