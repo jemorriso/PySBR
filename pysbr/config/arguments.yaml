@@ -12,6 +12,15 @@ date_range: |
           ]
   }
 
+date_range_sport: |
+  spid: $spids,
+  dt: {
+      between: [
+              $start,
+              $end
+          ]
+  }
+
 league_id: |
   lid: $lid
 

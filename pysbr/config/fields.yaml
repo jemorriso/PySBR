@@ -56,6 +56,16 @@ event: |
       }
   }
 
+event_2: |
+  {
+      events {
+          eid
+          participants {
+              partid
+          }
+      }
+  }
+
 consensus: |
   {
       eid
