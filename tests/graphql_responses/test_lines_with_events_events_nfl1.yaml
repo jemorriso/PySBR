@@ -1,0 +1,362 @@
+eventsByDateNew:
+  events:
+  - cit: Detroit
+    cou: USA
+    des: Washington Football Team@Detroit Lions
+    dt: 1605463200000
+    eid: 4143394
+    es: scheduled
+    eventGroup:
+      alias: Week 10
+      egid: 19
+      nam: REG Week 10
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1537
+      source:
+        abbr: WAS
+        cit: Washington
+        nam: Washington
+        nn: Football Team
+        sn: Washington
+    - ih: true
+      partid: 1539
+      source:
+        abbr: DET
+        cit: Detroit
+        nam: Detroit
+        nn: Lions
+        sn: Detroit
+    seid: 8582
+    st: dome
+  - cit: Green Bay
+    cou: USA
+    des: Jacksonville Jaguars@Green Bay Packers
+    dt: 1605463200000
+    eid: 4143396
+    es: scheduled
+    eventGroup:
+      alias: Week 10
+      egid: 19
+      nam: REG Week 10
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1529
+      source:
+        abbr: JAC
+        cit: Jacksonville
+        nam: Jacksonville
+        nn: Jaguars
+        sn: Jacksonville
+    - ih: true
+      partid: 1542
+      source:
+        abbr: GB
+        cit: Green Bay
+        nam: Green Bay
+        nn: Packers
+        sn: Green Bay
+    seid: 8582
+    st: outdoor
+  - cit: Las Vegas
+    cou: USA
+    des: Denver Broncos@Las Vegas Raiders
+    dt: 1605474300000
+    eid: 4143397
+    es: scheduled
+    eventGroup:
+      alias: Week 10
+      egid: 19
+      nam: REG Week 10
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1533
+      source:
+        abbr: LV
+        cit: Las Vegas
+        nam: Las Vegas
+        nn: Raiders
+        sn: Las Vegas
+    - ih: false
+      partid: 1534
+      source:
+        abbr: DEN
+        cit: Denver
+        nam: Denver
+        nn: Broncos
+        sn: Denver
+    seid: 8582
+    st: Turf
+  - cit: East Rutherford
+    cou: USA
+    des: Philadelphia Eagles@N.Y. Giants
+    dt: 1605463200000
+    eid: 4143398
+    es: scheduled
+    eventGroup:
+      alias: Week 10
+      egid: 19
+      nam: REG Week 10
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1535
+      source:
+        abbr: NYG
+        cit: New York
+        nam: N.Y. Giants
+        nn: Giants
+        sn: New York
+    - ih: false
+      partid: 1536
+      source:
+        abbr: PHI
+        cit: Philadelphia
+        nam: Philadelphia
+        nn: Eagles
+        sn: Philadelphia
+    seid: 8582
+    st: outdoor
+  - cit: Pittsburgh
+    cou: USA
+    des: Cincinnati Bengals@Pittsburgh Steelers
+    dt: 1605475500000
+    eid: 4143399
+    es: scheduled
+    eventGroup:
+      alias: Week 10
+      egid: 19
+      nam: REG Week 10
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1519
+      source:
+        abbr: PIT
+        cit: Pittsburgh
+        nam: Pittsburgh
+        nn: Steelers
+        sn: Pittsburgh
+    - ih: false
+      partid: 1522
+      source:
+        abbr: CIN
+        cit: Cincinnati
+        nam: Cincinnati
+        nn: Bengals
+        sn: Cincinnati
+    seid: 8582
+    st: Turf
+  - cit: Miami Gardens
+    cou: USA
+    des: Los Angeles Chargers@Miami Dolphins
+    dt: 1605474300000
+    eid: 4143503
+    es: scheduled
+    eventGroup:
+      alias: Week 10
+      egid: 19
+      nam: REG Week 10
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1524
+      source:
+        abbr: MIA
+        cit: Miami
+        nam: Miami
+        nn: Dolphins
+        sn: Miami
+    - ih: false
+      partid: 75380
+      source:
+        abbr: LAC
+        cit: Los Angeles
+        nam: L.A. Chargers
+        nn: Chargers
+        sn: Los Angeles
+    seid: 8582
+    st: Turf
+  - cit: Charlotte
+    cou: USA
+    des: Tampa Bay Buccaneers@Carolina Panthers
+    dt: 1605463200000
+    eid: 4143529
+    es: scheduled
+    eventGroup:
+      alias: Week 10
+      egid: 19
+      nam: REG Week 10
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1544
+      source:
+        abbr: TB
+        cit: Tampa Bay
+        nam: Tampa Bay
+        nn: Buccaneers
+        sn: Tampa Bay
+    - ih: true
+      partid: 1545
+      source:
+        abbr: CAR
+        cit: Carolina
+        nam: Carolina
+        nn: Panthers
+        sn: Carolina
+    seid: 8582
+    st: outdoor
+  - cit: Inglewood
+    cou: USA
+    des: Seattle Seahawks@Los Angeles Rams
+    dt: 1605475500000
+    eid: 4143530
+    es: scheduled
+    eventGroup:
+      alias: Week 10
+      egid: 19
+      nam: REG Week 10
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1548
+      source:
+        abbr: SEA
+        cit: Seattle
+        nam: Seattle
+        nn: Seahawks
+        sn: Seattle
+    - ih: true
+      partid: 1550
+      source:
+        abbr: LA
+        cit: Los Angeles
+        nam: L.A. Rams
+        nn: Rams
+        sn: Los Angeles
+    seid: 8582
+    st: outdoor
+  - cit: New Orleans
+    cou: USA
+    des: San Francisco 49ers@New Orleans Saints
+    dt: 1605475500000
+    eid: 4143531
+    es: scheduled
+    eventGroup:
+      alias: Week 10
+      egid: 19
+      nam: REG Week 10
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1543
+      source:
+        abbr: 'NO'
+        cit: New Orleans
+        nam: New Orleans
+        nn: Saints
+        sn: New Orleans
+    - ih: false
+      partid: 1547
+      source:
+        abbr: SF
+        cit: San Francisco
+        nam: San Francisco
+        nn: 49ers
+        sn: San Francisco
+    seid: 8582
+    st: dome
+  - cit: Cleveland
+    cou: USA
+    des: Houston Texans@Cleveland Browns
+    dt: 1605463200000
+    eid: 4143532
+    es: scheduled
+    eventGroup:
+      alias: Week 10
+      egid: 19
+      nam: REG Week 10
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1520
+      source:
+        abbr: CLE
+        cit: Cleveland
+        nam: Cleveland
+        nn: Browns
+        sn: Cleveland
+    - ih: false
+      partid: 1530
+      source:
+        abbr: HOU
+        cit: Houston
+        nam: Houston
+        nn: Texans
+        sn: Houston
+    seid: 8582
+    st: outdoor
+  - cit: Glendale
+    cou: USA
+    des: Buffalo Bills@Arizona Cardinals
+    dt: 1605474300000
+    eid: 4143534
+    es: scheduled
+    eventGroup:
+      alias: Week 10
+      egid: 19
+      nam: REG Week 10
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1526
+      source:
+        abbr: BUF
+        cit: Buffalo
+        nam: Buffalo
+        nn: Bills
+        sn: Buffalo
+    - ih: true
+      partid: 1549
+      source:
+        abbr: ARI
+        cit: Arizona
+        nam: Arizona
+        nn: Cardinals
+        sn: Arizona
+    seid: 8582
+    st: retractable_dome
+  - cit: Foxborough
+    cou: USA
+    des: Baltimore Ravens@New England Patriots
+    dt: 1605489600000
+    eid: 4143535
+    es: scheduled
+    eventGroup:
+      alias: Week 10
+      egid: 19
+      nam: REG Week 10
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1521
+      source:
+        abbr: BAL
+        cit: Baltimore
+        nam: Baltimore
+        nn: Ravens
+        sn: Baltimore
+    - ih: true
+      partid: 1525
+      source:
+        abbr: NE
+        cit: New England
+        nam: New England
+        nn: Patriots
+        sn: New England
+    seid: 8582
+    st: outdoor

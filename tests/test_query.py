@@ -884,3 +884,66 @@ class TestQuery:
         df = h.dataframe()
         assert isinstance(l_, list)
         assert isinstance(df, pd.DataFrame)
+
+    @mark.parametrize(
+        """lines, league_id, dt_str, market_ids, cassette_events, cassette_lines,
+        expected, is_best_lines""",
+        [
+            (
+                lazy_fixture("opening_lines"),
+                16,
+                "2020-11-15",
+                [401, 83, 402],
+                "test_lines_with_events_events_nfl1",
+                "test_lines_with_events_opening_lines_nfl1",
+                None,
+                False,
+            ),
+            (
+                lazy_fixture("best_lines"),
+                16,
+                "2020-11-15",
+                [401, 83, 402],
+                "test_lines_with_events_events_nfl1",
+                "test_lines_with_events_best_lines_nfl1",
+                None,
+                True,
+            ),
+            (
+                lazy_fixture("current_lines"),
+                16,
+                "2020-11-15",
+                [401, 83, 402],
+                "test_lines_with_events_events_nfl1",
+                "test_lines_with_events_current_lines_nfl1",
+                None,
+                False,
+            ),
+        ],
+    )
+    def test_lines_with_events(
+        self,
+        events_by_date,
+        lines,
+        league_id,
+        dt_str,
+        market_ids,
+        cassette_events,
+        cassette_lines,
+        expected,
+        is_best_lines,
+    ):
+        dt = datetime.strptime(dt_str, "%Y-%m-%d")
+        e = events_by_date(league_id, dt, cassette_events)
+        event_ids = e.ids()
+
+        lines_obj = (
+            lines(event_ids, market_ids, None, cassette_lines)
+            if not is_best_lines
+            else lines(event_ids, market_ids, cassette_lines)
+        )
+        l_ = lines_obj.list(e)
+        df = lines_obj.dataframe(e)
+        assert lines_obj is not None
+        assert l_ is not None
+        assert df is not None
