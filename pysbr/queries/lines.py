@@ -12,7 +12,8 @@ class Lines(Query):
         self._events = None
         self._event_descriptions = {}
         self._event_leagues = {}
-        self._participants = {}
+        # these are the participant ids for Over/Under lines for all sports I checked
+        self._participants = {15143: "over", 15144: "under"}
         self._leagues = {16: NFL, 6: NCAAF, 23: ATP}
         self._league_markets = {}
         self._sportsbooks = None
@@ -60,7 +61,7 @@ class Lines(Query):
             for e in self._events.list():
                 self._event_descriptions[e.get("event id")] = e.get("description")
                 self._event_leagues[e.get("event id")] = e.get("league id")
-                for p in e["participants"]:
+                for p in e.get("participants"):
                     participant_id = p.get("participant id")
                     source = p.get("source")
                     if "last name" in source:
