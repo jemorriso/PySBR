@@ -14,6 +14,8 @@ class Sport(Config):
         self.default_market_id = d["default market id"]
         self._markets = self._build_markets(d["markets"])
 
+        self.market_names = self._build_market_names(d["markets"])
+
         d = Utils.load_yaml(Utils.build_yaml_path(league_config))
         self._translate_dict(d, self.translations)
         self._league = d
@@ -39,6 +41,16 @@ class Sport(Config):
                     markets[x["url"]][v] = id
                     markets[x["name"]][v] = id
         return markets
+
+    def _build_market_names(self, m):
+        markets = {}
+        for x in m:
+            for y in x["market types"]:
+                markets[y["market id"]] = y["name"]
+        return markets
+
+    def markets(self):
+        return self._markets
 
     def market_ids(self, terms):
         search_dict = Utils.load_yaml(Utils.build_yaml_path("search_dictionary"))
@@ -103,6 +115,9 @@ class TeamSport(Sport):
                     teams[k][full_name] = x["team id"]
 
         return teams
+
+    def teams(self):
+        return self._teams
 
     def team_ids(self, terms):
         ids = []

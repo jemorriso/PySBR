@@ -11,6 +11,9 @@ class Sportsbook(Config):
         self._translate_dict(d, t)
 
         self._sportsbooks = self._build_sportsbooks(d["sportsbooks"])
+        self._provider_accounts = self._build_provider_accounts(d["sportsbooks"])
+
+        self.names = {v: k for k, v in self._provider_accounts["name"].items()}
 
     def _build_sportsbooks(self, s):
         sportsbooks = {}
@@ -20,6 +23,18 @@ class Sportsbook(Config):
                 sportsbooks[k][x[k]] = x["sportsbook id"]
 
         return sportsbooks
+
+    def _build_provider_accounts(self, s):
+        sportsbooks = {}
+        for k in ["name", "short name"]:
+            sportsbooks[k] = {}
+            for x in s:
+                sportsbooks[k][x[k]] = x["provider account id"]
+
+        return sportsbooks
+
+    def sportsbooks(self):
+        return self._sportsbooks
 
     def sportsbook_ids(self, terms):
         ids = []
