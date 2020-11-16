@@ -1,0 +1,42 @@
+multipleSearch:
+  searchLeague:
+  - lid: 2
+    nam: Premier League
+    region:
+      nam: England
+      sn: ENG
+    rid: 2
+    sn: PREM
+    spid: 2
+  - lid: 1810
+    nam: Indian Premier League
+    region:
+      nam: India
+      sn: IN
+    rid: 72
+    sn: ''
+    spid: 21
+  - lid: 1820
+    nam: Caribbean Premier League
+    region:
+      nam: West Indies
+      sn: wi
+    rid: 128
+    sn: ''
+    spid: 21
+  - lid: 2111
+    nam: Afghanistan Premier League
+    region:
+      nam: Afghanistan
+      sn: af
+    rid: 134
+    sn: ''
+    spid: 21
+  - lid: 158
+    nam: Premier League
+    region:
+      nam: Wales
+      sn: WLS
+    rid: 48
+    sn: WLS1
+    spid: 2

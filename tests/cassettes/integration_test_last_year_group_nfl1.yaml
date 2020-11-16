@@ -1,0 +1,81 @@
+interactions:
+- request:
+    body: '{"query": "{\n  eventsByDateNew(lid: [16], startDate: 1567666800000, hoursRange:
+      24) {\n    events {\n      lid\n      seid\n      eid\n      des\n      cit\n      cou\n      es\n      dt\n      st\n      participants
+      {\n        partid\n        ih\n        source {\n          ... on Team {\n            nam\n            nn\n            sn\n            abbr\n            cit\n          }\n          ...
+      on Player {\n            fn\n            lnam\n          }\n          ... on
+      ParticipantGroup {\n            partgid\n            nam\n            participants
+      {\n              partid\n              ih\n              source {\n                ...
+      on Player {\n                  fn\n                  lnam\n                }\n                ...
+      on Team {\n                  nam\n                  nn\n                  sn\n                  abbr\n                  cit\n                }\n              }\n            }\n          }\n        }\n      }\n      eventGroup
+      {\n        egid\n        nam\n        alias\n      }\n    }\n  }\n}\n"}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1045'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.25.0
+    method: POST
+    uri: https://www.sportsbookreview.com/ms-odds-v2/odds-v2-service
+  response:
+    body:
+      string: '{"data":{"eventsByDateNew":{"events":[{"lid":16,"seid":5703,"eid":3778574,"des":"Green
+        Bay Packers@Chicago Bears","cit":"Chicago","cou":"USA","es":"complete","dt":1567729200000,"st":"outdoor","participants":[{"partid":1540,"ih":true,"source":{"nam":"Chicago","nn":"Bears","sn":"Chicago","abbr":"CHI","cit":"Chicago"}},{"partid":1542,"ih":false,"source":{"nam":"Green
+        Bay","nn":"Packers","sn":"Green Bay","abbr":"GB","cit":"Green Bay"}}],"eventGroup":{"egid":10,"nam":"REG
+        Week 1","alias":"Week 1"}}]}}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Access-Control-Allow-Origin:
+      - '*'
+      Age:
+      - '0'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '502'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 16 Nov 2020 01:12:40 GMT
+      Keep-Alive:
+      - timeout=20
+      Server:
+      - nginx/1.18.0
+      Set-Cookie:
+      - x_geo_cookie_value=CA, ;Domain=sportsbookreview.com;Path=/;Max-Age=43200
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      X-Cache:
+      - Miss
+      X-Cache-Hits:
+      - '0'
+      X-Cacheable:
+      - Not Cacheable
+      X-City-Code:
+      - ''
+      X-City-Name:
+      - British Columbia
+      X-Country-Code:
+      - CA
+      X-Country-Name:
+      - Canada
+      X-DIS-Request-ID:
+      - e48a997f8c066680a36eca20b524429c
+      X-Proxy-Host:
+      - www.sportsbookreview.com
+      X-Varnish:
+      - '270183112'
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,77 @@
+interactions:
+- request:
+    body: '{"query": "{\n  searchEvent(query: [\"Nadal\"]) {\n    des\n    date\n    league\n    sport\n    spid\n    eid\n    eventParticipants\n    lid\n  }\n}\n"}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '154'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.25.0
+    method: POST
+    uri: https://www.sportsbookreview.com/ms-odds-v2/odds-v2-service
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAEA62SzW6DMBCEXwX5TKq1E8BwaqT2WkURp4YcXHAaS8QgfiJViHfv2pC0qElatb15
+        dmet8X7uSCYaQaKO1FJU6f7xKHVDok1HMlmTiKzbl1weXWeps0q+3T+JTOSusxY7IXPimmGJLgYM
+        ZpTOqBcziMCLAO4A4BkduRSvrfEs4xXKuiwqvJ80UmtV24LKUHM8SnNaME6Bc1QmyUpUjUpVKXRj
+        0my6xLiSD1tCSmMxJc/nCxd1bRWjHvdD1GqPvaZqJZ6rokFBQwCOqi7aKpVYwFvL6dBOYzkhwzsT
+        guZci4Ot2RUkpMfaqTTYnHPnVkoW+nOGs+eYPoQ+ahtzJ/J6mjPA1qWc49SYc6AzzTmQmwYdfM65
+        tcWt52brbN67J+TxXsmD6zwUB6VV+i3yIKYL5P035Aw89gPk1vYr5AFQuLLK8Z/8H/IvKXkw+Zi+
+        58+vEA8AzJ+9SHyYGmOOdKbILbkp8dHnnFqfiW/7/h1pH/bR/wMAAA==
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Age:
+      - '0'
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 16 Nov 2020 06:24:49 GMT
+      Keep-Alive:
+      - timeout=20
+      Server:
+      - nginx/1.18.0
+      Set-Cookie:
+      - x_geo_cookie_value=CA, ;Domain=sportsbookreview.com;Path=/;Max-Age=43200
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      X-Cache:
+      - Miss
+      X-Cache-Hits:
+      - '0'
+      X-Cacheable:
+      - Not Cacheable
+      X-City-Code:
+      - ''
+      X-City-Name:
+      - British Columbia
+      X-Country-Code:
+      - CA
+      X-Country-Name:
+      - Canada
+      X-DIS-Request-ID:
+      - cc91336fb1613e754726b74215bd776e
+      X-Proxy-Host:
+      - www.sportsbookreview.com
+      X-Varnish:
+      - '273253197'
+    status:
+      code: 200
+      message: OK
+version: 1

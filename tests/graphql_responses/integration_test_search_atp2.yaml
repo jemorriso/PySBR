@@ -1,0 +1,122 @@
+eventsInfoByParticipant:
+- events:
+  - cit: ''
+    cou: ''
+    des: Lopez, Feliciano@Nadal, Rafael
+    dt: 1604511000000
+    eid: 4276198
+    es: complete
+    eventGroup:
+      alias: null
+      egid: 18942
+      nam: ATP Paris, France Men Singles
+    lid: 23
+    participants:
+    - ih: true
+      partid: 5684
+      source:
+        fn: Rafael
+        lnam: Nadal
+    - ih: false
+      partid: 7025
+      source:
+        fn: Feliciano
+        lnam: Lopez
+    seid: 5562
+    st: Undefined
+  - cit: ''
+    cou: ''
+    des: Thompson, Jordan@Nadal, Rafael
+    dt: 1604593200000
+    eid: 4277895
+    es: complete
+    eventGroup:
+      alias: null
+      egid: 18942
+      nam: ATP Paris, France Men Singles
+    lid: 23
+    participants:
+    - ih: true
+      partid: 5684
+      source:
+        fn: Rafael
+        lnam: Nadal
+    - ih: false
+      partid: 29167
+      source:
+        fn: Jordan
+        lnam: Thompson
+    seid: 5562
+    st: Undefined
+  - cit: ''
+    cou: ''
+    des: Carreno Busta, Pablo@Nadal, Rafael
+    dt: 1604683800000
+    eid: 4278242
+    es: complete
+    eventGroup:
+      alias: null
+      egid: 18942
+      nam: ATP Paris, France Men Singles
+    lid: 23
+    participants:
+    - ih: false
+      partid: 5313
+      source:
+        fn: Pablo
+        lnam: Carreno Busta
+    - ih: true
+      partid: 5684
+      source:
+        fn: Rafael
+        lnam: Nadal
+    seid: 5562
+    st: Undefined
+  - cit: ''
+    cou: ''
+    des: Alexander Zverev@Rafael Nadal
+    dt: 1604763000000
+    eid: 4278821
+    es: complete
+    eventGroup:
+      alias: null
+      egid: 18942
+      nam: ATP Paris, France Men Singles
+    lid: 23
+    participants:
+    - ih: true
+      partid: 5684
+      source:
+        fn: Rafael
+        lnam: Nadal
+    - ih: false
+      partid: 29407
+      source:
+        fn: Alexander
+        lnam: Zverev
+    seid: 5562
+    st: Undefined
+  - cit: ''
+    cou: ''
+    des: Rublev, Andrey@Nadal, Rafael
+    dt: 1605470700000
+    eid: 4281088
+    es: complete
+    eventGroup:
+      alias: null
+      egid: 19119
+      nam: ATP World Tour Finals Men Singles
+    lid: 23
+    participants:
+    - ih: true
+      partid: 5684
+      source:
+        fn: Rafael
+        lnam: Nadal
+    - ih: false
+      partid: 29632
+      source:
+        fn: Andrey
+        lnam: Rublev
+    seid: 5562
+    st: Undefined

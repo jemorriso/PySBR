@@ -1,0 +1,72 @@
+interactions:
+- request:
+    body: '{"query": "{\n  leagueHierarchy(leagueIds: [2]) {\n    teamId\n    seasonId\n    leagueId\n    conference
+      {\n      id\n      name\n      shortname\n      favoriteshortname\n    }\n    division
+      {\n      id\n      name\n      shortname\n      favoriteshortname\n    }\n  }\n}\n"}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '277'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.25.0
+    method: POST
+    uri: https://www.sportsbookreview.com/ms-odds-v2/odds-v2-service
+  response:
+    body:
+      string: '{"data":{"leagueHierarchy":[]}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Access-Control-Allow-Origin:
+      - '*'
+      Age:
+      - '0'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '31'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 16 Nov 2020 07:12:23 GMT
+      Keep-Alive:
+      - timeout=20
+      Server:
+      - nginx/1.18.0
+      Set-Cookie:
+      - x_geo_cookie_value=CA, ;Domain=sportsbookreview.com;Path=/;Max-Age=43200
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      X-Cache:
+      - Miss
+      X-Cache-Hits:
+      - '0'
+      X-Cacheable:
+      - Not Cacheable
+      X-City-Code:
+      - ''
+      X-City-Name:
+      - British Columbia
+      X-Country-Code:
+      - CA
+      X-Country-Name:
+      - Canada
+      X-DIS-Request-ID:
+      - 6b8b81a16a476b0db2cdae64d6811556
+      X-Proxy-Host:
+      - www.sportsbookreview.com
+      X-Varnish:
+      - '273066207'
+    status:
+      code: 200
+      message: OK
+version: 1

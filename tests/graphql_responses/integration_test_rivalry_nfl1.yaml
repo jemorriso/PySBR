@@ -1,0 +1,290 @@
+lastMatchupsByParticipants:
+  events:
+  - cit: Green Bay
+    cou: USA
+    des: Chicago Bears@Green Bay Packers
+    dt: 1576432800000
+    eid: 3778780
+    es: complete
+    eventGroup:
+      alias: Week 15
+      egid: 24
+      nam: REG Week 15
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1540
+      source:
+        abbr: CHI
+        cit: Chicago
+        nam: Chicago
+        nn: Bears
+        sn: Chicago
+    - ih: true
+      partid: 1542
+      source:
+        abbr: GB
+        cit: Green Bay
+        nam: Green Bay
+        nn: Packers
+        sn: Green Bay
+    seid: 5703
+    st: outdoor
+  - cit: Chicago
+    cou: USA
+    des: Green Bay Packers@Chicago Bears
+    dt: 1567729200000
+    eid: 3778574
+    es: complete
+    eventGroup:
+      alias: Week 1
+      egid: 10
+      nam: REG Week 1
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1540
+      source:
+        abbr: CHI
+        cit: Chicago
+        nam: Chicago
+        nn: Bears
+        sn: Chicago
+    - ih: false
+      partid: 1542
+      source:
+        abbr: GB
+        cit: Green Bay
+        nam: Green Bay
+        nn: Packers
+        sn: Green Bay
+    seid: 5703
+    st: outdoor
+  - cit: Chicago
+    cou: USA
+    des: Green Bay Packers@Chicago Bears
+    dt: 1544983200000
+    eid: 3452870
+    es: complete
+    eventGroup:
+      alias: Week 15
+      egid: 24
+      nam: REG Week 15
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1540
+      source:
+        abbr: CHI
+        cit: Chicago
+        nam: Chicago
+        nn: Bears
+        sn: Chicago
+    - ih: false
+      partid: 1542
+      source:
+        abbr: GB
+        cit: Green Bay
+        nam: Green Bay
+        nn: Packers
+        sn: Green Bay
+    seid: 4494
+    st: outdoor
+  - cit: Green Bay
+    cou: USA
+    des: Chicago Bears@Green Bay Packers
+    dt: 1536538800000
+    eid: 3452671
+    es: complete
+    eventGroup:
+      alias: Week 1
+      egid: 10
+      nam: REG Week 1
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1540
+      source:
+        abbr: CHI
+        cit: Chicago
+        nam: Chicago
+        nn: Bears
+        sn: Chicago
+    - ih: true
+      partid: 1542
+      source:
+        abbr: GB
+        cit: Green Bay
+        nam: Green Bay
+        nn: Packers
+        sn: Green Bay
+    seid: 4494
+    st: outdoor
+  - cit: Chicago
+    cou: USA
+    des: Green Bay Packers@Chicago Bears
+    dt: 1510509600000
+    eid: 3193162
+    es: complete
+    eventGroup:
+      alias: Week 10
+      egid: 19
+      nam: REG Week 10
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1540
+      source:
+        abbr: CHI
+        cit: Chicago
+        nam: Chicago
+        nn: Bears
+        sn: Chicago
+    - ih: false
+      partid: 1542
+      source:
+        abbr: GB
+        cit: Green Bay
+        nam: Green Bay
+        nn: Packers
+        sn: Green Bay
+    seid: 3524
+    st: outdoor
+  - cit: Green Bay
+    cou: USA
+    des: Chicago Bears@Green Bay Packers
+    dt: 1506644700000
+    eid: 3193072
+    es: complete
+    eventGroup:
+      alias: Week 4
+      egid: 13
+      nam: REG Week 4
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1540
+      source:
+        abbr: CHI
+        cit: Chicago
+        nam: Chicago
+        nn: Bears
+        sn: Chicago
+    - ih: true
+      partid: 1542
+      source:
+        abbr: GB
+        cit: Green Bay
+        nam: Green Bay
+        nn: Packers
+        sn: Green Bay
+    seid: 3524
+    st: outdoor
+  - cit: Chicago
+    cou: USA
+    des: Green Bay@Chicago
+    dt: 1482084000000
+    eid: 3011400
+    es: complete
+    eventGroup: null
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1540
+      source:
+        abbr: CHI
+        cit: Chicago
+        nam: Chicago
+        nn: Bears
+        sn: Chicago
+    - ih: false
+      partid: 1542
+      source:
+        abbr: GB
+        cit: Green Bay
+        nam: Green Bay
+        nn: Packers
+        sn: Green Bay
+    seid: 2560
+    st: Turf
+  - cit: Green Bay
+    cou: USA
+    des: Chicago@Green Bay
+    dt: 1477009500000
+    eid: 3011280
+    es: complete
+    eventGroup: null
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1540
+      source:
+        abbr: CHI
+        cit: Chicago
+        nam: Chicago
+        nn: Bears
+        sn: Chicago
+    - ih: true
+      partid: 1542
+      source:
+        abbr: GB
+        cit: Green Bay
+        nam: Green Bay
+        nn: Packers
+        sn: Green Bay
+    seid: 2560
+    st: Turf
+  - cit: Green Bay
+    cou: USA
+    des: Chicago@Green Bay
+    dt: 1448587800000
+    eid: 2837152
+    es: complete
+    eventGroup: null
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1540
+      source:
+        abbr: CHI
+        cit: Chicago
+        nam: Chicago
+        nn: Bears
+        sn: Chicago
+    - ih: true
+      partid: 1542
+      source:
+        abbr: GB
+        cit: Green Bay
+        nam: Green Bay
+        nn: Packers
+        sn: Green Bay
+    seid: 1121
+    st: Grass
+  - cit: Chicago
+    cou: USA
+    des: Green Bay@Chicago
+    dt: 1442163600000
+    eid: 2836989
+    es: complete
+    eventGroup: null
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1540
+      source:
+        abbr: CHI
+        cit: Chicago
+        nam: Chicago
+        nn: Bears
+        sn: Chicago
+    - ih: false
+      partid: 1542
+      source:
+        abbr: GB
+        cit: Green Bay
+        nam: Green Bay
+        nn: Packers
+        sn: Green Bay
+    seid: 1121
+    st: Grass

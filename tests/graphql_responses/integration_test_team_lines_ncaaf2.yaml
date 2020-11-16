@@ -1,0 +1,212 @@
+eventsV2:
+  events:
+  - cit: Tuscaloosa
+    cou: USA
+    des: New Mexico State@Alabama
+    dt: 1567886400000
+    eid: 3771226
+    es: complete
+    eventGroup:
+      alias: Week 2
+      egid: 34
+      nam: REG Week 2
+    lid: 6
+    participants:
+    - ih: false
+      partid: 417
+      source:
+        abbr: NMS
+        cit: ''
+        nam: New Mexico State
+        nn: Aggies
+        sn: New Mexico State
+    - ih: true
+      partid: 1196
+      source:
+        abbr: BAMA
+        cit: ''
+        nam: Alabama
+        nn: Crimson Tide
+        sn: Alabama
+    seid: 5627
+    st: Turf
+  - cit: Tuscaloosa
+    cou: USA
+    des: Southern Miss@Alabama
+    dt: 1569081600000
+    eid: 3771291
+    es: complete
+    eventGroup:
+      alias: Week 4
+      egid: 36
+      nam: REG Week 4
+    lid: 6
+    participants:
+    - ih: false
+      partid: 1181
+      source:
+        abbr: USM
+        cit: ''
+        nam: Southern Miss
+        nn: Golden Eagles
+        sn: Southern Miss
+    - ih: true
+      partid: 1196
+      source:
+        abbr: BAMA
+        cit: ''
+        nam: Alabama
+        nn: Crimson Tide
+        sn: Alabama
+    seid: 5627
+    st: Turf
+  - cit: Tuscaloosa
+    cou: USA
+    des: Ole Miss@Alabama
+    dt: 1569699000000
+    eid: 3771299
+    es: complete
+    eventGroup:
+      alias: Week 5
+      egid: 37
+      nam: REG Week 5
+    lid: 6
+    participants:
+    - ih: false
+      partid: 1195
+      source:
+        abbr: MIS
+        cit: ''
+        nam: Ole Miss
+        nn: Rebels
+        sn: Ole Miss
+    - ih: true
+      partid: 1196
+      source:
+        abbr: BAMA
+        cit: ''
+        nam: Alabama
+        nn: Crimson Tide
+        sn: Alabama
+    seid: 5627
+    st: Turf
+  - cit: Tuscaloosa
+    cou: USA
+    des: Tennessee@Alabama
+    dt: 1571533200000
+    eid: 3771328
+    es: complete
+    eventGroup:
+      alias: Week 8
+      egid: 40
+      nam: REG Week 8
+    lid: 6
+    participants:
+    - ih: false
+      partid: 1190
+      source:
+        abbr: TEN
+        cit: ''
+        nam: Tennessee
+        nn: Volunteers
+        sn: Tennessee
+    - ih: true
+      partid: 1196
+      source:
+        abbr: BAMA
+        cit: ''
+        nam: Alabama
+        nn: Crimson Tide
+        sn: Alabama
+    seid: 5627
+    st: Turf
+  - cit: Tuscaloosa
+    cou: USA
+    des: Arkansas@Alabama
+    dt: 1572130800000
+    eid: 3771340
+    es: complete
+    eventGroup:
+      alias: Week 9
+      egid: 41
+      nam: REG Week 9
+    lid: 6
+    participants:
+    - ih: false
+      partid: 1192
+      source:
+        abbr: ARK
+        cit: ''
+        nam: Arkansas
+        nn: Razorbacks
+        sn: Arkansas
+    - ih: true
+      partid: 1196
+      source:
+        abbr: BAMA
+        cit: ''
+        nam: Alabama
+        nn: Crimson Tide
+        sn: Alabama
+    seid: 5627
+    st: Turf
+  - cit: College Station
+    cou: USA
+    des: Alabama@Texas A&M
+    dt: 1570908600000
+    eid: 3771623
+    es: complete
+    eventGroup:
+      alias: Week 7
+      egid: 39
+      nam: REG Week 7
+    lid: 6
+    participants:
+    - ih: false
+      partid: 1196
+      source:
+        abbr: BAMA
+        cit: ''
+        nam: Alabama
+        nn: Crimson Tide
+        sn: Alabama
+    - ih: true
+      partid: 1202
+      source:
+        abbr: TXAM
+        cit: ''
+        nam: Texas A&M
+        nn: Aggies
+        sn: Texas A&M
+    seid: 5627
+    st: Turf
+  - cit: Columbia
+    cou: USA
+    des: Alabama@South Carolina
+    dt: 1568489400000
+    eid: 3771643
+    es: complete
+    eventGroup:
+      alias: Week 3
+      egid: 35
+      nam: REG Week 3
+    lid: 6
+    participants:
+    - ih: true
+      partid: 1185
+      source:
+        abbr: SC
+        cit: ''
+        nam: South Carolina
+        nn: Gamecocks
+        sn: South Carolina
+    - ih: false
+      partid: 1196
+      source:
+        abbr: BAMA
+        cit: ''
+        nam: Alabama
+        nn: Crimson Tide
+        sn: Alabama
+    seid: 5627
+    st: Turf

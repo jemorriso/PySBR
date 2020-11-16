@@ -1,0 +1,76 @@
+interactions:
+- request:
+    body: '{"query": "{\n  multipleSearch(query: [\"premier league\"], did: 0) {\n    searchLeague
+      {\n      lid\n      nam\n      rid\n      spid\n      sn\n      region {\n        nam\n        sn\n      }\n    }\n  }\n}\n"}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '213'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.25.0
+    method: POST
+    uri: https://www.sportsbookreview.com/ms-odds-v2/odds-v2-service
+  response:
+    body:
+      string: '{"data":{"multipleSearch":{"searchLeague":[{"lid":2,"nam":"Premier
+        League","rid":2,"spid":2,"sn":"PREM","region":{"nam":"England","sn":"ENG"}},{"lid":1810,"nam":"Indian
+        Premier League","rid":72,"spid":21,"sn":"","region":{"nam":"India","sn":"IN"}},{"lid":1820,"nam":"Caribbean
+        Premier League","rid":128,"spid":21,"sn":"","region":{"nam":"West Indies","sn":"wi"}},{"lid":2111,"nam":"Afghanistan
+        Premier League","rid":134,"spid":21,"sn":"","region":{"nam":"Afghanistan","sn":"af"}},{"lid":158,"nam":"Premier
+        League","rid":48,"spid":2,"sn":"WLS1","region":{"nam":"Wales","sn":"WLS"}}]}}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Access-Control-Allow-Origin:
+      - '*'
+      Age:
+      - '0'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '584'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 16 Nov 2020 06:52:35 GMT
+      Keep-Alive:
+      - timeout=20
+      Server:
+      - nginx/1.18.0
+      Set-Cookie:
+      - x_geo_cookie_value=CA, ;Domain=sportsbookreview.com;Path=/;Max-Age=43200
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      X-Cache:
+      - Miss
+      X-Cache-Hits:
+      - '0'
+      X-Cacheable:
+      - Not Cacheable
+      X-City-Code:
+      - ''
+      X-City-Name:
+      - British Columbia
+      X-Country-Code:
+      - CA
+      X-Country-Name:
+      - Canada
+      X-DIS-Request-ID:
+      - d629ecea0c29d7f888e15daec363aec6
+      X-Proxy-Host:
+      - www.sportsbookreview.com
+      X-Varnish:
+      - '266627514'
+    status:
+      code: 200
+      message: OK
+version: 1

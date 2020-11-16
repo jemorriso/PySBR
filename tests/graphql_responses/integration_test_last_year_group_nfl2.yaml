@@ -1,0 +1,163 @@
+eventGroupsByLeague:
+- alias: Pre Week 1
+  edt: 1565485200000
+  egid: 2
+  lid: 16
+  nam: PRE Week 1
+  sdt: 1565305200000
+- alias: Pre Week 2
+  edt: 1566259200000
+  egid: 3
+  lid: 16
+  nam: PRE Week 2
+  sdt: 1565910000000
+- alias: Pre Week 3
+  edt: 1598832000000
+  egid: 4
+  lid: 16
+  nam: PRE Week 3
+  sdt: 1598571000000
+- alias: Pre Week 4
+  edt: 1504231200000
+  egid: 5
+  lid: 16
+  nam: PRE Week 4
+  sdt: 1504220400000
+- alias: Week 1
+  edt: 1568082000000
+  egid: 10
+  lid: 16
+  nam: REG Week 1
+  sdt: 1567729200000
+- alias: Week 2
+  edt: 1600733700000
+  egid: 11
+  lid: 16
+  nam: REG Week 2
+  sdt: 1600388400000
+- alias: Week 3
+  edt: 1601338500000
+  egid: 12
+  lid: 16
+  nam: REG Week 3
+  sdt: 1600993200000
+- alias: Week 4
+  edt: 1601946000000
+  egid: 13
+  lid: 16
+  nam: REG Week 4
+  sdt: 1601598000000
+- alias: Week 5
+  edt: 1539044100000
+  egid: 14
+  lid: 16
+  nam: REG Week 5
+  sdt: 1538698800000
+- alias: Week 6
+  edt: 1508200200000
+  egid: 15
+  lid: 16
+  nam: REG Week 6
+  sdt: 1507854300000
+- alias: Week 7
+  edt: 1603757700000
+  egid: 16
+  lid: 16
+  nam: REG Week 7
+  sdt: 1603412400000
+- alias: Week 8
+  edt: 1604366100000
+  egid: 17
+  lid: 16
+  nam: REG Week 8
+  sdt: 1604017200000
+- alias: Week 9
+  edt: 1572916500000
+  egid: 18
+  lid: 16
+  nam: REG Week 9
+  sdt: 1572567600000
+- alias: Week 10
+  edt: 1542071700000
+  egid: 19
+  lid: 16
+  nam: REG Week 10
+  sdt: 1541726400000
+- alias: Week 11
+  edt: 1511227800000
+  egid: 20
+  lid: 16
+  nam: REG Week 11
+  sdt: 1510881900000
+- alias: Week 12
+  edt: 1606785300000
+  egid: 21
+  lid: 16
+  nam: REG Week 12
+  sdt: 1606411800000
+- alias: Week 13
+  edt: 1575335700000
+  egid: 22
+  lid: 16
+  nam: REG Week 13
+  sdt: 1574962200000
+- alias: Week 14
+  edt: 1513042200000
+  egid: 23
+  lid: 16
+  nam: REG Week 14
+  sdt: 1512696300000
+- alias: Week 15
+  edt: 1513647000000
+  egid: 24
+  lid: 16
+  nam: REG Week 15
+  sdt: 1513301100000
+- alias: Week 16
+  edt: 1577150100000
+  egid: 25
+  lid: 16
+  nam: REG Week 16
+  sdt: 1576951200000
+- alias: Week 17
+  edt: 1609709100000
+  egid: 26
+  lid: 16
+  nam: REG Week 17
+  sdt: 1609696800000
+- alias: Wild Card
+  edt: null
+  egid: 28
+  lid: 16
+  nam: PST Week 1
+  sdt: null
+- alias: Divisional
+  edt: 1578872400000
+  egid: 29
+  lid: 16
+  nam: PST Week 2
+  sdt: 1578778500000
+- alias: Championship
+  edt: 1579477200000
+  egid: 30
+  lid: 16
+  nam: PST Week 3
+  sdt: 1579464300000
+- alias: Super Bowl
+  edt: 1549236600000
+  egid: 31
+  lid: 16
+  nam: PST Week 4
+  sdt: 1549236600000
+- alias: Hall of Fame
+  edt: 1501804800000
+  egid: 20162
+  lid: 16
+  nam: HOF
+  sdt: 1501804800000
+- alias: Pro Bowl
+  edt: null
+  egid: 20941
+  lid: 16
+  nam: PST Week Pro Bowl
+  sdt: null

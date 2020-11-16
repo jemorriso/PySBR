@@ -1,0 +1,81 @@
+interactions:
+- request:
+    body: '{"query": "{\n  leagueMarkets(lid: [2]) {\n    lid\n    mtid\n  }\n}\n"}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.25.0
+    method: POST
+    uri: https://www.sportsbookreview.com/ms-odds-v2/odds-v2-service
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA23WMW7cQAwF0LuodjEzJGekvYNPYKRYwIvAcNIk68rYu9tpo9cJhCT+T37y83N7
+        vd6v2+Vz+3W7/vy4PV//vN/uf7fLy3fk7XW7jKft9/3fQ388/R+KcyjPoTqH5jl0nEO9IbYQw7cD
+        cAfwDqAbgDeQIwZiqgm+LXAr5C3wLfxvx/924OtTRZ1oW18Mol59AXhf6tTaFVTvRajv6mpj+/Vm
+        R0FGB83RJQHqbADnoPqGslOTQ5CkrBHCGaj8CFR+hBilGBVnR8MjxY6JN0M9ClU+NPWhyofqGapn
+        aPJDox+D2VHPCDHimtCsR+mfmvaYSjTFXaMdbMcUpCnuU5CW2rHEfQmntk1oh4R2SGiHxCGah2ge
+        SnQo0YFE2cA9pZCUj2Toc2kppaWk5yS4ZwqS7CnlT1mCVIJU6GZK3il5p0wqpfmcyq5BSA1CSvMp
+        zadEm9JnSmApgaUEVtJSNXCvBu7VgLOazrIGhVTTDdJ0hMh2SydbyXarC2cXJDlCyRGqq55y7ZJ3
+        lFy75Nollym5TMllSi5TcpnSDintkNIOKe2Q0g4p7ZAKMQox0iFRieyTQd0MU3t+6qadOyCtb9n8
+        eDy+AF5uEtHgDAAA
+    headers:
+      Accept-Ranges:
+      - bytes
+      Access-Control-Allow-Origin:
+      - '*'
+      Age:
+      - '0'
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '468'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 16 Nov 2020 07:13:11 GMT
+      Keep-Alive:
+      - timeout=20
+      Server:
+      - nginx/1.18.0
+      Set-Cookie:
+      - x_geo_cookie_value=CA, ;Domain=sportsbookreview.com;Path=/;Max-Age=43200
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      X-Cache:
+      - Miss
+      X-Cache-Hits:
+      - '0'
+      X-Cacheable:
+      - Not Cacheable
+      X-City-Code:
+      - ''
+      X-City-Name:
+      - British Columbia
+      X-Country-Code:
+      - CA
+      X-Country-Name:
+      - Canada
+      X-DIS-Request-ID:
+      - ef664d95792601584fec7b504d56ed8c
+      X-Proxy-Host:
+      - www.sportsbookreview.com
+      X-Varnish:
+      - '273351159'
+    status:
+      code: 200
+      message: OK
+version: 1

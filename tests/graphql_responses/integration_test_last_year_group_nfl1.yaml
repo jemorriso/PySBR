@@ -1,0 +1,32 @@
+eventsByDateNew:
+  events:
+  - cit: Chicago
+    cou: USA
+    des: Green Bay Packers@Chicago Bears
+    dt: 1567729200000
+    eid: 3778574
+    es: complete
+    eventGroup:
+      alias: Week 1
+      egid: 10
+      nam: REG Week 1
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1540
+      source:
+        abbr: CHI
+        cit: Chicago
+        nam: Chicago
+        nn: Bears
+        sn: Chicago
+    - ih: false
+      partid: 1542
+      source:
+        abbr: GB
+        cit: Green Bay
+        nam: Green Bay
+        nn: Packers
+        sn: Green Bay
+    seid: 5703
+    st: outdoor

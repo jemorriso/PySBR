@@ -1,0 +1,198 @@
+interactions:
+- request:
+    body: '{"query": "{\n  eventsV2(lid: [6], dt: {between: [1567666800000, 1572418800000]})
+      {\n    events {\n      eid\n      participants {\n        partid\n      }\n    }\n  }\n}\n"}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '174'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.25.0
+    method: POST
+    uri: https://www.sportsbookreview.com/ms-odds-v2/odds-v2-service
+  response:
+    body:
+      string: !!binary |
+        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
+        uWhOBYsD8figv/z48eO/sI7BEzriAAA=
+    headers:
+      Accept-Ranges:
+      - bytes
+      Access-Control-Allow-Origin:
+      - '*'
+      Age:
+      - '0'
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '7091'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 16 Nov 2020 05:18:09 GMT
+      Keep-Alive:
+      - timeout=20
+      Server:
+      - nginx/1.18.0
+      Set-Cookie:
+      - x_geo_cookie_value=CA, ;Domain=sportsbookreview.com;Path=/;Max-Age=43200
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      X-Cache:
+      - Miss
+      X-Cache-Hits:
+      - '0'
+      X-Cacheable:
+      - Not Cacheable
+      X-City-Code:
+      - ''
+      X-City-Name:
+      - British Columbia
+      X-Country-Code:
+      - CA
+      X-Country-Name:
+      - Canada
+      X-DIS-Request-ID:
+      - 11ee69c2df9cfa6caff8b7c8f726b034
+      X-Proxy-Host:
+      - www.sportsbookreview.com
+      X-Varnish:
+      - '272577245'
+    status:
+      code: 200
+      message: OK
+version: 1
