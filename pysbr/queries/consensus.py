@@ -1,7 +1,7 @@
-from pysbr.queries.query import Query
+from pysbr.queries.lines import Lines
 
 
-class Consensus(Query):
+class Consensus(Lines):
     def __init__(self, event_ids, market_ids):
         super().__init__()
         self.name = "consensus"
@@ -11,3 +11,6 @@ class Consensus(Query):
         self._raw = self._build_and_execute_query(
             self.name, self.fields, self.arg_str, self.args
         )
+
+    def _clean_lines(self, *args):
+        pass
