@@ -21,6 +21,8 @@ class Query:
         self._sublist_keys = None
         self._id_key = None
 
+        self._translated = None
+
         transport = RequestsHTTPTransport(
             url="https://www.sportsbookreview.com/ms-odds-v2/odds-v2-service"
         )
@@ -138,8 +140,10 @@ class Query:
         return data
 
     def _copy_and_translate_data(self):
-        data = copy.deepcopy(self._find_data())
-        return self._translate_dict(data)
+        if self._translated is None:
+            data = copy.deepcopy(self._find_data())
+            self._translated = self._translate_dict(data)
+        return copy.deepcopy(self._translated)
 
     # for queries returning ids call this function to process _raw and return ids only
     def ids(self):
