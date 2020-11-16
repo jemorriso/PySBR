@@ -12,16 +12,14 @@ class Sport(Config):
 
         self.sport_id = d["sport id"]
         self.default_market_id = d["default market id"]
-        self._markets = self._build_markets(d["markets"])
 
+        self._market_ids = self._build_market_ds(d["markets"])
         self.market_names = self._build_market_names(d["markets"])
 
         d = Utils.load_yaml(Utils.build_yaml_path(league_config))
         self._translate_dict(d, self.translations)
         self._league = d
 
-        # assign instance variables for each of the top level dictionary elements
-        # in the yaml config file
         self.league_id = d["league id"]
         self.league_name = d["name"]
         self.abbr = d["alias"]
@@ -29,7 +27,7 @@ class Sport(Config):
     def _get_translation_dict(self):
         return Utils.load_yaml(Utils.build_yaml_path("dictionary"))
 
-    def _build_markets(self, m):
+    def _build_market_ds(self, m):
         markets = {}
         for x in m:
             markets[x["url"]] = {}
@@ -49,8 +47,11 @@ class Sport(Config):
                 markets[y["market id"]] = y["name"]
         return markets
 
-    def markets(self):
-        return self._markets
+    def sport_config(self):
+        return self._sport
+
+    def league_config(self):
+        return self._league
 
     def market_ids(self, terms):
         search_dict = Utils.load_yaml(Utils.build_yaml_path("search_dictionary"))
@@ -77,7 +78,7 @@ class Sport(Config):
                     pass
 
                 try:
-                    ids.append(self._markets[t[0]][t[1]])
+                    ids.append(self._market_ids[t[0]][t[1]])
                 except KeyError:
                     raise ValueError(f"Could not find market {old_t}")
         # TODO: need to handle case where they resolve to same ID, because I don't

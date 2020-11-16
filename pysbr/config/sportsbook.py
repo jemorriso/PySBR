@@ -8,13 +8,13 @@ class Sportsbook(Config):
 
         t = self._get_translation_dict()
         d = Utils.load_yaml(Utils.build_yaml_path("sportsbooks"))
-        self._translate_dict(d, t)
+        self._sportsbooks = self._translate_dict(d, t)
 
-        self._sportsbooks = self._build_sportsbooks(d["sportsbooks"])
+        self._sportsbooks_ids = self._build_sportsbook_ids(d["sportsbooks"])
 
-        self.names = {v: k for k, v in self._sportsbooks["name"].items()}
+        self.names = {v: k for k, v in self._sportsbooks_ids["name"].items()}
 
-    def _build_sportsbooks(self, s):
+    def _build_sportsbook_ids(self, s):
         sportsbooks = {}
         for k in ["name", "short name"]:
             sportsbooks[k] = {}
@@ -23,7 +23,7 @@ class Sportsbook(Config):
 
         return sportsbooks
 
-    def sportsbooks(self):
+    def sportsbook_config(self):
         return self._sportsbooks
 
     def sportsbook_ids(self, terms):
@@ -37,7 +37,7 @@ class Sportsbook(Config):
                 found = False
                 # Pylance error 'id is possibly unbound' if I don't set id to None here
                 id = None
-                for k, v in self._sportsbooks.items():
+                for k, v in self._sportsbooks_ids.items():
                     if t in v:
                         if not found:
                             found = True
