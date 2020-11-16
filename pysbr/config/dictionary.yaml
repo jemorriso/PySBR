@@ -61,8 +61,8 @@ mtgid: market group id
 marketTypes: market types
 
 # sportsbook
-sbid: sportsbook id
-paid: provider account id
+sbid: system sportsbook id
+paid: sportsbook id
 
 # consensus
 wag: wagers
@@ -91,7 +91,7 @@ favoriteshortname: favorite short name
 # Field translations
 ############################################
 # lines
-adj: spread
+adj: spread / total
 ap: american odds
 pri: decimal odds
 
@@ -99,6 +99,7 @@ pri: decimal odds
 eventGroup: event group
 participants: participants
 source: source
+seid: season id
 
 # event group
 sdt: start datetime

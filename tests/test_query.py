@@ -210,20 +210,24 @@ class TestQuery:
         assert isinstance(df, pd.DataFrame)
 
     @mark.parametrize(
-        "sportsbook_names, cassette_name, expected",
+        "sportsbook_ids, cassette_name, expected",
         [
             (
-                ["pinnacle", "bet365"],
+                [20, 5],
                 "test_sportbook1",
                 ["Pinnacle", "Bet365"],
             ),
         ],
     )
     def test_sportsbooks(
-        self, sportsbooks, sportsbook, sportsbook_names, cassette_name, expected
+        self,
+        sportsbooks,
+        sportsbook_ids,
+        cassette_name,
+        expected,
     ):
-        ids = sportsbook.sportsbook_ids(sportsbook_names)
-        s = sportsbooks(ids, cassette_name)
+        # the sportsbook ids are system sportsbook ids for this query
+        s = sportsbooks(sportsbook_ids, cassette_name)
         for i, x in enumerate(s._raw["sportsbooks"]):
             assert x["nam"] in expected
 

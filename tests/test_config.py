@@ -67,8 +67,8 @@ class TestConfig:
     @mark.parametrize(
         "terms, expected",
         [
-            (["pinnacle", "bodog", "bet365"], [238, 92, 43]),
-            (["pinnacle", "bodog sportsbook", "bet365"], [238, 92, 43]),
+            (["pinnacle", "bodog", "bet365"], [20, 9, 5]),
+            (["pinnacle", "bodog sportsbook", "bet365"], [20, 9, 5]),
         ],
     )
     def test_sportsbook_ids(self, sportsbook, terms, expected):
