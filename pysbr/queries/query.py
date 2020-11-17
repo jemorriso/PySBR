@@ -8,6 +8,8 @@ import pandas as pd
 
 from pysbr.utils import Utils
 
+from pysbr.config.config import Config
+
 
 # base query class
 class Query:
@@ -16,6 +18,8 @@ class Query:
     # schema = build_ast_schema(document)
 
     def __init__(self):
+        self._config = Config()
+
         self._raw = None
         self._subpath_keys = None
         self._sublist_keys = None
@@ -135,9 +139,37 @@ class Query:
 
         return data
 
-    def _translate_dict(self, data):
-        Utils.translate_dict(data, Utils.translation_dict())
-        return data
+    def _translate_dict(self, d):
+        def _recurse(el):
+            if isinstance(el, dict):
+                # MUST cast to list to avoid RuntimeError because d.pop()
+                for k in list(el.keys()):
+                    try:
+                        old_k = k
+                        # raises KeyError if no translation available
+                        k = t[k]
+
+                        v = el.pop(old_k)
+
+                        if k not in ["datetime", "start datetime", "end datetime"]:
+                            el[k] = v
+                        else:
+                            try:
+                                el[k] = Utils.timestamp_to_iso_str(v)
+                            except TypeError:
+                                el[k] = v
+                    except KeyError:
+                        pass
+                    v = el[k]
+                    if isinstance(v, dict) or isinstance(v, list):
+                        _recurse(v)
+            elif isinstance(el, list):
+                for x in el:
+                    _recurse(x)
+
+        t = self._config.translations()
+        _recurse(d)
+        return d
 
     def _copy_and_translate_data(self):
         if self._translated is None:
