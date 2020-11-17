@@ -1,5 +1,5 @@
 from pysbr.queries.query import Query
-from pysbr.utils import Utils
+import pysbr.utils as utils
 
 
 # TODO: add by league to title?
@@ -8,7 +8,7 @@ class EventsByDate(Query):
         super().__init__()
         self.name = "eventsByDateNew"
         self.arg_str = self._get_args("date")
-        self.args = {"lids": [league_id], "timestamp": Utils.datetime_to_timestamp(dt)}
+        self.args = {"lids": [league_id], "timestamp": utils.datetime_to_timestamp(dt)}
         self.fields = self._get_fields("event")
         self._raw = self._build_and_execute_query(
             self.name, self.fields, self.arg_str, self.args

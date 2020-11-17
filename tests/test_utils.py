@@ -4,6 +4,8 @@ from pytz import timezone
 from pytest import mark
 from tzlocal import get_localzone
 
+import pysbr.utils as utils
+
 
 class TestUtils:
     @mark.parametrize(
@@ -14,7 +16,7 @@ class TestUtils:
             ("2020-10-21, 21:15", "Canada/Pacific", 1603340100),
         ],
     )
-    def test_datetime_to_timestamp_aware(self, utils, dt_str, tz, expected):
+    def test_datetime_to_timestamp_aware(self, dt_str, tz, expected):
         dt = datetime.strptime(dt_str, "%Y-%m-%d, %H:%M")
         timestamp = utils.datetime_to_timestamp_aware(dt, tz)
         assert int(timestamp / 1000) == expected
@@ -27,7 +29,7 @@ class TestUtils:
             ("2020-10-21, 21:15", "Canada/Pacific", 1603340100),
         ],
     )
-    def test_timestamp_to_datetime_aware(self, utils, ts, tz, expected_str):
+    def test_timestamp_to_datetime_aware(self, ts, tz, expected_str):
         e_naive = datetime.strptime(expected_str, "%Y-%m-%d, %H:%M")
         if tz is None:
             tz = str(get_localzone())
@@ -43,7 +45,7 @@ class TestUtils:
             ("2020-10-21, 21:15", "Canada/Pacific", 1603340100),
         ],
     )
-    def test_datetime_to_timestamp(self, utils, dt_str, tz, expected):
+    def test_datetime_to_timestamp(self, dt_str, tz, expected):
         dt = timezone(tz).localize(datetime.strptime(dt_str, "%Y-%m-%d, %H:%M"))
         timestamp = utils.datetime_to_timestamp(dt)
         assert int(timestamp / 1000) == expected
@@ -55,7 +57,7 @@ class TestUtils:
             ("2020-10-21, 21:15", "Canada/Pacific", 1603340100),
         ],
     )
-    def test_timestamp_to_datetime(self, utils, ts, tz, expected_str):
+    def test_timestamp_to_datetime(self, ts, tz, expected_str):
         expected = timezone(tz).localize(
             datetime.strptime(expected_str, "%Y-%m-%d, %H:%M")
         )
@@ -63,7 +65,7 @@ class TestUtils:
         assert dt == expected
 
     @mark.parametrize(("fname", "expected"), [("arguments", True), ("foo", False)])
-    def test_load_yaml(self, utils, fname, expected):
+    def test_load_yaml(self, fname, expected):
         found = False
         path = utils.build_yaml_path(fname)
         try:

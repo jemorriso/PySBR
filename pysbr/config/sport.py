@@ -1,4 +1,4 @@
-from pysbr.utils import Utils
+import pysbr.utils as utils
 from pysbr.config.config import Config
 
 
@@ -6,15 +6,15 @@ class Sport(Config):
     def __init__(self, sport_config, league_config):
         super().__init__()
 
-        self._search_translations = Utils.load_yaml(
-            Utils.build_yaml_path("search_dictionary")
+        self._search_translations = utils.load_yaml(
+            utils.build_yaml_path("search_dictionary")
         )
 
         self._sport = self._translate_dict(
-            Utils.load_yaml(Utils.build_yaml_path(sport_config))
+            utils.load_yaml(utils.build_yaml_path(sport_config))
         )
         self._league = self._translate_dict(
-            Utils.load_yaml(Utils.build_yaml_path(league_config))
+            utils.load_yaml(utils.build_yaml_path(league_config))
         )
 
         self._market_ids = self._build_market_ids(self._sport["markets"])

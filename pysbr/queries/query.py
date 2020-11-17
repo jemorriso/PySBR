@@ -6,7 +6,7 @@ from gql import Client, gql
 from gql.transport.requests import RequestsHTTPTransport
 import pandas as pd
 
-from pysbr.utils import Utils
+import pysbr.utils as utils
 
 from pysbr.config.config import Config
 
@@ -65,7 +65,7 @@ class Query:
         """
         return (
             Template(
-                Utils.str_format(
+                utils.str_format(
                     """
                 query {
                     $q_name(
@@ -79,10 +79,10 @@ class Query:
                     "q_name": q_name,
                     "q_args": ""
                     if q_args is None
-                    else Utils.str_format(q_args, indent_=2, dedent_l1=True),
+                    else utils.str_format(q_args, indent_=2, dedent_l1=True),
                     "q_fields": ""
                     if q_fields is None
-                    else Utils.str_format(q_fields, indent_=1, dedent_l1=True),
+                    else utils.str_format(q_fields, indent_=1, dedent_l1=True),
                 }
             )
             # graphql query will not accept single quotes, but Template string by
@@ -104,7 +104,7 @@ class Query:
         Raises:
             NameError: If value of k is not a key in the loaded dictionary.
         """
-        return Utils.load_yaml((Utils.build_yaml_path(fname)))[k]
+        return utils.load_yaml((utils.build_yaml_path(fname)))[k]
 
     def _get_args(self, k):
         return self._get_val_from_yaml("arguments", k)
@@ -155,7 +155,7 @@ class Query:
                             el[k] = v
                         else:
                             try:
-                                el[k] = Utils.timestamp_to_iso_str(v)
+                                el[k] = utils.timestamp_to_iso_str(v)
                             except TypeError:
                                 el[k] = v
                     except KeyError:

@@ -1,9 +1,9 @@
-from pysbr.utils import Utils
+import pysbr.utils as utils
 
 
 class Config:
     def __init__(self):
-        self._translations = Utils.load_yaml(Utils.build_yaml_path("dictionary"))
+        self._translations = utils.load_yaml(utils.build_yaml_path("dictionary"))
 
     def _translate_dict(self, d):
         def _recurse(el):

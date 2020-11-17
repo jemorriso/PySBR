@@ -1,5 +1,5 @@
 from pysbr.queries.query import Query
-from pysbr.utils import Utils
+import pysbr.utils as utils
 
 
 class EventsByParticipants(Query):
@@ -31,8 +31,8 @@ class EventsByParticipants(Query):
         q_arg_str = self._get_args("date_range")
         q_args = {
             "lids": [league_id],
-            "start": Utils.datetime_to_timestamp(start),
-            "end": Utils.datetime_to_timestamp(end),
+            "start": utils.datetime_to_timestamp(start),
+            "end": utils.datetime_to_timestamp(end),
         }
         return q_arg_str, q_args
 
@@ -40,8 +40,8 @@ class EventsByParticipants(Query):
         q_arg_str = self._get_args("date_range_sport")
         q_args = {
             "spids": [sport_id],
-            "start": Utils.datetime_to_timestamp(start),
-            "end": Utils.datetime_to_timestamp(end),
+            "start": utils.datetime_to_timestamp(start),
+            "end": utils.datetime_to_timestamp(end),
         }
         return q_arg_str, q_args
 

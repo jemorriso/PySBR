@@ -5,8 +5,8 @@ from gql import Client, gql
 from gql.transport.requests import RequestsHTTPTransport
 import vcr
 
+import pysbr.utils as utils
 from pysbr.queries.query import Query
-from pysbr.utils import Utils
 from pysbr.queries.eventsbydate import EventsByDate
 from pysbr.queries.leaguehierarchy import LeagueHierarchy
 from pysbr.queries.team import Team
@@ -366,9 +366,9 @@ def execute_with_cassette(use_cassette):
     def fn(q, client, cassette_name):
         with use_cassette(cassette_name):
             result = client.execute(gql(q))
-        path = Utils.build_yaml_path(cassette_name, "tests/graphql_responses")
+        path = utils.build_yaml_path(cassette_name, "tests/graphql_responses")
         if not path.exists():
-            Utils.dump_yaml(result, path)
+            utils.dump_yaml(result, path)
         return result
 
     return fn
@@ -413,11 +413,6 @@ def build_and_execute_with_cassette(execute_with_cassette):
 @fixture
 def query():
     return Query()
-
-
-@fixture
-def utils():
-    return Utils()
 
 
 @fixture

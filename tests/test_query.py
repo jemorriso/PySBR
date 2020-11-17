@@ -6,6 +6,8 @@ from pytest_lazyfixture import lazy_fixture
 from gql import gql
 import pandas as pd
 
+import pysbr.utils as utils
+
 
 class TestQuery:
     def test_cassete(self, use_cassette):
@@ -15,7 +17,7 @@ class TestQuery:
                 r.headers["X-Github-Request-Id"] == "D3E6:3C26:1160E7:2D5DC3:5F98DDF3"
             )
 
-    def test_cassette_gql(self, utils, use_cassette, countries):
+    def test_cassette_gql(self, use_cassette, countries):
         with use_cassette("test_cassette_gql"):
             query = utils.str_format(
                 """
@@ -29,7 +31,7 @@ class TestQuery:
             result = countries.execute(gql(query))
             assert result["country"]["name"] == "Canada"
 
-    def test_build_query(self, utils, query):
+    def test_build_query(self, query):
         events = utils.str_format(
             """
             {
@@ -100,7 +102,7 @@ class TestQuery:
         )
 
     @mark.parametrize("dt_str", ["2020-10-29"])
-    def test_execute_query(self, utils, query, patched_execute, dt_str):
+    def test_execute_query(self, query, patched_execute, dt_str):
         dt = datetime.strptime(dt_str, "%Y-%m-%d")
         q_fields = utils.str_format(
             """

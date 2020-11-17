@@ -1,4 +1,4 @@
-from pysbr.utils import Utils
+import pysbr.utils as utils
 from pysbr.config.config import Config
 
 
@@ -7,7 +7,7 @@ class Sportsbook(Config):
         super().__init__()
 
         self._sportsbooks = self._translate_dict(
-            Utils.load_yaml(Utils.build_yaml_path("sportsbooks"))
+            utils.load_yaml(utils.build_yaml_path("sportsbooks"))
         )
 
         self._sportsbook_ids = self._build_sportsbook_ids(
