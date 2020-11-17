@@ -1,22 +1,15 @@
 from string import Template
 import copy
 
-# from graphql import build_ast_schema, parse
 from gql import Client, gql
 from gql.transport.requests import RequestsHTTPTransport
 import pandas as pd
 
 import pysbr.utils as utils
-
 from pysbr.config.config import Config
 
 
-# base query class
 class Query:
-    # with open("schema.graphql") as source:
-    #     document = parse(source.read())
-    # schema = build_ast_schema(document)
-
     def __init__(self):
         self._config = Config()
 
@@ -30,11 +23,9 @@ class Query:
         transport = RequestsHTTPTransport(
             url="https://www.sportsbookreview.com/ms-odds-v2/odds-v2-service"
         )
-        # client = Client(transport=_transport, fetch_schema_from_transport=True)
         self.client = Client(transport=transport, fetch_schema_from_transport=False)
 
-    @staticmethod
-    def _build_args(arg_str, args):
+    def _build_args(self, arg_str, args):
         """Build the argument string that gets inserted into a query.
 
         Args:
@@ -50,8 +41,7 @@ class Query:
         else:
             return None
 
-    @staticmethod
-    def _build_query_string(q_name, q_fields=None, q_args=None):
+    def _build_query_string(self, q_name, q_fields=None, q_args=None):
         """Build up the GraphQL query string.
 
         Args:
@@ -90,8 +80,7 @@ class Query:
             .replace("'", '"')
         )
 
-    @staticmethod
-    def _get_val_from_yaml(fname, k):
+    def _get_val_from_yaml(self, fname, k):
         """[summary]
 
         Args:
