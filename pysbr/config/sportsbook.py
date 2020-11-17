@@ -6,11 +6,13 @@ class Sportsbook(Config):
     def __init__(self):
         super().__init__()
 
-        # self._translations = self._get_translation_dict()
-        d = Utils.load_yaml(Utils.build_yaml_path("sportsbooks"))
-        self._sportsbooks = self._translate_dict(d, self._translations)
+        self._sportsbooks = self._translate_dict(
+            Utils.load_yaml(Utils.build_yaml_path("sportsbooks"))
+        )
 
-        self._sportsbook_ids = self._build_sportsbook_ids(d["sportsbooks"])
+        self._sportsbook_ids = self._build_sportsbook_ids(
+            self._sportsbooks["sportsbooks"]
+        )
 
         self.names = {v: k for k, v in self._sportsbook_ids["name"].items()}
 
@@ -26,7 +28,7 @@ class Sportsbook(Config):
     def sportsbook_config(self):
         return self._sportsbooks
 
-    def sportsbook_ids(self, terms):
+    def ids(self, terms):
         ids = []
         for t in terms:
             if isinstance(t, int):

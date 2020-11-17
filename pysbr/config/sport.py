@@ -6,27 +6,26 @@ class Sport(Config):
     def __init__(self, sport_config, league_config):
         super().__init__()
 
-        d = Utils.load_yaml(Utils.build_yaml_path(sport_config))
-        self._translate_dict(d, self._translations)
-        self._sport = d
-
-        self.sport_id = d["sport id"]
-        self.default_market_id = d["default market id"]
-
-        self._market_ids = self._build_market_ids(d["markets"])
-        self.market_names = self._build_market_names(d["markets"])
-
-        d = Utils.load_yaml(Utils.build_yaml_path(league_config))
-        self._translate_dict(d, self._translations)
-        self._league = d
-
-        self.league_id = d["league id"]
-        self.league_name = d["name"]
-        self.abbr = d["alias"]
-
         self._search_translations = Utils.load_yaml(
             Utils.build_yaml_path("search_dictionary")
         )
+
+        self._sport = self._translate_dict(
+            Utils.load_yaml(Utils.build_yaml_path(sport_config))
+        )
+        self._league = self._translate_dict(
+            Utils.load_yaml(Utils.build_yaml_path(league_config))
+        )
+
+        self._market_ids = self._build_market_ids(self._sport["markets"])
+
+        self.market_names = self._build_market_names(self._sport["markets"])
+
+        self.sport_id = self._sport["sport id"]
+        self.default_market_id = self._sport["default market id"]
+        self.league_id = self._league["league id"]
+        self.league_name = self._league["name"]
+        self.abbr = self._league["alias"]
 
     def _build_market_ids(self, m):
         markets = {}
@@ -93,9 +92,6 @@ class Sport(Config):
 class TeamSport(Sport):
     def __init__(self, sport_config, league_config):
         super().__init__(sport_config, league_config)
-
-        # d = Utils.load_yaml(Utils.build_yaml_path(league_config))
-        # self._translate_dict(d, self._translations)
 
         self._team_ids = self._build_team_ids(self._league["teams"])
 

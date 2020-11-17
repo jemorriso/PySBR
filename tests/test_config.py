@@ -72,4 +72,4 @@ class TestConfig:
         ],
     )
     def test_sportsbook_ids(self, sportsbook, terms, expected):
-        assert sportsbook.sportsbook_ids(terms) == expected
+        assert sportsbook.ids(terms) == expected
