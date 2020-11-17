@@ -3,10 +3,13 @@ from pysbr.utils import Utils
 
 class Config:
     def __init__(self):
-        self.translations = self._get_translation_dict()
+        self._translations = self._get_translation_dict()
 
     def _get_translation_dict(self):
         return Utils.load_yaml(Utils.build_yaml_path("dictionary"))
+
+    def translations(self):
+        return self._translations
 
     # TODO: copy to utils
     def _translate_dict(self, d, t):

@@ -7,27 +7,28 @@ class Sport(Config):
         super().__init__()
 
         d = Utils.load_yaml(Utils.build_yaml_path(sport_config))
-        self._translate_dict(d, self.translations)
+        self._translate_dict(d, self._translations)
         self._sport = d
 
         self.sport_id = d["sport id"]
         self.default_market_id = d["default market id"]
 
-        self._market_ids = self._build_market_ds(d["markets"])
+        self._market_ids = self._build_market_ids(d["markets"])
         self.market_names = self._build_market_names(d["markets"])
 
         d = Utils.load_yaml(Utils.build_yaml_path(league_config))
-        self._translate_dict(d, self.translations)
+        self._translate_dict(d, self._translations)
         self._league = d
 
         self.league_id = d["league id"]
         self.league_name = d["name"]
         self.abbr = d["alias"]
 
-    def _get_translation_dict(self):
-        return Utils.load_yaml(Utils.build_yaml_path("dictionary"))
+        self._search_translations = Utils.load_yaml(
+            Utils.build_yaml_path("search_dictionary")
+        )
 
-    def _build_market_ds(self, m):
+    def _build_market_ids(self, m):
         markets = {}
         for x in m:
             markets[x["url"]] = {}
@@ -53,8 +54,11 @@ class Sport(Config):
     def league_config(self):
         return self._league
 
+    def search_translations(self):
+        return self._search_translations
+
     def market_ids(self, terms):
-        search_dict = Utils.load_yaml(Utils.build_yaml_path("search_dictionary"))
+        search_dict = self._search_translations
         ids = []
         for t in terms:
             if isinstance(t, int):
@@ -90,13 +94,12 @@ class TeamSport(Sport):
     def __init__(self, sport_config, league_config):
         super().__init__(sport_config, league_config)
 
-        t = self._get_translation_dict()
-        d = Utils.load_yaml(Utils.build_yaml_path(league_config))
-        self._translate_dict(d, t)
+        # d = Utils.load_yaml(Utils.build_yaml_path(league_config))
+        # self._translate_dict(d, self._translations)
 
-        self._teams = self._build_teams(d["teams"])
+        self._team_ids = self._build_team_ids(self._league["teams"])
 
-    def _build_teams(self, t):
+    def _build_team_ids(self, t):
         teams = {}
         for k in [
             "abbreviation",
@@ -117,9 +120,6 @@ class TeamSport(Sport):
 
         return teams
 
-    def teams(self):
-        return self._teams
-
     def team_ids(self, terms):
         ids = []
         for t in terms:
@@ -131,7 +131,7 @@ class TeamSport(Sport):
                 found = False
                 # Pylance error 'id is possibly unbound' if I don't set id to None here
                 id = None
-                for k, v in self._teams.items():
+                for k, v in self._team_ids.items():
                     if t in v:
                         if not found:
                             found = True
