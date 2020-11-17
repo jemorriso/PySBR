@@ -8,6 +8,7 @@ class EventsByParticipants(Query):
             raise ValueError("Either league_id or sport_id must not be None.")
 
         super().__init__()
+        utils.make_list(participant_ids)
         event_ids = self._filter_events(
             participant_ids, start, end, league_id, sport_id
         )

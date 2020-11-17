@@ -68,6 +68,13 @@ def str_format(s, indent_=0, dedent_l1=False):
     return s
 
 
+def make_list(item):
+    if not isinstance(item, list):
+        return [item]
+    else:
+        return item
+
+
 def datetime_to_timestamp_aware(dt, tz=None):
     """**DEPRECATED** Convert python datetime object to epoch time.
 

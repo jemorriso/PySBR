@@ -31,6 +31,7 @@ class Sportsbook(Config):
         return self._sportsbooks
 
     def ids(self, terms):
+        terms = utils.make_list(terms)
         ids = []
         for t in terms:
             if isinstance(t, int):

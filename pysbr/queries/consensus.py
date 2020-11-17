@@ -1,9 +1,12 @@
 from pysbr.queries.lines import Lines
+import pysbr.utils as utils
 
 
 class Consensus(Lines):
     def __init__(self, event_ids, market_ids):
         super().__init__()
+        event_ids = utils.make_list(event_ids)
+        market_ids = utils.make_list(market_ids)
         self.name = "consensus"
         self.arg_str = self._get_args("lines")
         self.args = {"eids": event_ids, "mtids": market_ids}

@@ -1,10 +1,12 @@
 from pysbr.queries.lines import Lines
+import pysbr.utils as utils
 
 
 class LineHistory(Lines):
     def __init__(self, event_id, market_id, sportsbook_id, participant_ids):
         # only need 1 participant id, it's dumb
         super().__init__()
+        utils.make_list(participant_ids)
         self.name = "lineHistory"
         self.arg_str = self._get_args("line_history")
         self.args = {

@@ -59,6 +59,7 @@ class Sport(Config):
         return self._search_translations
 
     def market_ids(self, terms):
+        terms = utils.make_list(terms)
         search_dict = self._search_translations
         ids = []
         for t in terms:
@@ -119,6 +120,7 @@ class TeamSport(Sport):
         return teams
 
     def team_ids(self, terms):
+        terms = utils.make_list(terms)
         ids = []
         for t in terms:
             if isinstance(t, int):

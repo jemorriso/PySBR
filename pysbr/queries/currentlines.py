@@ -1,9 +1,12 @@
 from pysbr.queries.lines import Lines
+import pysbr.utils as utils
 
 
 class CurrentLines(Lines):
     def __init__(self, event_ids, market_ids, sportsbook_ids):
         super().__init__()
+        event_ids = utils.make_list(event_ids)
+        market_ids = utils.make_list(market_ids)
         self.name = "currentLines"
         self.arg_str = self._get_args("lines_3")
         self.args = {

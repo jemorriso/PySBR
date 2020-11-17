@@ -1,10 +1,12 @@
 from pysbr.queries.query import Query
+import pysbr.utils as utils
 
 
 class EventsByParticipantsRecent(Query):
     def __init__(self, participant_ids):
         # this query only gets the 5 most recent events for a participant.
         super().__init__()
+        utils.make_list(participant_ids)
         self.name = "eventsInfoByParticipant"
         self.arg_str = self._get_args("participants")
         self.args = {"partids": participant_ids}

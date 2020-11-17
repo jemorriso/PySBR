@@ -1,9 +1,11 @@
 from pysbr.queries.query import Query
+import pysbr.utils as utils
 
 
 class EventsByEventIds(Query):
     def __init__(self, event_ids):
         super().__init__()
+        utils.make_list(event_ids)
         self.name = "eventsV2"
         self.arg_str = self._get_args("event_ids")
         self.args = {"eids": event_ids}
