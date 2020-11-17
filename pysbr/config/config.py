@@ -20,8 +20,6 @@ class Config:
                     v = el[k]
                     if isinstance(v, dict) or isinstance(v, list):
                         _recurse(v)
-                    elif isinstance(v, str):
-                        el[k] = v.lower()
             elif isinstance(el, list):
                 for x in el:
                     _recurse(x)

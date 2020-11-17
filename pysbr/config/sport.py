@@ -30,14 +30,16 @@ class Sport(Config):
     def _build_market_ids(self, m):
         markets = {}
         for x in m:
-            markets[x["url"]] = {}
-            markets[x["name"]] = {}
+            url_key = x["url"].lower()
+            name_key = x["name"].lower()
+            markets[url_key] = {}
+            markets[name_key] = {}
             for y in x["market types"]:
                 id = [v for k, v in y.items() if k == "market id"][0]
                 for k in ["alias", "name", "url"]:
-                    v = [v for list_key, v in y.items() if list_key == k][0]
-                    markets[x["url"]][v] = id
-                    markets[x["name"]][v] = id
+                    v = [v.lower() for list_key, v in y.items() if list_key == k][0]
+                    markets[url_key][v] = id
+                    markets[name_key][v] = id
         return markets
 
     def _build_market_names(self, m):
@@ -108,10 +110,10 @@ class TeamSport(Sport):
             teams[k] = {}
             if not k == "full name":
                 for x in t:
-                    teams[k][x[k]] = x["team id"]
+                    teams[k][x[k].lower()] = x["team id"]
             else:
                 for x in t:
-                    full_name = " ".join([x["location"], x["nickname"]])
+                    full_name = " ".join([x["location"].lower(), x["nickname"].lower()])
                     teams[k][full_name] = x["team id"]
 
         return teams

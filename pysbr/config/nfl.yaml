@@ -144,8 +144,9 @@ teams:
     nam: Green Bay
     nn: Packers
     cit: Green Bay
-  - abbr: NO
-    sbr abbreviation: NO
+  # evidently, 'NO' (without quotes) is Boolean False in YAML
+  - abbr: 'NO'
+    sbr abbreviation: 'NO'
     tmid: 1543
     nam: New Orleans
     nn: Saints

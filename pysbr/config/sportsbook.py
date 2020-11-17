@@ -14,14 +14,16 @@ class Sportsbook(Config):
             self._sportsbooks["sportsbooks"]
         )
 
-        self.names = {v: k for k, v in self._sportsbook_ids["name"].items()}
+        self.names = {
+            x["sportsbook id"]: x["name"] for x in self._sportsbooks["sportsbooks"]
+        }
 
     def _build_sportsbook_ids(self, s):
         sportsbooks = {}
         for k in ["name", "short name"]:
             sportsbooks[k] = {}
             for x in s:
-                sportsbooks[k][x[k]] = x["sportsbook id"]
+                sportsbooks[k][x[k].lower()] = x["sportsbook id"]
 
         return sportsbooks
 
