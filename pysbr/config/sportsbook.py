@@ -1,3 +1,5 @@
+from collections import OrderedDict
+
 import pysbr.utils as utils
 from pysbr.config.config import Config
 
@@ -56,4 +58,4 @@ class Sportsbook(Config):
                 else:
                     ids.append(id)
 
-        return ids
+        return list(OrderedDict.fromkeys(ids))
