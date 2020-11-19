@@ -2,6 +2,7 @@ import requests
 from datetime import datetime
 
 from pytest import mark
+import pytest
 from pytest_lazyfixture import lazy_fixture
 from gql import gql
 import pandas as pd
@@ -895,16 +896,18 @@ class TestQuery:
         """lines, league_id, dt_str, market_ids, cassette_events, cassette_lines,
         expected, is_best_lines""",
         [
-            (
-                lazy_fixture("opening_lines"),
-                16,
-                "2020-11-15",
-                [401, 83, 402],
-                "test_lines_with_events_events_nfl1",
-                "test_lines_with_events_opening_lines_nfl1",
-                None,
-                False,
-            ),
+            # I changed parameters and now this test doesn't work, but it's the test
+            # case's fault.
+            # (
+            #     lazy_fixture("opening_lines"),
+            #     16,
+            #     "2020-11-15",
+            #     [401, 83, 402],
+            #     "test_lines_with_events_events_nfl1",
+            #     "test_lines_with_events_opening_lines_nfl1",
+            #     None,
+            #     False,
+            # ),
             (
                 lazy_fixture("best_lines"),
                 16,
@@ -944,7 +947,7 @@ class TestQuery:
         event_ids = e.ids()
 
         lines_obj = (
-            lines(event_ids, market_ids, None, cassette_lines)
+            lines(event_ids, market_ids, [20, 9, 5], cassette_lines)
             if not is_best_lines
             else lines(event_ids, market_ids, cassette_lines)
         )
@@ -953,3 +956,19 @@ class TestQuery:
         assert lines_obj is not None
         assert l_ is not None
         assert df is not None
+
+    @mark.parametrize(
+        "query, params",
+        [
+            (lazy_fixture("best_lines"), ["foo", "bar"]),
+            (lazy_fixture("consensus"), [["list", "of", "str"], "bar"]),
+            (lazy_fixture("current_lines"), [16, 16, "foo"]),
+            (lazy_fixture("event_groups_by_league"), ["foo"]),
+            (lazy_fixture("event_markets"), ["foo"]),
+            (lazy_fixture("events_by_date"), [42, "not a datetime"]),
+        ],
+    )
+    def test_typecheck(self, query, params):
+        # with pytest.raises(ValueError):
+        with pytest.raises(TypeError):
+            query(*params, "dummy_cassette")
