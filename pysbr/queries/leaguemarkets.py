@@ -2,7 +2,8 @@ from pysbr.queries.query import Query
 
 
 class LeagueMarkets(Query):
-    def __init__(self, league_id):
+    @Query.typecheck
+    def __init__(self, league_id: int):
         super().__init__()
         self.name = "leagueMarkets"
         self.arg_str = self._get_args("league_id")

@@ -1,9 +1,12 @@
+from typing import List, Union
+
 from pysbr.queries.query import Query
 import pysbr.utils as utils
 
 
 class Sportsbooks(Query):
-    def __init__(self, system_sportsbook_ids):
+    @Query.typecheck
+    def __init__(self, system_sportsbook_ids: Union[List[int], int]):
         super().__init__()
         system_sportsbook_ids = utils.make_list(system_sportsbook_ids)
         self.name = "sportsbooks"

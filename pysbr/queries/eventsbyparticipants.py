@@ -1,9 +1,20 @@
+from typing import Optional, List, Union
+from datetime import datetime
+
 from pysbr.queries.query import Query
 import pysbr.utils as utils
 
 
 class EventsByParticipants(Query):
-    def __init__(self, participant_ids, start, end, league_id=None, sport_id=None):
+    @Query.typecheck
+    def __init__(
+        self,
+        participant_ids: Union[List[int], int],
+        start: datetime,
+        end: datetime,
+        league_id: Optional[int] = None,
+        sport_id: Optional[int] = None,
+    ):
         if league_id is None and sport_id is None:
             raise ValueError("Either league_id or sport_id must not be None.")
 

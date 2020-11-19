@@ -2,7 +2,8 @@ from pysbr.queries.query import Query
 
 
 class EventsByMatchup(Query):
-    def __init__(self, participant_id1, participant_id2, count):
+    @Query.typecheck
+    def __init__(self, participant_id1: int, participant_id2: int, count: int):
         super().__init__()
         self.name = "lastMatchupsByParticipants"
         self.arg_str = self._get_args("matchup")

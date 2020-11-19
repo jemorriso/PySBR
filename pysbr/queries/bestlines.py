@@ -1,9 +1,15 @@
+from typing import List, Union
+
 from pysbr.queries.lines import Lines
+from pysbr.queries.query import Query
 import pysbr.utils as utils
 
 
 class BestLines(Lines):
-    def __init__(self, event_ids, market_ids):
+    @Query.typecheck
+    def __init__(
+        self, event_ids: Union[List[int], int], market_ids: Union[List[int], int]
+    ):
         super().__init__()
         event_ids = utils.make_list(event_ids)
         market_ids = utils.make_list(market_ids)

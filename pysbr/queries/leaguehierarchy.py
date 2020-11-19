@@ -2,7 +2,8 @@ from pysbr.queries.query import Query
 
 
 class LeagueHierarchy(Query):
-    def __init__(self, league_id):
+    @Query.typecheck
+    def __init__(self, league_id: int):
         # TODO: season id?
         super().__init__()
         self.name = "leagueHierarchy"

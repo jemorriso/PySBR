@@ -1,9 +1,12 @@
+from datetime import datetime
+
 from pysbr.queries.query import Query
 import pysbr.utils as utils
 
 
 class EventsByDateRange(Query):
-    def __init__(self, league_id, start, end):
+    @Query.typecheck
+    def __init__(self, league_id: int, start: datetime, end: datetime):
         super().__init__()
         self.name = "eventsV2"
         self.arg_str = self._get_args("date_range")

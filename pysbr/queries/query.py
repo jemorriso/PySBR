@@ -1,5 +1,6 @@
 from string import Template
 import copy
+import typing
 
 from gql import Client, gql
 from gql.transport.requests import RequestsHTTPTransport
@@ -24,6 +25,51 @@ class Query:
             url="https://www.sportsbookreview.com/ms-odds-v2/odds-v2-service"
         )
         self.client = Client(transport=transport, fetch_schema_from_transport=False)
+
+    def typecheck(f):
+        def recurse(a, t):
+            t_origin = typing.get_origin(t)
+            t_args = typing.get_args(t)
+
+            if t_origin is None and len(t_args) == 0:
+                if not isinstance(a, t):
+                    return False
+
+            elif isinstance(t_origin, type(list)):
+                if not isinstance(a, list):
+                    return False
+                if len(t_args) > 0:
+                    try:
+                        for x in a:
+                            for arg in t_args:
+                                if not recurse(x, arg):
+                                    return False
+                    except TypeError:
+                        return False
+                else:
+                    if not isinstance(a, t_origin):
+                        return False
+
+            elif isinstance(t_origin, typing._SpecialForm):
+                for arg in t_args:
+                    is_arg = recurse(a, arg)
+                    if is_arg:
+                        return True
+                return False
+
+            return True
+
+        def wrapper(*args):
+            types = list(typing.get_type_hints(f).values())
+            # first argument is self, ignore it
+            for a, t in zip(args[1:], types):
+                valid = recurse(a, t)
+                if not valid:
+                    raise TypeError(f"Expected {t}, got {a}")
+
+            f(*args)
+
+        return wrapper
 
     def _build_args(self, arg_str, args):
         """Build the argument string that gets inserted into a query.

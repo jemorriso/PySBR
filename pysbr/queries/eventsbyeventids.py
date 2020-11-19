@@ -1,9 +1,12 @@
+from typing import List, Union
+
 from pysbr.queries.query import Query
 import pysbr.utils as utils
 
 
 class EventsByEventIds(Query):
-    def __init__(self, event_ids):
+    @Query.typecheck
+    def __init__(self, event_ids: Union[List[int], int]):
         super().__init__()
         utils.make_list(event_ids)
         self.name = "eventsV2"

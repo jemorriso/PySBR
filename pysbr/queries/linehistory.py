@@ -1,9 +1,19 @@
+from typing import List, Union
+
 from pysbr.queries.lines import Lines
+from pysbr.queries.query import Query
 import pysbr.utils as utils
 
 
 class LineHistory(Lines):
-    def __init__(self, event_id, market_id, sportsbook_id, participant_ids):
+    @Query.typecheck
+    def __init__(
+        self,
+        event_id: int,
+        market_id: int,
+        sportsbook_id: int,
+        participant_ids: Union[List[int], int],
+    ):
         # only need 1 participant id, it's dumb
         super().__init__()
         utils.make_list(participant_ids)

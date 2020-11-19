@@ -3,7 +3,8 @@ from pysbr.queries.query import Query
 
 # only returns five first results, and only for upcoming events
 class SearchSports(Query):
-    def __init__(self, search_term):
+    @Query.typecheck
+    def __init__(self, search_term: str):
         super().__init__()
         self.name = "multipleSearch"
         self.arg_str = self._get_args("search_sport")

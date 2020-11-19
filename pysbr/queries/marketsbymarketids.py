@@ -1,9 +1,12 @@
+from typing import List, Union
+
 from pysbr.queries.query import Query
 import pysbr.utils as utils
 
 
 class MarketsByMarketIds(Query):
-    def __init__(self, market_ids, sport_id):
+    @Query.typecheck
+    def __init__(self, market_ids: Union[List[int]], sport_id: int):
         super().__init__()
         market_ids = utils.make_list(market_ids)
         self.name = "marketTypesById"

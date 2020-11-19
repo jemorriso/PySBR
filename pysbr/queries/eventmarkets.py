@@ -2,7 +2,8 @@ from pysbr.queries.query import Query
 
 
 class EventMarkets(Query):
-    def __init__(self, event_id):
+    @Query.typecheck
+    def __init__(self, event_id: int):
         super().__init__()
         self.name = "eventMarkets"
         self.arg_str = self._get_args("event_id")

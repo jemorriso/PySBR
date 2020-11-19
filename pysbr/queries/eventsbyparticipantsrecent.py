@@ -1,9 +1,12 @@
+from typing import List, Union
+
 from pysbr.queries.query import Query
 import pysbr.utils as utils
 
 
 class EventsByParticipantsRecent(Query):
-    def __init__(self, participant_ids):
+    @Query.typecheck
+    def __init__(self, participant_ids: Union[List[int]]):
         # this query only gets the 5 most recent events for a participant.
         super().__init__()
         utils.make_list(participant_ids)

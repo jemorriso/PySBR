@@ -1,10 +1,14 @@
+from datetime import datetime
+from typing import List, Union
+
 from pysbr.queries.query import Query
 import pysbr.utils as utils
 
 
 # TODO: add by league to title?
 class EventsByDate(Query):
-    def __init__(self, league_id, dt):
+    @Query.typecheck
+    def __init__(self, league_id: Union[List[int], int], dt: datetime):
         super().__init__()
         self.name = "eventsByDateNew"
         self.arg_str = self._get_args("date")
