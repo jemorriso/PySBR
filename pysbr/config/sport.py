@@ -1,3 +1,6 @@
+from collections import OrderedDict
+import itertools
+
 import pysbr.utils as utils
 from pysbr.config.config import Config
 
@@ -17,7 +20,7 @@ class Sport(Config):
             utils.load_yaml(utils.build_yaml_path(league_config))
         )
 
-        self._market_ids = self._build_market_ids(self._sport["markets"])
+        self._market_ids = self._build_market_ids()
 
         self.market_names = self._build_market_names(self._sport["markets"])
 
@@ -27,20 +30,23 @@ class Sport(Config):
         self.league_name = self._league["name"]
         self.abbr = self._league["alias"]
 
-    def _build_market_ids(self, m):
-        markets = {}
+    def _build_market_ids(self):
+        market_ids = {}
+        m = self._sport["markets"]
         for x in m:
-            url_key = x["url"].lower()
-            name_key = x["name"].lower()
-            markets[url_key] = {}
-            markets[name_key] = {}
+            keys_a = [v.lower() for v in x.values() if isinstance(v, str)]
             for y in x["market types"]:
-                id = [v for k, v in y.items() if k == "market id"][0]
-                for k in ["alias", "name", "url"]:
-                    v = [v.lower() for list_key, v in y.items() if list_key == k][0]
-                    markets[url_key][v] = id
-                    markets[name_key][v] = id
-        return markets
+                id = y["market id"]
+                keys_b = [v.lower() for v in y.values() if isinstance(v, str)]
+                keys = [
+                    " ".join(el).strip()
+                    for el in list(itertools.product(keys_a, keys_b))
+                ]
+                # Add name on its own for markets other than full game (the
+                # concatenated version will not make sense).
+                keys.append(y["name"].lower())
+                market_ids.update({k: id for k in keys})
+        return market_ids
 
     def _build_market_names(self, m):
         markets = {}
@@ -48,6 +54,62 @@ class Sport(Config):
             for y in x["market types"]:
                 markets[y["market id"]] = y["name"]
         return markets
+
+    def market_ids(self, terms):
+        def try_translate(term):
+            words = term.split(" ")
+            translated_words = []
+            for w in words:
+                try:
+                    translated_words.append(search_dict[w])
+                except KeyError:
+                    translated_words.append(w)
+            return " ".join(translated_words)
+
+        def try_match_and_append(term, ids):
+            id = self._market_ids.get(term)
+            if id is not None:
+                ids.append(id)
+                return True
+            return False
+
+        def split_word(word):
+            splits = []
+            for i in range(2, 4):
+                try:
+                    splits.append(" ".join([word[:i], word[i:]]))
+                except IndexError:
+                    pass
+            return splits
+
+        def match_term(term, ids):
+            if isinstance(term, int):
+                ids.append(term)
+                return True
+
+            try:
+                term = term.lower().strip()
+            except AttributeError:
+                raise AttributeError("Search terms must be ints or strings.")
+            translated_term = try_translate(term)
+            if try_match_and_append(translated_term, ids):
+                return True
+            if len(term.split(" ")) == 1:
+                splits = split_word(term)
+                for t_split in splits:
+                    translated_term = try_translate(t_split)
+                    if try_match_and_append(translated_term, ids):
+                        return True
+            return False
+
+        terms = utils.make_list(terms)
+        search_dict = self._search_translations
+        ids = []
+        for term in terms:
+            if not match_term(term, ids):
+                raise ValueError(f"Could not find market {term}")
+
+        return list(OrderedDict.fromkeys(ids))
 
     def sport_config(self):
         return self._sport
@@ -57,39 +119,6 @@ class Sport(Config):
 
     def search_translations(self):
         return self._search_translations
-
-    def market_ids(self, terms):
-        terms = utils.make_list(terms)
-        search_dict = self._search_translations
-        ids = []
-        for t in terms:
-            if isinstance(t, int):
-                ids.append(t)
-            else:
-                old_t = t
-                if isinstance(t, str):
-                    t = ["full game", t]
-                t = list(t)
-                try:
-                    t = [x.lower() for x in t]
-                except AttributeError:
-                    raise AttributeError("Search components must be ints or strings.")
-                try:
-                    t[0] = search_dict[t[0]]
-                except KeyError:
-                    pass
-                try:
-                    t[1] = search_dict[t[1]]
-                except KeyError:
-                    pass
-
-                try:
-                    ids.append(self._market_ids[t[0]][t[1]])
-                except KeyError:
-                    raise ValueError(f"Could not find market {old_t}")
-        # TODO: need to handle case where they resolve to same ID, because I don't
-        # think it will work for the query?
-        return ids
 
 
 class TeamSport(Sport):
@@ -145,4 +174,4 @@ class TeamSport(Sport):
                 else:
                     ids.append(id)
 
-        return ids
+        return list(OrderedDict.fromkeys(ids))
