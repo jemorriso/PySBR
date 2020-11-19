@@ -30,7 +30,7 @@ class TestIntegration:
             x.get("event group id") for x in e2list if x.get("alias") == "Week 10"
         ].pop()
 
-        market_id = nfl.market_ids([["1h", "ou"]])[0]
+        market_id = nfl.market_ids("1hou")[0]
         e3 = events_by_event_group(
             league_id,
             week10_id,
@@ -64,7 +64,7 @@ class TestIntegration:
             "integration_test_team_lines_ncaaf2",
         )
 
-        market_ids = ncaaf.market_ids([("fg", "ps"), ("ml")])
+        market_ids = ncaaf.market_ids(["fgps", "ml"])
         b = best_lines(e.ids(), market_ids, "integration_test_team_lines_ncaaf3")
         df = b.dataframe(e)
         assert df is not None
@@ -72,9 +72,7 @@ class TestIntegration:
     def test_rivalry_nfl(self, events_by_matchup, opening_lines):
         nfl = NFL()
         ids = nfl.team_ids(["chicago", "packers"])
-        market_ids = nfl.market_ids(
-            [("1q", "ou"), ("4q", "ml"), ("2q", "ml"), ("2h", "ps")]
-        )
+        market_ids = nfl.market_ids(["1qou", "4qml", "2qml", "2hps"])
         e = events_by_matchup(ids[0], ids[1], 10, "integration_test_rivalry_nfl1")
         o = opening_lines(e.ids(), market_ids, 20, "integration_test_rivalry_nfl2")
 
@@ -142,7 +140,7 @@ class TestIntegration:
 
         # I got these from inspecting in Chrome, league_markets returns too many
         market_ids = [1, 395, 396]
-        c = current_lines(e.ids(), market_ids, None, "integration_test_epl5")
+        c = current_lines(e.ids(), market_ids, 20, "integration_test_epl5")
 
         df = c.dataframe(e)
         assert df is not None

@@ -16,23 +16,47 @@ class TestConfig:
     def test_init(self, league):
         pass
 
+    # @mark.parametrize(
+    #     "league, terms, expected",
+    #     [
+    #         (lazy_fixture("nfl"), [("fg", "ml"), ("fg", "ps")], [83, 401]),
+    #         (lazy_fixture("nfl"), ["ml", "ps"], [83, 401]),
+    #         (lazy_fixture("ncaaf"), ["money lines", "ps"], [83, 401]),
+    #         (lazy_fixture("ncaaf"), "foo", None),
+    #         (lazy_fixture("ncaaf"), [["fg", "foo"]], None),
+    #         (lazy_fixture("ncaaf"), [["1H", "1st half - american total"]], [398]),
+    #         (lazy_fixture("atp"), [["FUT", "us open winner"]], [721]),
+    #     ],
+    # )
+    # def test_market_ids(self, league, terms, expected):
+    #     if expected is None:
+    #         with pytest.raises(ValueError):
+    #             league.market_ids(terms)
+
+    #     else:
+    #         assert league.market_ids(terms) == expected
+
     @mark.parametrize(
         "league, terms, expected",
         [
-            (lazy_fixture("nfl"), [("fg", "ml"), ("fg", "ps")], [83, 401]),
+            (lazy_fixture("nfl"), ["2q money lines", "2q tot", "2qou"], [97, 408]),
             (lazy_fixture("nfl"), ["ml", "ps"], [83, 401]),
+            (
+                lazy_fixture("nfl"),
+                ["first half spread", "1q spread", "4th-quarter over/under"],
+                [397, 403, 410],
+            ),
             (lazy_fixture("ncaaf"), ["money lines", "ps"], [83, 401]),
             (lazy_fixture("ncaaf"), "foo", None),
-            (lazy_fixture("ncaaf"), [["fg", "foo"]], None),
-            (lazy_fixture("ncaaf"), [["1H", "1st half - american total"]], [398]),
-            (lazy_fixture("atp"), [["FUT", "us open winner"]], [721]),
+            (lazy_fixture("ncaaf"), ["fg foo"], None),
+            (lazy_fixture("ncaaf"), ["1h total"], [398]),
+            (lazy_fixture("atp"), ["FUT us open winner"], [721]),
         ],
     )
     def test_market_ids(self, league, terms, expected):
         if expected is None:
             with pytest.raises(ValueError):
                 league.market_ids(terms)
-
         else:
             assert league.market_ids(terms) == expected
 
@@ -47,7 +71,7 @@ class TestConfig:
             (
                 lazy_fixture("ncaaf"),
                 ["WVU", "West Virginia Mountaineers", "West Virginia"],
-                [407, 407, 407],
+                [407],
             ),
             (
                 lazy_fixture("ncaaf"),
