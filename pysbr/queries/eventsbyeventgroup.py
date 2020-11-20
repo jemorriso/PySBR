@@ -1,8 +1,11 @@
 from pysbr.queries.query import Query
 
+
 class EventsByEventGroup(Query):
     @Query.typecheck
-    def __init__(self, league_id: int, event_group_id: int, season_id: int, market_id: int):
+    def __init__(
+        self, league_id: int, event_group_id: int, season_id: int, market_id: int
+    ):
         super().__init__()
         self.name = "eventsByEventGroupV2"
         self.arg_str = self._get_args("event_group")
