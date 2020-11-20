@@ -39,13 +39,13 @@ markets:
   - alias: ''
     marketTypes:
       - alias: ''
-        mtid: 311
-        nam: To Win Outright
-        url: to-win-outright
-      - alias: ''
         mtid: 725
         nam: Player Outrights
         url: player-specials
+      - alias: ''
+        mtid: 311
+        nam: To Win Outright
+        url: to-win-outright
     mtgid: 168
     nam: Futures
     url: futures

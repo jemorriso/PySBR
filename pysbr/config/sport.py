@@ -187,47 +187,47 @@ class NCAAF(TeamSport):
         super().__init__("football", "ncaaf")
 
 
-class MLB(TeamSport):
+class MLB(Sport):
     def __init__(self):
         super().__init__("baseball", "mlb")
 
 
-class NBA(TeamSport):
+class NBA(Sport):
     def __init__(self):
         super().__init__("basketball", "nba")
 
 
-class NCAAB(TeamSport):
+class NCAAB(Sport):
     def __init__(self):
         super().__init__("basketball", "ncaab")
 
 
-class NHL(TeamSport):
+class NHL(Sport):
     def __init__(self):
         super().__init__("hockey", "nhl")
 
 
-class EPL(TeamSport):
+class EPL(Sport):
     def __init__(self):
         super().__init__("soccer", "epl")
 
 
-class UCL(TeamSport):
+class UCL(Sport):
     def __init__(self):
         super().__init__("soccer", "ucl")
 
 
-class LaLiga(TeamSport):
+class LaLiga(Sport):
     def __init__(self):
         super().__init__("soccer", "laliga")
 
 
-class Bundesliga(TeamSport):
+class Bundesliga(Sport):
     def __init__(self):
         super().__init__("soccer", "bundesliga")
 
 
-class UEFANationsLeague(TeamSport):
+class UEFANationsLeague(Sport):
     def __init__(self):
         super().__init__("soccer", "uefanationsleague")
 

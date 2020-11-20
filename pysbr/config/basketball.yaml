@@ -3,117 +3,134 @@ default market id: 401
 
 markets:
   - alias: ''
-  marketTypes:
-  - alias: Money Lines
-    mtid: 83
-    nam: 2way (Including OT)
-    url: money-line
-  - alias: Point Spreads
-    mtid: 401
-    nam: Point Spread (Including OT)
-    url: pointspread
-  - alias: Totals
-    mtid: 402
-    nam: American Total (Including OT)
-    url: totals
-  mtgid: 169
-  nam: Full Game
-  url: full-game
-- alias: ''
-  marketTypes:
-  - alias: Money Lines
-    mtid: 168
-    nam: 2nd Half - Draw No Bet
-    url: money-line
-  - alias: Point Spreads
-    mtid: 399
-    nam: 2nd Half - Point Spread
-    url: pointspread
-  - alias: Totals
-    mtid: 400
-    nam: 2nd Half - American Total
-    url: totals
-  mtgid: 171
-  nam: 2nd Half
-  url: 2nd-half
-- alias: 1Q
-  marketTypes:
-  - alias: Money Lines
-    mtid: 93
-    nam: 1st Period - Draw No Bet
-    url: money-line
-  - alias: Point Spread
-    mtid: 403
-    nam: 1st Period - Point Spread
-    url: pointspread
-  - alias: Totals
-    mtid: 407
-    nam: 1st Period - American Total
-    url: totals
-  mtgid: 46
-  nam: 1Q
-  url: 1st-quarter
-- alias: ''
-  marketTypes:
-  - alias: Money Lines
-    mtid: 97
-    nam: 2nd Period - Draw No Bet
-    url: money-line
-  - alias: Point Spreads
-    mtid: 404
-    nam: 2nd Period - Point Spread
-    url: pointspread
-  - alias: Totals
-    mtid: 408
-    nam: 2nd Period - American Total
-    url: totals
-  mtgid: 47
-  nam: 2Q
-  url: 2nd-quarter
-- alias: ''
-  marketTypes:
-  - alias: Money Lines
-    mtid: 101
-    nam: 3rd Period - Draw No Bet
-    url: money-line
-  - alias: Point Spreads
-    mtid: 405
-    nam: 3rd Period - Point Spread
-    url: pointspread
-  - alias: Totals
-    mtid: 409
-    nam: 3rd Period - American Total
-    url: totals
-  mtgid: 48
-  nam: 3Q
-  url: 3rd-quarter
-- alias: 4Q
-  marketTypes:
-  - alias: Point Spreads
-    mtid: 406
-    nam: 4th Period - Point Spread
-    url: pointspread
-  - alias: Money Lines
-    mtid: 105
-    nam: 4th Period - Draw No Bet
-    url: money-line
-  - alias: Totals
-    mtid: 410
-    nam: 4th Period - American Total
-    url: totals
-  mtgid: 49
-  nam: 4Q
-  url: 4th-quarter
-- alias: ''
-  marketTypes:
+    marketTypes:
+      - alias: Money Lines
+        mtid: 83
+        nam: 2way (Including OT)
+        url: money-line
+      - alias: Point Spreads
+        mtid: 401
+        nam: Point Spread (Including OT)
+        url: pointspread
+      - alias: Totals
+        mtid: 402
+        nam: American Total (Including OT)
+        url: totals
+    mtgid: 169
+    nam: Full Game
+    url: full-game
+  - alias: 1st Half
+    marketTypes:
+      - alias: Money Lines
+        mtid: 91
+        nam: 1st Half - Draw No Bet
+        url: money-line
+      - alias: Point Spreads
+        mtid: 397
+        nam: 1st Half - Point Spread
+        url: pointspread
+      - alias: Totals
+        mtid: 398
+        nam: 1st Half - American Total
+        url: totals
+    mtgid: 170
+    nam: 1st Half
+    url: 1st-half
+  - alias: 2nd Half
+    marketTypes:
+      - alias: Money Lines
+        mtid: 168
+        nam: 2nd Half - Draw No Bet
+        url: money-line
+      - alias: Point Spreads
+        mtid: 399
+        nam: 2nd Half - Point Spread
+        url: pointspread
+      - alias: Totals
+        mtid: 400
+        nam: 2nd Half - American Total
+        url: totals
+    mtgid: 171
+    nam: 2nd Half
+    url: 2nd-half
+  - alias: 1Q
+    marketTypes:
+      - alias: Money Lines
+        mtid: 93
+        nam: 1st Period - Draw No Bet
+        url: money-line
+      - alias: Point Spread
+        mtid: 403
+        nam: 1st Period - Point Spread
+        url: pointspread
+      - alias: Totals
+        mtid: 407
+        nam: 1st Period - American Total
+        url: totals
+    mtgid: 46
+    nam: 1Q
+    url: 1st-quarter
+  - alias: 2Q
+    marketTypes:
+      - alias: Money Lines
+        mtid: 97
+        nam: 2nd Period - Draw No Bet
+        url: money-line
+      - alias: Point Spreads
+        mtid: 404
+        nam: 2nd Period - Point Spread
+        url: pointspread
+      - alias: Totals
+        mtid: 408
+        nam: 2nd Period - American Total
+        url: totals
+    mtgid: 47
+    nam: 2Q
+    url: 2nd-quarter
+  - alias: 3Q
+    marketTypes:
+      - alias: Money Lines
+        mtid: 101
+        nam: 3rd Period - Draw No Bet
+        url: money-line
+      - alias: Point Spreads
+        mtid: 405
+        nam: 3rd Period - Point Spread
+        url: pointspread
+      - alias: Totals
+        mtid: 409
+        nam: 3rd Period - American Total
+        url: totals
+    mtgid: 48
+    nam: 3Q
+    url: 3rd-quarter
+  - alias: 4Q
+    marketTypes:
+      - alias: Point Spreads
+        mtid: 406
+        nam: 4th Period - Point Spread
+        url: pointspread
+      - alias: Money Lines
+        mtid: 105
+        nam: 4th Period - Draw No Bet
+        url: money-line
+      - alias: Totals
+        mtid: 410
+        nam: 4th Period - American Total
+        url: totals
+    mtgid: 49
+    nam: 4Q
+    url: 4th-quarter
   - alias: ''
-    mtid: 311
-    nam: To Win Outright
-    url: to-win-outright
-  - alias: ''
-    mtid: 338
-    nam: To Win Conference
-    url: to-win-conference
-  mtgid: 176
-  nam: Futures
-  url: future
+    marketTypes:
+      - alias: ''
+        mtid: 338
+        nam: To Win Conference
+        url: to-win-conference
+      - alias: ''
+        mtid: 311
+        nam: To Win Outright
+        url: to-win-outright
+    mtgid: 176
+    nam: Futures
+    url: future

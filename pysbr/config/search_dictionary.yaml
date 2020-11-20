@@ -6,10 +6,9 @@ fg: full-game
 3q: 3rd-quarter
 4q: 4th-quarter
 fut: futures
-# these ones are unverified
-1p: 1st-period
-2p: 2nd-period
-3p: 3rd-period
+1p: 1st-quarter
+2p: 2nd-quarter
+3p: 3rd-quarter
 
 ps: pointspread
 ml: money-line

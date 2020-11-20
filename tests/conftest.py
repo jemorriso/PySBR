@@ -30,7 +30,20 @@ from pysbr.queries.currentlines import CurrentLines
 from pysbr.queries.bestlines import BestLines
 from pysbr.queries.consensus import Consensus
 from pysbr.queries.linehistory import LineHistory
-from pysbr.config.sport import ATP, NFL, NCAAF
+from pysbr.config.sport import (
+    ATP,
+    NFL,
+    NCAAF,
+    NBA,
+    NCAAB,
+    MLB,
+    NHL,
+    EPL,
+    UCL,
+    LaLiga,
+    Bundesliga,
+    UEFANationsLeague,
+)
 from pysbr.config.sportsbook import Sportsbook
 
 
@@ -336,6 +349,51 @@ def ncaaf():
 @fixture
 def atp():
     return ATP()
+
+
+@fixture
+def mlb():
+    return MLB()
+
+
+@fixture
+def ncaab():
+    return NCAAB()
+
+
+@fixture
+def nba():
+    return NBA()
+
+
+@fixture
+def nhl():
+    return NHL()
+
+
+@fixture
+def epl():
+    return EPL()
+
+
+@fixture
+def ucl():
+    return UCL()
+
+
+@fixture
+def laliga():
+    return LaLiga()
+
+
+@fixture
+def bundesliga():
+    return Bundesliga()
+
+
+@fixture
+def uefanationsleague():
+    return UEFANationsLeague()
 
 
 @fixture

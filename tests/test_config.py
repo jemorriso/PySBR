@@ -9,32 +9,16 @@ class TestConfig:
         [
             lazy_fixture("nfl"),
             lazy_fixture("ncaaf"),
+            lazy_fixture("epl"),
+            lazy_fixture("mlb"),
+            lazy_fixture("nba"),
+            lazy_fixture("nhl"),
             lazy_fixture("atp"),
             lazy_fixture("sportsbook"),
         ],
     )
     def test_init(self, league):
         pass
-
-    # @mark.parametrize(
-    #     "league, terms, expected",
-    #     [
-    #         (lazy_fixture("nfl"), [("fg", "ml"), ("fg", "ps")], [83, 401]),
-    #         (lazy_fixture("nfl"), ["ml", "ps"], [83, 401]),
-    #         (lazy_fixture("ncaaf"), ["money lines", "ps"], [83, 401]),
-    #         (lazy_fixture("ncaaf"), "foo", None),
-    #         (lazy_fixture("ncaaf"), [["fg", "foo"]], None),
-    #         (lazy_fixture("ncaaf"), [["1H", "1st half - american total"]], [398]),
-    #         (lazy_fixture("atp"), [["FUT", "us open winner"]], [721]),
-    #     ],
-    # )
-    # def test_market_ids(self, league, terms, expected):
-    #     if expected is None:
-    #         with pytest.raises(ValueError):
-    #             league.market_ids(terms)
-
-    #     else:
-    #         assert league.market_ids(terms) == expected
 
     @mark.parametrize(
         "league, terms, expected",
@@ -50,7 +34,7 @@ class TestConfig:
             (lazy_fixture("ncaaf"), "foo", None),
             (lazy_fixture("ncaaf"), ["fg foo"], None),
             (lazy_fixture("ncaaf"), ["1h total"], [398]),
-            (lazy_fixture("atp"), ["FUT us open winner"], [721]),
+            (lazy_fixture("atp"), ["us open winner"], [721]),
         ],
     )
     def test_market_ids(self, league, terms, expected):

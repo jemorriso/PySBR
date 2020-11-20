@@ -3,62 +3,62 @@ default market id: 1
 
 markets:
   - alias: ''
-  marketTypes:
-  - alias: Money Lines
-    mtid: 1
-    nam: Winner
-    url: money-line
-  - alias: Point Spread
-    mtid: 395
-    nam: Point Spread
-    url: pointspread
-  - alias: Totals
-    mtid: 396
-    nam: American Total
-    url: totals
-  mtgid: 193
-  nam: Full Game
-  url: full-game
-- alias: ''
-  marketTypes:
-  - alias: Money Lines
-    mtid: 23
-    nam: 1st Half Winner
-    url: money-line
-  - alias: Point Spreads
-    mtid: 397
-    nam: 1st Half - Point Spread
-    url: pointspread
-  - alias: Totals
-    mtid: 398
-    nam: 1st Half - American Total
-    url: totals
-  mtgid: 194
-  nam: 1st Half
-  url: 1st-half
-- alias: ''
-  marketTypes:
-  - alias: Money Lines
-    mtid: 33
-    nam: 2nd Half Winner
-    url: money-line
-  - alias: Point Spreads
-    mtid: 399
-    nam: 2nd Half - Point Spread
-    url: pointspread
-  - alias: Totals
-    mtid: 400
-    nam: 2nd Half - American Total
-    url: totals
-  mtgid: 195
-  nam: 2nd Half
-  url: 2nd-half
-- alias: ''
-  marketTypes:
+    marketTypes:
+      - alias: Money Lines
+        mtid: 1
+        nam: Winner
+        url: money-line
+      - alias: Point Spread
+        mtid: 395
+        nam: Point Spread
+        url: pointspread
+      - alias: Totals
+        mtid: 396
+        nam: American Total
+        url: totals
+    mtgid: 193
+    nam: Full Game
+    url: full-game
+  - alias: 1st Half
+    marketTypes:
+      - alias: Money Lines
+        mtid: 23
+        nam: 1st Half Winner
+        url: money-line
+      - alias: Point Spreads
+        mtid: 397
+        nam: 1st Half - Point Spread
+        url: pointspread
+      - alias: Totals
+        mtid: 398
+        nam: 1st Half - American Total
+        url: totals
+    mtgid: 194
+    nam: 1st Half
+    url: 1st-half
+  - alias: 2nd Half
+    marketTypes:
+      - alias: Money Lines
+        mtid: 33
+        nam: 2nd Half Winner
+        url: money-line
+      - alias: Point Spreads
+        mtid: 399
+        nam: 2nd Half - Point Spread
+        url: pointspread
+      - alias: Totals
+        mtid: 400
+        nam: 2nd Half - American Total
+        url: totals
+    mtgid: 195
+    nam: 2nd Half
+    url: 2nd-half
   - alias: ''
-    mtid: 311
-    nam: To Win Outright
-    url: to-win-outright
-  mtgid: 200
-  nam: Futures
-  url: futures
+    marketTypes:
+      - alias: ''
+        mtid: 311
+        nam: To Win Outright
+        url: to-win-outright
+    mtgid: 200
+    nam: Futures
+    url: futures

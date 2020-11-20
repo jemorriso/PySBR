@@ -124,10 +124,6 @@ markets:
   - alias: ''
     marketTypes:
       - alias: ''
-        mtid: 311
-        nam: To Win Outright
-        url: championship-winner
-      - alias: ''
         mtid: 338
         nam: To Win Conference
         url: conference-winner
@@ -143,6 +139,10 @@ markets:
         mtid: 542
         nam: Regular Season Wins
         url: regular-season-wins
+      - alias: ''
+        mtid: 311
+        nam: To Win Outright
+        url: championship-winner
     mtgid: 184
     nam: Futures
     url: futures
