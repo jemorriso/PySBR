@@ -1,7 +1,6 @@
 lid: 6
-nam: NCAA Football
-sn: NCAAF
-alias: College Football
+name: NCAA Football
+abbreviation: NCAAF
 
 teams:
   - tmid: 407

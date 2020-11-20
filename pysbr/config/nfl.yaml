@@ -1,7 +1,6 @@
 lid: 16
-nam: National Football League
-sn: NFL
-alias: NFL
+name: National Football League
+abbreviation: NFL
 
 # current season id: 8582
 

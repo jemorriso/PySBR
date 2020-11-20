@@ -30,9 +30,7 @@ from pysbr.queries.currentlines import CurrentLines
 from pysbr.queries.bestlines import BestLines
 from pysbr.queries.consensus import Consensus
 from pysbr.queries.linehistory import LineHistory
-from pysbr.config.nfl import NFL
-from pysbr.config.ncaaf import NCAAF
-from pysbr.config.atp import ATP
+from pysbr.config.sport import ATP, NFL, NCAAF
 from pysbr.config.sportsbook import Sportsbook
 
 

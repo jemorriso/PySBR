@@ -1,9 +1,7 @@
 import copy
 
 from pysbr.queries.query import Query
-from pysbr.config.nfl import NFL
-from pysbr.config.ncaaf import NCAAF
-from pysbr.config.atp import ATP
+from pysbr.config.sport import NFL, NCAAF, ATP
 from pysbr.config.sportsbook import Sportsbook
 
 

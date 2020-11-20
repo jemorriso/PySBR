@@ -28,7 +28,7 @@ class Sport(Config):
         self.default_market_id = self._sport["default market id"]
         self.league_id = self._league["league id"]
         self.league_name = self._league["name"]
-        self.abbr = self._league["alias"]
+        self.abbr = self._league["abbreviation"]
 
     def _build_market_ids(self):
         market_ids = {}
@@ -175,3 +175,63 @@ class TeamSport(Sport):
                     ids.append(id)
 
         return list(OrderedDict.fromkeys(ids))
+
+
+class NFL(TeamSport):
+    def __init__(self):
+        super().__init__("football", "nfl")
+
+
+class NCAAF(TeamSport):
+    def __init__(self):
+        super().__init__("football", "ncaaf")
+
+
+class MLB(TeamSport):
+    def __init__(self):
+        super().__init__("baseball", "mlb")
+
+
+class NBA(TeamSport):
+    def __init__(self):
+        super().__init__("basketball", "nba")
+
+
+class NCAAB(TeamSport):
+    def __init__(self):
+        super().__init__("basketball", "ncaab")
+
+
+class NHL(TeamSport):
+    def __init__(self):
+        super().__init__("hockey", "nhl")
+
+
+class EPL(TeamSport):
+    def __init__(self):
+        super().__init__("soccer", "epl")
+
+
+class UCL(TeamSport):
+    def __init__(self):
+        super().__init__("soccer", "ucl")
+
+
+class LaLiga(TeamSport):
+    def __init__(self):
+        super().__init__("soccer", "laliga")
+
+
+class Bundesliga(TeamSport):
+    def __init__(self):
+        super().__init__("soccer", "bundesliga")
+
+
+class UEFANationsLeague(TeamSport):
+    def __init__(self):
+        super().__init__("soccer", "uefanationsleague")
+
+
+class ATP(Sport):
+    def __init__(self):
+        super().__init__("tennis", "atp")
