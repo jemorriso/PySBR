@@ -77,7 +77,12 @@ class TestConfig:
         [
             (["pinnacle", "bodog", "bet365"], [20, 9, 5]),
             (["pinnacle", "bodog sportsbook", "bet365"], [20, 9, 5]),
+            ("foo", None),
         ],
     )
     def test_sportsbook_ids(self, sportsbook, terms, expected):
-        assert sportsbook.ids(terms) == expected
+        if expected is None:
+            with pytest.raises(ValueError):
+                sportsbook.ids(terms)
+        else:
+            assert sportsbook.ids(terms) == expected
