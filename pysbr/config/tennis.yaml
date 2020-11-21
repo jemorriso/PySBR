@@ -19,21 +19,21 @@ markets:
     mtgid: 217
     nam: Full Game
     url: full-game
-  - alias: ''
+  - alias: Futures
     marketTypes:
-      - alias: ''
+      - alias: French Open Winner
         mtid: 719
         nam: French Open Winner
         url: french-open-winner
-      - alias: ''
+      - alias: Wimbledon Winner
         mtid: 720
         nam: Wimbledon Winner
         url: davis-cup-winner
-      - alias: ''
+      - alias: US Open Winner
         mtid: 721
         nam: US Open Winner
         url: us-open-winner
-      - alias: ''
+      - alias: Australian Open Winner
         mtid: 723
         nam: Australian Open Winner
         url: australian-open-winner

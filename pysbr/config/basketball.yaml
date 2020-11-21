@@ -121,9 +121,9 @@ markets:
     mtgid: 49
     nam: 4Q
     url: 4th-quarter
-  - alias: ''
+  - alias: Futures
     marketTypes:
-      - alias: ''
+      - alias: To Win Conference
         mtid: 338
         nam: To Win Conference
         url: to-win-conference

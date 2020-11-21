@@ -36,9 +36,9 @@ markets:
     mtgid: 162
     nam: First Half
     url: 1st-half
-  - alias: ''
+  - alias: Futures
     marketTypes:
-      - alias: ''
+      - alias: Player Outrights
         mtid: 725
         nam: Player Outrights
         url: player-specials

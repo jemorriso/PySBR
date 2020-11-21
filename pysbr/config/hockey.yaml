@@ -70,7 +70,7 @@ markets:
     mtgid: 214
     nam: 3Q
     url: 3rd-quarter
-  - alias: ''
+  - alias: Futures
     marketTypes:
       - alias: ''
         mtid: 311

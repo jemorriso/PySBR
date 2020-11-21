@@ -53,7 +53,7 @@ markets:
     mtgid: 195
     nam: 2nd Half
     url: 2nd-half
-  - alias: ''
+  - alias: Futures
     marketTypes:
       - alias: ''
         mtid: 311
