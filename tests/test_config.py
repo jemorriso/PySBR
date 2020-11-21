@@ -50,8 +50,9 @@ class TestConfig:
             (lazy_fixture("nfl"), ["pit", "bal"], [1519, 1521]),
             (lazy_fixture("nfl"), ["Pittsburgh Steelers", "Ravens"], [1519, 1521]),
             (lazy_fixture("nfl"), ["foo Steelers", "Ravens"], None),
+            (lazy_fixture("nfl"), ["New York"], None),
             # there are 2 teams called the mountaineers!
-            # (lazy_fixture("ncaaf"), ["WVU", "Mountaineers"], [407, 407]),
+            (lazy_fixture("ncaaf"), ["WVU", "Mountaineers"], None),
             (
                 lazy_fixture("ncaaf"),
                 ["WVU", "West Virginia Mountaineers", "West Virginia"],
