@@ -1,6 +1,7 @@
 from string import Template
 import copy
 import typing
+from typing import Callable, Any, Dict, Optional, List, Union
 
 from gql import Client, gql
 from gql.transport.requests import RequestsHTTPTransport
@@ -11,6 +12,12 @@ from pysbr.config.config import Config
 
 
 class Query:
+    """Base class for making queries on the SBR GraphQL endpoint.
+
+    This class should not be directly instantiated; use the subclasses defined for each
+    query.
+    """
+
     def __init__(self):
         self._config = Config()
 
@@ -21,13 +28,28 @@ class Query:
 
         self._translated = None
 
+        self._arguments = utils.load_yaml((utils.build_yaml_path("arguments")))
+        self._fields = utils.load_yaml((utils.build_yaml_path("fields")))
+
         transport = RequestsHTTPTransport(
             url="https://www.sportsbookreview.com/ms-odds-v2/odds-v2-service"
         )
         self.client = Client(transport=transport, fetch_schema_from_transport=False)
 
-    def typecheck(f):
-        def recurse(a, t):
+    def typecheck(f: Callable) -> Callable:
+        """Decorator for type checking arguments passed to subclass __init__ methods.
+
+        The purpose of decorating the subclass __init__ methods is to avoid making
+        invalid queries on the GraphQL endpoint.
+
+        This method is only verified to work with List, Union, and primitive types.
+
+        Raises:
+            TypeError: If argument does not match expected type.
+        """
+
+        def recurse(a: Any, t: Dict) -> bool:
+            """Method for recursively validating nested types."""
             t_origin = typing.get_origin(t)
             t_args = typing.get_args(t)
 
@@ -59,7 +81,8 @@ class Query:
 
             return True
 
-        def wrapper(*args):
+        def wrapper(*args: Any) -> Any:
+            """Wrapper returned by the decorator, wrapping the function argument."""
             types = list(typing.get_type_hints(f).values())
             # first argument is self, ignore it
             for a, t in zip(args[1:], types):
@@ -71,33 +94,31 @@ class Query:
 
         return wrapper
 
-    def _build_args(self, arg_str, args):
-        """Build the argument string that gets inserted into a query.
+    def _build_args(self, arg_str: str, args: Dict[str, Any]) -> Optional[str]:
+        """Build the argument string that gets inserted into a query string.
 
-        Args:
-            arg_str (str): The arguments template string.
-            args (dict): The substitutions to make. Each key must match a template
-                placeholder, with the value being what gets substituted into the string.
+        arg_str should be a string with substitution placeholders matching each arg in
+        args.
 
-        Returns:
-            str: The argument string, with values inserted for each argument.
+        Raises:
+            KeyError: If keys in args do not match placeholders in arg_str.
+            ValueError: If arg_str is not a valid Template string.
         """
         if arg_str is not None and args is not None:
             return Template(arg_str).substitute(args)
         else:
             return None
 
-    def _build_query_string(self, q_name, q_fields=None, q_args=None):
-        """Build up the GraphQL query string.
+    def _build_query_string(
+        self, q_name: str, q_fields: Optional[str] = None, q_args: Optional[str] = None
+    ) -> str:
+        """Build up the GraphQL query string from given parameters.
 
-        Args:
-            q_name (str): The name of the query object to be queried.
-            q_fields (str): The fields to return.
-            q_args (str, optional): The arg names to pass to the query. Defaults to
-                None.
+        q_args should be the arguments to the query, with the values already filled in
+        (i.e. query._build_args() should be called first).
 
         Returns:
-            str: The query string ready to be substituted using Template.substitute()
+            The completed query string ready to be executed.
         """
         return (
             Template(
@@ -126,47 +147,57 @@ class Query:
             .replace("'", '"')
         )
 
-    def _get_val_from_yaml(self, fname, k):
-        """[summary]
-
-        Args:
-            fname ([type]): [description]
-            type ([type]): [description]
-
-        Returns:
-            [type]: [description]
+    def _get_args(self, k: str) -> str:
+        """Get the value of key k from the arguments dictionary.
 
         Raises:
-            NameError: If value of k is not a key in the loaded dictionary.
+            KeyError: If k is not a key in the arguments dict.
         """
-        return utils.load_yaml((utils.build_yaml_path(fname)))[k]
+        return self._arguments[k]
 
-    def _get_args(self, k):
-        return self._get_val_from_yaml("arguments", k)
+    def _get_fields(self, k: str) -> str:
+        """Get the value of key k from the fields dictionary.
 
-    def _get_fields(self, k):
-        return self._get_val_from_yaml("fields", k)
+        Raises:
+            KeyError: If k is not a key in the fields dict.
+        """
+        return self._fields[k]
 
-    def _execute_query(self, q):
-        """Execute a graphql query.
+    def _execute_query(self, q: str) -> Dict:
+        """Execute the GraphQL query specified by the string q.
 
-        Args:
-            q (str): The query string.
-
-        Returns:
-            dict: The result of the query.
+        Raises:
+            gql.GraphQLSyntaxError: If the query string is structured improperly.
+            gql.Exception: If the server raises an error during execution of the query.
         """
         return self.client.execute(gql(q))
 
     def _build_and_execute_query(
-        self, q_name, q_fields=None, q_arg_str=None, q_args=None
-    ):
+        self,
+        q_name: str,
+        q_fields: Optional[str] = None,
+        q_arg_str: Optional[str] = None,
+        q_args: Optional[Dict[str, Any]] = None,
+    ) -> Dict:
+        """Build query out of parameters, then execute it.
+
+        Raises:
+            gql.GraphQLSyntaxError: If the query string is structured improperly.
+            gql.Exception: If the server raises an error during execution of the query.
+            KeyError: If keys in q_args do not match placeholders in q_arg_str.
+            ValueError: If q_arg_str is not a valid Template string.
+        """
         q_string = self._build_query_string(
             q_name, q_fields, self._build_args(q_arg_str, q_args)
         )
         return self._execute_query(q_string)
 
     def _find_data(self):
+        """Return a reference to to the relevant part of the query response.
+
+        self._subpath_keys is a list of strings, which are a sequence of keys pointing
+        to the data.
+        """
         data = self._raw[self.name]
         if self._subpath_keys is not None:
             for k in self._subpath_keys:
@@ -174,8 +205,16 @@ class Query:
 
         return data
 
-    def _translate_dict(self, d):
+    def _translate_dict(self, d: Dict) -> Dict:
+        """Use translations from Config class to translate GraphQL response.
+
+        This method is used by Query.list() and Query.dataframe() in order to translate
+        field names from SBR into English words. Timestamps are converted into ISO
+        strings.
+        """
+
         def _recurse(el):
+            """Recursive method used to iterate over all dict keys."""
             if isinstance(el, dict):
                 # MUST cast to list to avoid RuntimeError because d.pop()
                 for k in list(el.keys()):
@@ -207,16 +246,43 @@ class Query:
         return d
 
     def _copy_and_translate_data(self):
+        """Translate SBR fields in GraphQL response, and return a copy.
+
+        This method is used by Query.list() and Query.dataframe(). self._translated
+        caches the translated data.
+        """
         if self._translated is None:
             data = copy.deepcopy(self._find_data())
             self._translated = self._translate_dict(data)
         return copy.deepcopy(self._translated)
 
-    # for queries returning ids call this function to process _raw and return ids only
-    def ids(self):
+    def arguments(self) -> Dict[str, str]:
+        """Get the arguments dictionary, containing templates for all subqueries."""
+        return self._arguments
+
+    def fields(self) -> Dict[str, str]:
+        """Get the fields dictionary, containing templates for all subqueries."""
+        return self._fields
+
+    def raw(self) -> Dict:
+        """Get the raw GraphQL response, without any data processing."""
+        return self._raw
+
+    def ids(self) -> List[int]:
+        """Get a list of ids from the query response.
+
+        The type of id returned depends on the Query implementation. For example,
+        calling this method on queries returning events will return a list of event ids.
+
+        This method is useful for queries accepting lists of ids as arguments.
+
+        Raises:
+            NotImplementedError: If the Query object does not have a default return id
+                type.
+        """
         if self._id_key is None:
             raise NotImplementedError(
-                f"{type(self).__name__} does not have a default return id type"
+                f"{type(self).__name__} does not have a default return id type."
             )
 
         translated = self.list()
@@ -226,26 +292,47 @@ class Query:
 
         return list(set(ids))
 
-    def list(self):
+    def list(self) -> List[Dict[str, Union[str, List, Dict]]]:
+        """Get a list of translated elements returned from the query.
+
+        Each element in the response is a dict with fields requested in the query and
+        the element's values for those fields. The fields are translated.
+        """
         data = self._copy_and_translate_data()
         # Some queries return dictionaries. Enforce this method returning a list.
         if isinstance(data, dict):
             data = [data]
         return data
 
-    def dataframe(self):
+    def dataframe(self) -> pd.DataFrame:
+        """Get a dataframe of elements returned from the query.
+
+        Each element in the response is a dict with fields requested in the query and
+        the element's values for those fields. The fields are translated, and if the
+        elements are nested, it is attempted to flatten them using self._sublist_keys,
+        which is a list of keys expected to be in each element that have values that
+        are lists.
+
+        If the elements cannot be flattened, a dataframe of the nested elements is
+        returned.
+        """
         data = self._copy_and_translate_data()
 
         # Using sublist_keys instead of recursive method because there is a possibility
-        # of overwriting keys without realizing it if using recursive method
-        # The idea is that pd.json_normalize() doesn't work on sublists
+        # of overwriting keys without realizing it if using recursive method.
+        # The idea is that pd.json_normalize() doesn't work on sublists.
         if self._sublist_keys is not None:
             for k in self._sublist_keys:
                 for el in data:
-                    for i, subel in enumerate(el[k]):
-                        new_key = f"{k}.{i+1}"
-                        el[new_key] = subel
-                    el.pop(k)
+                    try:
+                        for i, subel in enumerate(el.get(k)):
+                            new_key = f"{k}.{i+1}"
+                            el[new_key] = subel
+                        el.pop(k)
+                    except TypeError:
+                        pass
+                    except AttributeError:
+                        pass
         try:
             return pd.json_normalize(data)
         except AttributeError:
