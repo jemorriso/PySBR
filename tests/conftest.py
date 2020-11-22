@@ -48,10 +48,10 @@ from pysbr.config.sportsbook import Sportsbook
 
 
 class TestEventsByDate(EventsByDate):
-    def __init__(self, league_id, dt, patch_fn, cassette_name):
+    def __init__(self, league_ids, dt, patch_fn, cassette_name):
         self.cassette_name = cassette_name
         self.patch_fn = patch_fn
-        super().__init__(league_id, dt)
+        super().__init__(league_ids, dt)
 
     def _build_and_execute_query(self, *args):
         return self.patch_fn(self)
@@ -210,10 +210,10 @@ class TestEventsByParticipants(EventsByParticipants):
 
 
 class TestEventsByDateRange(EventsByDateRange):
-    def __init__(self, league_id, start, end, patch_fn, cassette_name):
+    def __init__(self, league_ids, start, end, patch_fn, cassette_name):
         self.cassette_name = cassette_name
         self.patch_fn = patch_fn
-        super().__init__(league_id, start, end)
+        super().__init__(league_ids, start, end)
 
     def _build_and_execute_query(self, *args):
         return self.patch_fn(self)
@@ -483,9 +483,9 @@ def sbr_client():
 
 @fixture
 def events_by_date(build_and_execute_with_cassette):
-    def fn(league_id, dt, cassette_name):
+    def fn(league_ids, dt, cassette_name):
         return TestEventsByDate(
-            league_id, dt, build_and_execute_with_cassette, cassette_name
+            league_ids, dt, build_and_execute_with_cassette, cassette_name
         )
 
     return fn
@@ -661,9 +661,9 @@ def events_by_participants(build_and_execute_with_cassette):
 
 @fixture
 def events_by_date_range(build_and_execute_with_cassette):
-    def fn(league_id, start, end, cassette_name):
+    def fn(league_ids, start, end, cassette_name):
         return TestEventsByDateRange(
-            league_id,
+            league_ids,
             start,
             end,
             build_and_execute_with_cassette,
