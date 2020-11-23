@@ -1,4 +1,4 @@
-from typing import Optional, List, Union
+from typing import Optional, List, Union, Tuple, Dict
 from datetime import datetime
 
 from pysbr.queries.query import Query
@@ -6,6 +6,29 @@ import pysbr.utils as utils
 
 
 class EventsByParticipants(Query):
+    """Get events for a number of participants over a given date range.
+
+    The query returns all events in the date range in which at least one of the
+    participants in the participant id list competed in.
+
+    This query makes two requests to the server; one to get all the event and
+    participant ids over the date range, and then another to get the full event
+    information for matching events.
+
+    Because of the first query, either a league or sport id must be provided.
+
+    All event queries return information about matching events including date and time,
+    location, participants, and associated ids.
+
+    Args:
+        participant_ids: SBR participant id or list of participant ids. A participant
+            id may refer to a team or an individual.
+        start: Python datetime object representing the start date to search.
+        end: Python datetime object representing the end date to search.
+        league_id: SBR league id.
+        sport_id: SBR sport id.
+    """
+
     @Query.typecheck
     def __init__(
         self,
@@ -39,7 +62,10 @@ class EventsByParticipants(Query):
         self._sublist_keys = ["participants"]
         self._id_key = "event id"
 
-    def _league_args(self, start, end, league_id):
+    def _league_args(
+        self, start: datetime, end: datetime, league_id: int
+    ) -> Tuple[str, Dict[str, Union[List[int], int]]]:
+        """Get the arguments needed to query by league."""
         q_arg_str = self._get_args("date_range")
         q_args = {
             "lids": [league_id],
@@ -48,7 +74,10 @@ class EventsByParticipants(Query):
         }
         return q_arg_str, q_args
 
-    def _sport_args(self, start, end, sport_id):
+    def _sport_args(
+        self, start: datetime, end: datetime, sport_id: int
+    ) -> Tuple[str, Dict[str, Union[List[int], int]]]:
+        """Get the arguments needed to query by sport."""
         q_arg_str = self._get_args("date_range_sport")
         q_args = {
             "spids": [sport_id],
@@ -57,7 +86,20 @@ class EventsByParticipants(Query):
         }
         return q_arg_str, q_args
 
-    def _filter_events(self, participant_ids, start, end, league_id, sport_id):
+    def _filter_events(
+        self,
+        participant_ids: List[int],
+        start: datetime,
+        end: datetime,
+        league_id: int,
+        sport_id: int,
+    ) -> List[int]:
+        """Make a query to get all events, and then filter out the relevant ones.
+
+        The query gets all the events for a league or a sport over the given date range,
+        and then a list of ids of events including at least one participant in the list
+        is returned.
+        """
         q_name = "eventsV2"
         q_arg_str, q_args = (
             self._league_args(start, end, league_id)
@@ -66,8 +108,8 @@ class EventsByParticipants(Query):
         )
         q_fields = self._get_fields("event_2")
         raw = self._build_and_execute_query(q_name, q_fields, q_arg_str, q_args)
-        # filter out relevant events
 
+        # filter out relevant events
         ids = []
         for e in raw["eventsV2"]["events"]:
             try:

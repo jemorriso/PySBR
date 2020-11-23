@@ -6,6 +6,17 @@ import pysbr.utils as utils
 
 
 class BestLines(Lines):
+    """Get the best lines offered by any sportsbook for a number of events and markets.
+
+    For each event, participant and market combination, the best line offered by any of
+    sportsbooks tracked by SBR is in the response. The date and time that the line was
+    offered is also recorded. Both American and decimal odds are included.
+
+    Args:
+        event_ids: SBR event id or list of event ids.
+        market_ids: SBR betting market id or list of market ids.
+    """
+
     @Query.typecheck
     def __init__(
         self, event_ids: Union[List[int], int], market_ids: Union[List[int], int]

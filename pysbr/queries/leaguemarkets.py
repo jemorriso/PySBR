@@ -2,6 +2,15 @@ from pysbr.queries.query import Query
 
 
 class LeagueMarkets(Query):
+    """Get the betting markets available for a particular league.
+
+    Only market ids are returned by the query, without market names. For some leagues,
+    this query returns many more market ids than the markets found on SBR.
+
+    Args:
+        league_id: SBR league id.
+    """
+
     @Query.typecheck
     def __init__(self, league_id: int):
         super().__init__()

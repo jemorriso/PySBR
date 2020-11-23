@@ -7,6 +7,28 @@ from pysbr.queries.query import Query
 # only returns five first results, and only for upcoming events
 # cannot search by location, league etc. Only by event participants
 class SearchEvents(Query):
+    """Get up to 5 upcoming events matching a given search term.
+
+    The search term should be a string referring to a team or participant's name. Case
+    is ignored. The max number of upcoming events returned is enforced by the server.
+
+    This query response has a different structure than other event queries, but still
+    includes information about date and time, participants, description, and associated
+    ids.
+
+    Example search terms:
+        'Seattle' (this will return information about all Seattle-based teams)
+        'Seahawks'
+        'Federer'
+        'federer'
+        'roger federer'
+        'tiz the law' (horse racing)
+
+    Args:
+        search_term: String referring to team or participant of interest.
+
+    """
+
     @Query.typecheck
     def __init__(self, search_term: str):
         super().__init__()

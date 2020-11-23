@@ -5,6 +5,21 @@ import pysbr.utils as utils
 
 
 class Sportsbooks(Query):
+    """Get information about a number of sportsbooks from their system ids.
+
+    Note that the id returned from lines-related queries is called 'sportsbook id' by
+    this application, which is translated from 'paid', the name returned from SBR.
+    There is another sportsbook id that is only used by the 'Sportsbooks' query, that
+    is called 'system sportsbook id' by this application, which is translated from
+    'sbid', the name returned from SBR. The system sportsbook id is not used by other
+    parts of the application.
+
+    Sportsbook name, id (paid), and system id (sbid) are included in the response.
+
+    Args:
+        system_sportsbook_ids:  The system ids of the sportsbooks of interest.
+    """
+
     @Query.typecheck
     def __init__(self, system_sportsbook_ids: Union[List[int], int]):
         super().__init__()

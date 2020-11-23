@@ -6,6 +6,17 @@ import pysbr.utils as utils
 
 
 class OpeningLines(Lines):
+    """Get the opening lines offered by a sportsbook for a number of events and markets.
+
+    The date and time that the line was offered is also recorded. Both American and
+    decimal odds are included.
+
+    Args:
+        event_ids: SBR event id or list of event ids.
+        market_ids: SBR betting market id or list of market ids.
+        sportsbook_id: SBR sportsbook id.
+    """
+
     @Query.typecheck
     def __init__(
         self,

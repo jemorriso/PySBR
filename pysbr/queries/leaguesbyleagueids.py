@@ -5,6 +5,14 @@ import pysbr.utils as utils
 
 
 class LeaguesByLeagueIds(Query):
+    """Get information about a number of leagues from their league ids.
+
+    League name, abbreviation, and sport id are included in the response.
+
+    Args:
+        league_ids: SBR league id or list of league ids.
+    """
+
     @Query.typecheck
     def __init__(self, league_ids: Union[List[int], int]):
         super().__init__()

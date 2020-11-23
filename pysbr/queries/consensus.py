@@ -6,6 +6,15 @@ import pysbr.utils as utils
 
 
 class Consensus(Lines):
+    """Get the consensus amongst SBR members for a number of events and markets.
+
+    For each event and market, SBR members are able to record a simulated wager. The query response includes information about the number of wagers made on a line, and the percentage of wagers on each side of a bet.
+
+    the best line offered by any of
+    sportsbooks tracked by SBR is in the response. The date and time that the line was
+    offered is also recorded.
+    """
+
     @Query.typecheck
     def __init__(
         self, event_ids: Union[List[int], int], market_ids: Union[List[int], int]

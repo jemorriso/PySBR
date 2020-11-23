@@ -208,7 +208,7 @@ class Query:
     def _translate_dict(self, d: Dict) -> Dict:
         """Use translations from Config class to translate GraphQL response.
 
-        This method is used by Query.list() and Query.dataframe() in order to translate
+        This method is used by self.list() and self.dataframe() in order to translate
         field names from SBR into English words. Timestamps are converted into ISO
         strings.
         """
@@ -245,10 +245,10 @@ class Query:
         _recurse(d)
         return d
 
-    def _copy_and_translate_data(self):
+    def _copy_and_translate_data(self) -> List[Dict]:
         """Translate SBR fields in GraphQL response, and return a copy.
 
-        This method is used by Query.list() and Query.dataframe(). self._translated
+        This method is used by self.list() and self.dataframe(). self._translated
         caches the translated data.
         """
         if self._translated is None:

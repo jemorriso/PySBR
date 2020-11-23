@@ -1,8 +1,18 @@
 from pysbr.queries.query import Query
 
 
-# only returns five first results, and only for upcoming events
 class SearchSports(Query):
+    """Get up to 5 sports matching a given search term.
+
+    Case is ignored. The max number of upcoming events returned is enforced by the
+    server.
+
+    The query response includes sport name and id.
+
+    Args:
+        search_term: String referring to the league of interest.
+    """
+
     @Query.typecheck
     def __init__(self, search_term: str):
         super().__init__()

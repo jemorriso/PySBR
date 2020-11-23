@@ -6,6 +6,22 @@ import pysbr.utils as utils
 
 
 class LineHistory(Lines):
+    """Get the line history of an event and market for a particular sportsbook.
+
+    The complete history of line movement for an event, market, and sportsbook is
+    returned by the query. Both American and decimal odds are included.
+
+    The query to the server does not work without at least one participant id of a
+    participant in the event, which is why it is a required argument.
+
+    Args:
+        event_id: SBR event id.
+        market_id: SBR betting market id.
+        sportsbook_id: SBR sportsbook id.
+        participant_ids: List of participant ids of participants in the event, or just
+        one participant id.
+    """
+
     @Query.typecheck
     def __init__(
         self,

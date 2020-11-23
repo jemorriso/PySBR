@@ -5,6 +5,15 @@ import pysbr.utils as utils
 
 
 class EventsByEventIds(Query):
+    """Get events from a list of event ids.
+
+    All event queries return information about matching events including date and time,
+    location, participants, and associated ids.
+
+    Args:
+        event_ids: SBR event id or list of event ids.
+    """
+
     @Query.typecheck
     def __init__(self, event_ids: Union[List[int], int]):
         super().__init__()

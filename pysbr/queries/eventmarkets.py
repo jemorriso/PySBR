@@ -2,6 +2,14 @@ from pysbr.queries.query import Query
 
 
 class EventMarkets(Query):
+    """Get the event markets available on a particular event.
+
+    The response contains only the market ids, not their names.
+
+    Args:
+        event_id: SBR event id.
+    """
+
     @Query.typecheck
     def __init__(self, event_id: int):
         super().__init__()

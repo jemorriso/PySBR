@@ -6,6 +6,18 @@ import pysbr.utils as utils
 
 
 class CurrentLines(Lines):
+    """Get the current lines offered by sportsbooks for a number of events and markets.
+
+    For each sportsbook, event, participant and market combination, the most recent
+    line offered by the book is in the response. Both American and decimal odds are
+    included.
+
+    Args:
+        event_ids: SBR event id or list of event ids.
+        market_ids: SBR betting market id or list of market ids.
+        sportsbook_ids: SBR sportsbook id or list of sportsbook ids.
+    """
+
     @Query.typecheck
     def __init__(
         self,
