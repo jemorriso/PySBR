@@ -12,7 +12,7 @@ class Sport(Config):
     These files hold query-relevant information about a given league and sport. Class
     must be initialized with given sport and league config files.
 
-    This is a base class not meant to be directly implemented; see subclasses for each
+    This is a base class not meant to be directly instantiated; see subclasses for each
     league.
 
     Attributes:
@@ -21,13 +21,14 @@ class Sport(Config):
         sport_id (int): The sport's id in SBR's database.
         default_market_id (int): The sport's default betting market id, where the id
             number is from SBR.
+        consensus_market_ids (List[int]): Available markets for consensus history query.
         league_id (int): The league's id in SBR's database.
         league_name (str): The league's name. May differ from the name given by SBR.
         abbr (str): The standard abbreviation for the league. May differ from the
             abbreviation given by SBR.
     """
 
-    def __init__(self, sport_config, league_config):
+    def __init__(self, sport_config: Dict, league_config: Dict):
         super().__init__()
 
         self._search_translations = utils.load_yaml(
@@ -47,6 +48,7 @@ class Sport(Config):
 
         self.sport_id = self._sport["sport id"]
         self.default_market_id = self._sport["default market id"]
+        self.consensus_market_ids = self._sport["consensus market ids"]
         self.league_id = self._league["league id"]
         self.league_name = self._league["name"]
         self.abbr = self._league["abbreviation"]
@@ -79,7 +81,7 @@ class Sport(Config):
                 market_ids.update({k: id for k in keys})
         return market_ids
 
-    def _build_market_names(self, m) -> Dict[int, str]:
+    def _build_market_names(self, m: List[Dict]) -> Dict[int, str]:
         """Build the dictionary that is used to translate from market ids to names."""
         markets = {}
         for x in m:
@@ -229,7 +231,7 @@ class TeamSport(Sport):
 
     Class must be initialized with given sport and league config files.
 
-    This class should not be directly implemented; use league subclasses.
+    This class should not be directly instantiated; use league subclasses.
 
     'id', 'abbreviation', 'sbr abbreviation', 'name', 'nickname', and 'location' are
     keys provided for each team in the league config file.

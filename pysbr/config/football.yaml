@@ -1,5 +1,9 @@
 spid: 4
 default market id: 401
+consensus market ids:
+  - 83
+  - 401
+  - 402
 
 markets:
   - alias: ''

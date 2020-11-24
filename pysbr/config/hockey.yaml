@@ -1,5 +1,9 @@
 spid: 6
 default market id: 311
+consensus market ids:
+  - 125
+  - 411
+  - 412
 
 markets:
   - alias: ''
