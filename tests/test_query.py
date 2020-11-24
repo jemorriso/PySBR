@@ -814,26 +814,56 @@ class TestQuery:
         assert isinstance(l_, list)
         assert isinstance(df, pd.DataFrame)
 
+    # @mark.parametrize(
+    #     "event_ids, market_ids, cassette_name, expected",
+    #     [
+    #         ([4143394, 4143395], [401, 83, 402], "test_consensus_nfl1", True),
+    #         ([4278815, 4279749], [126, 395, 396], "test_consensus_atp1", False),
+    #     ],
+    # )
+    # def test_consensus(
+    #   self, consensus, event_ids, market_ids, cassette_name, expected
+    # ):
+    #     c = consensus(event_ids, market_ids, cassette_name)
+
+    #     ids = []
+    #     for line in c._raw["consensus"]:
+    #         ids.append(line["eid"])
+    #         ids.append(line["mtid"])
+
+    #     if expected:
+    #         for id in event_ids + market_ids:
+    #             assert id in ids
+    #     else:
+    #         assert len(c._raw["consensus"]) == 0
+
+    #     l_ = c.list()
+    #     df = c.dataframe()
+    #     assert isinstance(l_, list)
+    #     assert isinstance(df, pd.DataFrame)
+
     @mark.parametrize(
-        "event_ids, market_ids, cassette_name, expected",
+        "event_id, market_ids, cassette_name, expected",
         [
-            ([4143394, 4143395], [401, 83, 402], "test_consensus_nfl1", True),
-            ([4278815, 4279749], [126, 395, 396], "test_consensus_atp1", False),
+            (4143394, [401, 83, 402], "test_consensus_history_nfl1", True),
+            (4250867, [125, 411, 412], "test_consensus_history_nhl1", True),
         ],
     )
-    def test_consensus(self, consensus, event_ids, market_ids, cassette_name, expected):
-        c = consensus(event_ids, market_ids, cassette_name)
+    def test_consensus_history(
+        self, consensus_history, event_id, market_ids, cassette_name, expected
+    ):
+        c = consensus_history(event_id, market_ids, cassette_name)
 
         ids = []
-        for line in c._raw["consensus"]:
+        for line in c._raw["consensusHistory"]:
             ids.append(line["eid"])
             ids.append(line["mtid"])
 
         if expected:
-            for id in event_ids + market_ids:
+            for id in [event_id] + market_ids:
                 assert id in ids
         else:
-            assert len(c._raw["consensus"]) == 0
+            assert len(c._raw["consensusHistory"]) == 0
 
         l_ = c.list()
         df = c.dataframe()
