@@ -65,6 +65,10 @@ lines_3: |
   mtid: $mtids,
   paid: $paids
 
+consensus_history: |
+  eid: $eid,
+  mtid: $mtids,
+
 line_history: |
   eid: $eid,
   mtid: $mtid,

@@ -76,7 +76,18 @@ class Lines(Query):
         ]
         for term in to_remove:
             for line in data:
-                line.pop(term, None)
+                try:
+                    # ConsensusHistory has 'line' as a key, instead of being the
+                    # top-level dictionary.
+                    line = line["line"]
+                except KeyError:
+                    pass
+                try:
+                    # The earliest (time-wise) lines in consensusHistory may not have
+                    # 'line' as a key.
+                    line.pop(term, None)
+                except AttributeError:
+                    pass
         return data
 
     def _init_config(self, data: List[Dict]) -> None:

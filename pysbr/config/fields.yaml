@@ -66,7 +66,19 @@ event_2: |
       }
   }
 
-consensus: |
+# consensus: |
+#   {
+#       eid
+#       mtid
+#       partid
+#       sbid
+#       paid
+#       wag
+#       perc
+#       tim
+#   }
+
+consensus_history: |
   {
       eid
       mtid
@@ -75,7 +87,11 @@ consensus: |
       paid
       wag
       perc
+      vol
+      tvol
       tim
+      lineid
+      line
   }
 
 line_history: |

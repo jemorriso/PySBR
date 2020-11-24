@@ -112,3 +112,11 @@ searchParticipants: search participants
 # search league
 region: region
 rid: region id
+
+# consensus
+lineid: line id
+line: line
+wag: wagers
+vol: volume
+tvol: total volume
+wb: whale bets
