@@ -991,7 +991,7 @@ class TestQuery:
         "query, params",
         [
             (lazy_fixture("best_lines"), ["foo", "bar"]),
-            (lazy_fixture("consensus"), [["list", "of", "str"], "bar"]),
+            # (lazy_fixture("consensus"), [["list", "of", "str"], "bar"]),
             (lazy_fixture("current_lines"), [16, 16, "foo"]),
             (lazy_fixture("event_groups_by_league"), ["foo"]),
             (lazy_fixture("event_markets"), ["foo"]),
