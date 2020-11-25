@@ -9,11 +9,10 @@ from pysbr.config.config import Config
 class Sport(Config):
     """Provides access to sport and league config files.
 
-    These files hold query-relevant information about a given league and sport. Class
-    must be initialized with given sport and league config files.
+    These files hold query-relevant information about a given sport.
 
     This is a base class not meant to be directly instantiated; see subclasses for each
-    league.
+    league and sport.
 
     Attributes:
         market_names (Dict[int, str]): Map market id to name. Used by Query.list() and
@@ -22,13 +21,9 @@ class Sport(Config):
         default_market_id (int): The sport's default betting market id, where the id
             number is from SBR.
         consensus_market_ids (List[int]): Available markets for consensus history query.
-        league_id (int): The league's id in SBR's database.
-        league_name (str): The league's name. May differ from the name given by SBR.
-        abbr (str): The standard abbreviation for the league. May differ from the
-            abbreviation given by SBR.
     """
 
-    def __init__(self, sport_config: Dict, league_config: Dict):
+    def __init__(self, sport_config: Dict):
         super().__init__()
 
         self._search_translations = utils.load_yaml(
@@ -38,9 +33,6 @@ class Sport(Config):
         self._sport = self._translate_dict(
             utils.load_yaml(utils.build_yaml_path(sport_config))
         )
-        self._league = self._translate_dict(
-            utils.load_yaml(utils.build_yaml_path(league_config))
-        )
 
         self._market_ids = self._build_market_ids()
 
@@ -49,9 +41,6 @@ class Sport(Config):
         self.sport_id = self._sport["sport id"]
         self.default_market_id = self._sport["default market id"]
         self.consensus_market_ids = self._sport["consensus market ids"]
-        self.league_id = self._league["league id"]
-        self.league_name = self._league["name"]
-        self.abbr = self._league["abbreviation"]
 
     def _build_market_ids(self) -> Dict[str, int]:
         """Build the dictionary that is used for searching available betting markets.
@@ -208,6 +197,39 @@ class Sport(Config):
         """
         return self._sport
 
+    def search_translations(self) -> Dict[str, str]:
+        """Get the dict containing translations for search abbreviatons / spelling variants.
+
+        This is the dict that is used Sport.market_ids().
+        """
+        return self._search_translations
+
+
+class League(Sport):
+    """Provides access to league config files.
+
+    These files hold query-relevant information about a given league.
+
+    This is a base class not meant to be directly instantiated; see subclasses for each
+    league.
+
+    Attributes:
+        league_id (int): The league's id in SBR's database.
+        league_name (str): The league's name. May differ from the name given by SBR.
+        abbr (str): The standard abbreviation for the league. May differ from the
+            abbreviation given by SBR.
+    """
+
+    def __init__(self, sport_config, league_config):
+        super().__init__(sport_config)
+
+        self._league = self._translate_dict(
+            utils.load_yaml(utils.build_yaml_path(league_config))
+        )
+        self.league_id = self._league["league id"]
+        self.league_name = self._league["name"]
+        self.abbr = self._league["abbreviation"]
+
     def league_config(
         self,
     ) -> Dict[str, Union[int, str, List[Dict[str, Union[int, str]]]]]:
@@ -218,15 +240,8 @@ class Sport(Config):
         """
         return self._league
 
-    def search_translations(self) -> Dict[str, str]:
-        """Get the dict containing translations for search abbreviatons / spelling variants.
 
-        This is the dict that is used Sport.market_ids().
-        """
-        return self._search_translations
-
-
-class TeamSport(Sport):
+class TeamLeague(League):
     """Additional methods for leagues with team information in their config files.
 
     Class must be initialized with given sport and league config files.
@@ -331,84 +346,126 @@ class TeamSport(Sport):
         return list(OrderedDict.fromkeys(ids))
 
 
-class NFL(TeamSport):
+class Football(Sport):
+    """Provides access to football config files."""
+
+    def __init__(self):
+        super.__init__("football")
+
+
+class Basketball(Sport):
+    """Provides access to basketball config files."""
+
+    def __init__(self):
+        super.__init__("basketball")
+
+
+class Baseball(Sport):
+    """Provides access to baseball config files."""
+
+    def __init__(self):
+        super.__init__("baseball")
+
+
+class Hockey(Sport):
+    """Provides access to hockey config files."""
+
+    def __init__(self):
+        super.__init__("hockey")
+
+
+class Soccer(Sport):
+    """Provides access to soccer config files."""
+
+    def __init__(self):
+        super.__init__("soccer")
+
+
+class Tennis(Sport):
+    """Provides access to tennis config files."""
+
+    def __init__(self):
+        super.__init__("tennis")
+
+
+class NFL(TeamLeague):
     """Provides access to NFL config files."""
 
     def __init__(self):
         super().__init__("football", "nfl")
 
 
-class NCAAF(TeamSport):
+class NCAAF(TeamLeague):
     """Provides access to NCAAF config files."""
 
     def __init__(self):
         super().__init__("football", "ncaaf")
 
 
-class MLB(Sport):
+class MLB(League):
     """Provides access to MLB config files."""
 
     def __init__(self):
         super().__init__("baseball", "mlb")
 
 
-class NBA(Sport):
+class NBA(League):
     """Provides access to NBA config files."""
 
     def __init__(self):
         super().__init__("basketball", "nba")
 
 
-class NCAAB(Sport):
+class NCAAB(League):
     """Provides access to NCAAB config files."""
 
     def __init__(self):
         super().__init__("basketball", "ncaab")
 
 
-class NHL(Sport):
+class NHL(League):
     """Provides access to NHL config files."""
 
     def __init__(self):
         super().__init__("hockey", "nhl")
 
 
-class EPL(Sport):
+class EPL(League):
     """Provides access to EPL config files."""
 
     def __init__(self):
         super().__init__("soccer", "epl")
 
 
-class UCL(Sport):
+class UCL(League):
     """Provides access to UCL config files."""
 
     def __init__(self):
         super().__init__("soccer", "ucl")
 
 
-class LaLiga(Sport):
+class LaLiga(League):
     """Provides access to La Liga config files."""
 
     def __init__(self):
         super().__init__("soccer", "laliga")
 
 
-class Bundesliga(Sport):
+class Bundesliga(League):
     """Provides access to Bundesliga config files."""
 
     def __init__(self):
         super().__init__("soccer", "bundesliga")
 
 
-class UEFANationsLeague(Sport):
+class UEFANationsLeague(League):
     """Provides access to UEFA Nations League config files."""
 
     def __init__(self):
         super().__init__("soccer", "uefanationsleague")
 
 
-class ATP(Sport):
+class ATP(League):
     """Provides access to ATP config files."""
 
     def __init__(self):
