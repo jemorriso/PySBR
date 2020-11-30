@@ -36,5 +36,5 @@ class EventsByDateRange(Query):
         )
 
         self._subpath_keys = ["events"]
-        self._sublist_keys = ["participants"]
+        self._sublist_keys = ["participants", "scores"]
         self._id_key = "event id"
