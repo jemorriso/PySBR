@@ -14,6 +14,8 @@ class TestConfig:
             lazy_fixture("nba"),
             lazy_fixture("nhl"),
             lazy_fixture("atp"),
+            lazy_fixture("ncaab"),
+            lazy_fixture("ufc"),
             lazy_fixture("sportsbook"),
         ],
     )

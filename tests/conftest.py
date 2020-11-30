@@ -45,6 +45,7 @@ from pysbr.config.sport import (
     LaLiga,
     Bundesliga,
     UEFANationsLeague,
+    UFC,
 )
 from pysbr.config.sportsbook import Sportsbook
 
@@ -412,6 +413,11 @@ def bundesliga():
 @fixture
 def uefanationsleague():
     return UEFANationsLeague()
+
+
+@fixture
+def ufc():
+    return UFC()
 
 
 @fixture
