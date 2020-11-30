@@ -225,13 +225,18 @@ class Query:
 
                         v = el.pop(old_k)
 
-                        if k not in ["datetime", "start datetime", "end datetime"]:
-                            el[k] = v
-                        else:
+                        if k in ["datetime", "start datetime", "end datetime"]:
                             try:
                                 el[k] = utils.timestamp_to_iso_str(v)
                             except TypeError:
                                 el[k] = v
+                        elif k in ["points scored"]:
+                            try:
+                                el[k] = int(v)
+                            except ValueError:
+                                el[k] = v
+                        else:
+                            el[k] = v
                     except KeyError:
                         pass
                     v = el[k]

@@ -17,6 +17,16 @@ from pysbr.config.sport import (
     NHL,
     UCL,
     UEFANationsLeague,
+    UFC,
+)
+from pysbr.config.sport import (
+    Football,
+    Basketball,
+    Baseball,
+    Hockey,
+    Soccer,
+    Tennis,
+    Fighting,
 )
 from pysbr.config.sportsbook import Sportsbook
 
@@ -32,6 +42,8 @@ class Lines(Query):
         self._events = None
         self._event_descriptions = {}
         self._event_leagues = {}
+        self._event_sports = {}
+        self._event_scores = {}
         # these are the participant ids for Over/Under lines for all sports I checked
         self._participants = {15143: "over", 15144: "under"}
         self._leagues = {
@@ -47,8 +59,21 @@ class Lines(Query):
             7: NHL,
             8: UCL,
             1911: UEFANationsLeague,
+            26: UFC,
         }
-        self._league_markets = {}
+        self._leagues_init = {}
+
+        self._sports = {
+            4: Football,
+            5: Basketball,
+            3: Baseball,
+            6: Hockey,
+            1: Soccer,
+            8: Tennis,
+            9: Fighting,
+        }
+        self._sports_init = {}
+
         self._sportsbooks = None
 
         self._with_ids_translated = None
@@ -97,27 +122,134 @@ class Lines(Query):
 
         league_ids = [e.get("league id") for e in self._events.list()]
         for id in set(league_ids):
-            if id not in self._league_markets:
-                try:
-                    self._league_markets[id] = self._leagues[id]().market_names
-                except KeyError:
-                    pass
+            try:
+                self._leagues_init[id] = self._leagues[id]()
+            except KeyError:
+                pass
 
-        if (
-            not self._event_descriptions
-            or not self._event_leagues
-            or not self._participants
-        ):
-            for e in self._events.list():
-                self._event_descriptions[e.get("event id")] = e.get("description")
-                self._event_leagues[e.get("event id")] = e.get("league id")
-                for p in e.get("participants"):
-                    participant_id = p.get("participant id")
-                    source = p.get("source")
-                    if "last name" in source:
-                        self._participants[participant_id] = source.get("last name")
-                    elif "abbreviation" in source:
-                        self._participants[participant_id] = source.get("abbreviation")
+        sport_ids = [e.get("sport id") for e in self._events.list()]
+        for id in set(sport_ids):
+            try:
+                self._sports_init[id] = self._sports[id]()
+            except KeyError:
+                pass
+
+        for e in self._events.list():
+            self._event_descriptions[e.get("event id")] = e.get("description")
+            self._event_leagues[e.get("event id")] = e.get("league id")
+            self._event_sports[e.get("event id")] = e.get("sport id")
+            self._event_scores[e.get("event id")] = e.get("scores")
+            for p in e.get("participants"):
+                participant_id = p.get("participant id")
+                source = p.get("source")
+                if "last name" in source:
+                    self._participants[participant_id] = source.get("last name")
+                elif "abbreviation" in source:
+                    self._participants[participant_id] = source.get("abbreviation")
+
+    def _get_config(self, line):
+        try:
+            return self._leagues_init[self._event_leagues.get(line.get("event id"))]
+        except KeyError:
+            try:
+                return self._sports_init[self._event_sports.get(line.get("event id"))]
+            except KeyError:
+                # neither league nor sport has a config file
+                return None
+
+    def _resolve_market(self, line):
+        try:
+            return self._get_config(line).market_names.get(line.get("market id"))
+        except AttributeError:
+            return None
+
+    def _tally_points(self, line, period_scores, market_range):
+        scores = copy.deepcopy(period_scores)
+        if market_range is not None:
+            scores = [s for s in period_scores if s.get("period") in market_range]
+
+        participant_id = line.get("participant id")
+        o_scores = []
+        if participant_id not in [15143, 15144]:
+            scores = [
+                s for s in period_scores if s.get("participant id") == participant_id
+            ]
+            o_scores = [
+                s for s in period_scores if s.get("participant id") != participant_id
+            ]
+
+        try:
+            return sum([s.get("points scored") for s in scores]), sum(
+                [s.get("points scored") for s in o_scores]
+            )
+        except TypeError:
+            return None, None
+
+    def _evaluate_bet(self, line, points, o_points):
+        try:
+            market_type = self._get_config(line).market_types.get(line.get("market id"))
+        except AttributeError:
+            return None
+
+        participant_id = line.get("participant id")
+        spread_or_total = line["spread / total"]
+        if market_type == "total":
+            # participant ids for o/u
+            over = 15143
+            under = 15144
+            if (
+                participant_id == over
+                and points > spread_or_total
+                or participant_id == under
+                and points < spread_or_total
+            ):
+                return True
+            else:
+                return False
+        else:
+            try:
+                if points + spread_or_total > o_points:
+                    return True
+                else:
+                    return False
+            except ValueError:
+                return None
+
+    def _resolve_bet(self, line):
+        scores = self._event_scores.get(line.get("event id"))
+        # event query didn't have scores, or the game hasn't been played yet (query
+        # returns empty list)
+        if not scores:
+            return None, None
+
+        try:
+            market_periods = self._get_config(line).market_periods.get(
+                line.get("market id")
+            )
+        except AttributeError:
+            return
+
+        try:
+            market_range = list(range(market_periods[0], market_periods[-1]))
+        except TypeError:
+            market_range = None
+
+        points, o_points = self._tally_points(line, scores, market_range)
+        if points is None or o_points is None:
+            return None, None
+
+        is_win = self._evaluate_bet(line, points, o_points)
+        if is_win is None:
+            return None, None
+
+        try:
+            profit = (
+                round((line.get("decimal odds") - 1) * 100, 2) if is_win else -100.0
+            )
+        except ValueError:
+            return None, None
+
+        return ("W" if is_win else "L", profit)
 
     def _translate_ids(self, data: List[Dict]) -> List[Dict]:
         """Add new entries to each element in the list for element's id fields.
@@ -148,14 +280,15 @@ class Lines(Query):
 
         for line in data:
             line["event"] = self._event_descriptions.get(line.get("event id"))
-            try:
-                line["market"] = self._league_markets.get(
-                    self._event_leagues.get(line.get("event id"))
-                ).get(line.get("market id"))
-            # if somehow got None.get(None)
-            except AttributeError:
-                pass
-            line["sportsbook"] = self._sportsbooks.get(line.get("provider account id"))
+            market = self._resolve_market(line)
+            if market is not None:
+                line["market"] = market
+            result, profit = self._resolve_bet(line)
+            if result is not None:
+                line["result"] = result
+            if profit is not None:
+                line["profit"] = profit
+            line["sportsbook"] = self._sportsbooks.get(line.get("sportsbook id"))
             line["participant"] = self._participants.get(line.get("participant id"))
 
         self._with_ids_translated = data
