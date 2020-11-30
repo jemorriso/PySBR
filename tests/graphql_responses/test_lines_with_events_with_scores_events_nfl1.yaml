@@ -1,0 +1,707 @@
+eventsByDateNew:
+  events:
+  - cit: Baltimore
+    cou: USA
+    des: Tennessee Titans@Baltimore Ravens
+    dt: 1606068000000
+    eid: 4143401
+    es: complete
+    eventGroup:
+      alias: Week 11
+      egid: 20
+      nam: REG Week 11
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1521
+      source:
+        abbr: BAL
+        cit: Baltimore
+        nam: Baltimore
+        nn: Ravens
+        sn: Baltimore
+    - ih: false
+      partid: 1528
+      source:
+        abbr: TEN
+        cit: Tennessee
+        nam: Tennessee
+        nn: Titans
+        sn: Tennessee
+    scores:
+    - partid: 1528
+      pn: 5
+      val: '6'
+    - partid: 1521
+      pn: 5
+      val: '0'
+    - partid: 1521
+      pn: 4
+      val: '3'
+    - partid: 1528
+      pn: 4
+      val: '11'
+    - partid: 1528
+      pn: 3
+      val: '3'
+    - partid: 1521
+      pn: 3
+      val: '7'
+    - partid: 1528
+      pn: 2
+      val: '3'
+    - partid: 1521
+      pn: 2
+      val: '11'
+    - partid: 1521
+      pn: 1
+      val: '3'
+    - partid: 1528
+      pn: 1
+      val: '7'
+    seid: 8582
+    spid: 4
+    st: outdoor
+  - cit: Charlotte
+    cou: USA
+    des: Detroit Lions@Carolina Panthers
+    dt: 1606068000000
+    eid: 4143402
+    es: complete
+    eventGroup:
+      alias: Week 11
+      egid: 20
+      nam: REG Week 11
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1539
+      source:
+        abbr: DET
+        cit: Detroit
+        nam: Detroit
+        nn: Lions
+        sn: Detroit
+    - ih: true
+      partid: 1545
+      source:
+        abbr: CAR
+        cit: Carolina
+        nam: Carolina
+        nn: Panthers
+        sn: Carolina
+    scores:
+    - partid: 1545
+      pn: 4
+      val: '3'
+    - partid: 1539
+      pn: 4
+      val: '0'
+    - partid: 1545
+      pn: 3
+      val: '10'
+    - partid: 1539
+      pn: 3
+      val: '0'
+    - partid: 1545
+      pn: 2
+      val: '0'
+    - partid: 1539
+      pn: 2
+      val: '0'
+    - partid: 1545
+      pn: 1
+      val: '7'
+    - partid: 1539
+      pn: 1
+      val: '0'
+    seid: 8582
+    spid: 4
+    st: outdoor
+  - cit: Las Vegas
+    cou: USA
+    des: Kansas City Chiefs@Las Vegas Raiders
+    dt: 1606094400000
+    eid: 4143403
+    es: complete
+    eventGroup:
+      alias: Week 11
+      egid: 20
+      nam: REG Week 11
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1531
+      source:
+        abbr: KC
+        cit: Kansas City
+        nam: Kansas City
+        nn: Chiefs
+        sn: Kansas City
+    - ih: true
+      partid: 1533
+      source:
+        abbr: LV
+        cit: Las Vegas
+        nam: Las Vegas
+        nn: Raiders
+        sn: Las Vegas
+    scores:
+    - partid: 1531
+      pn: 4
+      val: '14'
+    - partid: 1533
+      pn: 4
+      val: '14'
+    - partid: 1531
+      pn: 3
+      val: '7'
+    - partid: 1533
+      pn: 3
+      val: '0'
+    - partid: 1533
+      pn: 2
+      val: '3'
+    - partid: 1531
+      pn: 2
+      val: '7'
+    - partid: 1533
+      pn: 1
+      val: '14'
+    - partid: 1531
+      pn: 1
+      val: '7'
+    seid: 8582
+    spid: 4
+    st: dome
+  - cit: Indianapolis
+    cou: USA
+    des: Green Bay Packers@Indianapolis Colts
+    dt: 1606080300000
+    eid: 4143404
+    es: complete
+    eventGroup:
+      alias: Week 11
+      egid: 20
+      nam: REG Week 11
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1527
+      source:
+        abbr: IND
+        cit: Indianapolis
+        nam: Indianapolis
+        nn: Colts
+        sn: Indianapolis
+    - ih: false
+      partid: 1542
+      source:
+        abbr: GB
+        cit: Green Bay
+        nam: Green Bay
+        nn: Packers
+        sn: Green Bay
+    scores:
+    - partid: 1527
+      pn: 5
+      val: '3'
+    - partid: 1542
+      pn: 5
+      val: '0'
+    - partid: 1542
+      pn: 4
+      val: '3'
+    - partid: 1527
+      pn: 4
+      val: '6'
+    - partid: 1527
+      pn: 3
+      val: '11'
+    - partid: 1542
+      pn: 3
+      val: '0'
+    - partid: 1542
+      pn: 2
+      val: '21'
+    - partid: 1527
+      pn: 2
+      val: '7'
+    - partid: 1527
+      pn: 1
+      val: '7'
+    - partid: 1542
+      pn: 1
+      val: '7'
+    seid: 8582
+    spid: 4
+    st: retractable_dome
+  - cit: Minneapolis
+    cou: USA
+    des: Dallas Cowboys@Minnesota Vikings
+    dt: 1606080300000
+    eid: 4143405
+    es: complete
+    eventGroup:
+      alias: Week 11
+      egid: 20
+      nam: REG Week 11
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1538
+      source:
+        abbr: DAL
+        cit: Dallas
+        nam: Dallas
+        nn: Cowboys
+        sn: Dallas
+    - ih: true
+      partid: 1541
+      source:
+        abbr: MIN
+        cit: Minnesota
+        nam: Minnesota
+        nn: Vikings
+        sn: Minnesota
+    scores:
+    - partid: 1538
+      pn: 4
+      val: '15'
+    - partid: 1541
+      pn: 4
+      val: '14'
+    - partid: 1541
+      pn: 3
+      val: '7'
+    - partid: 1538
+      pn: 3
+      val: '0'
+    - partid: 1538
+      pn: 2
+      val: '10'
+    - partid: 1541
+      pn: 2
+      val: '0'
+    - partid: 1541
+      pn: 1
+      val: '7'
+    - partid: 1538
+      pn: 1
+      val: '6'
+    seid: 8582
+    spid: 4
+    st: dome
+  - cit: Jacksonville
+    cou: USA
+    des: Pittsburgh Steelers@Jacksonville Jaguars
+    dt: 1606068000000
+    eid: 4143406
+    es: complete
+    eventGroup:
+      alias: Week 11
+      egid: 20
+      nam: REG Week 11
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1519
+      source:
+        abbr: PIT
+        cit: Pittsburgh
+        nam: Pittsburgh
+        nn: Steelers
+        sn: Pittsburgh
+    - ih: true
+      partid: 1529
+      source:
+        abbr: JAC
+        cit: Jacksonville
+        nam: Jacksonville
+        nn: Jaguars
+        sn: Jacksonville
+    scores:
+    - partid: 1519
+      pn: 4
+      val: '10'
+    - partid: 1529
+      pn: 4
+      val: '0'
+    - partid: 1529
+      pn: 3
+      val: '0'
+    - partid: 1519
+      pn: 3
+      val: '0'
+    - partid: 1519
+      pn: 2
+      val: '17'
+    - partid: 1529
+      pn: 2
+      val: '0'
+    - partid: 1529
+      pn: 1
+      val: '3'
+    - partid: 1519
+      pn: 1
+      val: '0'
+    seid: 8582
+    spid: 4
+    st: outdoor
+  - cit: Inglewood
+    cou: USA
+    des: N.Y. Jets@Los Angeles Chargers
+    dt: 1606079100000
+    eid: 4143498
+    es: complete
+    eventGroup:
+      alias: Week 11
+      egid: 20
+      nam: REG Week 11
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1523
+      source:
+        abbr: NYJ
+        cit: New York
+        nam: N.Y. Jets
+        nn: Jets
+        sn: New York
+    - ih: true
+      partid: 75380
+      source:
+        abbr: LAC
+        cit: Los Angeles
+        nam: L.A. Chargers
+        nn: Chargers
+        sn: Los Angeles
+    scores:
+    - partid: 1523
+      pn: 4
+      val: '9'
+    - partid: 75380
+      pn: 4
+      val: '3'
+    - partid: 1523
+      pn: 3
+      val: '13'
+    - partid: 75380
+      pn: 3
+      val: '7'
+    - partid: 75380
+      pn: 2
+      val: '17'
+    - partid: 1523
+      pn: 2
+      val: '0'
+    - partid: 75380
+      pn: 1
+      val: '7'
+    - partid: 1523
+      pn: 1
+      val: '6'
+    seid: 8582
+    spid: 4
+    st: outdoor
+  - cit: Houston
+    cou: USA
+    des: New England Patriots@Houston Texans
+    dt: 1606068000000
+    eid: 4143537
+    es: complete
+    eventGroup:
+      alias: Week 11
+      egid: 20
+      nam: REG Week 11
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1525
+      source:
+        abbr: NE
+        cit: New England
+        nam: New England
+        nn: Patriots
+        sn: New England
+    - ih: true
+      partid: 1530
+      source:
+        abbr: HOU
+        cit: Houston
+        nam: Houston
+        nn: Texans
+        sn: Houston
+    scores:
+    - partid: 1530
+      pn: 4
+      val: '3'
+    - partid: 1525
+      pn: 4
+      val: '3'
+    - partid: 1530
+      pn: 3
+      val: '3'
+    - partid: 1525
+      pn: 3
+      val: '7'
+    - partid: 1530
+      pn: 2
+      val: '14'
+    - partid: 1525
+      pn: 2
+      val: '3'
+    - partid: 1530
+      pn: 1
+      val: '7'
+    - partid: 1525
+      pn: 1
+      val: '7'
+    seid: 8582
+    spid: 4
+    st: retractable_dome
+  - cit: Cleveland
+    cou: USA
+    des: Philadelphia Eagles@Cleveland Browns
+    dt: 1606068000000
+    eid: 4143538
+    es: complete
+    eventGroup:
+      alias: Week 11
+      egid: 20
+      nam: REG Week 11
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1520
+      source:
+        abbr: CLE
+        cit: Cleveland
+        nam: Cleveland
+        nn: Browns
+        sn: Cleveland
+    - ih: false
+      partid: 1536
+      source:
+        abbr: PHI
+        cit: Philadelphia
+        nam: Philadelphia
+        nn: Eagles
+        sn: Philadelphia
+    scores:
+    - partid: 1536
+      pn: 4
+      val: '10'
+    - partid: 1520
+      pn: 4
+      val: '10'
+    - partid: 1520
+      pn: 3
+      val: '5'
+    - partid: 1536
+      pn: 3
+      val: '7'
+    - partid: 1520
+      pn: 2
+      val: '7'
+    - partid: 1536
+      pn: 2
+      val: '0'
+    - partid: 1520
+      pn: 1
+      val: '0'
+    - partid: 1536
+      pn: 1
+      val: '0'
+    seid: 8582
+    spid: 4
+    st: outdoor
+  - cit: New Orleans
+    cou: USA
+    des: Atlanta Falcons@New Orleans Saints
+    dt: 1606068000000
+    eid: 4143539
+    es: complete
+    eventGroup:
+      alias: Week 11
+      egid: 20
+      nam: REG Week 11
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1543
+      source:
+        abbr: 'NO'
+        cit: New Orleans
+        nam: New Orleans
+        nn: Saints
+        sn: New Orleans
+    - ih: false
+      partid: 1546
+      source:
+        abbr: ATL
+        cit: Atlanta
+        nam: Atlanta
+        nn: Falcons
+        sn: Atlanta
+    scores:
+    - partid: 1543
+      pn: 4
+      val: '7'
+    - partid: 1546
+      pn: 4
+      val: '0'
+    - partid: 1543
+      pn: 3
+      val: '7'
+    - partid: 1546
+      pn: 3
+      val: '0'
+    - partid: 1543
+      pn: 2
+      val: '7'
+    - partid: 1546
+      pn: 2
+      val: '6'
+    - partid: 1543
+      pn: 1
+      val: '3'
+    - partid: 1546
+      pn: 1
+      val: '3'
+    seid: 8582
+    spid: 4
+    st: dome
+  - cit: Landover
+    cou: USA
+    des: Cincinnati Bengals@Washington Football Team
+    dt: 1606068000000
+    eid: 4143541
+    es: complete
+    eventGroup:
+      alias: Week 11
+      egid: 20
+      nam: REG Week 11
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1522
+      source:
+        abbr: CIN
+        cit: Cincinnati
+        nam: Cincinnati
+        nn: Bengals
+        sn: Cincinnati
+    - ih: true
+      partid: 1537
+      source:
+        abbr: WAS
+        cit: Washington
+        nam: Washington
+        nn: Football Team
+        sn: Washington
+    scores:
+    - partid: 1537
+      pn: 4
+      val: '3'
+    - partid: 1522
+      pn: 4
+      val: '0'
+    - partid: 1537
+      pn: 3
+      val: '10'
+    - partid: 1522
+      pn: 3
+      val: '0'
+    - partid: 1522
+      pn: 2
+      val: '9'
+    - partid: 1537
+      pn: 2
+      val: '0'
+    - partid: 1537
+      pn: 1
+      val: '7'
+    - partid: 1522
+      pn: 1
+      val: '0'
+    seid: 8582
+    spid: 4
+    st: outdoor
+  - cit: Denver
+    cou: USA
+    des: Miami Dolphins@Denver Broncos
+    dt: 1606079100000
+    eid: 4262502
+    es: scheduled
+    eventGroup: null
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1534
+      source:
+        abbr: DEN
+        cit: Denver
+        nam: Denver
+        nn: Broncos
+        sn: Denver
+    scores: []
+    seid: 8582
+    spid: 4
+    st: outdoor
+  - cit: Denver
+    cou: USA
+    des: Miami Dolphins@Denver Broncos
+    dt: 1606079100000
+    eid: 4262511
+    es: complete
+    eventGroup:
+      alias: Week 11
+      egid: 20
+      nam: REG Week 11
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1524
+      source:
+        abbr: MIA
+        cit: Miami
+        nam: Miami
+        nn: Dolphins
+        sn: Miami
+    - ih: true
+      partid: 1534
+      source:
+        abbr: DEN
+        cit: Denver
+        nam: Denver
+        nn: Broncos
+        sn: Denver
+    scores:
+    - partid: 1534
+      pn: 4
+      val: '0'
+    - partid: 1524
+      pn: 4
+      val: '3'
+    - partid: 1534
+      pn: 3
+      val: '7'
+    - partid: 1524
+      pn: 3
+      val: '0'
+    - partid: 1534
+      pn: 2
+      val: '6'
+    - partid: 1524
+      pn: 2
+      val: '3'
+    - partid: 1534
+      pn: 1
+      val: '7'
+    - partid: 1524
+      pn: 1
+      val: '7'
+    seid: 8582
+    spid: 4
+    st: outdoor

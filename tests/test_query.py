@@ -1002,3 +1002,36 @@ class TestQuery:
         # with pytest.raises(ValueError):
         with pytest.raises(TypeError):
             query(*params, "dummy_cassette")
+
+    @mark.parametrize(
+        "league_id, dt_str, market_ids, cassette_events, cassette_lines, expected",
+        [
+            (
+                16,
+                "2020-11-22",
+                [83, 401, 402],
+                "test_lines_with_events_with_scores_events_nfl1",
+                "test_lines_with_events_with_scores_lines_nfl1",
+                None,
+            )
+        ],
+    )
+    def test_lines_with_events_with_scores(
+        self,
+        events_by_date,
+        current_lines,
+        league_id,
+        dt_str,
+        market_ids,
+        cassette_events,
+        cassette_lines,
+        expected,
+    ):
+        dt = datetime.strptime(dt_str, "%Y-%m-%d")
+        e = events_by_date(league_id, dt, cassette_events)
+        c = current_lines(e.ids(), market_ids, [5, 9, 20], cassette_lines)
+        l_ = c.list(e)
+        df = c.dataframe(e)
+        # assert lines_obj is not None
+        assert l_ is not None
+        assert df is not None
