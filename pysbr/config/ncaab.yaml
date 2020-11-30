@@ -1,3 +1,59 @@
 lid: 14
 name: NCAA Basketball
 abbreviation: NCAAB
+
+markets:
+  - alias: ''
+    marketTypes:
+      - alias: Money Lines
+        mtid: 83
+        nam: 2way (Including OT)
+        url: money-line
+      - alias: Point Spreads
+        mtid: 401
+        nam: Point Spread (Including OT)
+        url: pointspread
+      - alias: Totals
+        mtid: 402
+        nam: American Total (Including OT)
+        url: totals
+    mtgid: 169
+    nam: Full Game
+    url: full-game
+    periods: 0
+  - alias: 1st Half
+    marketTypes:
+      - alias: Money Lines
+        mtid: 91
+        nam: 1st Half - Draw No Bet
+        url: money-line
+      - alias: Point Spreads
+        mtid: 397
+        nam: 1st Half - Point Spread
+        url: pointspread
+      - alias: Totals
+        mtid: 398
+        nam: 1st Half - American Total
+        url: totals
+    mtgid: 170
+    nam: 1st Half
+    url: 1st-half
+    periods: [1, 3]
+  - alias: 2nd Half
+    marketTypes:
+      - alias: Money Lines
+        mtid: 168
+        nam: 2nd Half - Draw No Bet
+        url: money-line
+      - alias: Point Spreads
+        mtid: 399
+        nam: 2nd Half - Point Spread
+        url: pointspread
+      - alias: Totals
+        mtid: 400
+        nam: 2nd Half - American Total
+        url: totals
+    mtgid: 171
+    nam: 2nd Half
+    url: 2nd-half
+    periods: [3, 5]

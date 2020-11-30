@@ -23,6 +23,7 @@ markets:
     mtgid: 209
     nam: Full Game
     url: full-game
+    periods: 0
   - alias: 1st Period
     marketTypes:
       - alias: Point Spreads
@@ -40,6 +41,7 @@ markets:
     mtgid: 212
     nam: 1Q
     url: 1st-quarter
+    periods: [1, 2]
   - alias: 2nd Period
     marketTypes:
       - alias: Point Spread
@@ -57,6 +59,7 @@ markets:
     mtgid: 213
     nam: 2Q
     url: 2nd-quarter
+    periods: [2, 3]
   - alias: 3rd Period
     marketTypes:
       - alias: Point Spreads
@@ -74,6 +77,7 @@ markets:
     mtgid: 214
     nam: 3Q
     url: 3rd-quarter
+    periods: [3, 4]
   - alias: Futures
     marketTypes:
       - alias: ''

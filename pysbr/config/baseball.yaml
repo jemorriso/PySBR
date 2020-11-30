@@ -23,6 +23,7 @@ markets:
     mtgid: 161
     nam: Full Game
     url: full-game
+    periods: 0
   - alias: 1st 5
     marketTypes:
       - alias: Money Lines
@@ -40,6 +41,7 @@ markets:
     mtgid: 162
     nam: First Half
     url: 1st-half
+    periods: [1, 6]
   - alias: Futures
     marketTypes:
       - alias: Player Outrights

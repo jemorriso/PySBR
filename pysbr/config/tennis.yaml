@@ -23,6 +23,7 @@ markets:
     mtgid: 217
     nam: Full Game
     url: full-game
+    periods: 0
   - alias: Futures
     marketTypes:
       - alias: French Open Winner

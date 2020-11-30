@@ -1,0 +1,21 @@
+spid: 9
+default market id: 126
+consensus market ids:
+  - 126
+  - 396
+
+markets:
+  - alias: ''
+    marketTypes:
+      - mtid: 126
+        url: money-line
+        nam: 2way
+        alias: Money Lines
+      - mtid: 396
+        url: totals
+        nam: American Total
+        alias: Totals
+    url: full-game
+    nam: Full Game
+    mtgid: 187
+    periods: 0

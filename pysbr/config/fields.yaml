@@ -1,6 +1,7 @@
 event: |
   {
       events {
+          spid
           lid
           seid
           eid
@@ -52,6 +53,11 @@ event: |
               egid
               nam
               alias
+          }
+          scores {
+              partid
+              pn
+              val
           }
       }
   }

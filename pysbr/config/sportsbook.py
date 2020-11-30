@@ -11,6 +11,13 @@ class Sportsbook(Config):
     In the config file there is information provided for the 27 sportsbooks found on
     SBR.
 
+    Note that the id returned from lines-related queries is called 'sportsbook id' by
+    this application, which is translated from 'paid', the name returned from SBR.
+    There is another sportsbook id that is only used by the 'Sportsbooks' query, that
+    is called 'system sportsbook id' by this application, which is translated from
+    'sbid', the name returned from SBR. The system sportsbook id is not used by other
+    parts of the application.
+
     Attributes:
         names (Dict[int, str]): Map sportsbook id to name. Used by Query.list() and
             Query.dataframe() in order to translate from id to name.

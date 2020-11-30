@@ -101,6 +101,10 @@ participants: participants
 source: source
 seid: season id
 
+# score
+pn: period
+val: points scored
+
 # event group
 sdt: start datetime
 edt: end datetime

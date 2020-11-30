@@ -37,6 +37,8 @@ class Sport(Config):
         self._market_ids = self._build_market_ids()
 
         self.market_names = self._build_market_names(self._sport["markets"])
+        self.market_periods = self._build_market_periods(self._sport["markets"])
+        self.market_types = self._build_market_types(self._sport["markets"])
 
         self.sport_id = self._sport["sport id"]
         self.default_market_id = self._sport["default market id"]
@@ -77,6 +79,37 @@ class Sport(Config):
             for y in x["market types"]:
                 markets[y["market id"]] = y["name"]
         return markets
+
+    def _build_market_periods(self, m: List[Dict]) -> Dict[int, List[int]]:
+        """Build the dictionary that is used to translate from market ids to periods.
+
+        The periods refer to the parts of a game that a market is active for. For
+        example, a 1st quarter or 1st period market will have a value of [1,2].
+        """
+        markets = {}
+        for x in m:
+            for y in x["market types"]:
+                try:
+                    markets[y["market id"]] = x["periods"]
+                except KeyError:
+                    pass
+        return markets
+
+    def _build_market_types(self, m):
+        market_types = {}
+        name_map = {
+            "money-line": "moneyline",
+            "pointspread": "spread",
+            "totals": "total",
+        }
+        for x in m:
+            for y in x["market types"]:
+                try:
+                    market_types[y["market id"]] = name_map[y["url"]]
+                except KeyError:
+                    # futures
+                    market_types[y["market id"]] = x["url"]
+        return market_types
 
     def market_ids(self, terms: Union[List[Union[int, str]], int, str]) -> List[int]:
         """Given provided search terms, return a list of matching market ids.
@@ -350,42 +383,49 @@ class Football(Sport):
     """Provides access to football config files."""
 
     def __init__(self):
-        super.__init__("football")
+        super().__init__("football")
 
 
 class Basketball(Sport):
     """Provides access to basketball config files."""
 
     def __init__(self):
-        super.__init__("basketball")
+        super().__init__("basketball")
 
 
 class Baseball(Sport):
     """Provides access to baseball config files."""
 
     def __init__(self):
-        super.__init__("baseball")
+        super().__init__("baseball")
 
 
 class Hockey(Sport):
     """Provides access to hockey config files."""
 
     def __init__(self):
-        super.__init__("hockey")
+        super().__init__("hockey")
 
 
 class Soccer(Sport):
     """Provides access to soccer config files."""
 
     def __init__(self):
-        super.__init__("soccer")
+        super().__init__("soccer")
 
 
 class Tennis(Sport):
     """Provides access to tennis config files."""
 
     def __init__(self):
-        super.__init__("tennis")
+        super().__init__("tennis")
+
+
+class Fighting(Sport):
+    """Provides access to tennis config files."""
+
+    def __init__(self):
+        super().__init__("fighting")
 
 
 class NFL(TeamLeague):
@@ -421,6 +461,12 @@ class NCAAB(League):
 
     def __init__(self):
         super().__init__("basketball", "ncaab")
+
+        self._market_ids = self._build_market_ids()
+
+        self.market_names = self._build_market_names(self._league["markets"])
+        self.market_periods = self._build_market_periods(self._league["markets"])
+        self.market_types = self._build_market_types(self._league["markets"])
 
 
 class NHL(League):
@@ -470,3 +516,10 @@ class ATP(League):
 
     def __init__(self):
         super().__init__("tennis", "atp")
+
+
+class UFC(League):
+    """Provides access to UFC config files."""
+
+    def __init__(self):
+        super().__init__("fighting", "ufc")
