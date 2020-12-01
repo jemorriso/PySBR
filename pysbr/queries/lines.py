@@ -1,5 +1,5 @@
 import copy
-from typing import List, Dict, Union
+from typing import List, Dict, Union, Tuple
 
 import pandas as pd
 
@@ -28,6 +28,7 @@ from pysbr.config.sport import (
     Tennis,
     Fighting,
 )
+from pysbr.config.sport import Sport
 from pysbr.config.sportsbook import Sportsbook
 
 
@@ -116,7 +117,15 @@ class Lines(Query):
         return data
 
     def _init_config(self, data: List[Dict]) -> None:
-        """"""
+        """Initialize private instance variables.
+
+        There is a lot of data that needs to be initialized in order to translate from
+        ids to information. This method does that.
+
+        self._leagues and self._sports map league and sport ids to their configuration
+        classes. Other private instance variables map event and participant ids to their
+        translations.
+        """
         if self._sportsbooks is None:
             self._sportsbooks = Sportsbook().names
 
@@ -147,7 +156,12 @@ class Lines(Query):
                 elif "abbreviation" in source:
                     self._participants[participant_id] = source.get("abbreviation")
 
-    def _get_config(self, line):
+    def _get_config(self, line: List[Dict]) -> Sport:
+        """Get league or sport config class.
+
+        If neither the league nor the sport has a configuration class, then the market
+        name and bet result will not appear in the Query.list() or Query.dataframe().
+        """
         try:
             return self._leagues_init[self._event_leagues.get(line.get("event id"))]
         except KeyError:
@@ -157,14 +171,24 @@ class Lines(Query):
                 # neither league nor sport has a config file
                 return None
 
-    def _resolve_market(self, line):
+    def _resolve_market(self, line: List[Dict]) -> str:
+        """Attempt to get the name of the market from its id."""
         try:
             return self._get_config(line).market_names.get(line.get("market id"))
         except AttributeError:
             return None
 
-    def _tally_points(self, line, period_scores, market_range):
+    def _tally_points(
+        self, line: List[Dict], period_scores: List[Dict[str, int]], market_range: range
+    ) -> Tuple[int, int]:
+        """Sum up the points scored over the range of interest, according to the market
+        in question.
+
+        If the market is a total, the return is of the form (total, []). Otherwise, the
+        return looks like (points_scored_by_team, points_scored_by_other_team).
+        """
         scores = copy.deepcopy(period_scores)
+        # TODO: check that len scores == market range (current and future events)
         if market_range is not None:
             scores = [s for s in period_scores if s.get("period") in market_range]
 
@@ -185,7 +209,12 @@ class Lines(Query):
         except TypeError:
             return None, None
 
-    def _evaluate_bet(self, line, points, o_points):
+    def _evaluate_bet(self, line: List[Dict], points, o_points):
+        """Evaluate whether the bet won or lost.
+
+        Given a line, market, and point totals, determine whether the bet won or lost,
+        returning True if win, and False if lose.
+        """
         try:
             market_type = self._get_config(line).market_types.get(line.get("market id"))
         except AttributeError:
@@ -215,7 +244,19 @@ class Lines(Query):
             except ValueError:
                 return None
 
-    def _resolve_bet(self, line):
+    def _resolve_bet(self, line: List[Dict]) -> Tuple[str, float]:
+        """Given a line, determine what the result of the bet was.
+
+        Utilizes event scores list which is part of an event query response. This
+        method calculates the point totals for the team of the line in question vs. the
+        other team, over the periods / quarters that the bet is evaluated, in order to
+        determine the result of the bet.
+
+        Returns a tuple where the first value is 'W' or 'L', and the second value is
+        the amount of profit the bet would return on a $100 bet. If some step fails,
+        (None, None) is returned and the bet result / profit are not included for that
+        particular line. Errors are not raised.
+        """
         scores = self._event_scores.get(line.get("event id"))
         # event query didn't have scores, or the game hasn't been played yet (query
         # returns empty list)
@@ -252,7 +293,7 @@ class Lines(Query):
         return ("W" if is_win else "L", profit)
 
     def _translate_ids(self, data: List[Dict]) -> List[Dict]:
-        """Add new entries to each element in the list for element's id fields.
+        """Add new entries to each element in the list for the element's id fields.
 
         The response for lines-related queries has many ids without associated
         information, making it hard to remember which line is related to which event.
@@ -267,6 +308,7 @@ class Lines(Query):
             betting market name
             sportsbook name
             participant information
+            bet result information (whether it won or lost; only for completed events)
 
         self._with_ids_translated caches the returned list.
         """
