@@ -9,10 +9,10 @@ black = "*"
 pytest = "*"
 vcrpy = "*"
 pytest-cov = "*"
-pysbr = {editable = true, path = "."}
 tzlocal = "*"
 pytest-lazy-fixture = "*"
 pandasgui = "*"
+python-sbr = {editable = true, path = "."}
 
 [packages]
 gql = "*"
