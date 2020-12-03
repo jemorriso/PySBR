@@ -117,7 +117,7 @@ def datetime_to_timestamp(dt: datetime) -> int:
 
 
 def timestamp_to_datetime(ts: int) -> datetime:
-    """Convert Unix timestamp to datetime.
+    """Convert Unix timestamp (in milliseconds) to datetime.
 
     The returned datetime object is aware, and uses the system timezone.
     """
@@ -125,6 +125,20 @@ def timestamp_to_datetime(ts: int) -> datetime:
 
 
 def timestamp_to_iso_str(ts: int) -> str:
-    """Convert Unix timestamp to ISO string."""
+    """Convert Unix timestamp (in milliseconds) to ISO string."""
 
     return timestamp_to_datetime(ts).replace(microsecond=0).isoformat()
+
+
+def iso_str_to_timestamp(iso_str: str) -> int:
+    """Convert iso str to Unix timestamp in milliseconds."""
+    return datetime.fromisoformat(iso_str).timestamp() * 1000
+
+
+def iso_zulu_to_offset(iso_str: str) -> str:
+    """Convert ISO string in Zulu time to UTC offset.
+
+    Does not check the contents of the ISO string - assumes it is a correctly formatted
+    ISO string in Zulu time.
+    """
+    return iso_str.replace("Z", "+00:00")
