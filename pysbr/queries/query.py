@@ -2,6 +2,7 @@ from string import Template
 import copy
 import typing
 from typing import Callable, Any, Dict, Optional, List, Union
+from functools import wraps
 
 from gql import Client, gql
 from gql.transport.requests import RequestsHTTPTransport
@@ -81,6 +82,7 @@ class Query:
 
             return True
 
+        @wraps(f)
         def wrapper(*args: Any) -> Any:
             """Wrapper returned by the decorator, wrapping the function argument."""
             types = list(typing.get_type_hints(f).values())
@@ -224,16 +226,29 @@ class Query:
                         k = t[k]
 
                         v = el.pop(old_k)
-
+                        try:
+                            # Sometimes values that should be integers are returned as
+                            # strings. Need to make sure we're not truncating floats,
+                            # however.
+                            if isinstance(v, str):
+                                v = int(v)
+                        except ValueError:
+                            pass
                         if k in ["datetime", "start datetime", "end datetime"]:
+                            try:
+                                # SearchEvents returns Zulu time iso string for value of
+                                # 'date'.
+                                v = utils.iso_str_to_timestamp(
+                                    utils.iso_zulu_to_offset(v)
+                                )
+                            except (AttributeError, ValueError):
+                                # AttributeError raised by iso_zulu_to_offset if v is a
+                                # timestamp. ValueError raised by iso_str_to_timestamp
+                                # if v is invalid isoformat string.
+                                pass
                             try:
                                 el[k] = utils.timestamp_to_iso_str(v)
                             except TypeError:
-                                el[k] = v
-                        elif k in ["points scored"]:
-                            try:
-                                el[k] = int(v)
-                            except ValueError:
                                 el[k] = v
                         else:
                             el[k] = v
