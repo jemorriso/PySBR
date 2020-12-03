@@ -40,7 +40,7 @@ class Sportsbook(Config):
 
         s = self._sportsbooks["sportsbooks"]
         sportsbooks = {}
-        for k in ["name", "short name"]:
+        for k in ["name", "alias"]:
             sportsbooks[k] = {}
             for x in s:
                 sportsbooks[k][x[k].lower()] = x["sportsbook id"]
