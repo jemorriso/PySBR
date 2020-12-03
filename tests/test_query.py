@@ -1035,3 +1035,33 @@ class TestQuery:
         # assert lines_obj is not None
         assert l_ is not None
         assert df is not None
+
+    @mark.parametrize(
+        "search_term, market_ids, cassette_events, cassette_lines, expected",
+        [
+            (
+                "nebraska",
+                [401],
+                "test_lines_with_search_events_events_ncaab1",
+                "test_lines_with_search_events_lines_ncaab1",
+                None,
+            )
+        ],
+    )
+    def test_lines_with_search_events(
+        self,
+        search_events,
+        current_lines,
+        search_term,
+        market_ids,
+        cassette_events,
+        cassette_lines,
+        expected,
+    ):
+        e = search_events(search_term, cassette_events)
+        c = current_lines(e.ids(), market_ids, [5, 9, 20], cassette_lines)
+        l_ = c.list(e)
+        df = c.dataframe(e)
+        # assert lines_obj is not None
+        assert l_ is not None
+        assert df is not None

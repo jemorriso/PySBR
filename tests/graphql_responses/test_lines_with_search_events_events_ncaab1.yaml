@@ -1,0 +1,36 @@
+searchEvent:
+- date: '2020-12-05T17:00:00.000Z'
+  des: Nebraska@Purdue
+  eid: 4245117
+  eventParticipants: '[{"eid":4245117,"partid":443,"psid":443,"ih":true,"rot":358,"source":{"tmid":443,"lid":6,"nam":"Purdue","nn":"Boilermakers","sn":"Purdue","abbr":"PUR"},"nam":"Purdue"},{"eid":4245117,"partid":1203,"psid":1203,"ih":false,"rot":357,"source":{"tmid":1203,"lid":6,"nam":"Nebraska","nn":"Cornhuskers","sn":"Nebraska","abbr":"NEB"},"nam":"Nebraska"}]'
+  league: NCAAF
+  lid: 6
+  spid: '4'
+  sport: football
+- date: '2020-12-01T22:00:00.000Z'
+  des: Nebraska-Omaha Mavericks@Creighton Bluejays
+  eid: 4285173
+  eventParticipants: '[{"eid":4285173,"partid":910,"psid":910,"ih":true,"rot":606,"source":{"tmid":910,"lid":2934,"nam":"Creighton","nn":"Bluejays","sn":"Creighton","abbr":"CREI"},"nam":"Creighton"},{"eid":4285173,"partid":972,"psid":972,"ih":false,"rot":605,"source":{"tmid":972,"lid":2934,"nam":"Nebraska-Omaha","nn":"Mavericks","sn":"Nebraska-Omaha","abbr":"NEOM"},"nam":"Nebraska-Omaha"}]'
+  league: NCAAB
+  lid: 14
+  spid: '5'
+  sport: basketball
+- date: '2020-12-02T02:00:00.000Z'
+  des: South Dakota Coyotes@Nebraska Cornhuskers
+  eid: 4285434
+  eventParticipants: '[{"eid":4285434,"partid":680,"psid":680,"ih":true,"rot":1626,"source":{"tmid":680,"lid":2934,"nam":"Nebraska","nn":"Cornhuskers","sn":"Nebraska","abbr":"NEB"},"nam":"Nebraska"},{"eid":4285434,"partid":1949,"psid":1949,"ih":false,"rot":1625,"source":{"tmid":1949,"lid":2934,"nam":"South
+    Dakota","nn":"Coyotes","sn":"South Dakota","abbr":"SDAK"},"nam":"South Dakota"}]'
+  league: NCAAB
+  lid: 14
+  spid: '5'
+  sport: basketball
+- date: '2020-12-01T21:35:00.000Z'
+  des: Minnesota Duluth Bulldogs@Nebraska Omaha Mavericks
+  eid: 4293077
+  eventParticipants: '[{"eid":4293077,"partid":415874,"psid":87386,"ih":true,"rot":0,"source":{"tmid":87386,"lid":2704,"nam":"Nebraska
+    Omaha Mavericks","nn":"","sn":"","abbr":""},"nam":"Nebraska Omaha Mavericks"},{"eid":4293077,"partid":415876,"psid":87388,"ih":false,"rot":0,"source":{"tmid":87388,"lid":2704,"nam":"Minnesota
+    Duluth Bulldogs","nn":"","sn":"","abbr":""},"nam":"Minnesota Duluth Bulldogs"}]'
+  league: NCAA Men
+  lid: 2704
+  spid: '6'
+  sport: hockey

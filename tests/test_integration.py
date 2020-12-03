@@ -87,7 +87,7 @@ class TestIntegration:
 
         nadal = None
         for x in e.list():
-            for y in x.get("event participants"):
+            for y in x.get("participants"):
                 try:
                     if y["source"]["last name"] == "Nadal":
 

@@ -1,0 +1,84 @@
+interactions:
+- request:
+    body: '{"query": "{\n  searchEvent(query: [\"nebraska\"]) {\n    des\n    date\n    league\n    sport\n    spid\n    eid\n    eventParticipants\n    lid\n  }\n}\n"}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '157'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.25.0
+    method: POST
+    uri: https://www.sportsbookreview.com/ms-odds-v2/odds-v2-service
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA7WVS4/aMBSF/0rk9VDZecOKZ6WqghnN0E0nszDgISkhRnYyEkL899oJEDsx6ahq
+        JRb3Xo5Njs+HcwIbnGMwOAFOMFvHsw+S5WDwegIbwsEALMiKYb7Dw6eCbQoCHqSeiC9saMMesnvQ
+        W6JgAKH4fIEQ/hSKlOBtITWLyWj0VQz4gTKxKXinNF/hNC1HyUZMXFESWbm26yEUiE4+wBNmebJO
+        DjjL5UO8niKpimpZBA5SUo5cR7ZcaZJYlDkriKgZzUXjeKGoOS3YmohW7JfvlQVpWfuiyvBeVBGo
+        7EZAjrJyMqZJStge7wjj5ZxnTSVerVg1+/EcgbNhu/NDlxVkQ8XLpSvNvOOUq24Cs5vLkrada4yq
+        oQllWVzwph9NenO0mI11R7Xs/CYzlyH6wl6Dm97jHsfYmuMPwpL1jg8njCTbOKeZNU4L8gsfuYEp
+        tLTtDqbGClMr8SukQZVXUxV6KHD+TFUlU6LoI1gnUTVtqnzom3OoFlQx2H3HVc7t5l9j63IUag66
+        8BbE5Hn2TU9CEWp4tT0FtuKpbAxw+dC7Y6pcYTSlp606uwVvQkyRK6A9zs2kXdU1b8itgXuhRR5b
+        U7yjObYm9EhzwofXpZbCugE3ewn/GW6uOJhP4OaW53eLxg8V3KqmjRvy7Tu8VSs6o/kv//yHLk+o
+        7/aV26zqDMAJW3eIu6wx+lLz1r2V0au+WtKbt5fp6LtuTteaUZsnWUa45GxapFI+LtJ0Q7cKb41b
+        z3zFIXGR32POmpNMwS6m6x051sj5NXJ9BwafeG9WMvW9ibwwcOuAwsAJfSN30JzOdcElngCasGue
+        hBqVmpGeixm49l4agGaHvu4wNDPYYTG8Z/EuBn/jsWOzGkL5AOe38/k3hG8mabUJAAA=
+    headers:
+      Accept-Ranges:
+      - bytes
+      Access-Control-Allow-Origin:
+      - '*'
+      Age:
+      - '0'
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '677'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 01 Dec 2020 22:44:57 GMT
+      Keep-Alive:
+      - timeout=20
+      Server:
+      - nginx/1.18.0
+      Set-Cookie:
+      - x_geo_cookie_value=CA, ;Domain=sportsbookreview.com;Path=/;Max-Age=43200
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      X-Cache:
+      - Miss
+      X-Cache-Hits:
+      - '0'
+      X-Cacheable:
+      - Not Cacheable
+      X-City-Code:
+      - ''
+      X-City-Name:
+      - British Columbia
+      X-Country-Code:
+      - CA
+      X-Country-Name:
+      - Canada
+      X-DIS-Request-ID:
+      - a8f3bc8ed747c4d571db9248eae0a8ad
+      X-Proxy-Host:
+      - www.sportsbookreview.com
+      X-Varnish:
+      - '58537528'
+    status:
+      code: 200
+      message: OK
+version: 1
