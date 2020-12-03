@@ -45,6 +45,7 @@ class Lines(Query):
         self._event_leagues = {}
         self._event_sports = {}
         self._event_scores = {}
+        self._event_statuses = {}
         # these are the participant ids for Over/Under lines for all sports I checked
         self._participants = {15143: "over", 15144: "under"}
         self._leagues = {
@@ -148,13 +149,19 @@ class Lines(Query):
             self._event_leagues[e.get("event id")] = e.get("league id")
             self._event_sports[e.get("event id")] = e.get("sport id")
             self._event_scores[e.get("event id")] = e.get("scores")
-            for p in e.get("participants"):
-                participant_id = p.get("participant id")
-                source = p.get("source")
-                if "last name" in source:
-                    self._participants[participant_id] = source.get("last name")
-                elif "abbreviation" in source:
-                    self._participants[participant_id] = source.get("abbreviation")
+            self._event_statuses[e.get("event id")] = e.get("event status")
+            try:
+                for p in e["participants"]:
+                    participant_id = p.get("participant id")
+                    source = p.get("source")
+                    if "last name" in source:
+                        self._participants[participant_id] = source.get("last name")
+                    elif "abbreviation" in source:
+                        self._participants[participant_id] = source.get("abbreviation")
+            except KeyError:
+                # Should not reach here; e['participants'] should be empty list at
+                # least.
+                pass
 
     def _get_config(self, line: List[Dict]) -> Sport:
         """Get league or sport config class.
@@ -163,6 +170,8 @@ class Lines(Query):
         name and bet result will not appear in the Query.list() or Query.dataframe().
         """
         try:
+            # League needs to be before sport because it may override some attributes.
+            # E.g. NCAAB market periods.
             return self._leagues_init[self._event_leagues.get(line.get("event id"))]
         except KeyError:
             try:
@@ -179,7 +188,10 @@ class Lines(Query):
             return None
 
     def _tally_points(
-        self, line: List[Dict], period_scores: List[Dict[str, int]], market_range: range
+        self,
+        line: List[Dict],
+        period_scores: List[Dict[str, int]],
+        market_range: List[int],
     ) -> Tuple[int, int]:
         """Sum up the points scored over the range of interest, according to the market
         in question.
@@ -257,10 +269,11 @@ class Lines(Query):
         (None, None) is returned and the bet result / profit are not included for that
         particular line. Errors are not raised.
         """
+        event_status = self._event_statuses.get(line.get("event id"))
         scores = self._event_scores.get(line.get("event id"))
-        # event query didn't have scores, or the game hasn't been played yet (query
-        # returns empty list)
-        if not scores:
+        # Event query didn't have scores, or the game hasn't been played yet (query
+        # returns empty list), or event is in progress.
+        if not scores or event_status != "complete":
             return None, None
 
         try:
@@ -290,7 +303,7 @@ class Lines(Query):
         except ValueError:
             return None, None
 
-        return ("W" if is_win else "L", profit)
+        return ("W" if is_win else "L", profit, points)
 
     def _translate_ids(self, data: List[Dict]) -> List[Dict]:
         """Add new entries to each element in the list for the element's id fields.
@@ -325,11 +338,13 @@ class Lines(Query):
             market = self._resolve_market(line)
             if market is not None:
                 line["market"] = market
-            result, profit = self._resolve_bet(line)
+            result, profit, points = self._resolve_bet(line)
             if result is not None:
                 line["result"] = result
             if profit is not None:
                 line["profit"] = profit
+            if points is not None:
+                line["participant score"] = points
             line["sportsbook"] = self._sportsbooks.get(line.get("sportsbook id"))
             line["participant"] = self._participants.get(line.get("participant id"))
 
