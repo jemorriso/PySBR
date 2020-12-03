@@ -2,9 +2,9 @@ version: 2.1
 
 jobs:
   build:
-    # code runs inside this docker image, using python 3.8.6
+    # code runs inside this docker image, using python 3.9.0
     docker:
-      - image: circleci/python:3.8.6
+      - image: circleci/python:3.9.0
         # environment:
         #   TZ: 'UTC'
 
