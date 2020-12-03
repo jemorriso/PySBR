@@ -110,7 +110,9 @@ sdt: start datetime
 edt: end datetime
 
 # search event
-eventParticipants: event participants
+# Using 'participants' so that match event queries (helpful in Lines._init_config()).
+eventParticipants: participants
+# this one doesn't matter because it's not used by Lines._init_config().
 searchParticipants: search participants
 
 # search league

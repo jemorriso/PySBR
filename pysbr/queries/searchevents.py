@@ -40,7 +40,7 @@ class SearchEvents(Query):
             self.name, self.fields, self.arg_str, self.args
         )
 
-        self._sublist_keys = ["event participants"]
+        self._sublist_keys = ["participants"]
         self._id_key = "event id"
 
     def _string_to_json(self, data, key):
