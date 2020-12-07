@@ -456,7 +456,7 @@ class NBA(League):
         super().__init__("basketball", "nba")
 
 
-class NCAAB(League):
+class NCAAB(TeamLeague):
     """Provides access to NCAAB config files."""
 
     def __init__(self):

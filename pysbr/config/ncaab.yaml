@@ -57,3 +57,3525 @@ markets:
     nam: 2nd Half
     url: 2nd-half
     periods: [3, 5]
+
+teams:
+  - abbr: COLO
+    sbr abbreviation: COLO
+    connid: 689
+    conname: PAC12
+    divid: 461
+    divname: NCAA Division I
+    cit: Boulder
+    nam: Colorado
+    nn: Buffaloes
+    tmid: 678
+  - abbr: JVST
+    sbr abbreviation: JVST
+    connid: 697
+    conname: OVC
+    divid: 469
+    divname: NCAA Division I
+    cit: Jacksonville
+    nam: Jacksonville State
+    nn: Gamecocks
+    tmid: 725
+  - abbr: EIU
+    sbr abbreviation: EIU
+    connid: 697
+    conname: OVC
+    divid: 469
+    divname: NCAA Division I
+    cit: Charleston
+    nam: Eastern Illinois
+    nn: Panthers
+    tmid: 726
+  - abbr: SEMO
+    sbr abbreviation: SEMO
+    connid: 697
+    conname: OVC
+    divid: 469
+    divname: NCAA Division I
+    cit: Cape Girardeau
+    nam: Southeast Missouri State
+    nn: Redhawks
+    tmid: 730
+  - abbr: WIN
+    sbr abbreviation: WIN
+    connid: 666
+    conname: BIGSOUTH
+    divid: 438
+    divname: NCAA Division I
+    cit: Rock Hill
+    nam: Winthrop
+    nn: Eagles
+    tmid: 742
+  - abbr: RAD
+    sbr abbreviation: RAD
+    connid: 666
+    conname: BIGSOUTH
+    divid: 438
+    divname: NCAA Division I
+    cit: Radford
+    nam: Radford
+    nn: Highlanders
+    tmid: 743
+  - abbr: HP
+    sbr abbreviation: HP
+    connid: 666
+    conname: BIGSOUTH
+    divid: 438
+    divname: NCAA Division I
+    cit: High Point
+    nam: High Point
+    nn: Panthers
+    tmid: 745
+  - abbr: CHSO
+    sbr abbreviation: CHSO
+    connid: 666
+    conname: BIGSOUTH
+    divid: 438
+    divname: NCAA Division I
+    cit: North Charleston
+    nam: Charleston Southern
+    nn: Buccaneers
+    tmid: 746
+  - abbr: UNCA
+    sbr abbreviation: UNCA
+    connid: 666
+    conname: BIGSOUTH
+    divid: 438
+    divname: NCAA Division I
+    cit: Asheville
+    nam: UNC Asheville
+    nn: Bulldogs
+    tmid: 747
+  - abbr: WEBB
+    sbr abbreviation: WEBB
+    connid: 666
+    conname: BIGSOUTH
+    divid: 438
+    divname: NCAA Division I
+    cit: Boiling Springs
+    nam: Gardner-Webb
+    nn: Runnin' Bulldogs
+    tmid: 777
+  - abbr: CAMP
+    sbr abbreviation: CAMP
+    connid: 666
+    conname: BIGSOUTH
+    divid: 438
+    divname: NCAA Division I
+    cit: Buies Creek
+    nam: Campbell
+    nn: Fighting Camels
+    tmid: 778
+  - abbr: UCSD
+    sbr abbreviation: UCSD
+    connid: 750
+    conname: BIGWEST
+    divid: 522
+    divname: NCAA Division I
+    cit: La Jolla
+    nam: UC San Diego
+    nn: Tritons
+    tmid: 1020
+  - abbr: AUB
+    sbr abbreviation: AUB
+    connid: 683
+    conname: SEC
+    divid: 455
+    divname: NCAA Division I
+    cit: Auburn
+    nam: Auburn
+    nn: Tigers
+    tmid: 1258
+  - abbr: LSU
+    sbr abbreviation: LSU
+    connid: 683
+    conname: SEC
+    divid: 455
+    divname: NCAA Division I
+    cit: Baton Rouge
+    nam: LSU
+    nn: Tigers
+    tmid: 1259
+  - abbr: UK
+    sbr abbreviation: UK
+    connid: 683
+    conname: SEC
+    divid: 455
+    divname: NCAA Division I
+    cit: Lexington
+    nam: Kentucky
+    nn: Wildcats
+    tmid: 1264
+  - abbr: UGA
+    sbr abbreviation: UGA
+    connid: 683
+    conname: SEC
+    divid: 455
+    divname: NCAA Division I
+    cit: Athens
+    nam: Georgia
+    nn: Bulldogs
+    tmid: 1266
+  - abbr: SCAR
+    sbr abbreviation: SCAR
+    connid: 683
+    conname: SEC
+    divid: 455
+    divname: NCAA Division I
+    cit: Columbia
+    nam: South Carolina
+    nn: Gamecocks
+    tmid: 1268
+  - abbr: BELL
+    sbr abbreviation: BELL
+    connid: 792
+    conname: AS
+    divid: 564
+    divname: NCAA Division I
+    cit: Louisville
+    nam: Bellarmine
+    nn: Knights
+    tmid: 1038
+  - abbr: DSU
+    sbr abbreviation: DSU
+    connid: 761
+    conname: WAC
+    divid: 533
+    divname: NCAA Division I
+    cit: St. George
+    nam: Dixie State
+    nn: Trailblazers
+    tmid: 1411
+  - abbr: HOF
+    sbr abbreviation: HOF
+    connid: 726
+    conname: COLONIAL
+    divid: 498
+    divname: NCAA Division I
+    cit: Hempstead
+    nam: Hofstra
+    nn: Pride
+    tmid: 640
+  - abbr: JMU
+    sbr abbreviation: JMU
+    connid: 726
+    conname: COLONIAL
+    divid: 498
+    divname: NCAA Division I
+    cit: Harrisonburg
+    nam: James Madison
+    nn: Dukes
+    tmid: 641
+  - abbr: LMU
+    sbr abbreviation: LMU
+    connid: 732
+    conname: WCC
+    divid: 504
+    divname: NCAA Division I
+    cit: Los Angeles
+    nam: Loyola Marymount
+    nn: Lions
+    tmid: 652
+  - abbr: PORT
+    sbr abbreviation: PORT
+    connid: 732
+    conname: WCC
+    divid: 504
+    divname: NCAA Division I
+    cit: Portland
+    nam: Portland
+    nn: Pilots
+    tmid: 654
+  - abbr: USD
+    sbr abbreviation: USD
+    connid: 732
+    conname: WCC
+    divid: 504
+    divname: NCAA Division I
+    cit: San Diego
+    nam: San Diego
+    nn: Toreros
+    tmid: 655
+  - abbr: SCU
+    sbr abbreviation: SCU
+    connid: 732
+    conname: WCC
+    divid: 504
+    divname: NCAA Division I
+    cit: Santa Clara
+    nam: Santa Clara
+    nn: Broncos
+    tmid: 656
+  - abbr: OKST
+    sbr abbreviation: OKST
+    connid: 709
+    conname: BIG12
+    divid: 481
+    divname: NCAA Division I
+    cit: Stillwater
+    nam: Oklahoma State
+    nn: Cowboys
+    tmid: 679
+  - abbr: NEB
+    sbr abbreviation: NEB
+    connid: 701
+    conname: BIG10
+    divid: 473
+    divname: NCAA Division I
+    cit: Lincoln
+    nam: Nebraska
+    nn: Cornhuskers
+    tmid: 680
+  - abbr: KU
+    sbr abbreviation: KU
+    connid: 709
+    conname: BIG12
+    divid: 481
+    divname: NCAA Division I
+    cit: Lawrence
+    nam: Kansas
+    nn: Jayhawks
+    tmid: 681
+  - abbr: TTU
+    sbr abbreviation: TTU
+    connid: 709
+    conname: BIG12
+    divid: 481
+    divname: NCAA Division I
+    cit: Lubbock
+    nam: Texas Tech
+    nn: Red Raiders
+    tmid: 682
+  - abbr: KSU
+    sbr abbreviation: KSU
+    connid: 709
+    conname: BIG12
+    divid: 481
+    divname: NCAA Division I
+    cit: Manhattan
+    nam: Kansas State
+    nn: Wildcats
+    tmid: 683
+  - abbr: ISU
+    sbr abbreviation: ISU
+    connid: 709
+    conname: BIG12
+    divid: 481
+    divname: NCAA Division I
+    cit: Ames
+    nam: Iowa State
+    nn: Cyclones
+    tmid: 684
+  - abbr: TEX
+    sbr abbreviation: TEX
+    connid: 709
+    conname: BIG12
+    divid: 481
+    divname: NCAA Division I
+    cit: Austin
+    nam: Texas
+    nn: Longhorns
+    tmid: 685
+  - abbr: OKLA
+    sbr abbreviation: OKLA
+    connid: 709
+    conname: BIG12
+    divid: 481
+    divname: NCAA Division I
+    cit: Norman
+    nam: Oklahoma
+    nn: Sooners
+    tmid: 686
+  - abbr: BAY
+    sbr abbreviation: BAY
+    connid: 709
+    conname: BIG12
+    divid: 481
+    divname: NCAA Division I
+    cit: Waco
+    nam: Baylor
+    nn: Bears
+    tmid: 687
+  - abbr: TXAM
+    sbr abbreviation: TXAM
+    connid: 683
+    conname: SEC
+    divid: 455
+    divname: NCAA Division I
+    cit: College Station
+    nam: Texas A&M
+    nn: Aggies
+    tmid: 688
+  - abbr: MIZZ
+    sbr abbreviation: MIZZ
+    connid: 683
+    conname: SEC
+    divid: 455
+    divname: NCAA Division I
+    cit: Columbia
+    nam: Missouri
+    nn: Tigers
+    tmid: 689
+  - abbr: DART
+    sbr abbreviation: DART
+    connid: 717
+    conname: IVY
+    divid: 489
+    divname: NCAA Division I
+    cit: Hanover
+    nam: Dartmouth
+    nn: Big Green
+    tmid: 690
+  - abbr: BRWN
+    sbr abbreviation: BRWN
+    connid: 717
+    conname: IVY
+    divid: 489
+    divname: NCAA Division I
+    cit: Providence
+    nam: Brown
+    nn: Bears
+    tmid: 691
+  - abbr: PENN
+    sbr abbreviation: PENN
+    connid: 717
+    conname: IVY
+    divid: 489
+    divname: NCAA Division I
+    cit: Philadelphia
+    nam: Pennsylvania
+    nn: Quakers
+    tmid: 692
+  - abbr: YALE
+    sbr abbreviation: YALE
+    connid: 717
+    conname: IVY
+    divid: 489
+    divname: NCAA Division I
+    cit: New Haven
+    nam: Yale
+    nn: Bulldogs
+    tmid: 693
+  - abbr: CLMB
+    sbr abbreviation: CLMB
+    connid: 717
+    conname: IVY
+    divid: 489
+    divname: NCAA Division I
+    cit: New York
+    nam: Columbia
+    nn: Lions
+    tmid: 694
+  - abbr: PRIN
+    sbr abbreviation: PRIN
+    connid: 717
+    conname: IVY
+    divid: 489
+    divname: NCAA Division I
+    cit: Princeton
+    nam: Princeton
+    nn: Tigers
+    tmid: 695
+  - abbr: HARV
+    sbr abbreviation: HARV
+    connid: 717
+    conname: IVY
+    divid: 489
+    divname: NCAA Division I
+    cit: Allston
+    nam: Harvard
+    nn: Crimson
+    tmid: 696
+  - abbr: COR
+    sbr abbreviation: COR
+    connid: 717
+    conname: IVY
+    divid: 489
+    divname: NCAA Division I
+    cit: Ithaca
+    nam: Cornell
+    nn: Big Red
+    tmid: 697
+  - abbr: TEM
+    sbr abbreviation: TEM
+    connid: 730
+    conname: AAC
+    divid: 502
+    divname: NCAA Division I
+    cit: Philadelphia
+    nam: Temple
+    nn: Owls
+    tmid: 706
+  - abbr: WAG
+    sbr abbreviation: WAG
+    connid: 713
+    conname: NE
+    divid: 485
+    divname: NCAA Division I
+    cit: Staten Island
+    nam: Wagner
+    nn: Seahawks
+    tmid: 712
+  - abbr: SHU
+    sbr abbreviation: SHU
+    connid: 713
+    conname: NE
+    divid: 485
+    divname: NCAA Division I
+    cit: Fairfield
+    nam: Sacred Heart
+    nn: Pioneers
+    tmid: 715
+  - abbr: VCU
+    sbr abbreviation: VCU
+    connid: 745
+    conname: A10
+    divid: 517
+    divname: NCAA Division I
+    cit: Richmond
+    nam: Virginia Commonwealth
+    nn: Rams
+    tmid: 637
+  - abbr: ODU
+    sbr abbreviation: ODU
+    connid: 755
+    conname: CUSA
+    divid: 527
+    divname: NCAA Division I
+    cit: Norfolk
+    nam: Old Dominion
+    nn: Monarchs
+    tmid: 638
+  - abbr: GMU
+    sbr abbreviation: GMU
+    connid: 745
+    conname: A10
+    divid: 517
+    divname: NCAA Division I
+    cit: Fairfax
+    nam: George Mason
+    nn: Patriots
+    tmid: 639
+  - abbr: DREX
+    sbr abbreviation: DREX
+    connid: 726
+    conname: COLONIAL
+    divid: 498
+    divname: NCAA Division I
+    cit: Philadelphia
+    nam: Drexel
+    nn: Dragons
+    tmid: 642
+  - abbr: WM
+    sbr abbreviation: WM
+    connid: 726
+    conname: COLONIAL
+    divid: 498
+    divname: NCAA Division I
+    cit: Williamsburg
+    nam: William & Mary
+    nn: Tribe
+    tmid: 643
+  - abbr: TOWS
+    sbr abbreviation: TOWS
+    connid: 726
+    conname: COLONIAL
+    divid: 498
+    divname: NCAA Division I
+    cit: Towson
+    nam: Towson
+    nn: Tigers
+    tmid: 644
+  - abbr: NE
+    sbr abbreviation: NE
+    connid: 726
+    conname: COLONIAL
+    divid: 498
+    divname: NCAA Division I
+    cit: Boston
+    nam: Northeastern
+    nn: Huskies
+    tmid: 645
+  - abbr: GAST
+    sbr abbreviation: GAST
+    connid: 715
+    conname: SUNBELT
+    divid: 487
+    divname: NCAA Division I
+    cit: Atlanta
+    nam: Georgia State
+    nn: Panthers
+    tmid: 646
+  - abbr: DEL
+    sbr abbreviation: DEL
+    connid: 726
+    conname: COLONIAL
+    divid: 498
+    divname: NCAA Division I
+    cit: Newark
+    nam: Delaware
+    nn: Fightin Blue Hens
+    tmid: 648
+  - abbr: SFPA
+    sbr abbreviation: SFPA
+    connid: 713
+    conname: NE
+    divid: 485
+    divname: NCAA Division I
+    cit: Loretto
+    nam: St. Francis (PA)
+    nn: Red Flash
+    tmid: 716
+  - abbr: MSM
+    sbr abbreviation: MSM
+    connid: 713
+    conname: NE
+    divid: 485
+    divname: NCAA Division I
+    cit: Emmitsburg
+    nam: Mount St. Mary's
+    nn: Mountaineers
+    tmid: 717
+  - abbr: CCSU
+    sbr abbreviation: CCSU
+    connid: 713
+    conname: NE
+    divid: 485
+    divname: NCAA Division I
+    cit: New Britain
+    nam: Central Connecticut State
+    nn: Blue Devils
+    tmid: 718
+  - abbr: FDU
+    sbr abbreviation: FDU
+    connid: 713
+    conname: NE
+    divid: 485
+    divname: NCAA Division I
+    cit: Teaneck
+    nam: Fairleigh Dickinson
+    nn: Knights
+    tmid: 719
+  - abbr: SFNY
+    sbr abbreviation: SFNY
+    connid: 713
+    conname: NE
+    divid: 485
+    divname: NCAA Division I
+    cit: Brooklyn
+    nam: St. Francis (BKN)
+    nn: Terriers
+    tmid: 720
+  - abbr: SMC
+    sbr abbreviation: SMC
+    connid: 732
+    conname: WCC
+    divid: 504
+    divname: NCAA Division I
+    cit: Moraga
+    nam: Saint Mary's
+    nn: Gaels
+    tmid: 649
+  - abbr: PEPP
+    sbr abbreviation: PEPP
+    connid: 732
+    conname: WCC
+    divid: 504
+    divname: NCAA Division I
+    cit: Malibu
+    nam: Pepperdine
+    nn: Waves
+    tmid: 650
+  - abbr: GONZ
+    sbr abbreviation: GONZ
+    connid: 732
+    conname: WCC
+    divid: 504
+    divname: NCAA Division I
+    cit: Spokane
+    nam: Gonzaga
+    nn: Bulldogs
+    tmid: 651
+  - abbr: SF
+    sbr abbreviation: SF
+    connid: 732
+    conname: WCC
+    divid: 504
+    divname: NCAA Division I
+    cit: San Francisco
+    nam: San Francisco
+    nn: Dons
+    tmid: 653
+  - abbr: CAN
+    sbr abbreviation: CAN
+    connid: 752
+    conname: MAAC
+    divid: 524
+    divname: NCAA Division I
+    cit: Buffalo
+    nam: Canisius
+    nn: Golden Griffins
+    tmid: 657
+  - abbr: MAN
+    sbr abbreviation: MAN
+    connid: 752
+    conname: MAAC
+    divid: 524
+    divname: NCAA Division I
+    cit: Bronx
+    nam: Manhattan
+    nn: Jaspers
+    tmid: 658
+  - abbr: NIAG
+    sbr abbreviation: NIAG
+    connid: 752
+    conname: MAAC
+    divid: 524
+    divname: NCAA Division I
+    cit: Lewiston
+    nam: Niagara
+    nn: Purple Eagles
+    tmid: 659
+  - abbr: IONA
+    sbr abbreviation: IONA
+    connid: 752
+    conname: MAAC
+    divid: 524
+    divname: NCAA Division I
+    cit: New Rochelle
+    nam: Iona
+    nn: Gaels
+    tmid: 660
+  - abbr: SPC
+    sbr abbreviation: SPC
+    connid: 752
+    conname: MAAC
+    divid: 524
+    divname: NCAA Division I
+    cit: Jersey City
+    nam: St. Peter's
+    nn: Peacocks
+    tmid: 661
+  - abbr: MRST
+    sbr abbreviation: MRST
+    connid: 752
+    conname: MAAC
+    divid: 524
+    divname: NCAA Division I
+    cit: Poughkeepsie
+    nam: Marist
+    nn: Red Foxes
+    tmid: 662
+  - abbr: L-MD
+    sbr abbreviation: L-MD
+    connid: 798
+    conname: PATRIOT
+    divid: 570
+    divname: NCAA Division I
+    cit: Baltimore
+    nam: Loyola (MD)
+    nn: Greyhounds
+    tmid: 663
+  - abbr: SIE
+    sbr abbreviation: SIE
+    connid: 752
+    conname: MAAC
+    divid: 524
+    divname: NCAA Division I
+    cit: Albany
+    nam: Siena
+    nn: Saints
+    tmid: 664
+  - abbr: RID
+    sbr abbreviation: RID
+    connid: 752
+    conname: MAAC
+    divid: 524
+    divname: NCAA Division I
+    cit: Lawrenceville
+    nam: Rider
+    nn: Broncs
+    tmid: 665
+  - abbr: FAIR
+    sbr abbreviation: FAIR
+    connid: 752
+    conname: MAAC
+    divid: 524
+    divname: NCAA Division I
+    cit: Bridgeport
+    nam: Fairfield
+    nn: Stags
+    tmid: 666
+  - abbr: MORG
+    sbr abbreviation: MORG
+    connid: 777
+    conname: MEAC
+    divid: 549
+    divname: NCAA Division I
+    cit: Baltimore
+    nam: Morgan State
+    nn: Bears
+    tmid: 667
+  - abbr: NORF
+    sbr abbreviation: NORF
+    connid: 777
+    conname: MEAC
+    divid: 549
+    divname: NCAA Division I
+    cit: Norfolk
+    nam: Norfolk State
+    nn: Spartans
+    tmid: 668
+  - abbr: OSU
+    sbr abbreviation: OSU
+    connid: 701
+    conname: BIG10
+    divid: 473
+    divname: NCAA Division I
+    cit: Columbus
+    nam: Ohio State
+    nn: Buckeyes
+    tmid: 786
+  - abbr: MINN
+    sbr abbreviation: MINN
+    connid: 701
+    conname: BIG10
+    divid: 473
+    divname: NCAA Division I
+    cit: Minneapolis
+    nam: Minnesota
+    nn: Golden Gophers
+    tmid: 787
+  - abbr: IOWA
+    sbr abbreviation: IOWA
+    connid: 701
+    conname: BIG10
+    divid: 473
+    divname: NCAA Division I
+    cit: Iowa City
+    nam: Iowa
+    nn: Hawkeyes
+    tmid: 788
+  - abbr: PUR
+    sbr abbreviation: PUR
+    connid: 701
+    conname: BIG10
+    divid: 473
+    divname: NCAA Division I
+    cit: West Lafayette
+    nam: Purdue
+    nn: Boilermakers
+    tmid: 789
+  - abbr: PSU
+    sbr abbreviation: PSU
+    connid: 701
+    conname: BIG10
+    divid: 473
+    divname: NCAA Division I
+    cit: University Park
+    nam: Penn State
+    nn: Nittany Lions
+    tmid: 790
+  - abbr: DSU
+    sbr abbreviation: DSU
+    connid: 777
+    conname: MEAC
+    divid: 549
+    divname: NCAA Division I
+    cit: Dover
+    nam: Delaware State
+    nn: Hornets
+    tmid: 669
+  - abbr: HAMP
+    sbr abbreviation: HAMP
+    connid: 666
+    conname: BIGSOUTH
+    divid: 438
+    divname: NCAA Division I
+    cit: Hampton
+    nam: Hampton
+    nn: Pirates
+    tmid: 670
+  - abbr: FAMU
+    sbr abbreviation: FAMU
+    connid: 777
+    conname: MEAC
+    divid: 549
+    divname: NCAA Division I
+    cit: Tallahassee
+    nam: Florida A&M
+    nn: Rattlers
+    tmid: 671
+  - abbr: COPP
+    sbr abbreviation: COPP
+    connid: 777
+    conname: MEAC
+    divid: 549
+    divname: NCAA Division I
+    cit: Baltimore
+    nam: Coppin State
+    nn: Eagles
+    tmid: 674
+  - abbr: ALBY
+    sbr abbreviation: ALBY
+    connid: 708
+    conname: AE
+    divid: 480
+    divname: NCAA Division I
+    cit: Guilderland
+    nam: Albany
+    nn: Great Danes
+    tmid: 870
+  - abbr: UVM
+    sbr abbreviation: UVM
+    connid: 708
+    conname: AE
+    divid: 480
+    divname: NCAA Division I
+    cit: Burlington
+    nam: Vermont
+    nn: Catamounts
+    tmid: 871
+  - abbr: HART
+    sbr abbreviation: HART
+    connid: 708
+    conname: AE
+    divid: 480
+    divname: NCAA Division I
+    cit: West Hartford
+    nam: Hartford
+    nn: Hawks
+    tmid: 872
+  - abbr: UNH
+    sbr abbreviation: UNH
+    connid: 708
+    conname: AE
+    divid: 480
+    divname: NCAA Division I
+    cit: Durham
+    nam: New Hampshire
+    nn: Wildcats
+    tmid: 873
+  - abbr: TCU
+    sbr abbreviation: TCU
+    connid: 709
+    conname: BIG12
+    divid: 481
+    divname: NCAA Division I
+    cit: Fort Worth
+    nam: TCU
+    nn: Horned Frogs
+    tmid: 875
+  - abbr: HOW
+    sbr abbreviation: HOW
+    connid: 777
+    conname: MEAC
+    divid: 549
+    divname: NCAA Division I
+    cit: Washington
+    nam: Howard
+    nn: Bison
+    tmid: 675
+  - abbr: COOK
+    sbr abbreviation: COOK
+    connid: 777
+    conname: MEAC
+    divid: 549
+    divname: NCAA Division I
+    cit: Daytona Beach
+    nam: Bethune-Cookman
+    nn: Wildcats
+    tmid: 677
+  - abbr: SIUE
+    sbr abbreviation: SIUE
+    connid: 697
+    conname: OVC
+    divid: 469
+    divname: NCAA Division I
+    cit: Edwardsville
+    nam: SIU-Edwardsville
+    nn: Cougars
+    tmid: 1069
+  - abbr: DAY
+    sbr abbreviation: DAY
+    connid: 745
+    conname: A10
+    divid: 517
+    divname: NCAA Division I
+    cit: Dayton
+    nam: Dayton
+    nn: Flyers
+    tmid: 698
+  - abbr: MASS
+    sbr abbreviation: MASS
+    connid: 745
+    conname: A10
+    divid: 517
+    divname: NCAA Division I
+    cit: Amherst
+    nam: Massachusetts
+    nn: Minutemen
+    tmid: 699
+  - abbr: LAS
+    sbr abbreviation: LAS
+    connid: 745
+    conname: A10
+    divid: 517
+    divname: NCAA Division I
+    cit: Philadelphia
+    nam: La Salle
+    nn: Explorers
+    tmid: 700
+  - abbr: CHAR
+    sbr abbreviation: CHAR
+    connid: 755
+    conname: CUSA
+    divid: 527
+    divname: NCAA Division I
+    cit: Charlotte
+    nam: Charlotte
+    nn: 49ers
+    tmid: 701
+  - abbr: SBON
+    sbr abbreviation: SBON
+    connid: 745
+    conname: A10
+    divid: 517
+    divname: NCAA Division I
+    cit: St. Bonaventure
+    nam: St. Bonaventure
+    nn: Bonnies
+    tmid: 702
+  - abbr: DUQ
+    sbr abbreviation: DUQ
+    connid: 745
+    conname: A10
+    divid: 517
+    divname: NCAA Division I
+    cit: Pittsburgh
+    nam: Duquesne
+    nn: Dukes
+    tmid: 703
+  - abbr: XAV
+    sbr abbreviation: XAV
+    connid: 737
+    conname: BIGEAST
+    divid: 509
+    divname: NCAA Division I
+    cit: Cincinnati
+    nam: Xavier
+    nn: Musketeers
+    tmid: 704
+  - abbr: FOR
+    sbr abbreviation: FOR
+    connid: 745
+    conname: A10
+    divid: 517
+    divname: NCAA Division I
+    cit: Bronx
+    nam: Fordham
+    nn: Rams
+    tmid: 707
+  - abbr: RICH
+    sbr abbreviation: RICH
+    connid: 745
+    conname: A10
+    divid: 517
+    divname: NCAA Division I
+    cit: Richmond
+    nam: Richmond
+    nn: Spiders
+    tmid: 708
+  - abbr: URI
+    sbr abbreviation: URI
+    connid: 745
+    conname: A10
+    divid: 517
+    divname: NCAA Division I
+    cit: Kingston
+    nam: Rhode Island
+    nn: Rams
+    tmid: 709
+  - abbr: GW
+    sbr abbreviation: GW
+    connid: 745
+    conname: A10
+    divid: 517
+    divname: NCAA Division I
+    cit: Washington
+    nam: George Washington
+    nn: Colonials
+    tmid: 710
+  - abbr: SLU
+    sbr abbreviation: SLU
+    connid: 745
+    conname: A10
+    divid: 517
+    divname: NCAA Division I
+    cit: St. Louis
+    nam: Saint Louis
+    nn: Billikens
+    tmid: 711
+  - abbr: QUIN
+    sbr abbreviation: QUIN
+    connid: 752
+    conname: MAAC
+    divid: 524
+    divname: NCAA Division I
+    cit: Hamden
+    nam: Quinnipiac
+    nn: Bobcats
+    tmid: 713
+  - abbr: MONM
+    sbr abbreviation: MONM
+    connid: 752
+    conname: MAAC
+    divid: 524
+    divname: NCAA Division I
+    cit: West Long Branch
+    nam: Monmouth
+    nn: Hawks
+    tmid: 722
+  - abbr: MURR
+    sbr abbreviation: MURR
+    connid: 697
+    conname: OVC
+    divid: 469
+    divname: NCAA Division I
+    cit: Murray
+    nam: Murray State
+    nn: Racers
+    tmid: 723
+  - abbr: SAM
+    sbr abbreviation: SAM
+    connid: 739
+    conname: SOUTHERN
+    divid: 511
+    divname: NCAA Division I
+    cit: Birmingham
+    nam: Samford
+    nn: Bulldogs
+    tmid: 724
+  - abbr: TNST
+    sbr abbreviation: TNST
+    connid: 697
+    conname: OVC
+    divid: 469
+    divname: NCAA Division I
+    cit: Nashville
+    nam: Tennessee State
+    nn: Tigers
+    tmid: 727
+  - abbr: EKY
+    sbr abbreviation: EKY
+    connid: 697
+    conname: OVC
+    divid: 469
+    divname: NCAA Division I
+    cit: Richmond
+    nam: Eastern Kentucky
+    nn: Colonels
+    tmid: 728
+  - abbr: MORE
+    sbr abbreviation: MORE
+    connid: 697
+    conname: OVC
+    divid: 469
+    divname: NCAA Division I
+    cit: Morehead
+    nam: Morehead State
+    nn: Eagles
+    tmid: 729
+  - abbr: PEAY
+    sbr abbreviation: PEAY
+    connid: 697
+    conname: OVC
+    divid: 469
+    divname: NCAA Division I
+    cit: Clarksville
+    nam: Austin Peay
+    nn: Governors
+    tmid: 731
+  - abbr: UTM
+    sbr abbreviation: UTM
+    connid: 697
+    conname: OVC
+    divid: 469
+    divname: NCAA Division I
+    cit: Martin
+    nam: Tennessee-Martin
+    nn: Skyhawks
+    tmid: 732
+  - abbr: TNTC
+    sbr abbreviation: TNTC
+    connid: 697
+    conname: OVC
+    divid: 469
+    divname: NCAA Division I
+    cit: Cookeville
+    nam: Tennessee Tech
+    nn: Golden Eagles
+    tmid: 733
+  - abbr: CSF
+    sbr abbreviation: CSF
+    connid: 750
+    conname: BIGWEST
+    divid: 522
+    divname: NCAA Division I
+    cit: Fullerton
+    nam: Cal State Fullerton
+    nn: Titans
+    tmid: 734
+  - abbr: UCRV
+    sbr abbreviation: UCRV
+    connid: 750
+    conname: BIGWEST
+    divid: 522
+    divname: NCAA Division I
+    cit: Riverside
+    nam: UC Riverside
+    nn: Highlanders
+    tmid: 735
+  - abbr: UCI
+    sbr abbreviation: UCI
+    connid: 750
+    conname: BIGWEST
+    divid: 522
+    divname: NCAA Division I
+    cit: Irvine
+    nam: UC Irvine
+    nn: Anteaters
+    tmid: 736
+  - abbr: UCSB
+    sbr abbreviation: UCSB
+    connid: 750
+    conname: BIGWEST
+    divid: 522
+    divname: NCAA Division I
+    cit: Santa Barbara
+    nam: UC Santa Barbara
+    nn: Gauchos
+    tmid: 737
+  - abbr: LBSU
+    sbr abbreviation: LBSU
+    connid: 750
+    conname: BIGWEST
+    divid: 522
+    divname: NCAA Division I
+    cit: Long Beach
+    nam: Long Beach State
+    nn: Beach
+    tmid: 738
+  - abbr: PAC
+    sbr abbreviation: PAC
+    connid: 732
+    conname: WCC
+    divid: 504
+    divname: NCAA Division I
+    cit: Stockton
+    nam: Pacific
+    nn: Tigers
+    tmid: 739
+  - abbr: CSN
+    sbr abbreviation: CSN
+    connid: 750
+    conname: BIGWEST
+    divid: 522
+    divname: NCAA Division I
+    cit: Northridge
+    nam: Cal State Northridge
+    nn: Matadors
+    tmid: 740
+  - abbr: CP
+    sbr abbreviation: CP
+    connid: 750
+    conname: BIGWEST
+    divid: 522
+    divname: NCAA Division I
+    cit: San Luis Obispo
+    nam: Cal Poly
+    nn: Mustangs
+    tmid: 741
+  - abbr: LIB
+    sbr abbreviation: LIB
+    connid: 792
+    conname: AS
+    divid: 564
+    divname: NCAA Division I
+    cit: Lynchburg
+    nam: Liberty
+    nn: Flames
+    tmid: 744
+  - abbr: VMI
+    sbr abbreviation: VMI
+    connid: 739
+    conname: SOUTHERN
+    divid: 511
+    divname: NCAA Division I
+    cit: Lexington
+    nam: Virginia Military
+    nn: Keydets
+    tmid: 748
+  - abbr: CCAR
+    sbr abbreviation: CCAR
+    connid: 715
+    conname: SUNBELT
+    divid: 487
+    divname: NCAA Division I
+    cit: Conway
+    nam: Coastal Carolina
+    nn: Chanticleers
+    tmid: 749
+  - abbr: NAVY
+    sbr abbreviation: NAVY
+    connid: 798
+    conname: PATRIOT
+    divid: 570
+    divname: NCAA Division I
+    cit: Annapolis
+    nam: Navy
+    nn: Midshipmen
+    tmid: 750
+  - abbr: BUCK
+    sbr abbreviation: BUCK
+    connid: 798
+    conname: PATRIOT
+    divid: 570
+    divname: NCAA Division I
+    cit: Lewisburg
+    nam: Bucknell
+    nn: Bison
+    tmid: 751
+  - abbr: LAF
+    sbr abbreviation: LAF
+    connid: 798
+    conname: PATRIOT
+    divid: 570
+    divname: NCAA Division I
+    cit: Easton
+    nam: Lafayette
+    nn: Leopards
+    tmid: 752
+  - abbr: HC
+    sbr abbreviation: HC
+    connid: 798
+    conname: PATRIOT
+    divid: 570
+    divname: NCAA Division I
+    cit: Worcester
+    nam: Holy Cross
+    nn: Crusaders
+    tmid: 753
+  - abbr: AMER
+    sbr abbreviation: AMER
+    connid: 798
+    conname: PATRIOT
+    divid: 570
+    divname: NCAA Division I
+    cit: Washington
+    nam: American University
+    nn: Eagles
+    tmid: 754
+  - abbr: ARMY
+    sbr abbreviation: ARMY
+    connid: 798
+    conname: PATRIOT
+    divid: 570
+    divname: NCAA Division I
+    cit: West Point
+    nam: Army
+    nn: Black Knights
+    tmid: 755
+  - abbr: LEH
+    sbr abbreviation: LEH
+    connid: 798
+    conname: PATRIOT
+    divid: 570
+    divname: NCAA Division I
+    cit: Bethlehem
+    nam: Lehigh
+    nn: Mountain Hawks
+    tmid: 756
+  - abbr: COLG
+    sbr abbreviation: COLG
+    connid: 798
+    conname: PATRIOT
+    divid: 570
+    divname: NCAA Division I
+    cit: Hamilton
+    nam: Colgate
+    nn: Raiders
+    tmid: 757
+  - abbr: VILL
+    sbr abbreviation: VILL
+    connid: 737
+    conname: BIGEAST
+    divid: 509
+    divname: NCAA Division I
+    cit: Bryn Mawr
+    nam: Villanova
+    nn: Wildcats
+    tmid: 758
+  - abbr: GTWN
+    sbr abbreviation: GTWN
+    connid: 737
+    conname: BIGEAST
+    divid: 509
+    divname: NCAA Division I
+    cit: Washington
+    nam: Georgetown
+    nn: Hoyas
+    tmid: 759
+  - abbr: SJU
+    sbr abbreviation: SJU
+    connid: 737
+    conname: BIGEAST
+    divid: 509
+    divname: NCAA Division I
+    cit: Queens
+    nam: St. John's
+    nn: Red Storm
+    tmid: 760
+  - abbr: DEP
+    sbr abbreviation: DEP
+    connid: 737
+    conname: BIGEAST
+    divid: 509
+    divname: NCAA Division I
+    cit: Chicago
+    nam: DePaul
+    nn: Blue Demons
+    tmid: 761
+  - abbr: WVU
+    sbr abbreviation: WVU
+    connid: 709
+    conname: BIG12
+    divid: 481
+    divname: NCAA Division I
+    cit: Morgantown
+    nam: West Virginia
+    nn: Mountaineers
+    tmid: 762
+  - abbr: HALL
+    sbr abbreviation: HALL
+    connid: 737
+    conname: BIGEAST
+    divid: 509
+    divname: NCAA Division I
+    cit: Newark
+    nam: Seton Hall
+    nn: Pirates
+    tmid: 763
+  - abbr: SYR
+    sbr abbreviation: SYR
+    connid: 784
+    conname: ACC
+    divid: 556
+    divname: NCAA Division I
+    cit: Syracuse
+    nam: Syracuse
+    nn: Orange
+    tmid: 764
+  - abbr: ND
+    sbr abbreviation: ND
+    connid: 784
+    conname: ACC
+    divid: 556
+    divname: NCAA Division I
+    cit: South Bend
+    nam: Notre Dame
+    nn: Fighting Irish
+    tmid: 766
+  - abbr: PITT
+    sbr abbreviation: PITT
+    connid: 784
+    conname: ACC
+    divid: 556
+    divname: NCAA Division I
+    cit: Pittsburgh
+    nam: Pittsburgh
+    nn: Panthers
+    tmid: 767
+  - abbr: CIN
+    sbr abbreviation: CIN
+    connid: 730
+    conname: AAC
+    divid: 502
+    divname: NCAA Division I
+    cit: Cincinnati
+    nam: Cincinnati
+    nn: Bearcats
+    tmid: 768
+  - abbr: MARQ
+    sbr abbreviation: MARQ
+    connid: 737
+    conname: BIGEAST
+    divid: 509
+    divname: NCAA Division I
+    cit: Milwaukee
+    nam: Marquette
+    nn: Golden Eagles
+    tmid: 769
+  - abbr: PROV
+    sbr abbreviation: PROV
+    connid: 737
+    conname: BIGEAST
+    divid: 509
+    divname: NCAA Division I
+    cit: Providence
+    nam: Providence
+    nn: Friars
+    tmid: 770
+  - abbr: LOU
+    sbr abbreviation: LOU
+    connid: 784
+    conname: ACC
+    divid: 556
+    divname: NCAA Division I
+    cit: Louisville
+    nam: Louisville
+    nn: Cardinals
+    tmid: 771
+  - abbr: USF
+    sbr abbreviation: USF
+    connid: 730
+    conname: AAC
+    divid: 502
+    divname: NCAA Division I
+    cit: Tampa
+    nam: South Florida
+    nn: Bulls
+    tmid: 772
+  - abbr: RUTG
+    sbr abbreviation: RUTG
+    connid: 701
+    conname: BIG10
+    divid: 473
+    divname: NCAA Division I
+    cit: Piscataway
+    nam: Rutgers
+    nn: Scarlet Knights
+    tmid: 773
+  - abbr: KENN
+    sbr abbreviation: KENN
+    connid: 792
+    conname: AS
+    divid: 564
+    divname: NCAA Division I
+    cit: Kennesaw
+    nam: Kennesaw State
+    nn: Owls
+    tmid: 774
+  - abbr: MER
+    sbr abbreviation: MER
+    connid: 739
+    conname: SOUTHERN
+    divid: 511
+    divname: NCAA Division I
+    cit: Macon
+    nam: Mercer
+    nn: Bears
+    tmid: 775
+  - abbr: BEL
+    sbr abbreviation: BEL
+    connid: 697
+    conname: OVC
+    divid: 469
+    divname: NCAA Division I
+    cit: Nashville
+    nam: Belmont
+    nn: Bruins
+    tmid: 776
+  - abbr: UNF
+    sbr abbreviation: UNF
+    connid: 792
+    conname: AS
+    divid: 564
+    divname: NCAA Division I
+    cit: Jacksonville
+    nam: North Florida
+    nn: Ospreys
+    tmid: 779
+  - abbr: MRMK
+    sbr abbreviation: MRMK
+    connid: 713
+    conname: NE
+    divid: 485
+    divname: NCAA Division I
+    cit: North Andover
+    nam: Merrimack
+    nn: Warriors
+    tmid: 35014
+  - abbr: JAC
+    sbr abbreviation: JAC
+    connid: 792
+    conname: AS
+    divid: 564
+    divname: NCAA Division I
+    cit: Jacksonville
+    nam: Jacksonville
+    nn: Dolphins
+    tmid: 780
+  - abbr: TARL
+    sbr abbreviation: TARL
+    connid: 761
+    conname: WAC
+    divid: 533
+    divname: NCAA Division I
+    cit: Stephenville
+    nam: Tarleton State
+    nn: Texans
+    tmid: 35007
+  - abbr: LIP
+    sbr abbreviation: LIP
+    connid: 792
+    conname: AS
+    divid: 564
+    divname: NCAA Division I
+    cit: Nashville
+    nam: Lipscomb
+    nn: Bisons
+    tmid: 781
+  - abbr: ETSU
+    sbr abbreviation: ETSU
+    connid: 739
+    conname: SOUTHERN
+    divid: 511
+    divname: NCAA Division I
+    cit: Johnson City
+    nam: East Tennessee State
+    nn: Buccaneers
+    tmid: 782
+  - abbr: STET
+    sbr abbreviation: STET
+    connid: 792
+    conname: AS
+    divid: 564
+    divname: NCAA Division I
+    cit: DeLand
+    nam: Stetson
+    nn: Hatters
+    tmid: 783
+  - abbr: ILL
+    sbr abbreviation: ILL
+    connid: 701
+    conname: BIG10
+    divid: 473
+    divname: NCAA Division I
+    cit: Champaign
+    nam: Illinois
+    nn: Fighting Illini
+    tmid: 784
+  - abbr: WIS
+    sbr abbreviation: WIS
+    connid: 701
+    conname: BIG10
+    divid: 473
+    divname: NCAA Division I
+    cit: Madison
+    nam: Wisconsin
+    nn: Badgers
+    tmid: 785
+  - abbr: MSU
+    sbr abbreviation: MSU
+    connid: 701
+    conname: BIG10
+    divid: 473
+    divname: NCAA Division I
+    cit: East Lansing
+    nam: Michigan State
+    nn: Spartans
+    tmid: 791
+  - abbr: IND
+    sbr abbreviation: IND
+    connid: 701
+    conname: BIG10
+    divid: 473
+    divname: NCAA Division I
+    cit: Bloomington
+    nam: Indiana
+    nn: Hoosiers
+    tmid: 792
+  - abbr: NW
+    sbr abbreviation: NW
+    connid: 701
+    conname: BIG10
+    divid: 473
+    divname: NCAA Division I
+    cit: Evanston
+    nam: Northwestern
+    nn: Wildcats
+    tmid: 793
+  - abbr: MICH
+    sbr abbreviation: MICH
+    connid: 701
+    conname: BIG10
+    divid: 473
+    divname: NCAA Division I
+    cit: Ann Arbor
+    nam: Michigan
+    nn: Wolverines
+    tmid: 794
+  - abbr: WSU
+    sbr abbreviation: WSU
+    connid: 689
+    conname: PAC12
+    divid: 461
+    divname: NCAA Division I
+    cit: Pullman
+    nam: Washington State
+    nn: Cougars
+    tmid: 795
+  - abbr: USC
+    sbr abbreviation: USC
+    connid: 689
+    conname: PAC12
+    divid: 461
+    divname: NCAA Division I
+    cit: Los Angeles
+    nam: USC
+    nn: Trojans
+    tmid: 796
+  - abbr: STAN
+    sbr abbreviation: STAN
+    connid: 689
+    conname: PAC12
+    divid: 461
+    divname: NCAA Division I
+    cit: Stanford
+    nam: Stanford
+    nn: Cardinal
+    tmid: 797
+  - abbr: UCWV
+    sbr abbreviation: UCWV
+    connid: 788
+    conname: MEC
+    divid: 560
+    divname: NCAA Division II
+    cit: Charleston
+    nam: Charleston
+    nn: Cougars
+    tmid: 54309
+  - abbr: CAL
+    sbr abbreviation: CAL
+    connid: 689
+    conname: PAC12
+    divid: 461
+    divname: NCAA Division I
+    cit: Berkeley
+    nam: California
+    nn: Golden Bears
+    tmid: 798
+  - abbr: ARIZ
+    sbr abbreviation: ARIZ
+    connid: 689
+    conname: PAC12
+    divid: 461
+    divname: NCAA Division I
+    cit: Tuscon
+    nam: Arizona
+    nn: Wildcats
+    tmid: 799
+  - abbr: ORST
+    sbr abbreviation: ORST
+    connid: 689
+    conname: PAC12
+    divid: 461
+    divname: NCAA Division I
+    cit: Corvallis
+    nam: Oregon State
+    nn: Beavers
+    tmid: 800
+  - abbr: WASH
+    sbr abbreviation: WASH
+    connid: 689
+    conname: PAC12
+    divid: 461
+    divname: NCAA Division I
+    cit: Seattle
+    nam: Washington
+    nn: Huskies
+    tmid: 801
+  - abbr: UCLA
+    sbr abbreviation: UCLA
+    connid: 689
+    conname: PAC12
+    divid: 461
+    divname: NCAA Division I
+    cit: Los Angeles
+    nam: UCLA
+    nn: Bruins
+    tmid: 802
+  - abbr: ASU
+    sbr abbreviation: ASU
+    connid: 689
+    conname: PAC12
+    divid: 461
+    divname: NCAA Division I
+    cit: Tempe
+    nam: Arizona State
+    nn: Sun Devils
+    tmid: 803
+  - abbr: ORE
+    sbr abbreviation: ORE
+    connid: 689
+    conname: PAC12
+    divid: 461
+    divname: NCAA Division I
+    cit: Eugene
+    nam: Oregon
+    nn: Ducks
+    tmid: 804
+  - abbr: MIA
+    sbr abbreviation: MIA
+    connid: 784
+    conname: ACC
+    divid: 556
+    divname: NCAA Division I
+    cit: Coral Gables
+    nam: Miami (FL)
+    nn: Hurricanes
+    tmid: 805
+  - abbr: MD
+    sbr abbreviation: MD
+    connid: 701
+    conname: BIG10
+    divid: 473
+    divname: NCAA Division I
+    cit: College Park
+    nam: Maryland
+    nn: Terrapins
+    tmid: 806
+  - abbr: FSU
+    sbr abbreviation: FSU
+    connid: 784
+    conname: ACC
+    divid: 556
+    divname: NCAA Division I
+    cit: Tallahassee
+    nam: Florida State
+    nn: Seminoles
+    tmid: 807
+  - abbr: CLEM
+    sbr abbreviation: CLEM
+    connid: 784
+    conname: ACC
+    divid: 556
+    divname: NCAA Division I
+    cit: Clemson
+    nam: Clemson
+    nn: Tigers
+    tmid: 808
+  - abbr: WAKE
+    sbr abbreviation: WAKE
+    connid: 784
+    conname: ACC
+    divid: 556
+    divname: NCAA Division I
+    cit: Winston-Salem
+    nam: Wake Forest
+    nn: Demon Deacons
+    tmid: 809
+  - abbr: GT
+    sbr abbreviation: GT
+    connid: 784
+    conname: ACC
+    divid: 556
+    divname: NCAA Division I
+    cit: Atlanta
+    nam: Georgia Tech
+    nn: Yellow Jackets
+    tmid: 810
+  - abbr: UNC
+    sbr abbreviation: UNC
+    connid: 784
+    conname: ACC
+    divid: 556
+    divname: NCAA Division I
+    cit: Chapel Hill
+    nam: North Carolina
+    nn: Tar Heels
+    tmid: 811
+  - abbr: BC
+    sbr abbreviation: BC
+    connid: 784
+    conname: ACC
+    divid: 556
+    divname: NCAA Division I
+    cit: Chestnut Hill
+    nam: Boston College
+    nn: Eagles
+    tmid: 813
+  - abbr: DUKE
+    sbr abbreviation: DUKE
+    connid: 784
+    conname: ACC
+    divid: 556
+    divname: NCAA Division I
+    cit: Durham
+    nam: Duke
+    nn: Blue Devils
+    tmid: 814
+  - abbr: UVA
+    sbr abbreviation: UVA
+    connid: 784
+    conname: ACC
+    divid: 556
+    divname: NCAA Division I
+    cit: Charlottesville
+    nam: Virginia
+    nn: Cavaliers
+    tmid: 815
+  - abbr: VT
+    sbr abbreviation: VT
+    connid: 784
+    conname: ACC
+    divid: 556
+    divname: NCAA Division I
+    cit: Blacksburg
+    nam: Virginia Tech
+    nn: Hokies
+    tmid: 816
+  - abbr: ALCN
+    sbr abbreviation: ALCN
+    connid: 772
+    conname: SWAC
+    divid: 544
+    divname: NCAA Division I
+    cit: Lorman
+    nam: Alcorn State
+    nn: Braves
+    tmid: 817
+  - abbr: JKST
+    sbr abbreviation: JKST
+    connid: 772
+    conname: SWAC
+    divid: 544
+    divname: NCAA Division I
+    cit: Jackson
+    nam: Jackson State
+    nn: Tigers
+    tmid: 818
+  - abbr: ALST
+    sbr abbreviation: ALST
+    connid: 772
+    conname: SWAC
+    divid: 544
+    divname: NCAA Division I
+    cit: Montgomery
+    nam: Alabama State
+    nn: Hornets
+    tmid: 819
+  - abbr: SOU
+    sbr abbreviation: SOU
+    connid: 623
+    conname: SWAC
+    divid: 389
+    divname: NCAA Division I
+    cit: Baton Rouge
+    nam: Southern University
+    nn: Jaguars
+    tmid: 820
+  - abbr: ARPB
+    sbr abbreviation: ARPB
+    connid: 772
+    conname: SWAC
+    divid: 544
+    divname: NCAA Division I
+    cit: Pine Bluff
+    nam: Arkansas-Pine Bluff
+    nn: Golden Lions
+    tmid: 821
+  - abbr: AAMU
+    sbr abbreviation: AAMU
+    connid: 772
+    conname: SWAC
+    divid: 544
+    divname: NCAA Division I
+    cit: Huntsville
+    nam: Alabama A&M
+    nn: Bulldogs
+    tmid: 822
+  - abbr: GRAM
+    sbr abbreviation: GRAM
+    connid: 772
+    conname: SWAC
+    divid: 544
+    divname: NCAA Division I
+    cit: Grambling
+    nam: Grambling State
+    nn: Tigers
+    tmid: 823
+  - abbr: TXSO
+    sbr abbreviation: TXSO
+    connid: 772
+    conname: SWAC
+    divid: 544
+    divname: NCAA Division I
+    cit: Houston
+    nam: Texas Southern
+    nn: Tigers
+    tmid: 824
+  - abbr: MVSU
+    sbr abbreviation: MVSU
+    connid: 772
+    conname: SWAC
+    divid: 544
+    divname: NCAA Division I
+    cit: Itta Bena
+    nam: Mississippi Valley State
+    nn: Delta Devils
+    tmid: 825
+  - abbr: PV
+    sbr abbreviation: PV
+    connid: 772
+    conname: SWAC
+    divid: 544
+    divname: NCAA Division I
+    cit: Prairie View
+    nam: Prairie View A&M
+    nn: Panthers
+    tmid: 826
+  - abbr: MILW
+    sbr abbreviation: MILW
+    connid: 670
+    conname: HORIZON
+    divid: 442
+    divname: NCAA Division I
+    cit: Milwaukee
+    nam: Milwaukee
+    nn: Panthers
+    tmid: 827
+  - abbr: YSU
+    sbr abbreviation: YSU
+    connid: 670
+    conname: HORIZON
+    divid: 442
+    divname: NCAA Division I
+    cit: Youngstown
+    nam: Youngstown State
+    nn: Penguins
+    tmid: 828
+  - abbr: BUT
+    sbr abbreviation: BUT
+    connid: 737
+    conname: BIGEAST
+    divid: 509
+    divname: NCAA Division I
+    cit: Indianapolis
+    nam: Butler
+    nn: Bulldogs
+    tmid: 829
+  - abbr: UIC
+    sbr abbreviation: UIC
+    connid: 670
+    conname: HORIZON
+    divid: 442
+    divname: NCAA Division I
+    cit: Chicago
+    nam: Illinois-Chicago
+    nn: Flames
+    tmid: 830
+  - abbr: GB
+    sbr abbreviation: GB
+    connid: 670
+    conname: HORIZON
+    divid: 442
+    divname: NCAA Division I
+    cit: Green Bay
+    nam: Green Bay
+    nn: Phoenix
+    tmid: 831
+  - abbr: CLEV
+    sbr abbreviation: CLEV
+    connid: 670
+    conname: HORIZON
+    divid: 442
+    divname: NCAA Division I
+    cit: Cleveland
+    nam: Cleveland State
+    nn: Vikings
+    tmid: 832
+  - abbr: WRST
+    sbr abbreviation: WRST
+    connid: 670
+    conname: HORIZON
+    divid: 442
+    divname: NCAA Division I
+    cit: Fairborn
+    nam: Wright State
+    nn: Raiders
+    tmid: 833
+  - abbr: L-IL
+    sbr abbreviation: L-IL
+    connid: 703
+    conname: MVC
+    divid: 475
+    divname: NCAA Division I
+    cit: Chicago
+    nam: Loyola Chicago
+    nn: Ramblers
+    tmid: 834
+  - abbr: DET
+    sbr abbreviation: DET
+    connid: 670
+    conname: HORIZON
+    divid: 442
+    divname: NCAA Division I
+    cit: Detroit
+    nam: Detroit Mercy
+    nn: Titans
+    tmid: 835
+  - abbr: ORU
+    sbr abbreviation: ORU
+    connid: 746
+    conname: SUMMIT
+    divid: 518
+    divname: NCAA Division I
+    cit: Tulsa
+    nam: Oral Roberts
+    nn: Golden Eagles
+    tmid: 837
+  - abbr: OAK
+    sbr abbreviation: OAK
+    connid: 670
+    conname: HORIZON
+    divid: 442
+    divname: NCAA Division I
+    cit: Rochester
+    nam: Oakland
+    nn: Golden Grizzlies
+    tmid: 838
+  - abbr: WIU
+    sbr abbreviation: WIU
+    connid: 746
+    conname: SUMMIT
+    divid: 518
+    divname: NCAA Division I
+    cit: Macomb
+    nam: Western Illinois
+    nn: Leathernecks
+    tmid: 840
+  - abbr: IUPU
+    sbr abbreviation: IUPU
+    connid: 670
+    conname: HORIZON
+    divid: 442
+    divname: NCAA Division I
+    cit: Indianapolis
+    nam: IUPUI
+    nn: Jaguars
+    tmid: 841
+  - abbr: VALP
+    sbr abbreviation: VALP
+    connid: 703
+    conname: MVC
+    divid: 475
+    divname: NCAA Division I
+    cit: Valparaiso
+    nam: Valparaiso
+    nn: Crusaders
+    tmid: 842
+  - abbr: SUU
+    sbr abbreviation: SUU
+    connid: 721
+    conname: BIGSKY
+    divid: 493
+    divname: NCAA Division I
+    cit: Cedar City
+    nam: Southern Utah
+    nn: Thunderbirds
+    tmid: 843
+  - abbr: ECU
+    sbr abbreviation: ECU
+    connid: 730
+    conname: AAC
+    divid: 502
+    divname: NCAA Division I
+    cit: Greenville
+    nam: East Carolina
+    nn: Pirates
+    tmid: 844
+  - abbr: UCF
+    sbr abbreviation: UCF
+    connid: 730
+    conname: AAC
+    divid: 502
+    divname: NCAA Division I
+    cit: Orlando
+    nam: UCF
+    nn: Knights
+    tmid: 845
+  - abbr: USM
+    sbr abbreviation: USM
+    connid: 755
+    conname: CUSA
+    divid: 527
+    divname: NCAA Division I
+    cit: Hattiesburg
+    nam: Southern Miss
+    nn: Golden Eagles
+    tmid: 846
+  - abbr: UAB
+    sbr abbreviation: UAB
+    connid: 755
+    conname: CUSA
+    divid: 527
+    divname: NCAA Division I
+    cit: Birmingham
+    nam: UAB
+    nn: Blazers
+    tmid: 847
+  - abbr: HOU
+    sbr abbreviation: HOU
+    connid: 730
+    conname: AAC
+    divid: 502
+    divname: NCAA Division I
+    cit: Houston
+    nam: Houston
+    nn: Cougars
+    tmid: 848
+  - abbr: TULN
+    sbr abbreviation: TULN
+    connid: 730
+    conname: AAC
+    divid: 502
+    divname: NCAA Division I
+    cit: New Orleans
+    nam: Tulane
+    nn: Green Wave
+    tmid: 849
+  - abbr: MEM
+    sbr abbreviation: MEM
+    connid: 730
+    conname: AAC
+    divid: 502
+    divname: NCAA Division I
+    cit: Memphis
+    nam: Memphis
+    nn: Tigers
+    tmid: 850
+  - abbr: UTEP
+    sbr abbreviation: UTEP
+    connid: 755
+    conname: CUSA
+    divid: 527
+    divname: NCAA Division I
+    cit: El Paso
+    nam: UTEP
+    nn: Miners
+    tmid: 851
+  - abbr: TLSA
+    sbr abbreviation: TLSA
+    connid: 730
+    conname: AAC
+    divid: 502
+    divname: NCAA Division I
+    cit: Tulsa
+    nam: Tulsa
+    nn: Golden Hurricane
+    tmid: 852
+  - abbr: MRSH
+    sbr abbreviation: MRSH
+    connid: 755
+    conname: CUSA
+    divid: 527
+    divname: NCAA Division I
+    cit: Huntington
+    nam: Marshall
+    nn: Thundering Herd
+    tmid: 853
+  - abbr: SMU
+    sbr abbreviation: SMU
+    connid: 730
+    conname: AAC
+    divid: 502
+    divname: NCAA Division I
+    cit: Dallas
+    nam: SMU
+    nn: Mustangs
+    tmid: 854
+  - abbr: RICE
+    sbr abbreviation: RICE
+    connid: 755
+    conname: CUSA
+    divid: 527
+    divname: NCAA Division I
+    cit: Houston
+    nam: Rice
+    nn: Owls
+    tmid: 855
+  - abbr: NAU
+    sbr abbreviation: NAU
+    connid: 721
+    conname: BIGSKY
+    divid: 493
+    divname: NCAA Division I
+    cit: Flagstaff
+    nam: Northern Arizona
+    nn: Lumberjacks
+    tmid: 856
+  - abbr: IDST
+    sbr abbreviation: IDST
+    connid: 721
+    conname: BIGSKY
+    divid: 493
+    divname: NCAA Division I
+    cit: Pocatello
+    nam: Idaho State
+    nn: Bengals
+    tmid: 857
+  - abbr: PRST
+    sbr abbreviation: PRST
+    connid: 721
+    conname: BIGSKY
+    divid: 493
+    divname: NCAA Division I
+    cit: Portland
+    nam: Portland State
+    nn: Vikings
+    tmid: 858
+  - abbr: SAC
+    sbr abbreviation: SAC
+    connid: 721
+    conname: BIGSKY
+    divid: 493
+    divname: NCAA Division I
+    cit: Sacramento
+    nam: Sacramento State
+    nn: Hornets
+    tmid: 859
+  - abbr: MONT
+    sbr abbreviation: MONT
+    connid: 721
+    conname: BIGSKY
+    divid: 493
+    divname: NCAA Division I
+    cit: Missoula
+    nam: Montana
+    nn: Grizzlies
+    tmid: 860
+  - abbr: EWU
+    sbr abbreviation: EWU
+    connid: 721
+    conname: BIGSKY
+    divid: 493
+    divname: NCAA Division I
+    cit: Cheney
+    nam: Eastern Washington
+    nn: Eagles
+    tmid: 861
+  - abbr: MTST
+    sbr abbreviation: MTST
+    connid: 721
+    conname: BIGSKY
+    divid: 493
+    divname: NCAA Division I
+    cit: Bozeman
+    nam: Montana State
+    nn: Bobcats
+    tmid: 862
+  - abbr: UNCO
+    sbr abbreviation: UNCO
+    connid: 721
+    conname: BIGSKY
+    divid: 493
+    divname: NCAA Division I
+    cit: Greeley
+    nam: Northern Colorado
+    nn: Bears
+    tmid: 863
+  - abbr: WEB
+    sbr abbreviation: WEB
+    connid: 721
+    conname: BIGSKY
+    divid: 493
+    divname: NCAA Division I
+    cit: Ogden
+    nam: Weber State
+    nn: Wildcats
+    tmid: 864
+  - abbr: BING
+    sbr abbreviation: BING
+    connid: 708
+    conname: AE
+    divid: 480
+    divname: NCAA Division I
+    cit: Binghamton
+    nam: Binghamton
+    nn: Bearcats
+    tmid: 865
+  - abbr: BU
+    sbr abbreviation: BU
+    connid: 798
+    conname: PATRIOT
+    divid: 570
+    divname: NCAA Division I
+    cit: Boston
+    nam: Boston University
+    nn: Terriers
+    tmid: 866
+  - abbr: STON
+    sbr abbreviation: STON
+    connid: 708
+    conname: AE
+    divid: 480
+    divname: NCAA Division I
+    cit: Stony Brook
+    nam: Stony Brook
+    nn: Seawolves
+    tmid: 867
+  - abbr: UMBC
+    sbr abbreviation: UMBC
+    connid: 708
+    conname: AE
+    divid: 480
+    divname: NCAA Division I
+    cit: Baltimore
+    nam: UMBC
+    nn: Retrievers
+    tmid: 868
+  - abbr: ME
+    sbr abbreviation: ME
+    connid: 708
+    conname: AE
+    divid: 480
+    divname: NCAA Division I
+    cit: Bangor
+    nam: Maine
+    nn: Black Bears
+    tmid: 869
+  - abbr: WYO
+    sbr abbreviation: WYO
+    connid: 678
+    conname: MWC
+    divid: 450
+    divname: NCAA Division I
+    cit: Laramie
+    nam: Wyoming
+    nn: Cowboys
+    tmid: 874
+  - abbr: AFA
+    sbr abbreviation: AFA
+    connid: 678
+    conname: MWC
+    divid: 450
+    divname: NCAA Division I
+    cit: Colorado Springs
+    nam: Air Force
+    nn: Falcons
+    tmid: 876
+  - abbr: UNM
+    sbr abbreviation: UNM
+    connid: 678
+    conname: MWC
+    divid: 450
+    divname: NCAA Division I
+    cit: Albuquerque
+    nam: New Mexico
+    nn: Lobos
+    tmid: 877
+  - abbr: UTAH
+    sbr abbreviation: UTAH
+    connid: 689
+    conname: PAC12
+    divid: 461
+    divname: NCAA Division I
+    cit: Salt Lake City
+    nam: Utah
+    nn: Utes
+    tmid: 878
+  - abbr: SDSU
+    sbr abbreviation: SDSU
+    connid: 678
+    conname: MWC
+    divid: 450
+    divname: NCAA Division I
+    cit: San Diego
+    nam: San Diego State
+    nn: Aztecs
+    tmid: 879
+  - abbr: CSU
+    sbr abbreviation: CSU
+    connid: 678
+    conname: MWC
+    divid: 450
+    divname: NCAA Division I
+    cit: Fort Collins
+    nam: Colorado State
+    nn: Rams
+    tmid: 880
+  - abbr: BYU
+    sbr abbreviation: BYU
+    connid: 732
+    conname: WCC
+    divid: 504
+    divname: NCAA Division I
+    cit: Provo
+    nam: BYU
+    nn: Cougars
+    tmid: 881
+  - abbr: UNLV
+    sbr abbreviation: UNLV
+    connid: 678
+    conname: MWC
+    divid: 450
+    divname: NCAA Division I
+    cit: Paradise
+    nam: UNLV
+    nn: Rebels
+    tmid: 882
+  - abbr: IDHO
+    sbr abbreviation: IDHO
+    connid: 721
+    conname: BIGSKY
+    divid: 493
+    divname: NCAA Division I
+    cit: Moscow
+    nam: Idaho
+    nn: Vandals
+    tmid: 883
+  - abbr: HAW
+    sbr abbreviation: HAW
+    connid: 750
+    conname: BIGWEST
+    divid: 522
+    divname: NCAA Division I
+    cit: Honolulu
+    nam: Hawaii
+    nn: Warriors
+    tmid: 884
+  - abbr: NEV
+    sbr abbreviation: NEV
+    connid: 678
+    conname: MWC
+    divid: 450
+    divname: NCAA Division I
+    cit: Reno
+    nam: Nevada
+    nn: Wolf Pack
+    tmid: 885
+  - abbr: BSU
+    sbr abbreviation: BSU
+    connid: 678
+    conname: MWC
+    divid: 450
+    divname: NCAA Division I
+    cit: Boise
+    nam: Boise State
+    nn: Broncos
+    tmid: 886
+  - abbr: USU
+    sbr abbreviation: USU
+    connid: 678
+    conname: MWC
+    divid: 450
+    divname: NCAA Division I
+    cit: Logan
+    nam: Utah State
+    nn: Aggies
+    tmid: 887
+  - abbr: LT
+    sbr abbreviation: LT
+    connid: 755
+    conname: CUSA
+    divid: 527
+    divname: NCAA Division I
+    cit: Ruston
+    nam: Louisiana Tech
+    nn: Bulldogs
+    tmid: 888
+  - abbr: FRES
+    sbr abbreviation: FRES
+    connid: 678
+    conname: MWC
+    divid: 450
+    divname: NCAA Division I
+    cit: Fresno
+    nam: Fresno State
+    nn: Bulldogs
+    tmid: 889
+  - abbr: NMSU
+    sbr abbreviation: NMSU
+    connid: 761
+    conname: WAC
+    divid: 533
+    divname: NCAA Division I
+    cit: Las Cruces
+    nam: New Mexico State
+    nn: Aggies
+    tmid: 890
+  - abbr: SJSU
+    sbr abbreviation: SJSU
+    connid: 678
+    conname: MWC
+    divid: 450
+    divname: NCAA Division I
+    cit: San Jose
+    nam: San Jose State
+    nn: Spartans
+    tmid: 891
+  - abbr: NDSU
+    sbr abbreviation: NDSU
+    connid: 746
+    conname: SUMMIT
+    divid: 518
+    divname: NCAA Division I
+    cit: Fargo
+    nam: North Dakota State
+    nn: Bison
+    tmid: 892
+  - abbr: UVU
+    sbr abbreviation: UVU
+    connid: 761
+    conname: WAC
+    divid: 533
+    divname: NCAA Division I
+    cit: Orem
+    nam: Utah Valley
+    nn: Wolverines
+    tmid: 893
+  - abbr: LONG
+    sbr abbreviation: LONG
+    connid: 666
+    conname: BIGSOUTH
+    divid: 438
+    divname: NCAA Division I
+    cit: Portsmouth
+    nam: Longwood
+    nn: Lancers
+    tmid: 894
+  - abbr: CHS
+    sbr abbreviation: CHS
+    connid: 761
+    conname: WAC
+    divid: 533
+    divname: NCAA Division I
+    cit: Chicago
+    nam: Chicago State
+    nn: Cougars
+    tmid: 896
+  - abbr: UCD
+    sbr abbreviation: UCD
+    connid: 750
+    conname: BIGWEST
+    divid: 522
+    divname: NCAA Division I
+    cit: Davis
+    nam: UC Davis
+    nn: Aggies
+    tmid: 897
+  - abbr: UTRGV
+    sbr abbreviation: UTRGV
+    connid: 761
+    conname: WAC
+    divid: 533
+    divname: NCAA Division I
+    cit: Edinburg
+    nam: Texas Rio Grande Valley
+    nn: Vaqueros
+    tmid: 899
+  - abbr: UNI
+    sbr abbreviation: UNI
+    connid: 703
+    conname: MVC
+    divid: 475
+    divname: NCAA Division I
+    cit: Cedar Falls
+    nam: Northern Iowa
+    nn: Panthers
+    tmid: 903
+  - abbr: MOSU
+    sbr abbreviation: MOSU
+    connid: 703
+    conname: MVC
+    divid: 475
+    divname: NCAA Division I
+    cit: Springfield
+    nam: Missouri State
+    nn: Bears
+    tmid: 904
+  - abbr: ILST
+    sbr abbreviation: ILST
+    connid: 703
+    conname: MVC
+    divid: 475
+    divname: NCAA Division I
+    cit: Normal
+    nam: Illinois State
+    nn: Redbirds
+    tmid: 905
+  - abbr: BRAD
+    sbr abbreviation: BRAD
+    connid: 703
+    conname: MVC
+    divid: 475
+    divname: NCAA Division I
+    cit: Peoria
+    nam: Bradley
+    nn: Braves
+    tmid: 906
+  - abbr: EVAN
+    sbr abbreviation: EVAN
+    connid: 703
+    conname: MVC
+    divid: 475
+    divname: NCAA Division I
+    cit: Evansville
+    nam: Evansville
+    nn: Purple Aces
+    tmid: 907
+  - abbr: WICH
+    sbr abbreviation: WICH
+    connid: 730
+    conname: AAC
+    divid: 502
+    divname: NCAA Division I
+    cit: Wichita
+    nam: Wichita State
+    nn: Shockers
+    tmid: 908
+  - abbr: INST
+    sbr abbreviation: INST
+    connid: 703
+    conname: MVC
+    divid: 475
+    divname: NCAA Division I
+    cit: Terre Haute
+    nam: Indiana State
+    nn: Sycamores
+    tmid: 909
+  - abbr: CREI
+    sbr abbreviation: CREI
+    connid: 737
+    conname: BIGEAST
+    divid: 509
+    divname: NCAA Division I
+    cit: Omaha
+    nam: Creighton
+    nn: Bluejays
+    tmid: 910
+  - abbr: SIU
+    sbr abbreviation: SIU
+    connid: 703
+    conname: MVC
+    divid: 475
+    divname: NCAA Division I
+    cit: Carbondale
+    nam: Southern Illinois
+    nn: Salukis
+    tmid: 911
+  - abbr: DRKE
+    sbr abbreviation: DRKE
+    connid: 703
+    conname: MVC
+    divid: 475
+    divname: NCAA Division I
+    cit: Des Moines
+    nam: Drake
+    nn: Bulldogs
+    tmid: 912
+  - abbr: AC
+    sbr abbreviation: AC
+    connid: 767
+    conname: SOUTHLAND
+    divid: 539
+    divname: NCAA Division I
+    cit: Abilene
+    nam: Abilene Christian
+    nn: Wildcats
+    tmid: 952
+  - abbr: PRE
+    sbr abbreviation: PRE
+    connid: 666
+    conname: BIGSOUTH
+    divid: 438
+    divname: NCAA Division I
+    cit: Clinton
+    nam: Presbyterian
+    nn: Blue Hose
+    tmid: 962
+  - abbr: NEOM
+    sbr abbreviation: NEOM
+    connid: 746
+    conname: SUMMIT
+    divid: 518
+    divname: NCAA Division I
+    cit: Omaha
+    nam: Nebraska-Omaha
+    nn: Mavericks
+    tmid: 972
+  - abbr: FGCU
+    sbr abbreviation: FGCU
+    connid: 792
+    conname: AS
+    divid: 564
+    divname: NCAA Division I
+    cit: Fort Myers
+    nam: Florida Gulf Coast
+    nn: Eagles
+    tmid: 973
+  - abbr: IW
+    sbr abbreviation: IW
+    connid: 767
+    conname: SOUTHLAND
+    divid: 539
+    divname: NCAA Division I
+    cit: San Antonio
+    nam: Incarnate Word
+    nn: Cardinals
+    tmid: 993
+  - abbr: NIU
+    sbr abbreviation: NIU
+    connid: 693
+    conname: MAC
+    divid: 465
+    divname: NCAA Division I
+    cit: DeKalb
+    nam: Northern Illinois
+    nn: Huskies
+    tmid: 1233
+  - abbr: EMU
+    sbr abbreviation: EMU
+    connid: 693
+    conname: MAC
+    divid: 465
+    divname: NCAA Division I
+    cit: Ypsilanti
+    nam: Eastern Michigan
+    nn: Eagles
+    tmid: 1234
+  - abbr: BALL
+    sbr abbreviation: BALL
+    connid: 693
+    conname: MAC
+    divid: 465
+    divname: NCAA Division I
+    cit: Muncie
+    nam: Ball State
+    nn: Cardinals
+    tmid: 1235
+  - abbr: TOL
+    sbr abbreviation: TOL
+    connid: 693
+    conname: MAC
+    divid: 465
+    divname: NCAA Division I
+    cit: Toledo
+    nam: Toledo
+    nn: Rockets
+    tmid: 1236
+  - abbr: WMU
+    sbr abbreviation: WMU
+    connid: 693
+    conname: MAC
+    divid: 465
+    divname: NCAA Division I
+    cit: Kalamazoo
+    nam: Western Michigan
+    nn: Broncos
+    tmid: 1237
+  - abbr: CMU
+    sbr abbreviation: CMU
+    connid: 693
+    conname: MAC
+    divid: 465
+    divname: NCAA Division I
+    cit: Mount Pleasant
+    nam: Central Michigan
+    nn: Chippewas
+    tmid: 1238
+  - abbr: KENT
+    sbr abbreviation: KENT
+    connid: 693
+    conname: MAC
+    divid: 465
+    divname: NCAA Division I
+    cit: Kent
+    nam: Kent State
+    nn: Golden Flashes
+    tmid: 1239
+  - abbr: BGSU
+    sbr abbreviation: BGSU
+    connid: 693
+    conname: MAC
+    divid: 465
+    divname: NCAA Division I
+    cit: Bowling Green
+    nam: Bowling Green
+    nn: Falcons
+    tmid: 1240
+  - abbr: OHIO
+    sbr abbreviation: OHIO
+    connid: 693
+    conname: MAC
+    divid: 465
+    divname: NCAA Division I
+    cit: Athens
+    nam: Ohio
+    nn: Bobcats
+    tmid: 1241
+  - abbr: AKR
+    sbr abbreviation: AKR
+    connid: 693
+    conname: MAC
+    divid: 465
+    divname: NCAA Division I
+    cit: Akron
+    nam: Akron
+    nn: Zips
+    tmid: 1242
+  - abbr: BUFF
+    sbr abbreviation: BUFF
+    connid: 693
+    conname: MAC
+    divid: 465
+    divname: NCAA Division I
+    cit: Buffalo
+    nam: Buffalo
+    nn: Bulls
+    tmid: 1243
+  - abbr: M-OH
+    sbr abbreviation: M-OH
+    connid: 693
+    conname: MAC
+    divid: 465
+    divname: NCAA Division I
+    cit: Oxford
+    nam: Miami (OH)
+    nn: RedHawks
+    tmid: 1244
+  - abbr: USA
+    sbr abbreviation: USA
+    connid: 715
+    conname: SUNBELT
+    divid: 487
+    divname: NCAA Division I
+    cit: Mobile
+    nam: South Alabama
+    nn: Jaguars
+    tmid: 1245
+  - abbr: MTU
+    sbr abbreviation: MTU
+    connid: 755
+    conname: CUSA
+    divid: 527
+    divname: NCAA Division I
+    cit: Murfreesboro
+    nam: Middle Tennessee
+    nn: Blue Raiders
+    tmid: 1246
+  - abbr: FAU
+    sbr abbreviation: FAU
+    connid: 755
+    conname: CUSA
+    divid: 527
+    divname: NCAA Division I
+    cit: Boca Raton
+    nam: Florida Atlantic
+    nn: Owls
+    tmid: 1247
+  - abbr: FIU
+    sbr abbreviation: FIU
+    connid: 755
+    conname: CUSA
+    divid: 527
+    divname: NCAA Division I
+    cit: Miami
+    nam: Florida International
+    nn: Golden Panthers
+    tmid: 1248
+  - abbr: WKU
+    sbr abbreviation: WKU
+    connid: 755
+    conname: CUSA
+    divid: 527
+    divname: NCAA Division I
+    cit: Bowling Green
+    nam: Western Kentucky
+    nn: Hilltoppers
+    tmid: 1249
+  - abbr: TROY
+    sbr abbreviation: TROY
+    connid: 715
+    conname: SUNBELT
+    divid: 487
+    divname: NCAA Division I
+    cit: Troy
+    nam: Troy
+    nn: Trojans
+    tmid: 1250
+  - abbr: ARST
+    sbr abbreviation: ARST
+    connid: 715
+    conname: SUNBELT
+    divid: 487
+    divname: NCAA Division I
+    cit: Jonesboro
+    nam: Arkansas State
+    nn: Red Wolves
+    tmid: 1251
+  - abbr: UNT
+    sbr abbreviation: UNT
+    connid: 755
+    conname: CUSA
+    divid: 527
+    divname: NCAA Division I
+    cit: Denton
+    nam: North Texas
+    nn: Mean Green
+    tmid: 1252
+  - abbr: UNO
+    sbr abbreviation: UNO
+    connid: 767
+    conname: SOUTHLAND
+    divid: 539
+    divname: NCAA Division I
+    cit: New Orleans
+    nam: New Orleans
+    nn: Privateers
+    tmid: 1253
+  - abbr: ULL
+    sbr abbreviation: ULL
+    connid: 715
+    conname: SUNBELT
+    divid: 487
+    divname: NCAA Division I
+    cit: Lafayette
+    nam: Louisiana-Lafayette
+    nn: Ragin' Cajuns
+    tmid: 1254
+  - abbr: DEN
+    sbr abbreviation: DEN
+    connid: 746
+    conname: SUMMIT
+    divid: 518
+    divname: NCAA Division I
+    cit: Denver
+    nam: Denver
+    nn: Pioneers
+    tmid: 1255
+  - abbr: ULM
+    sbr abbreviation: ULM
+    connid: 715
+    conname: SUNBELT
+    divid: 487
+    divname: NCAA Division I
+    cit: Monroe
+    nam: Louisiana-Monroe
+    nn: Warhawks
+    tmid: 1256
+  - abbr: UALR
+    sbr abbreviation: UALR
+    connid: 715
+    conname: SUNBELT
+    divid: 487
+    divname: NCAA Division I
+    cit: Little Rock
+    nam: Arkansas-Little Rock
+    nn: Trojans
+    tmid: 1257
+  - abbr: ALA
+    sbr abbreviation: ALA
+    connid: 683
+    conname: SEC
+    divid: 455
+    divname: NCAA Division I
+    cit: Tuscaloosa
+    nam: Alabama
+    nn: Crimson Tide
+    tmid: 1260
+  - abbr: MSST
+    sbr abbreviation: MSST
+    connid: 683
+    conname: SEC
+    divid: 455
+    divname: NCAA Division I
+    cit: Starkville
+    nam: Mississippi State
+    nn: Bulldogs
+    tmid: 1261
+  - abbr: ARK
+    sbr abbreviation: ARK
+    connid: 683
+    conname: SEC
+    divid: 455
+    divname: NCAA Division I
+    cit: Fayetteville
+    nam: Arkansas
+    nn: Razorbacks
+    tmid: 1262
+  - abbr: MISS
+    sbr abbreviation: MISS
+    connid: 683
+    conname: SEC
+    divid: 455
+    divname: NCAA Division I
+    cit: Oxford
+    nam: Ole Miss
+    nn: Rebels
+    tmid: 1263
+  - abbr: TENN
+    sbr abbreviation: TENN
+    connid: 683
+    conname: SEC
+    divid: 455
+    divname: NCAA Division I
+    cit: Knoxville
+    nam: Tennessee
+    nn: Volunteers
+    tmid: 1265
+  - abbr: VAN
+    sbr abbreviation: VAN
+    connid: 683
+    conname: SEC
+    divid: 455
+    divname: NCAA Division I
+    cit: Nashville
+    nam: Vanderbilt
+    nn: Commodores
+    tmid: 1267
+  - abbr: FLA
+    sbr abbreviation: FLA
+    connid: 683
+    conname: SEC
+    divid: 455
+    divname: NCAA Division I
+    cit: Gainesville
+    nam: Florida
+    nn: Gators
+    tmid: 1269
+  - abbr: TXST
+    sbr abbreviation: TXST
+    connid: 715
+    conname: SUNBELT
+    divid: 487
+    divname: NCAA Division I
+    cit: San Marcos
+    nam: Texas State
+    nn: Bobcats
+    tmid: 1270
+  - abbr: AMCC
+    sbr abbreviation: AMCC
+    connid: 767
+    conname: SOUTHLAND
+    divid: 539
+    divname: NCAA Division I
+    cit: Corpus Christi
+    nam: Texas A&M-CC
+    nn: Islanders
+    tmid: 1272
+  - abbr: UTA
+    sbr abbreviation: UTA
+    connid: 715
+    conname: SUNBELT
+    divid: 487
+    divname: NCAA Division I
+    cit: Arlington
+    nam: Texas-Arlington
+    nn: Mavericks
+    tmid: 1273
+  - abbr: SFA
+    sbr abbreviation: SFA
+    connid: 767
+    conname: SOUTHLAND
+    divid: 539
+    divname: NCAA Division I
+    cit: Nacogdoches
+    nam: Stephen F. Austin
+    nn: Lumberjacks
+    tmid: 1274
+  - abbr: SHSU
+    sbr abbreviation: SHSU
+    connid: 767
+    conname: SOUTHLAND
+    divid: 539
+    divname: NCAA Division I
+    cit: Huntsville
+    nam: Sam Houston State
+    nn: Bearkats
+    tmid: 1275
+  - abbr: NWST
+    sbr abbreviation: NWST
+    connid: 767
+    conname: SOUTHLAND
+    divid: 539
+    divname: NCAA Division I
+    cit: Natchitoches
+    nam: Northwestern State
+    nn: Demons
+    tmid: 1276
+  - abbr: SELA
+    sbr abbreviation: SELA
+    connid: 767
+    conname: SOUTHLAND
+    divid: 539
+    divname: NCAA Division I
+    cit: Hammond
+    nam: Southeastern Louisiana
+    nn: Lions
+    tmid: 1277
+  - abbr: MCNS
+    sbr abbreviation: MCNS
+    connid: 767
+    conname: SOUTHLAND
+    divid: 539
+    divname: NCAA Division I
+    cit: Lake Charles
+    nam: McNeese State
+    nn: Cowboys
+    tmid: 1278
+  - abbr: LAM
+    sbr abbreviation: LAM
+    connid: 767
+    conname: SOUTHLAND
+    divid: 539
+    divname: NCAA Division I
+    cit: Beaumont
+    nam: Lamar
+    nn: Cardinals
+    tmid: 1279
+  - abbr: NICH
+    sbr abbreviation: NICH
+    connid: 767
+    conname: SOUTHLAND
+    divid: 539
+    divname: NCAA Division I
+    cit: Thibodaux
+    nam: Nicholls State
+    nn: Colonels
+    tmid: 1280
+  - abbr: CARK
+    sbr abbreviation: CARK
+    connid: 767
+    conname: SOUTHLAND
+    divid: 539
+    divname: NCAA Division I
+    cit: Conway
+    nam: Central Arkansas
+    nn: Bears
+    tmid: 1281
+  - abbr: WCU
+    sbr abbreviation: WCU
+    connid: 739
+    conname: SOUTHERN
+    divid: 511
+    divname: NCAA Division I
+    cit: Cullowhee
+    nam: Western Carolina
+    nn: Catamounts
+    tmid: 1282
+  - abbr: ELON
+    sbr abbreviation: ELON
+    connid: 726
+    conname: COLONIAL
+    divid: 498
+    divname: NCAA Division I
+    cit: Elon
+    nam: Elon
+    nn: Phoenix
+    tmid: 1283
+  - abbr: UNCG
+    sbr abbreviation: UNCG
+    connid: 739
+    conname: SOUTHERN
+    divid: 511
+    divname: NCAA Division I
+    cit: Greensboro
+    nam: UNC Greensboro
+    nn: Spartans
+    tmid: 1284
+  - abbr: CHAT
+    sbr abbreviation: CHAT
+    connid: 739
+    conname: SOUTHERN
+    divid: 511
+    divname: NCAA Division I
+    cit: Chattanooga
+    nam: Chattanooga
+    nn: Mocs
+    tmid: 1285
+  - abbr: APP
+    sbr abbreviation: APP
+    connid: 715
+    conname: SUNBELT
+    divid: 487
+    divname: NCAA Division I
+    cit: Boone
+    nam: Appalachian State
+    nn: Mountaineers
+    tmid: 1286
+  - abbr: DAV
+    sbr abbreviation: DAV
+    connid: 745
+    conname: A10
+    divid: 517
+    divname: NCAA Division I
+    cit: Davidson
+    nam: Davidson
+    nn: Wildcats
+    tmid: 1287
+  - abbr: WOF
+    sbr abbreviation: WOF
+    connid: 739
+    conname: SOUTHERN
+    divid: 511
+    divname: NCAA Division I
+    cit: Spartanburg
+    nam: Wofford
+    nn: Terriers
+    tmid: 1288
+  - abbr: CIT
+    sbr abbreviation: CIT
+    connid: 739
+    conname: SOUTHERN
+    divid: 511
+    divname: NCAA Division I
+    cit: Charleston
+    nam: Citadel
+    nn: Bulldogs
+    tmid: 1289
+  - abbr: FUR
+    sbr abbreviation: FUR
+    connid: 739
+    conname: SOUTHERN
+    divid: 511
+    divname: NCAA Division I
+    cit: Greenville
+    nam: Furman
+    nn: Paladins
+    tmid: 1290
+  - abbr: GASO
+    sbr abbreviation: GASO
+    connid: 715
+    conname: SUNBELT
+    divid: 487
+    divname: NCAA Division I
+    cit: Statesboro
+    nam: Georgia Southern
+    nn: Eagles
+    tmid: 1291
+  - abbr: COFC
+    sbr abbreviation: COFC
+    connid: 565
+    conname: COLONIAL
+    divid: 331
+    divname: NCAA Division I
+    cit: Charleston
+    nam: Charleston
+    nn: Cougars
+    tmid: 1292
+  - abbr: SCUS
+    sbr abbreviation: SCUS
+    connid: 666
+    conname: BIGSOUTH
+    divid: 438
+    divname: NCAA Division I
+    cit: Spartanburg
+    nam: USC Upstate
+    nn: Spartans
+    tmid: 1374
+  - abbr: HBU
+    sbr abbreviation: HBU
+    connid: 767
+    conname: SOUTHLAND
+    divid: 539
+    divname: NCAA Division I
+    cit: Houston
+    nam: Houston Baptist
+    nn: Huskies
+    tmid: 1375
+  - abbr: UNA
+    sbr abbreviation: UNA
+    connid: 792
+    conname: AS
+    divid: 564
+    divname: NCAA Division I
+    cit: Florence
+    nam: North Alabama
+    nn: Lions
+    tmid: 1404
+  - abbr: UND
+    sbr abbreviation: UND
+    connid: 746
+    conname: SUMMIT
+    divid: 518
+    divname: NCAA Division I
+    cit: Grand Forks
+    nam: North Dakota
+    nn: Fighting Hawks
+    tmid: 1443
+  - abbr: BRY
+    sbr abbreviation: BRY
+    connid: 713
+    conname: NE
+    divid: 485
+    divname: NCAA Division I
+    cit: Smithfield
+    nam: Bryant University
+    nn: Bulldogs
+    tmid: 1910
+  - abbr: SEA
+    sbr abbreviation: SEA
+    connid: 761
+    conname: WAC
+    divid: 533
+    divname: NCAA Division I
+    cit: Seattle
+    nam: Seattle
+    nn: Redhawks
+    tmid: 1946
+  - abbr: SDAK
+    sbr abbreviation: SDAK
+    connid: 746
+    conname: SUMMIT
+    divid: 518
+    divname: NCAA Division I
+    cit: Vermillion
+    nam: South Dakota
+    nn: Coyotes
+    tmid: 1949
+  - abbr: CBU
+    sbr abbreviation: CBU
+    connid: 761
+    conname: WAC
+    divid: 533
+    divname: NCAA Division I
+    cit: Riverside
+    nam: California Baptist
+    nn: Lancers
+    tmid: 1967
+  - abbr: GC
+    sbr abbreviation: GC
+    connid: 761
+    conname: WAC
+    divid: 533
+    divname: NCAA Division I
+    cit: Phoenix
+    nam: Grand Canyon
+    nn: Antelopes
+    tmid: 2206
+  - abbr: NKU
+    sbr abbreviation: NKU
+    connid: 670
+    conname: HORIZON
+    divid: 442
+    divname: NCAA Division I
+    cit: Highland Heights
+    nam: Northern Kentucky
+    nn: Norse
+    tmid: 8241
+  - abbr: MASSL
+    sbr abbreviation: MASSL
+    connid: 708
+    conname: AE
+    divid: 480
+    divname: NCAA Division I
+    cit: Lowell
+    nam: Massachusetts-Lowell
+    nn: River Hawks
+    tmid: 14454
+  - abbr: UTSA
+    sbr abbreviation: UTSA
+    connid: 755
+    conname: CUSA
+    divid: 527
+    divname: NCAA Division I
+    cit: San Antonio
+    nam: UTSA
+    nn: Roadrunners
+    tmid: 15781
+  - abbr: SDST
+    sbr abbreviation: SDST
+    connid: 746
+    conname: SUMMIT
+    divid: 518
+    divname: NCAA Division I
+    cit: Brookings
+    nam: South Dakota State
+    nn: Jackrabbits
+    tmid: 53956
+  - abbr: NCAT
+    sbr abbreviation: NCAT
+    connid: 777
+    conname: MEAC
+    divid: 549
+    divname: NCAA Division I
+    cit: Greensboro
+    nam: North Carolina A&T
+    nn: Aggies
+    tmid: 54049
+  - abbr: SCST
+    sbr abbreviation: SCST
+    connid: 777
+    conname: MEAC
+    divid: 549
+    divname: NCAA Division I
+    cit: Orangeburg
+    nam: South Carolina State
+    nn: Bulldogs
+    tmid: 54054
+  - abbr: UMES
+    sbr abbreviation: UMES
+    connid: 777
+    conname: MEAC
+    divid: 549
+    divname: NCAA Division I
+    cit: Princess Anne
+    nam: Maryland-Eastern Shore
+    nn: Hawks
+    tmid: 54056
+  - abbr: NCCU
+    sbr abbreviation: NCCU
+    connid: 777
+    conname: MEAC
+    divid: 549
+    divname: NCAA Division I
+    cit: Durham
+    nam: North Carolina Central
+    nn: Eagles
+    tmid: 54060
+  - abbr: NCST
+    sbr abbreviation: NCST
+    connid: 784
+    conname: ACC
+    divid: 556
+    divname: NCAA Division I
+    cit: Raleigh
+    nam: North Carolina State
+    nn: Wolfpack
+    tmid: 54076
+  - abbr: UNCW
+    sbr abbreviation: UNCW
+    connid: 726
+    conname: COLONIAL
+    divid: 498
+    divname: NCAA Division I
+    cit: Wilmington
+    nam: NC-Wilmington
+    nn: Seahawks
+    tmid: 54268
+  - abbr: JOES
+    sbr abbreviation: JOES
+    connid: 745
+    conname: A10
+    divid: 517
+    divname: NCAA Division I
+    cit: Philadelphia
+    nam: Saint Joseph's (PA)
+    nn: Hawks
+    tmid: 54298
+  - abbr: LIU
+    sbr abbreviation: LIU
+    connid: 713
+    conname: NE
+    divid: 485
+    divname: NCAA Division I
+    cit: Brooklyn
+    nam: LIU
+    nn: Sharks
+    tmid: 84387
