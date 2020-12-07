@@ -1,0 +1,386 @@
+eventsByDateNew:
+  events:
+  - cit: Minneapolis
+    cou: USA
+    des: Jacksonville Jaguars@Minnesota Vikings
+    dt: 1607277600000
+    eid: 4143414
+    es: scheduled
+    eventGroup:
+      alias: Week 13
+      egid: 22
+      nam: REG Week 13
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1529
+      source:
+        abbr: JAC
+        cit: Jacksonville
+        nam: Jacksonville
+        nn: Jaguars
+        sn: Jacksonville
+    - ih: true
+      partid: 1541
+      source:
+        abbr: MIN
+        cit: Minnesota
+        nam: Minnesota
+        nn: Vikings
+        sn: Minnesota
+    scores: []
+    seid: 8582
+    spid: 4
+    st: artificial
+  - cit: East Rutherford
+    cou: USA
+    des: Las Vegas Raiders@N.Y. Jets
+    dt: 1607277600000
+    eid: 4143415
+    es: scheduled
+    eventGroup:
+      alias: Week 13
+      egid: 22
+      nam: REG Week 13
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1523
+      source:
+        abbr: NYJ
+        cit: New York
+        nam: N.Y. Jets
+        nn: Jets
+        sn: New York
+    - ih: false
+      partid: 1533
+      source:
+        abbr: LV
+        cit: Las Vegas
+        nam: Las Vegas
+        nn: Raiders
+        sn: Las Vegas
+    scores: []
+    seid: 8582
+    spid: 4
+    st: artificial
+  - cit: Nashville
+    cou: USA
+    des: Cleveland Browns@Tennessee Titans
+    dt: 1607277600000
+    eid: 4143416
+    es: scheduled
+    eventGroup:
+      alias: Week 13
+      egid: 22
+      nam: REG Week 13
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1520
+      source:
+        abbr: CLE
+        cit: Cleveland
+        nam: Cleveland
+        nn: Browns
+        sn: Cleveland
+    - ih: true
+      partid: 1528
+      source:
+        abbr: TEN
+        cit: Tennessee
+        nam: Tennessee
+        nn: Titans
+        sn: Tennessee
+    scores: []
+    seid: 8582
+    spid: 4
+    st: Turf
+  - cit: Chicago
+    cou: USA
+    des: Detroit Lions@Chicago Bears
+    dt: 1607277600000
+    eid: 4143417
+    es: scheduled
+    eventGroup:
+      alias: Week 13
+      egid: 22
+      nam: REG Week 13
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1539
+      source:
+        abbr: DET
+        cit: Detroit
+        nam: Detroit
+        nn: Lions
+        sn: Detroit
+    - ih: true
+      partid: 1540
+      source:
+        abbr: CHI
+        cit: Chicago
+        nam: Chicago
+        nn: Bears
+        sn: Chicago
+    scores: []
+    seid: 8582
+    spid: 4
+    st: Turf
+  - cit: Green Bay
+    cou: USA
+    des: Philadelphia Eagles@Green Bay Packers
+    dt: 1607289900000
+    eid: 4143418
+    es: scheduled
+    eventGroup:
+      alias: Week 13
+      egid: 22
+      nam: REG Week 13
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1536
+      source:
+        abbr: PHI
+        cit: Philadelphia
+        nam: Philadelphia
+        nn: Eagles
+        sn: Philadelphia
+    - ih: true
+      partid: 1542
+      source:
+        abbr: GB
+        cit: Green Bay
+        nam: Green Bay
+        nn: Packers
+        sn: Green Bay
+    scores: []
+    seid: 8582
+    spid: 4
+    st: Turf
+  - cit: Atlanta
+    cou: USA
+    des: New Orleans Saints@Atlanta Falcons
+    dt: 1607277600000
+    eid: 4143553
+    es: scheduled
+    eventGroup:
+      alias: Week 13
+      egid: 22
+      nam: REG Week 13
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1543
+      source:
+        abbr: 'NO'
+        cit: New Orleans
+        nam: New Orleans
+        nn: Saints
+        sn: New Orleans
+    - ih: true
+      partid: 1546
+      source:
+        abbr: ATL
+        cit: Atlanta
+        nam: Atlanta
+        nn: Falcons
+        sn: Atlanta
+    scores: []
+    seid: 8582
+    spid: 4
+    st: artificial
+  - cit: Miami Gardens
+    cou: USA
+    des: Cincinnati Bengals@Miami Dolphins
+    dt: 1607277600000
+    eid: 4143554
+    es: scheduled
+    eventGroup:
+      alias: Week 13
+      egid: 22
+      nam: REG Week 13
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1522
+      source:
+        abbr: CIN
+        cit: Cincinnati
+        nam: Cincinnati
+        nn: Bengals
+        sn: Cincinnati
+    - ih: true
+      partid: 1524
+      source:
+        abbr: MIA
+        cit: Miami
+        nam: Miami
+        nn: Dolphins
+        sn: Miami
+    scores: []
+    seid: 8582
+    spid: 4
+    st: Turf
+  - cit: Houston
+    cou: USA
+    des: Indianapolis Colts@Houston Texans
+    dt: 1607277600000
+    eid: 4143555
+    es: scheduled
+    eventGroup:
+      alias: Week 13
+      egid: 22
+      nam: REG Week 13
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1527
+      source:
+        abbr: IND
+        cit: Indianapolis
+        nam: Indianapolis
+        nn: Colts
+        sn: Indianapolis
+    - ih: true
+      partid: 1530
+      source:
+        abbr: HOU
+        cit: Houston
+        nam: Houston
+        nn: Texans
+        sn: Houston
+    scores: []
+    seid: 8582
+    spid: 4
+    st: artificial
+  - cit: Kansas City
+    cou: USA
+    des: Denver Broncos@Kansas City Chiefs
+    dt: 1607304000000
+    eid: 4143556
+    es: scheduled
+    eventGroup:
+      alias: Week 13
+      egid: 22
+      nam: REG Week 13
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1531
+      source:
+        abbr: KC
+        cit: Kansas City
+        nam: Kansas City
+        nn: Chiefs
+        sn: Kansas City
+    - ih: false
+      partid: 1534
+      source:
+        abbr: DEN
+        cit: Denver
+        nam: Denver
+        nn: Broncos
+        sn: Denver
+    scores: []
+    seid: 8582
+    spid: 4
+    st: Turf
+  - cit: Inglewood
+    cou: USA
+    des: New England Patriots@Los Angeles Chargers
+    dt: 1607289900000
+    eid: 4143558
+    es: scheduled
+    eventGroup:
+      alias: Week 13
+      egid: 22
+      nam: REG Week 13
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1525
+      source:
+        abbr: NE
+        cit: New England
+        nam: New England
+        nn: Patriots
+        sn: New England
+    - ih: true
+      partid: 75380
+      source:
+        abbr: LAC
+        cit: Los Angeles
+        nam: L.A. Chargers
+        nn: Chargers
+        sn: Los Angeles
+    scores: []
+    seid: 8582
+    spid: 4
+    st: artificial
+  - cit: Glendale
+    cou: USA
+    des: Los Angeles Rams@Arizona Cardinals
+    dt: 1607288700000
+    eid: 4143559
+    es: scheduled
+    eventGroup:
+      alias: Week 13
+      egid: 22
+      nam: REG Week 13
+    lid: 16
+    participants:
+    - ih: true
+      partid: 1549
+      source:
+        abbr: ARI
+        cit: Arizona
+        nam: Arizona
+        nn: Cardinals
+        sn: Arizona
+    - ih: false
+      partid: 1550
+      source:
+        abbr: LA
+        cit: Los Angeles
+        nam: L.A. Rams
+        nn: Rams
+        sn: Los Angeles
+    scores: []
+    seid: 8582
+    spid: 4
+    st: Turf
+  - cit: Seattle
+    cou: USA
+    des: N.Y. Giants@Seattle Seahawks
+    dt: 1607288700000
+    eid: 4143561
+    es: scheduled
+    eventGroup:
+      alias: Week 13
+      egid: 22
+      nam: REG Week 13
+    lid: 16
+    participants:
+    - ih: false
+      partid: 1535
+      source:
+        abbr: NYG
+        cit: New York
+        nam: N.Y. Giants
+        nn: Giants
+        sn: New York
+    - ih: true
+      partid: 1548
+      source:
+        abbr: SEA
+        cit: Seattle
+        nam: Seattle
+        nn: Seahawks
+        sn: Seattle
+    scores: []
+    seid: 8582
+    spid: 4
+    st: artificial

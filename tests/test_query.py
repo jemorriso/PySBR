@@ -1013,7 +1013,15 @@ class TestQuery:
                 "test_lines_with_events_with_scores_events_nfl1",
                 "test_lines_with_events_with_scores_lines_nfl1",
                 None,
-            )
+            ),
+            (
+                16,
+                "2020-12-06",
+                [83, 401, 402],
+                "test_lines_with_events_with_scores_events_nfl2",
+                "test_lines_with_events_with_scores_lines_nfl2",
+                None,
+            ),
         ],
     )
     def test_lines_with_events_with_scores(
