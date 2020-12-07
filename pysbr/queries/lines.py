@@ -154,10 +154,16 @@ class Lines(Query):
                 for p in e["participants"]:
                     participant_id = p.get("participant id")
                     source = p.get("source")
-                    if "last name" in source:
+                    if "last name" in source and source.get("last name") is not None:
                         self._participants[participant_id] = source.get("last name")
-                    elif "abbreviation" in source:
+                    elif (
+                        "abbreviation" in source
+                        and source.get("abbreviation") is not None
+                    ):
                         self._participants[participant_id] = source.get("abbreviation")
+                    elif "name" in source and source.get("name") is not None:
+                        self._participants[participant_id] = source.get("name")
+
             except KeyError:
                 # Should not reach here; e['participants'] should be empty list at
                 # least.
@@ -274,7 +280,7 @@ class Lines(Query):
         # Event query didn't have scores, or the game hasn't been played yet (query
         # returns empty list), or event is in progress.
         if not scores or event_status != "complete":
-            return None, None
+            return None, None, None
 
         try:
             market_periods = self._get_config(line).market_periods.get(
@@ -290,18 +296,18 @@ class Lines(Query):
 
         points, o_points = self._tally_points(line, scores, market_range)
         if points is None or o_points is None:
-            return None, None
+            return None, None, None
 
         is_win = self._evaluate_bet(line, points, o_points)
         if is_win is None:
-            return None, None
+            return None, None, None
 
         try:
             profit = (
                 round((line.get("decimal odds") - 1) * 100, 2) if is_win else -100.0
             )
         except ValueError:
-            return None, None
+            return None, None, None
 
         return ("W" if is_win else "L", profit, points)
 
