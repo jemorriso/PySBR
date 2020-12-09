@@ -18,10 +18,14 @@ setup(
     classifiers=[
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
     ],
+    python_requires=">=3.8",
     packages=find_packages(exclude=["tests", "tests.*"]),
-    keywords="sportsbookreview betting api gambling sports graphql odds",
+    keywords="""
+        sportsbookreview sportsbook review betting api gambling sports graphql odds
+        lines moneyline
+    """,
     include_package_data=True,
     install_requires=["gql", "pandas", "pytz", "pyyaml"],
 )
