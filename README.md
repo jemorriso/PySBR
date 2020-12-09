@@ -4,11 +4,13 @@
 [![Python Version][python-image]][python-url]
 [![Build Status][circleci-image]][circleci-url]
 
-This package allows you to get odds and other information from [Sportsbook Review](https://SportsbookReview.com)  (SBR) for any of the leagues that are supported on the website, including NFL, NCAAB, UFC, ATP, EPL and many others. For a given event, you can get the current, best, opening lines and line history for any combination of betting markets and sportsbooks available on the website.
+This library allows you to get odds and other information from [Sportsbook Review](https://SportsbookReview.com)  (SBR) for any of the leagues that are supported on the website, including NFL, NCAAB, UFC, ATP, EPL and many others. For a given event, you can get the current, best, opening lines and line history for any combination of betting markets and sportsbooks available on the website.
 
-The GraphQL endpoint is undocumented and subject to change, so use at your own risk. Try and avoid getting rate limited so we can keep this available for everyone to use!
+The SBR GraphQL endpoint is undocumented and subject to change, so use at your own risk. Try and avoid getting rate limited so we can keep this available for everyone to use!
 
-![example-img](docs/img/readme250.gif)
+Project documentation found on [ReadTheDocs][readthedocs].
+
+![example-img](https://raw.githubusercontent.com/JeMorriso/PySBR/main/docs/img/readme250.gif)
 
 ## Installation
 
@@ -155,7 +157,7 @@ cl.list(e)[:2]
 ```
 
 
-You can see that Seahawks won the 1st half by a score of 23-17, netting a profit of \\$51.28 on a \\$100 bet on Seahawks 1st half ML if you were to bet Pinnacle's closing line.
+You can see that Seahawks won the 1st half by a score of 23-17, netting a profit of \$51.28 on a \$100 bet on Seahawks 1st half ML if you were to bet Pinnacle's closing line.
 
 
 ### Opening lines for teams over date range
@@ -236,7 +238,7 @@ ol.list(e)[5]
 Gonzaga opened as a 4 point favorite against Kansas, and Baylor opened as a 5.5 point favorite against Illinois.
 
 
-## Search for event and get line history
+### Search for event and get line history
 
 
 ```python
@@ -333,7 +335,7 @@ lh.list(s)[1]
 ```
 
 
-## Getting odds on Wimbledon futures
+### Getting odds on Wimbledon futures
 
 
 ```python
@@ -416,8 +418,6 @@ cl = CurrentLines(wimbledon_eid, wimbledon_futures_id, sb.ids('bet365')[0])
 ```
 
 
-_For more examples and usage, please refer to the [Wiki][read the docs]._
-
 ## Development setup
 
 Use Pipenv. Clone this repo, and then run `pipenv install --dev --pre black` to create a virtual environment with dev dependencies installed.
@@ -429,6 +429,8 @@ pipenv run pytest --cov=pysbr tests/
 
 ## Release History
 
+* 0.1.3
+    * CHANGE: Update docs
 * 0.1.0
     * Initial release
 
@@ -438,7 +440,7 @@ Jeremy Morrison – [jeremymorrison.ca](https://jeremymorrison.ca) - contact@jer
 
 Distributed under the MIT license. See ``LICENSE`` for more information.
 
-[github.com/JeMorriso](https://github.com/JeMorriso/)
+[github.com/JeMorriso/PySBR](https://github.com/JeMorriso/PySBR)
 
 ## Contributing
 
@@ -449,9 +451,9 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
 5. Create a new Pull Request
 
 <!-- Markdown link & img dfn's -->
-[python-image]: https://img.shields.io/github/pipenv/locked/python-version/jemorriso/pysbr 
+[python-image]: https://img.shields.io/pypi/pyversions/python-sbr 
 [python-url]: https://www.python.org/downloads/release/python-390/
 [circleci-image]: https://img.shields.io/circleci/build/github/JeMorriso/PySBR?token=9edfd6cf500869db3c74fc7691b80a0701b38b64
 [circleci-url]: https://app.circleci.com/pipelines/github/JeMorriso 
 
-[readthedocs]: https://github.com/yourname/yourproject/wiki
+[readthedocs]: https://pysbr.readthedocs.io/
