@@ -12,7 +12,8 @@ class LineHistory(Lines):
     returned by the query. Both American and decimal odds are included.
 
     The query to the server does not work without at least one participant id of a
-    participant in the event, which is why it is a required argument.
+    participant in the event. If you only include 1 participant id, the query will only
+    return the history for the side of the bet relevant to that participant id.
 
     Args:
         event_id: SBR event id.
