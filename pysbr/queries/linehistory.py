@@ -53,6 +53,6 @@ class LineHistory(Lines):
         lines = self._raw[self.name]
         cleaned_lines = []
         for el in lines:
-            cleaned_lines.append(el["lines"][0])
+            cleaned_lines.extend(el["lines"])
 
         return cleaned_lines

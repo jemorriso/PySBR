@@ -7,7 +7,7 @@ README = (HERE / "README.md").read_text()
 
 setup(
     name="python-sbr",
-    version="0.1.3",
+    version="0.1.4",
     description="Access the SportsbookReview GraphQL endpoint.",
     long_description=README,
     long_description_content_type="text/markdown",
