@@ -1,4 +1,6 @@
 from unittest.mock import patch
+import time
+import random
 
 from pytest import fixture
 from gql import Client, gql
@@ -48,6 +50,11 @@ from pysbr.config.sport import (
     UFC,
 )
 from pysbr.config.sportsbook import Sportsbook
+
+
+QUERY_SERVER = False
+WAIT_MEAN = 69
+WAIT_DEVIATION = 42
 
 
 class TestEventsByDate(EventsByDate):
@@ -491,6 +498,42 @@ def build_and_execute_with_cassette(execute_with_cassette):
 
 
 @fixture
+def build_and_execute_with_wait():
+    def fn(obj, *args):
+        wait_time = random.randrange(
+            WAIT_MEAN - WAIT_DEVIATION, WAIT_MEAN + WAIT_DEVIATION
+        )
+        print(f"Waiting for {wait_time} seconds before executing query...")
+        time.sleep(wait_time)
+        # Need to call _build_and_execute_query on the parent of the Test object,
+        # because _build_and_execute_query is overridden in the Test object.
+        return super(type(obj), obj)._build_and_execute_query(
+            getattr(obj, "name", None),
+            getattr(obj, "fields", None),
+            getattr(obj, "arg_str", None),
+            getattr(obj, "args", None),
+        )
+
+    return fn
+
+
+# Factory fixture that wraps build_and_execute_with_cassette, and adds the ability
+# to run test suite without VCR. So when it gets called it either does
+# build_and_excute_with_cassette or it performs a wait, and then calls the original
+# execute function
+@fixture
+def execute_factory(build_and_execute_with_cassette, build_and_execute_with_wait):
+    def fn(obj, *args):
+
+        if QUERY_SERVER:
+            return build_and_execute_with_wait(obj, *args)
+        else:
+            return build_and_execute_with_cassette(obj, *args)
+
+    return fn
+
+
+@fixture
 def query():
     return Query()
 
@@ -506,49 +549,43 @@ def sbr_client():
 
 
 @fixture
-def events_by_date(build_and_execute_with_cassette):
+def events_by_date(execute_factory):
     def fn(league_ids, dt, cassette_name):
-        return TestEventsByDate(
-            league_ids, dt, build_and_execute_with_cassette, cassette_name
-        )
+        return TestEventsByDate(league_ids, dt, execute_factory, cassette_name)
 
     return fn
 
 
 @fixture
-def league_hierarchy(build_and_execute_with_cassette):
+def league_hierarchy(execute_factory):
     def fn(league_id, cassette_name):
-        return TestLeagueHierarchy(
-            league_id, build_and_execute_with_cassette, cassette_name
-        )
+        return TestLeagueHierarchy(league_id, execute_factory, cassette_name)
 
     return fn
 
 
 @fixture
-def team(build_and_execute_with_cassette):
+def team(execute_factory):
     def fn(team_id, cassette_name):
-        return TestTeam(team_id, build_and_execute_with_cassette, cassette_name)
+        return TestTeam(team_id, execute_factory, cassette_name)
 
     return fn
 
 
 @fixture
-def sportsbooks(build_and_execute_with_cassette):
+def sportsbooks(execute_factory):
     def fn(sportsbook_ids, cassette_name):
-        return TestSportsbooks(
-            sportsbook_ids, build_and_execute_with_cassette, cassette_name
-        )
+        return TestSportsbooks(sportsbook_ids, execute_factory, cassette_name)
 
     return fn
 
 
 @fixture
-def event_groups_by_league(build_and_execute_with_cassette):
+def event_groups_by_league(execute_factory):
     def fn(league_id, cassette_name):
         return TestEventGroupsByLeague(
             league_id,
-            build_and_execute_with_cassette,
+            execute_factory,
             cassette_name,
         )
 
@@ -556,12 +593,12 @@ def event_groups_by_league(build_and_execute_with_cassette):
 
 
 @fixture
-def markets_by_market_ids(build_and_execute_with_cassette):
+def markets_by_market_ids(execute_factory):
     def fn(market_ids, sport_id, cassette_name):
         return TestMarketsByMarketIds(
             market_ids,
             sport_id,
-            build_and_execute_with_cassette,
+            execute_factory,
             cassette_name,
         )
 
@@ -569,11 +606,11 @@ def markets_by_market_ids(build_and_execute_with_cassette):
 
 
 @fixture
-def league_markets(build_and_execute_with_cassette):
+def league_markets(execute_factory):
     def fn(league_id, cassette_name):
         return TestLeagueMarkets(
             league_id,
-            build_and_execute_with_cassette,
+            execute_factory,
             cassette_name,
         )
 
@@ -581,11 +618,11 @@ def league_markets(build_and_execute_with_cassette):
 
 
 @fixture
-def leagues_by_league_ids(build_and_execute_with_cassette):
+def leagues_by_league_ids(execute_factory):
     def fn(league_ids, cassette_name):
         return TestLeaguesByLeagueIds(
             league_ids,
-            build_and_execute_with_cassette,
+            execute_factory,
             cassette_name,
         )
 
@@ -593,11 +630,11 @@ def leagues_by_league_ids(build_and_execute_with_cassette):
 
 
 @fixture
-def search_events(build_and_execute_with_cassette):
+def search_events(execute_factory):
     def fn(search_term, cassette_name):
         return TestSearchEvents(
             search_term,
-            build_and_execute_with_cassette,
+            execute_factory,
             cassette_name,
         )
 
@@ -605,11 +642,11 @@ def search_events(build_and_execute_with_cassette):
 
 
 @fixture
-def search_sports(build_and_execute_with_cassette):
+def search_sports(execute_factory):
     def fn(search_term, cassette_name):
         return TestSearchSports(
             search_term,
-            build_and_execute_with_cassette,
+            execute_factory,
             cassette_name,
         )
 
@@ -617,11 +654,11 @@ def search_sports(build_and_execute_with_cassette):
 
 
 @fixture
-def search_leagues(build_and_execute_with_cassette):
+def search_leagues(execute_factory):
     def fn(search_term, cassette_name):
         return TestSearchLeagues(
             search_term,
-            build_and_execute_with_cassette,
+            execute_factory,
             cassette_name,
         )
 
@@ -629,11 +666,11 @@ def search_leagues(build_and_execute_with_cassette):
 
 
 @fixture
-def event_markets(build_and_execute_with_cassette):
+def event_markets(execute_factory):
     def fn(event_id, cassette_name):
         return TestEventMarkets(
             event_id,
-            build_and_execute_with_cassette,
+            execute_factory,
             cassette_name,
         )
 
@@ -641,11 +678,11 @@ def event_markets(build_and_execute_with_cassette):
 
 
 @fixture
-def events_by_event_ids(build_and_execute_with_cassette):
+def events_by_event_ids(execute_factory):
     def fn(event_ids, cassette_name):
         return TestEventsByEventIds(
             event_ids,
-            build_and_execute_with_cassette,
+            execute_factory,
             cassette_name,
         )
 
@@ -653,11 +690,11 @@ def events_by_event_ids(build_and_execute_with_cassette):
 
 
 @fixture
-def events_by_participants_recent(build_and_execute_with_cassette):
+def events_by_participants_recent(execute_factory):
     def fn(participant_ids, cassette_name):
         return TestEventsByParticipantsRecent(
             participant_ids,
-            build_and_execute_with_cassette,
+            execute_factory,
             cassette_name,
         )
 
@@ -665,7 +702,7 @@ def events_by_participants_recent(build_and_execute_with_cassette):
 
 
 @fixture
-def events_by_participants(build_and_execute_with_cassette):
+def events_by_participants(execute_factory):
     def fn(
         participant_ids, start, end, league_id, sport_id, cassette_name, cassette_name2
     ):
@@ -675,7 +712,7 @@ def events_by_participants(build_and_execute_with_cassette):
             end,
             league_id,
             sport_id,
-            build_and_execute_with_cassette,
+            execute_factory,
             cassette_name,
             cassette_name2,
         )
@@ -684,13 +721,13 @@ def events_by_participants(build_and_execute_with_cassette):
 
 
 @fixture
-def events_by_date_range(build_and_execute_with_cassette):
+def events_by_date_range(execute_factory):
     def fn(league_ids, start, end, cassette_name):
         return TestEventsByDateRange(
             league_ids,
             start,
             end,
-            build_and_execute_with_cassette,
+            execute_factory,
             cassette_name,
         )
 
@@ -698,14 +735,14 @@ def events_by_date_range(build_and_execute_with_cassette):
 
 
 @fixture
-def events_by_event_group(build_and_execute_with_cassette):
+def events_by_event_group(execute_factory):
     def fn(league_id, event_group_id, season_id, market_id, cassette_name):
         return TestEventsByEventGroup(
             league_id,
             event_group_id,
             season_id,
             market_id,
-            build_and_execute_with_cassette,
+            execute_factory,
             cassette_name,
         )
 
@@ -713,13 +750,13 @@ def events_by_event_group(build_and_execute_with_cassette):
 
 
 @fixture
-def events_by_matchup(build_and_execute_with_cassette):
+def events_by_matchup(execute_factory):
     def fn(participant_id1, participant_id2, count, cassette_name):
         return TestEventsByMatchup(
             participant_id1,
             participant_id2,
             count,
-            build_and_execute_with_cassette,
+            execute_factory,
             cassette_name,
         )
 
@@ -727,13 +764,13 @@ def events_by_matchup(build_and_execute_with_cassette):
 
 
 @fixture
-def opening_lines(build_and_execute_with_cassette):
+def opening_lines(execute_factory):
     def fn(event_ids, market_ids, provider_account_id, cassette_name):
         return TestOpeningLines(
             event_ids,
             market_ids,
             provider_account_id,
-            build_and_execute_with_cassette,
+            execute_factory,
             cassette_name,
         )
 
@@ -741,13 +778,13 @@ def opening_lines(build_and_execute_with_cassette):
 
 
 @fixture
-def current_lines(build_and_execute_with_cassette):
+def current_lines(execute_factory):
     def fn(event_ids, market_ids, provider_account_ids, cassette_name):
         return TestCurrentLines(
             event_ids,
             market_ids,
             provider_account_ids,
-            build_and_execute_with_cassette,
+            execute_factory,
             cassette_name,
         )
 
@@ -755,12 +792,12 @@ def current_lines(build_and_execute_with_cassette):
 
 
 @fixture
-def best_lines(build_and_execute_with_cassette):
+def best_lines(execute_factory):
     def fn(event_ids, market_ids, cassette_name):
         return TestBestLines(
             event_ids,
             market_ids,
-            build_and_execute_with_cassette,
+            execute_factory,
             cassette_name,
         )
 
@@ -781,12 +818,12 @@ def best_lines(build_and_execute_with_cassette):
 
 
 @fixture
-def consensus_history(build_and_execute_with_cassette):
+def consensus_history(execute_factory):
     def fn(event_id, market_ids, cassette_name):
         return TestConsensusHistory(
             event_id,
             market_ids,
-            build_and_execute_with_cassette,
+            execute_factory,
             cassette_name,
         )
 
@@ -794,14 +831,14 @@ def consensus_history(build_and_execute_with_cassette):
 
 
 @fixture
-def line_history(build_and_execute_with_cassette):
+def line_history(execute_factory):
     def fn(event_id, market_id, sportsbook_id, participant_ids, cassette_name):
         return TestLineHistory(
             event_id,
             market_id,
             sportsbook_id,
             participant_ids,
-            build_and_execute_with_cassette,
+            execute_factory,
             cassette_name,
         )
 
