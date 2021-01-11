@@ -1,3 +1,186 @@
 lid: 5
 name: National Basketball Association
 abbreviation: NBA
+
+# All SBR abbreviations are correct.
+teams:
+  - tmid: 1143
+    abbr: UTA
+    sbr abbreviation: UTA
+    cit: Utah
+    nam: Utah
+    nn: Jazz
+  - tmid: 1144
+    abbr: MIN
+    sbr abbreviation: MIN
+    cit: Minnesota
+    nam: Minnesota
+    nn: Timberwolves
+  - tmid: 1145
+    abbr: OKC
+    sbr abbreviation: OKC
+    cit: Oklahoma City
+    nam: Oklahoma City
+    nn: Thunder
+  - tmid: 1146
+    abbr: POR
+    sbr abbreviation: POR
+    cit: Portland
+    nam: Portland
+    nn: Trail Blazers
+  - tmid: 1147
+    abbr: DEN
+    sbr abbreviation: DEN
+    cit: Denver
+    nam: Denver
+    nn: Nuggets
+  - tmid: 1148
+    abbr: LAL
+    sbr abbreviation: LAL
+    cit: Los Angeles
+    nam: L.A. Lakers
+    nn: Lakers
+  - tmid: 1149
+    abbr: PHX
+    sbr abbreviation: PHX
+    cit: Phoenix
+    nam: Phoenix
+    nn: Suns
+  - tmid: 1150
+    abbr: SAC
+    sbr abbreviation: SAC
+    cit: Sacramento
+    nam: Sacramento
+    nn: Kings
+  - tmid: 1151
+    abbr: LAC
+    sbr abbreviation: LAC
+    cit: Los Angeles
+    nam: L.A. Clippers
+    nn: Clippers
+  - tmid: 1152
+    abbr: GSW
+    sbr abbreviation: GSW
+    cit: Golden State
+    nam: Golden State
+    nn: Warriors
+  - tmid: 1153
+    abbr: SAS
+    sbr abbreviation: SAS
+    cit: San Antonio
+    nam: San Antonio
+    nn: Spurs
+  - tmid: 1154
+    abbr: DAL
+    sbr abbreviation: DAL
+    cit: Dallas
+    nam: Dallas
+    nn: Mavericks
+  - tmid: 1155
+    abbr: HOU
+    sbr abbreviation: HOU
+    cit: Houston
+    nam: Houston
+    nn: Rockets
+  - tmid: 1156
+    abbr: MEM
+    sbr abbreviation: MEM
+    cit: Memphis
+    nam: Memphis
+    nn: Grizzlies
+  - tmid: 1157
+    abbr: NOP
+    sbr abbreviation: NOP
+    cit: New Orleans
+    nam: New Orleans
+    nn: Pelicans
+  - tmid: 1158
+    abbr: MIA
+    sbr abbreviation: MIA
+    cit: Miami
+    nam: Miami
+    nn: Heat
+  - tmid: 1159
+    abbr: ATL
+    sbr abbreviation: ATL
+    cit: Atlanta
+    nam: Atlanta
+    nn: Hawks
+  - tmid: 1160
+    abbr: WAS
+    sbr abbreviation: WAS
+    cit: Washington
+    nam: Washington
+    nn: Wizards
+  - tmid: 1161
+    abbr: ORL
+    sbr abbreviation: ORL
+    cit: Orlando
+    nam: Orlando
+    nn: Magic
+  - tmid: 1162
+    abbr: CHA
+    sbr abbreviation: CHA
+    cit: Charlotte
+    nam: Charlotte
+    nn: Hornets
+  - tmid: 1163
+    abbr: IND
+    sbr abbreviation: IND
+    cit: Indiana
+    nam: Indiana
+    nn: Pacers
+  - tmid: 1164
+    abbr: DET
+    sbr abbreviation: DET
+    cit: Detroit
+    nam: Detroit
+    nn: Pistons
+  - tmid: 1165
+    abbr: MIL
+    sbr abbreviation: MIL
+    cit: Milwaukee
+    nam: Milwaukee
+    nn: Bucks
+  - tmid: 1166
+    abbr: CLE
+    sbr abbreviation: CLE
+    cit: Cleveland
+    nam: Cleveland
+    nn: Cavaliers
+  - tmid: 1167
+    abbr: CHI
+    sbr abbreviation: CHI
+    cit: Chicago
+    nam: Chicago
+    nn: Bulls
+  - tmid: 1168
+    abbr: TOR
+    sbr abbreviation: TOR
+    cit: Toronto
+    nam: Toronto
+    nn: Raptors
+  - tmid: 1169
+    abbr: BKN
+    sbr abbreviation: BKN
+    cit: Brooklyn
+    nam: Brooklyn
+    nn: Nets
+  - tmid: 1170
+    abbr: NYK
+    sbr abbreviation: NYK
+    cit: New York
+    nam: New York
+    nn: Knicks
+  - tmid: 1171
+    abbr: BOS
+    sbr abbreviation: BOS
+    cit: Boston
+    nam: Boston
+    nn: Celtics
+  - tmid: 1172
+    abbr: PHI
+    sbr abbreviation: PHI
+    cit: Philadelphia
+    nam: Philadelphia
+    nn: 76ers

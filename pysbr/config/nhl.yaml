@@ -1,3 +1,197 @@
 lid: 7
 name: National Hockey League
 abbreviation: NHL
+
+# All SBR abbreviations are correct.
+
+# Note that for expansion teams since VGK, participant id is DIFFERENT from team id. I
+# have used team id as a synonym for participant id inside team config files, so I will
+# continue to do that, but note that they are really the participant ids. This should
+# not cause problems, I checked that SBR is using participant ids.
+teams:
+  - tmid: 109432
+    abbr: VGK
+    sbr abbreviation: VGK
+    cit: Vegas
+    nam: Vegas
+    nn: Golden Knights
+  - tmid: 565
+    abbr: CHI
+    sbr abbreviation: CHI
+    cit: Chicago
+    nam: Chicago
+    nn: Blackhawks
+  - tmid: 566
+    abbr: DET
+    sbr abbreviation: DET
+    cit: Detroit
+    nam: Detroit
+    nn: Red Wings
+  - tmid: 567
+    abbr: STL
+    sbr abbreviation: STL
+    cit: St. Louis
+    nam: St. Louis
+    nn: Blues
+  - tmid: 568
+    abbr: CBJ
+    sbr abbreviation: CBJ
+    cit: Columbus
+    nam: Columbus
+    nn: Blue Jackets
+  - tmid: 569
+    abbr: NSH
+    sbr abbreviation: NSH
+    cit: Nashville
+    nam: Nashville
+    nn: Predators
+  - tmid: 570
+    abbr: DAL
+    sbr abbreviation: DAL
+    cit: Dallas
+    nam: Dallas
+    nn: Stars
+  - tmid: 571
+    abbr: SJ
+    sbr abbreviation: SJ
+    cit: San Jose
+    nam: San Jose
+    nn: Sharks
+  - tmid: 572
+    abbr: ANA
+    sbr abbreviation: ANA
+    cit: Anaheim
+    nam: Anaheim
+    nn: Ducks
+  - tmid: 573
+    abbr: LA
+    sbr abbreviation: LA
+    cit: Los Angeles
+    nam: Los Angeles
+    nn: Kings
+  - tmid: 574
+    abbr: ARI
+    sbr abbreviation: ARI
+    cit: Arizona
+    nam: Arizona
+    nn: Coyotes
+  - tmid: 575
+    abbr: COL
+    sbr abbreviation: COL
+    cit: Colorado
+    nam: Colorado
+    nn: Avalanche
+  - tmid: 576
+    abbr: MIN
+    sbr abbreviation: MIN
+    cit: Minnesota
+    nam: Minnesota
+    nn: Wild
+  - tmid: 577
+    abbr: CGY
+    sbr abbreviation: CGY
+    cit: Calgary
+    nam: Calgary
+    nn: Flames
+  - tmid: 578
+    abbr: VAN
+    sbr abbreviation: VAN
+    cit: Vancouver
+    nam: Vancouver
+    nn: Canucks
+  - tmid: 579
+    abbr: EDM
+    sbr abbreviation: EDM
+    cit: Edmonton
+    nam: Edmonton
+    nn: Oilers
+  - tmid: 580
+    abbr: MTL
+    sbr abbreviation: MTL
+    cit: Montreal
+    nam: Montreal
+    nn: Canadiens
+  - tmid: 581
+    abbr: BOS
+    sbr abbreviation: BOS
+    cit: Boston
+    nam: Boston
+    nn: Bruins
+  - tmid: 582
+    abbr: OTT
+    sbr abbreviation: OTT
+    cit: Ottawa
+    nam: Ottawa
+    nn: Senators
+  - tmid: 583
+    abbr: BUF
+    sbr abbreviation: BUF
+    cit: Buffalo
+    nam: Buffalo
+    nn: Sabres
+  - tmid: 584
+    abbr: TOR
+    sbr abbreviation: TOR
+    cit: Toronto
+    nam: Toronto
+    nn: Maple Leafs
+  - tmid: 585
+    abbr: TB
+    sbr abbreviation: TB
+    cit: Tampa Bay
+    nam: Tampa Bay
+    nn: Lightning
+  - tmid: 586
+    abbr: FLA
+    sbr abbreviation: FLA
+    cit: Florida
+    nam: Florida
+    nn: Panthers
+  - tmid: 587
+    abbr: WSH
+    sbr abbreviation: WSH
+    cit: Washington
+    nam: Washington
+    nn: Capitals
+  - tmid: 588
+    abbr: WPG
+    sbr abbreviation: WPG
+    cit: Winnipeg
+    nam: Winnipeg
+    nn: Jets
+  - tmid: 589
+    abbr: CAR
+    sbr abbreviation: CAR
+    cit: Carolina
+    nam: Carolina
+    nn: Hurricanes
+  - tmid: 590
+    abbr: PHI
+    sbr abbreviation: PHI
+    cit: Philadelphia
+    nam: Philadelphia
+    nn: Flyers
+  - tmid: 591
+    abbr: NYR
+    sbr abbreviation: NYR
+    cit: New York
+    nam: N.Y. Rangers
+    nn: Rangers
+  - tmid: 592
+    abbr: NJ
+    sbr abbreviation: NJ
+    cit: New Jersey
+    nam: New Jersey
+    nn: Devils
+  - tmid: 593
+    abbr: PIT
+    sbr abbreviation: PIT
+    cit: Pittsburgh
+    nam: Pittsburgh
+    nn: Penguins
+  - tmid: 594
+    abbr: NYI
+    sbr abbreviation: NYI
+    cit: New York
+    nam: N.Y. Islanders
+    nn: Islanders
