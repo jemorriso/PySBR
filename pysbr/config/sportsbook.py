@@ -1,4 +1,4 @@
-from typing import Dict, List, Union
+from typing import Dict, List, Union, Optional
 from collections import OrderedDict
 
 import pysbr.utils as utils
@@ -54,6 +54,30 @@ class Sportsbook(Config):
         n 'short name', 'sportsbook id' and 'system sportsbook id' as keys.
         """
         return self._sportsbooks
+
+    def id(self, term: Union[int, str]) -> Optional[int]:
+        """Take provided search term and return matching sportsbook id.
+
+        If search term is string, search for matching sportsbook. If search term is
+        int, assume that it is the ID, and return it.
+
+        This method is provided as a convenience so that you don't need to
+        remember sportsbook id numbers. Case is ignored for search terms.
+
+        Example search terms:
+            'pinnacle'
+            'PINNACLE'
+            'bodog'
+            'bodog sportsbook'
+            20
+
+        Raises:
+            TypeError:
+                If a provided search term is not an int or str.
+            ValueError:
+                If a provided search term string cannot be matched with a sportsbook.
+        """
+        return self.ids(term)[0]
 
     def ids(self, terms: Union[List[Union[int, str]], int, str]) -> List[int]:
         """Take provided search terms and return list of matching sportsbook ids.

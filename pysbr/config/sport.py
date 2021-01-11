@@ -111,6 +111,41 @@ class Sport(Config):
                     market_types[y["market id"]] = x["url"]
         return market_types
 
+    def market_id(self, term: Union[int, str]) -> int:
+        """Given provided search term, return matching market id.
+
+        If search term is string, search for matching betting market. If search term is
+        int, assume that it is the ID, and return it.
+
+        This method is provided as a convenience so that you don't need to
+        remember market id numbers. Case is ignored for search terms.
+
+        A search dictionary is utilized so that you can use common abbrevations /
+        spelling variants for markets instead of typing them out / worrying about
+        format.
+
+        Example search terms, which all point to the same market id:
+            '1st half over/under'
+            '1st-half totals'
+            '1st half o/u'
+            'first half totals'
+            'first-half ou'
+            '1hou'
+            '1htot'
+            '1h ou'
+            '1h tot'
+            '1H OU'
+            '1H TOT'
+            '1HOU'
+
+        Raises:
+            TypeError:
+                If a provided search term is not an int or str.
+            ValueError:
+                If a provided search term string cannot be matched with a market.
+        """
+        return self.market_ids(term)[0]
+
     def market_ids(self, terms: Union[List[Union[int, str]], int, str]) -> List[int]:
         """Given provided search terms, return a list of matching market ids.
 
@@ -328,6 +363,30 @@ class TeamLeague(League):
 
         return teams
 
+    def team_id(self, term: Union[int, str]) -> int:
+        """Given provided search term, return matching team id.
+
+        If search term is string, search for matching team. If search term is
+        int, assume that it is the ID, and return it.
+
+        This method is provided as a convenience so that you don't need to
+        remember team id numbers. Case is ignored for search terms.
+
+        Example search terms:
+            Seattle
+            Seahawks
+            Seattle Seahawks
+            sea
+            SEA
+
+        Raises:
+            TypeError:
+                If a search term is not an int or str.
+            ValueError:
+                If a search term is ambiguous, or cannot be matched with a team.
+        """
+        return self.team_ids(term)[0]
+
     def team_ids(self, terms: Union[int, str, List[Union[int, str]]]) -> List[int]:
         """Given provided search terms, return a list of matching team ids.
 
@@ -449,7 +508,7 @@ class MLB(League):
         super().__init__("baseball", "mlb")
 
 
-class NBA(League):
+class NBA(TeamLeague):
     """Provides access to NBA config files."""
 
     def __init__(self):
@@ -469,7 +528,7 @@ class NCAAB(TeamLeague):
         self.market_types = self._build_market_types(self._league["markets"])
 
 
-class NHL(League):
+class NHL(TeamLeague):
     """Provides access to NHL config files."""
 
     def __init__(self):

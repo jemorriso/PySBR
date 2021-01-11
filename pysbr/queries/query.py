@@ -288,6 +288,24 @@ class Query:
         """Get the raw GraphQL response, without any data processing."""
         return self._raw
 
+    def id(self) -> Optional[int]:
+        """Get the first id returned from the query response.
+
+        The type of id returned depends on the Query implementation. For example,
+        calling this method on queries returning events will return a list of event ids.
+
+        If there are no ids, None is returned.
+
+        Raises:
+            NotImplementedError: If the Query object does not have a default return id
+                type.
+        """
+        try:
+            # TODO: This is slow since it iterates over all ids needlessly.
+            return self.ids()[0]
+        except IndexError:
+            return None
+
     def ids(self) -> List[int]:
         """Get a list of ids from the query response.
 
