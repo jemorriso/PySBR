@@ -1,10 +1,11 @@
 # PySBR
-> A Python client for accessing the Sportsbook Review GraphQL endpoint. 
+
+> A Python client for accessing the Sportsbook Review GraphQL endpoint.
 
 [![Python Version][python-image]][python-url]
 [![Build Status][circleci-image]][circleci-url]
 
-This library allows you to get odds and other information from [Sportsbook Review](https://SportsbookReview.com)  (SBR) for any of the leagues that are supported on the website, including NFL, NCAAB, UFC, ATP, EPL and many others. For a given event, you can get the current, best, opening lines and line history for any combination of betting markets and sportsbooks available on the website.
+This library allows you to get odds and other information from [Sportsbook Review](https://SportsbookReview.com) (SBR) for any of the leagues that are supported on the website, including NFL, NCAAB, UFC, ATP, EPL and many others. For a given event, you can get the current, best, opening lines and line history for any combination of betting markets and sportsbooks available on the website.
 
 The SBR GraphQL endpoint is undocumented and subject to change, so use at your own risk. Try and avoid getting rate limited so we can keep this available for everyone to use!
 
@@ -38,17 +39,16 @@ sb = Sportsbook()
 
 Using the `NFL` config class to get the NFL's league id, the `EventsByDate` query can then be used to retrieve all the events on some date for a given league or sport.
 
-
 ```python
 e = EventsByDate(nfl.league_id, dt)
 ```
 
 All queries have `list` and `dataframe` as available instance methods, producing a readable and formatted list or dataframe of the server response. You can also view the raw response from the server by accessing the `_raw` instance variable.
 
-
 ```python
 e.list()[0]
 ```
+
 ```python
     {'scores': [],
      'sport id': 4,
@@ -82,17 +82,16 @@ e.list()[0]
 
 Then you can get the current lines for any betting markets and sportsbooks of interest by using `CurrentLines`.
 
-
 ```python
 cl = CurrentLines(e.ids(), nfl.market_ids(['1Qou', 'ps', '1st half moneyline']), sb.ids(['Pinnacle', 'Bovada']))
 ```
 
 Notice how you can use the `NFL` config class to find the betting market ids for 1st quarter over/under, full game point spread, and 1st half moneyline. See the documentation for accepted formats. Similarly, you can use `Sportsbook` to find sportsbook ids.
 
-
 ```python
 cl.list(e)[0]
 ```
+
 ```python
     {'market id': 91,
      'event id': 4143414,
@@ -114,7 +113,6 @@ In order to get the 'event', 'market', 'sportsbook' and 'participant' fields, pa
 
 If an event is already completed, 'scores' will be populated in the response. The score data can then be used to calculate the result of the bet.
 
-
 ```python
 dt = datetime.strptime('2020-11-30', '%Y-%m-%d')
 
@@ -123,6 +121,7 @@ cl = CurrentLines(e.ids(), nfl.market_ids(['1Qou', 'ps', '1st half moneyline']),
 
 cl.list(e)[:2]
 ```
+
 ```python
     [{'market id': 91,
       'event id': 4143550,
@@ -156,9 +155,7 @@ cl.list(e)[:2]
       'participant': 'SEA'}]
 ```
 
-
 You can see that Seahawks won the 1st half by a score of 23-17, netting a profit of \$51.28 on a \$100 bet on Seahawks 1st half ML if you were to bet Pinnacle's closing line.
-
 
 ### Opening lines for teams over date range
 
@@ -172,30 +169,27 @@ end = datetime.strptime('2020-12-03', '%Y-%m-%d')
 
 For NCAA basketball all the teams have been added to the config class, so here you can use the `team_ids` method.
 
-
 ```python
-gonzaga = ncaab.team_ids("GONZ")
-baylor = ncaab.team_ids("baylor")
+gonzaga = ncaab.team_id("GONZ")
+baylor = ncaab.team_id("baylor")
 ```
 
 `EventsByParticipants` includes any games that Gonzaga or Baylor played in over the given date range.
 
-
 ```python
-e = EventsByParticipants(gonzaga + baylor, start, end, ncaab.league_id)
+e = EventsByParticipants([gonzaga, baylor], start, end, ncaab.league_id)
 ```
 
 Use the `OpeningLines` query to get the opening lines on Bovada for all the matching games:
 
-
 ```python
-ol = OpeningLines(e.ids(), ncaab.market_ids('ps'), sb.ids('Bovada')[0])
+ol = OpeningLines(e.ids(), ncaab.market_id('ps'), sb.id('Bovada'))
 ```
-
 
 ```python
 ol.list(e)[1]
 ```
+
 ```python
     {'market id': 401,
      'event id': 4285569,
@@ -213,9 +207,11 @@ ol.list(e)[1]
      'sportsbook': 'Bovada',
      'participant': 'GONZ'}
 ```
+
 ```python
 ol.list(e)[5]
 ```
+
 ```python
     {'market id': 401,
      'event id': 4286230,
@@ -234,29 +230,25 @@ ol.list(e)[5]
      'participant': 'BAY'}
 ```
 
-
 Gonzaga opened as a 4 point favorite against Kansas, and Baylor opened as a 5.5 point favorite against Illinois.
 
-
 ### Search for event and get line history
-
 
 ```python
 ufc = UFC()
 sb = Sportsbook()
 ```
 
-For some leagues there is no configuration class, or it doesn't have teams or participants. In this case `SearchEvents` comes in handy. You can search for an event by participant like so:
-
+For some leagues there is no configuration class, or it doesn't have teams or participants. In this case `SearchEvents` comes in handy. You can search for an upcoming event by participant like so:
 
 ```python
 s = SearchEvents('vettori')
 ```
 
-
 ```python
 s.list()[0]
 ```
+
 ```python
     {'description': 'Jack Hermansson@Marvin Vettori',
      'datetime': '2020-12-05T20:59:00-08:00',
@@ -291,17 +283,16 @@ s.list()[0]
      'league id': 26}
 ```
 
-
 You can get the complete line movement history for an event for a given market and sportsbook. Here you can see the line moving in Vettori's favor.
-
 
 ```python
 vettori = s.list()[0]['participants'][1]['participant id']
 
-lh = LineHistory(s.ids()[0], ufc.default_market_id, sb.ids('Pinnacle')[0], vettori)
+lh = LineHistory(s.id(), ufc.default_market_id, sb.id('Pinnacle'), vettori)
 
 lh.list(s)[0]
 ```
+
 ```python
     {'market id': 126,
      'event id': 4293126,
@@ -316,9 +307,11 @@ lh.list(s)[0]
      'sportsbook': 'Pinnacle',
      'participant': 'Marvin Vettori'}
 ```
+
 ```python
 lh.list(s)[1]
 ```
+
 ```python
     {'market id': 126,
      'event id': 4293126,
@@ -334,9 +327,7 @@ lh.list(s)[1]
      'participant': 'Marvin Vettori'}
 ```
 
-
 ### Getting odds on Wimbledon futures
-
 
 ```python
 sb = Sportsbook()
@@ -345,14 +336,13 @@ atp = ATP()
 
 Sometimes it may not be obvious how to find a given market id. In this case you can call `sport_config` on a league configuration class and search for the market you are looking for. See the documentation for other config methods.
 
-
 ```python
 print(atp.sport_config())
 ```
+
 ```python
     {'default market id': 126, 'consensus market ids': [126, 395, 396], 'markets': [{'periods': 0, 'alias': '', 'market types': [{'alias': 'Money Lines', 'market id': 126, 'name': '2way', 'url': 'money-line'}, {'alias': 'Point Spreads', 'market id': 395, 'name': 'Point Spread', 'url': 'pointspread'}, {'alias': 'Total Games', 'market id': 396, 'name': 'American Total', 'url': 'totals'}], 'market group id': 217, 'name': 'Full Game', 'url': 'full-game'}, {'alias': 'Futures', 'market types': [{'alias': 'French Open Winner', 'market id': 719, 'name': 'French Open Winner', 'url': 'french-open-winner'}, {'alias': 'Wimbledon Winner', 'market id': 720, 'name': 'Wimbledon Winner', 'url': 'davis-cup-winner'}, {'alias': 'US Open Winner', 'market id': 721, 'name': 'US Open Winner', 'url': 'us-open-winner'}, {'alias': 'Australian Open Winner', 'market id': 723, 'name': 'Australian Open Winner', 'url': 'australian-open-winner'}], 'market group id': 224, 'name': 'Futures', 'url': 'futures'}], 'sport id': 8}
 ```
-
 
 ```python
 wimbledon_futures_id = 720
@@ -363,7 +353,6 @@ end = datetime.strptime('2021-07-12', '%Y-%m-%d')
 
 You can use `EventsByDateRange` to find Wimbledon's event id.
 
-
 ```python
 e = EventsByDateRange(atp.league_id, start, end)
 
@@ -372,12 +361,12 @@ wimbledon_eid = e.list()[0]['event id']
 
 With Wimbledon's event id and the futures market id, you can get the current odds on Bet365 for each competitor to win Wimbledon.
 
-
 ```python
-cl = CurrentLines(wimbledon_eid, wimbledon_futures_id, sb.ids('bet365')[0])
+cl = CurrentLines(wimbledon_eid, wimbledon_futures_id, sb.id('bet365'))
 
 [o for o in cl.list(e) if o['participant'] in ['Dimitrov', 'Djokovic', 'Nadal']]
 ```
+
 ```python
     [{'market id': 720,
       'event id': 4138561,
@@ -417,28 +406,28 @@ cl = CurrentLines(wimbledon_eid, wimbledon_futures_id, sb.ids('bet365')[0])
       'participant': 'Nadal'}]
 ```
 
-
 ## Development setup
 
 Use Pipenv. Clone this repo, and then run `pipenv install --dev --pre black` to create a virtual environment with dev dependencies installed.
 
 To run the test suite:
+
 ```sh
 pipenv run pytest --cov=pysbr tests/
 ```
 
 ## Release History
 
-* 0.1.3
-    * CHANGE: Update docs
-* 0.1.0
-    * Initial release
+- 0.1.3
+  - CHANGE: Update docs
+- 0.1.0
+  - Initial release
 
 ## Meta
 
 Jeremy Morrison – [jeremymorrison.ca](https://jeremymorrison.ca) - contact@jeremymorrison.ca
 
-Distributed under the MIT license. See ``LICENSE`` for more information.
+Distributed under the MIT license. See `LICENSE` for more information.
 
 [github.com/JeMorriso/PySBR](https://github.com/JeMorriso/PySBR)
 
@@ -451,9 +440,9 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
 5. Create a new Pull Request
 
 <!-- Markdown link & img dfn's -->
-[python-image]: https://img.shields.io/pypi/pyversions/python-sbr 
+
+[python-image]: https://img.shields.io/pypi/pyversions/python-sbr
 [python-url]: https://www.python.org/downloads/release/python-390/
 [circleci-image]: https://img.shields.io/circleci/build/github/JeMorriso/PySBR?token=9edfd6cf500869db3c74fc7691b80a0701b38b64
-[circleci-url]: https://app.circleci.com/pipelines/github/JeMorriso 
-
+[circleci-url]: https://app.circleci.com/pipelines/github/JeMorriso
 [readthedocs]: https://pysbr.readthedocs.io/
