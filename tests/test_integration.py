@@ -83,6 +83,8 @@ class TestIntegration:
         events_by_participants_recent,
         current_lines,
     ):
+        # This test will fail if querying server if Nadal does not have any upcoming
+        # events.
         e = search_events("Nadal", "integration_test_search_atp1")
 
         nadal = None

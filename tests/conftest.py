@@ -475,6 +475,11 @@ def patched_execute(execute_with_cassette):
 def build_and_execute_with_cassette(execute_with_cassette):
     # this is implictly working as a patch function for Query._build_and_execute()
     def fn(obj, *args):
+        # This try block is because of EventsByParticipants, which requires 2 separate
+        # server calls. In the first one, name, args, fields, arg_str attributes are
+        # not assigned yet, and not what we want. So catch attribute error and use the
+        # args passed in (like how it is done in EventsByParticipants).
+        # See _filter_events() method.
         try:
             q_string = obj._build_query_string(
                 obj.name, obj.fields, obj._build_args(obj.arg_str, obj.args)
@@ -505,14 +510,14 @@ def build_and_execute_with_wait():
         )
         print(f"Waiting for {wait_time} seconds before executing query...")
         time.sleep(wait_time)
-        # Need to call _build_and_execute_query on the parent of the Test object,
-        # because _build_and_execute_query is overridden in the Test object.
-        return super(type(obj), obj)._build_and_execute_query(
-            getattr(obj, "name", None),
-            getattr(obj, "fields", None),
-            getattr(obj, "arg_str", None),
-            getattr(obj, "args", None),
-        )
+        try:
+            return super(type(obj), obj)._build_and_execute_query(
+                obj.name, obj.fields, obj.arg_str, obj.args
+            )
+        except AttributeError:
+            return super(type(obj), obj)._build_and_execute_query(
+                args[0], args[1], args[2], args[3]
+            )
 
     return fn
 

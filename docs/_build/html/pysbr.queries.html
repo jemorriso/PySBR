@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>pysbr.queries package &mdash; PySBR 0.0.1 documentation</title>
+  <title>pysbr.queries package &mdash; PySBR 0.2.0 documentation</title>
   
 
   
@@ -16,7 +16,10 @@
 
   
   
+
   
+  
+
   
 
   
@@ -29,7 +32,6 @@
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -50,7 +52,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home" alt="Documentation Home"> PySBR
+            <a href="index.html" class="icon icon-home"> PySBR
           
 
           
@@ -137,6 +139,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -152,7 +156,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="_sources/pysbr.queries.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -175,7 +179,7 @@
 <span id="pysbr-queries-bestlines-module"></span><h2>pysbr.queries.bestlines module<a class="headerlink" href="#module-pysbr.queries.bestlines" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="pysbr.queries.bestlines.BestLines">
-<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.bestlines.</code><code class="sig-name descname">BestLines</code><a class="headerlink" href="#pysbr.queries.bestlines.BestLines" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.bestlines.</code><code class="sig-name descname">BestLines</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">event_ids</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>List<span class="p">[</span>int<span class="p">]</span><span class="p">, </span>int<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">market_ids</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>List<span class="p">[</span>int<span class="p">]</span><span class="p">, </span>int<span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysbr.queries.bestlines.BestLines" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pysbr.queries.lines.Lines" title="pysbr.queries.lines.Lines"><code class="xref py py-class docutils literal notranslate"><span class="pre">pysbr.queries.lines.Lines</span></code></a></p>
 <p>Get the best lines offered by any sportsbook for a number of events and markets.</p>
 <p>For each event, participant and market combination, the best line offered by any of
@@ -198,7 +202,7 @@ this case it is not easy to figure out which book it came from.</p>
 <span id="pysbr-queries-consensushistory-module"></span><h2>pysbr.queries.consensusHistory module<a class="headerlink" href="#module-pysbr.queries.consensusHistory" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="pysbr.queries.consensusHistory.ConsensusHistory">
-<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.consensusHistory.</code><code class="sig-name descname">ConsensusHistory</code><a class="headerlink" href="#pysbr.queries.consensusHistory.ConsensusHistory" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.consensusHistory.</code><code class="sig-name descname">ConsensusHistory</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">event_id</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">market_ids</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>List<span class="p">[</span>int<span class="p">]</span><span class="p">, </span>int<span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysbr.queries.consensusHistory.ConsensusHistory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pysbr.queries.lines.Lines" title="pysbr.queries.lines.Lines"><code class="xref py py-class docutils literal notranslate"><span class="pre">pysbr.queries.lines.Lines</span></code></a></p>
 <p>Get the consensus amongst SBR members for selected markets on an event.</p>
 <p>For events in some leagues and markets, SBR members can simulate a wager on the
@@ -226,7 +230,7 @@ spread, and total (all full-time).</p>
 <span id="pysbr-queries-currentlines-module"></span><h2>pysbr.queries.currentlines module<a class="headerlink" href="#module-pysbr.queries.currentlines" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="pysbr.queries.currentlines.CurrentLines">
-<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.currentlines.</code><code class="sig-name descname">CurrentLines</code><a class="headerlink" href="#pysbr.queries.currentlines.CurrentLines" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.currentlines.</code><code class="sig-name descname">CurrentLines</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">event_ids</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>List<span class="p">[</span>int<span class="p">]</span><span class="p">, </span>int<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">market_ids</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>List<span class="p">[</span>int<span class="p">]</span><span class="p">, </span>int<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">sportsbook_ids</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>List<span class="p">[</span>int<span class="p">]</span><span class="p">, </span>int<span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysbr.queries.currentlines.CurrentLines" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pysbr.queries.lines.Lines" title="pysbr.queries.lines.Lines"><code class="xref py py-class docutils literal notranslate"><span class="pre">pysbr.queries.lines.Lines</span></code></a></p>
 <p>Get the current lines offered by sportsbooks for a number of events and markets.</p>
 <p>For each sportsbook, event, participant and market combination, the most recent
@@ -248,7 +252,7 @@ included.</p>
 <span id="pysbr-queries-eventgroupsbyleague-module"></span><h2>pysbr.queries.eventgroupsbyleague module<a class="headerlink" href="#module-pysbr.queries.eventgroupsbyleague" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="pysbr.queries.eventgroupsbyleague.EventGroupsByLeague">
-<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.eventgroupsbyleague.</code><code class="sig-name descname">EventGroupsByLeague</code><a class="headerlink" href="#pysbr.queries.eventgroupsbyleague.EventGroupsByLeague" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.eventgroupsbyleague.</code><code class="sig-name descname">EventGroupsByLeague</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">league_id</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysbr.queries.eventgroupsbyleague.EventGroupsByLeague" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pysbr.queries.query.Query" title="pysbr.queries.query.Query"><code class="xref py py-class docutils literal notranslate"><span class="pre">pysbr.queries.query.Query</span></code></a></p>
 <p>Get the event groups available on a particular league.</p>
 <p>Event groups refer to things like Week 1 of the NFL season, or the US Open, so you
@@ -267,7 +271,7 @@ query response.</p>
 <span id="pysbr-queries-eventmarkets-module"></span><h2>pysbr.queries.eventmarkets module<a class="headerlink" href="#module-pysbr.queries.eventmarkets" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="pysbr.queries.eventmarkets.EventMarkets">
-<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.eventmarkets.</code><code class="sig-name descname">EventMarkets</code><a class="headerlink" href="#pysbr.queries.eventmarkets.EventMarkets" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.eventmarkets.</code><code class="sig-name descname">EventMarkets</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">event_id</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysbr.queries.eventmarkets.EventMarkets" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pysbr.queries.query.Query" title="pysbr.queries.query.Query"><code class="xref py py-class docutils literal notranslate"><span class="pre">pysbr.queries.query.Query</span></code></a></p>
 <p>Get the event markets available on a particular event.</p>
 <p>The response contains only the market ids, not their names.</p>
@@ -283,7 +287,7 @@ query response.</p>
 <span id="pysbr-queries-eventsbydate-module"></span><h2>pysbr.queries.eventsbydate module<a class="headerlink" href="#module-pysbr.queries.eventsbydate" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="pysbr.queries.eventsbydate.EventsByDate">
-<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.eventsbydate.</code><code class="sig-name descname">EventsByDate</code><a class="headerlink" href="#pysbr.queries.eventsbydate.EventsByDate" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.eventsbydate.</code><code class="sig-name descname">EventsByDate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">league_ids</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>List<span class="p">[</span>int<span class="p">]</span><span class="p">, </span>int<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">dt</span><span class="p">:</span> <span class="n">datetime.datetime</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysbr.queries.eventsbydate.EventsByDate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pysbr.queries.query.Query" title="pysbr.queries.query.Query"><code class="xref py py-class docutils literal notranslate"><span class="pre">pysbr.queries.query.Query</span></code></a></p>
 <p>Get events for selected leagues on a certain date.</p>
 <p>All event queries return information about matching events including date and time,
@@ -304,7 +308,7 @@ are those in the range [dt, dt + 24 hours].</p></li>
 <span id="pysbr-queries-eventsbydaterange-module"></span><h2>pysbr.queries.eventsbydaterange module<a class="headerlink" href="#module-pysbr.queries.eventsbydaterange" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="pysbr.queries.eventsbydaterange.EventsByDateRange">
-<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.eventsbydaterange.</code><code class="sig-name descname">EventsByDateRange</code><a class="headerlink" href="#pysbr.queries.eventsbydaterange.EventsByDateRange" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.eventsbydaterange.</code><code class="sig-name descname">EventsByDateRange</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">league_ids</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>List<span class="p">[</span>int<span class="p">]</span><span class="p">, </span>int<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">start</span><span class="p">:</span> <span class="n">datetime.datetime</span></em>, <em class="sig-param"><span class="n">end</span><span class="p">:</span> <span class="n">datetime.datetime</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysbr.queries.eventsbydaterange.EventsByDateRange" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pysbr.queries.query.Query" title="pysbr.queries.query.Query"><code class="xref py py-class docutils literal notranslate"><span class="pre">pysbr.queries.query.Query</span></code></a></p>
 <p>Get events for selected leagues over a range of dates.</p>
 <p>All event queries return information about matching events including date and time,
@@ -325,7 +329,7 @@ location, participants, and associated ids.</p>
 <span id="pysbr-queries-eventsbyeventgroup-module"></span><h2>pysbr.queries.eventsbyeventgroup module<a class="headerlink" href="#module-pysbr.queries.eventsbyeventgroup" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="pysbr.queries.eventsbyeventgroup.EventsByEventGroup">
-<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.eventsbyeventgroup.</code><code class="sig-name descname">EventsByEventGroup</code><a class="headerlink" href="#pysbr.queries.eventsbyeventgroup.EventsByEventGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.eventsbyeventgroup.</code><code class="sig-name descname">EventsByEventGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">league_id</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">event_group_id</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">season_id</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">market_id</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysbr.queries.eventsbyeventgroup.EventsByEventGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pysbr.queries.query.Query" title="pysbr.queries.query.Query"><code class="xref py py-class docutils literal notranslate"><span class="pre">pysbr.queries.query.Query</span></code></a></p>
 <p>Get events for a particular league and event group.</p>
 <p>All event queries return information about matching events including date and time,
@@ -352,7 +356,7 @@ default market id for a given sport.</p></li>
 <span id="pysbr-queries-eventsbyeventids-module"></span><h2>pysbr.queries.eventsbyeventids module<a class="headerlink" href="#module-pysbr.queries.eventsbyeventids" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="pysbr.queries.eventsbyeventids.EventsByEventIds">
-<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.eventsbyeventids.</code><code class="sig-name descname">EventsByEventIds</code><a class="headerlink" href="#pysbr.queries.eventsbyeventids.EventsByEventIds" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.eventsbyeventids.</code><code class="sig-name descname">EventsByEventIds</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">event_ids</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>List<span class="p">[</span>int<span class="p">]</span><span class="p">, </span>int<span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysbr.queries.eventsbyeventids.EventsByEventIds" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pysbr.queries.query.Query" title="pysbr.queries.query.Query"><code class="xref py py-class docutils literal notranslate"><span class="pre">pysbr.queries.query.Query</span></code></a></p>
 <p>Get events from a list of event ids.</p>
 <p>All event queries return information about matching events including date and time,
@@ -369,7 +373,7 @@ location, participants, and associated ids.</p>
 <span id="pysbr-queries-eventsbymatchup-module"></span><h2>pysbr.queries.eventsbymatchup module<a class="headerlink" href="#module-pysbr.queries.eventsbymatchup" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="pysbr.queries.eventsbymatchup.EventsByMatchup">
-<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.eventsbymatchup.</code><code class="sig-name descname">EventsByMatchup</code><a class="headerlink" href="#pysbr.queries.eventsbymatchup.EventsByMatchup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.eventsbymatchup.</code><code class="sig-name descname">EventsByMatchup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">participant_id1</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">participant_id2</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">count</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysbr.queries.eventsbymatchup.EventsByMatchup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pysbr.queries.query.Query" title="pysbr.queries.query.Query"><code class="xref py py-class docutils literal notranslate"><span class="pre">pysbr.queries.query.Query</span></code></a></p>
 <p>Get events where two participants matched up against one another.</p>
 <p>This query returns up to n previous head-to-head matches between two participants,
@@ -398,7 +402,7 @@ order from present.</p></li>
 <span id="pysbr-queries-eventsbyparticipants-module"></span><h2>pysbr.queries.eventsbyparticipants module<a class="headerlink" href="#module-pysbr.queries.eventsbyparticipants" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="pysbr.queries.eventsbyparticipants.EventsByParticipants">
-<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.eventsbyparticipants.</code><code class="sig-name descname">EventsByParticipants</code><a class="headerlink" href="#pysbr.queries.eventsbyparticipants.EventsByParticipants" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.eventsbyparticipants.</code><code class="sig-name descname">EventsByParticipants</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">participant_ids</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>List<span class="p">[</span>int<span class="p">]</span><span class="p">, </span>int<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">start</span><span class="p">:</span> <span class="n">datetime.datetime</span></em>, <em class="sig-param"><span class="n">end</span><span class="p">:</span> <span class="n">datetime.datetime</span></em>, <em class="sig-param"><span class="n">league_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sport_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysbr.queries.eventsbyparticipants.EventsByParticipants" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pysbr.queries.query.Query" title="pysbr.queries.query.Query"><code class="xref py py-class docutils literal notranslate"><span class="pre">pysbr.queries.query.Query</span></code></a></p>
 <p>Get events for a number of participants over a given date range.</p>
 <p>The query returns all events in the date range in which at least one of the
@@ -428,7 +432,7 @@ id may refer to a team or an individual.</p></li>
 <span id="pysbr-queries-eventsbyparticipantsrecent-module"></span><h2>pysbr.queries.eventsbyparticipantsrecent module<a class="headerlink" href="#module-pysbr.queries.eventsbyparticipantsrecent" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="pysbr.queries.eventsbyparticipantsrecent.EventsByParticipantsRecent">
-<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.eventsbyparticipantsrecent.</code><code class="sig-name descname">EventsByParticipantsRecent</code><a class="headerlink" href="#pysbr.queries.eventsbyparticipantsrecent.EventsByParticipantsRecent" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.eventsbyparticipantsrecent.</code><code class="sig-name descname">EventsByParticipantsRecent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">participant_ids</span><span class="p">:</span> <span class="n">List<span class="p">[</span>int<span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysbr.queries.eventsbyparticipantsrecent.EventsByParticipantsRecent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pysbr.queries.query.Query" title="pysbr.queries.query.Query"><code class="xref py py-class docutils literal notranslate"><span class="pre">pysbr.queries.query.Query</span></code></a></p>
 <p>Get the 5 most recent events for a number of participants.</p>
 <p>5 is an arbitrary number enforced by the query on the server side.</p>
@@ -446,7 +450,7 @@ location, participants, and associated ids.</p>
 <span id="pysbr-queries-leaguehierarchy-module"></span><h2>pysbr.queries.leaguehierarchy module<a class="headerlink" href="#module-pysbr.queries.leaguehierarchy" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="pysbr.queries.leaguehierarchy.LeagueHierarchy">
-<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.leaguehierarchy.</code><code class="sig-name descname">LeagueHierarchy</code><a class="headerlink" href="#pysbr.queries.leaguehierarchy.LeagueHierarchy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.leaguehierarchy.</code><code class="sig-name descname">LeagueHierarchy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">league_id</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysbr.queries.leaguehierarchy.LeagueHierarchy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pysbr.queries.query.Query" title="pysbr.queries.query.Query"><code class="xref py py-class docutils literal notranslate"><span class="pre">pysbr.queries.query.Query</span></code></a></p>
 <p>Get the league hierarchy for a particular league.</p>
 <p>The query returns a list of dicts, each representing a team in the league. Each
@@ -465,7 +469,7 @@ team belongs to.</p>
 <span id="pysbr-queries-leaguemarkets-module"></span><h2>pysbr.queries.leaguemarkets module<a class="headerlink" href="#module-pysbr.queries.leaguemarkets" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="pysbr.queries.leaguemarkets.LeagueMarkets">
-<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.leaguemarkets.</code><code class="sig-name descname">LeagueMarkets</code><a class="headerlink" href="#pysbr.queries.leaguemarkets.LeagueMarkets" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.leaguemarkets.</code><code class="sig-name descname">LeagueMarkets</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">league_id</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysbr.queries.leaguemarkets.LeagueMarkets" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pysbr.queries.query.Query" title="pysbr.queries.query.Query"><code class="xref py py-class docutils literal notranslate"><span class="pre">pysbr.queries.query.Query</span></code></a></p>
 <p>Get the betting markets available for a particular league.</p>
 <p>Only market ids are returned by the query, without market names. For some leagues,
@@ -482,7 +486,7 @@ this query returns many more market ids than the markets found on SBR.</p>
 <span id="pysbr-queries-leaguesbyleagueids-module"></span><h2>pysbr.queries.leaguesbyleagueids module<a class="headerlink" href="#module-pysbr.queries.leaguesbyleagueids" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="pysbr.queries.leaguesbyleagueids.LeaguesByLeagueIds">
-<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.leaguesbyleagueids.</code><code class="sig-name descname">LeaguesByLeagueIds</code><a class="headerlink" href="#pysbr.queries.leaguesbyleagueids.LeaguesByLeagueIds" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.leaguesbyleagueids.</code><code class="sig-name descname">LeaguesByLeagueIds</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">league_ids</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>List<span class="p">[</span>int<span class="p">]</span><span class="p">, </span>int<span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysbr.queries.leaguesbyleagueids.LeaguesByLeagueIds" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pysbr.queries.query.Query" title="pysbr.queries.query.Query"><code class="xref py py-class docutils literal notranslate"><span class="pre">pysbr.queries.query.Query</span></code></a></p>
 <p>Get information about a number of leagues from their league ids.</p>
 <p>League name, abbreviation, and sport id are included in the response.</p>
@@ -498,7 +502,7 @@ this query returns many more market ids than the markets found on SBR.</p>
 <span id="pysbr-queries-linehistory-module"></span><h2>pysbr.queries.linehistory module<a class="headerlink" href="#module-pysbr.queries.linehistory" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="pysbr.queries.linehistory.LineHistory">
-<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.linehistory.</code><code class="sig-name descname">LineHistory</code><a class="headerlink" href="#pysbr.queries.linehistory.LineHistory" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.linehistory.</code><code class="sig-name descname">LineHistory</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">event_id</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">market_id</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">sportsbook_id</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">participant_ids</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>List<span class="p">[</span>int<span class="p">]</span><span class="p">, </span>int<span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysbr.queries.linehistory.LineHistory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pysbr.queries.lines.Lines" title="pysbr.queries.lines.Lines"><code class="xref py py-class docutils literal notranslate"><span class="pre">pysbr.queries.lines.Lines</span></code></a></p>
 <p>Get the line history of an event and market for a particular sportsbook.</p>
 <p>The complete history of line movement for an event, market, and sportsbook is
@@ -554,7 +558,7 @@ description, participant information, and betting market name.</p>
 <span id="pysbr-queries-marketsbymarketids-module"></span><h2>pysbr.queries.marketsbymarketids module<a class="headerlink" href="#module-pysbr.queries.marketsbymarketids" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="pysbr.queries.marketsbymarketids.MarketsByMarketIds">
-<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.marketsbymarketids.</code><code class="sig-name descname">MarketsByMarketIds</code><a class="headerlink" href="#pysbr.queries.marketsbymarketids.MarketsByMarketIds" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.marketsbymarketids.</code><code class="sig-name descname">MarketsByMarketIds</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">market_ids</span><span class="p">:</span> <span class="n">List<span class="p">[</span>int<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">sport_id</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysbr.queries.marketsbymarketids.MarketsByMarketIds" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pysbr.queries.query.Query" title="pysbr.queries.query.Query"><code class="xref py py-class docutils literal notranslate"><span class="pre">pysbr.queries.query.Query</span></code></a></p>
 <p>Get information about a number of leagues from their league ids.</p>
 <p>Market name, description, and market type id are included in the response.</p>
@@ -573,7 +577,7 @@ description, participant information, and betting market name.</p>
 <span id="pysbr-queries-openinglines-module"></span><h2>pysbr.queries.openinglines module<a class="headerlink" href="#module-pysbr.queries.openinglines" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="pysbr.queries.openinglines.OpeningLines">
-<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.openinglines.</code><code class="sig-name descname">OpeningLines</code><a class="headerlink" href="#pysbr.queries.openinglines.OpeningLines" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.openinglines.</code><code class="sig-name descname">OpeningLines</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">event_ids</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>List<span class="p">[</span>int<span class="p">]</span><span class="p">, </span>int<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">market_ids</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>List<span class="p">[</span>int<span class="p">]</span><span class="p">, </span>int<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">sportsbook_id</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysbr.queries.openinglines.OpeningLines" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pysbr.queries.lines.Lines" title="pysbr.queries.lines.Lines"><code class="xref py py-class docutils literal notranslate"><span class="pre">pysbr.queries.lines.Lines</span></code></a></p>
 <p>Get the opening lines offered by a sportsbook for a number of events and markets.</p>
 <p>The date and time that the line was offered is also recorded. Both American and
@@ -622,6 +626,21 @@ returned.</p>
 <dt id="pysbr.queries.query.Query.fields">
 <code class="sig-name descname">fields</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Dict<span class="p">[</span>str<span class="p">, </span>str<span class="p">]</span><a class="headerlink" href="#pysbr.queries.query.Query.fields" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the fields dictionary, containing templates for all subqueries.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pysbr.queries.query.Query.id">
+<code class="sig-name descname">id</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span>int<span class="p">]</span><a class="headerlink" href="#pysbr.queries.query.Query.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the first id returned from the query response.</p>
+<p>The type of id returned depends on the Query implementation. For example,
+calling this method on queries returning events will return a list of event ids.</p>
+<p>If there are no ids, None is returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>NotImplementedError</strong> – If the Query object does not have a default return id
+    type.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -674,7 +693,7 @@ invalid queries on the GraphQL endpoint.</p>
 <span id="pysbr-queries-searchevents-module"></span><h2>pysbr.queries.searchevents module<a class="headerlink" href="#module-pysbr.queries.searchevents" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="pysbr.queries.searchevents.SearchEvents">
-<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.searchevents.</code><code class="sig-name descname">SearchEvents</code><a class="headerlink" href="#pysbr.queries.searchevents.SearchEvents" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.searchevents.</code><code class="sig-name descname">SearchEvents</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">search_term</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysbr.queries.searchevents.SearchEvents" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pysbr.queries.query.Query" title="pysbr.queries.query.Query"><code class="xref py py-class docutils literal notranslate"><span class="pre">pysbr.queries.query.Query</span></code></a></p>
 <p>Get up to 5 upcoming events matching a given search term.</p>
 <p>The search term should be a string referring to a team or participant’s name. Case
@@ -703,7 +722,7 @@ ids.</p>
 <span id="pysbr-queries-searchleagues-module"></span><h2>pysbr.queries.searchleagues module<a class="headerlink" href="#module-pysbr.queries.searchleagues" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="pysbr.queries.searchleagues.SearchLeagues">
-<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.searchleagues.</code><code class="sig-name descname">SearchLeagues</code><a class="headerlink" href="#pysbr.queries.searchleagues.SearchLeagues" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.searchleagues.</code><code class="sig-name descname">SearchLeagues</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">search_term</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysbr.queries.searchleagues.SearchLeagues" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pysbr.queries.query.Query" title="pysbr.queries.query.Query"><code class="xref py py-class docutils literal notranslate"><span class="pre">pysbr.queries.query.Query</span></code></a></p>
 <p>Get up to 5 leagues matching a given search term.</p>
 <p>The search term can be part of a league’s full name or abbreviation. Case is
@@ -728,7 +747,7 @@ ignored. The max number of upcoming events returned is enforced by the server.</
 <span id="pysbr-queries-searchsports-module"></span><h2>pysbr.queries.searchsports module<a class="headerlink" href="#module-pysbr.queries.searchsports" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="pysbr.queries.searchsports.SearchSports">
-<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.searchsports.</code><code class="sig-name descname">SearchSports</code><a class="headerlink" href="#pysbr.queries.searchsports.SearchSports" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.searchsports.</code><code class="sig-name descname">SearchSports</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">search_term</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysbr.queries.searchsports.SearchSports" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pysbr.queries.query.Query" title="pysbr.queries.query.Query"><code class="xref py py-class docutils literal notranslate"><span class="pre">pysbr.queries.query.Query</span></code></a></p>
 <p>Get up to 5 sports matching a given search term.</p>
 <p>Case is ignored. The max number of upcoming events returned is enforced by the
@@ -746,7 +765,7 @@ server.</p>
 <span id="pysbr-queries-sportsbooks-module"></span><h2>pysbr.queries.sportsbooks module<a class="headerlink" href="#module-pysbr.queries.sportsbooks" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="pysbr.queries.sportsbooks.Sportsbooks">
-<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.sportsbooks.</code><code class="sig-name descname">Sportsbooks</code><a class="headerlink" href="#pysbr.queries.sportsbooks.Sportsbooks" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.sportsbooks.</code><code class="sig-name descname">Sportsbooks</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">system_sportsbook_ids</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>List<span class="p">[</span>int<span class="p">]</span><span class="p">, </span>int<span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysbr.queries.sportsbooks.Sportsbooks" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pysbr.queries.query.Query" title="pysbr.queries.query.Query"><code class="xref py py-class docutils literal notranslate"><span class="pre">pysbr.queries.query.Query</span></code></a></p>
 <p>Get information about a number of sportsbooks from their system ids.</p>
 <p>Note that the id returned from lines-related queries is called ‘sportsbook id’ by
@@ -768,7 +787,7 @@ parts of the application.</p>
 <span id="pysbr-queries-team-module"></span><h2>pysbr.queries.team module<a class="headerlink" href="#module-pysbr.queries.team" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="pysbr.queries.team.Team">
-<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.team.</code><code class="sig-name descname">Team</code><a class="headerlink" href="#pysbr.queries.team.Team" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pysbr.queries.team.</code><code class="sig-name descname">Team</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">team_id</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysbr.queries.team.Team" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pysbr.queries.query.Query" title="pysbr.queries.query.Query"><code class="xref py py-class docutils literal notranslate"><span class="pre">pysbr.queries.query.Query</span></code></a></p>
 <p>Get information about a team from its team id.</p>
 <p>The team’s name, location, conference, division, league, and associated ids are
@@ -791,35 +810,28 @@ among the values returned from the query.</p>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-      
-        <a href="pysbr.config.html" class="btn btn-neutral float-left" title="pysbr.config package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="pysbr.config.html" class="btn btn-neutral float-left" title="pysbr.config package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020, Jeremy Morrison
+        &#169; Copyright 2020, Jeremy Morrison.
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

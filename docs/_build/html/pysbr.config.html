@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>pysbr.config package &mdash; PySBR 0.0.1 documentation</title>
+  <title>pysbr.config package &mdash; PySBR 0.2.0 documentation</title>
   
 
   
@@ -16,7 +16,10 @@
 
   
   
+
   
+  
+
   
 
   
@@ -29,7 +32,6 @@
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -51,7 +53,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home" alt="Documentation Home"> PySBR
+            <a href="index.html" class="icon icon-home"> PySBR
           
 
           
@@ -138,6 +140,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -153,7 +157,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="_sources/pysbr.config.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -317,7 +321,7 @@ inheriting from TeamSport, it also holds a list of all teams in the league.</p>
 <dl class="py class">
 <dt id="pysbr.config.sport.NBA">
 <em class="property">class </em><code class="sig-prename descclassname">pysbr.config.sport.</code><code class="sig-name descname">NBA</code><a class="headerlink" href="#pysbr.config.sport.NBA" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pysbr.config.sport.League" title="pysbr.config.sport.League"><code class="xref py py-class docutils literal notranslate"><span class="pre">pysbr.config.sport.League</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pysbr.config.sport.TeamLeague" title="pysbr.config.sport.TeamLeague"><code class="xref py py-class docutils literal notranslate"><span class="pre">pysbr.config.sport.TeamLeague</span></code></a></p>
 <p>Provides access to NBA config files.</p>
 </dd></dl>
 
@@ -345,7 +349,7 @@ inheriting from TeamSport, it also holds a list of all teams in the league.</p>
 <dl class="py class">
 <dt id="pysbr.config.sport.NHL">
 <em class="property">class </em><code class="sig-prename descclassname">pysbr.config.sport.</code><code class="sig-name descname">NHL</code><a class="headerlink" href="#pysbr.config.sport.NHL" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pysbr.config.sport.League" title="pysbr.config.sport.League"><code class="xref py py-class docutils literal notranslate"><span class="pre">pysbr.config.sport.League</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pysbr.config.sport.TeamLeague" title="pysbr.config.sport.TeamLeague"><code class="xref py py-class docutils literal notranslate"><span class="pre">pysbr.config.sport.TeamLeague</span></code></a></p>
 <p>Provides access to NHL config files.</p>
 </dd></dl>
 
@@ -406,6 +410,42 @@ number is from SBR.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
 <dd class="field-odd"><p>List[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pysbr.config.sport.Sport.market_id">
+<code class="sig-name descname">market_id</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">term</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>int<span class="p">, </span>str<span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pysbr.config.sport.Sport.market_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given provided search term, return matching market id.</p>
+<p>If search term is string, search for matching betting market. If search term is
+int, assume that it is the ID, and return it.</p>
+<p>This method is provided as a convenience so that you don’t need to
+remember market id numbers. Case is ignored for search terms.</p>
+<p>A search dictionary is utilized so that you can use common abbrevations /
+spelling variants for markets instead of typing them out / worrying about
+format.</p>
+<dl class="simple">
+<dt>Example search terms, which all point to the same market id:</dt><dd><p>‘1st half over/under’
+‘1st-half totals’
+‘1st half o/u’
+‘first half totals’
+‘first-half ou’
+‘1hou’
+‘1htot’
+‘1h ou’
+‘1h tot’
+‘1H OU’
+‘1H TOT’
+‘1HOU’</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>TypeError</strong> – If a provided search term is not an int or str.</p></li>
+<li><p><strong>ValueError</strong> – If a provided search term string cannot be matched with a market.</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -472,6 +512,32 @@ of all markets available on the sport.</p>
 <p>This class should not be directly instantiated; use league subclasses.</p>
 <p>‘id’, ‘abbreviation’, ‘sbr abbreviation’, ‘name’, ‘nickname’, and ‘location’ are
 keys provided for each team in the league config file.</p>
+<dl class="py method">
+<dt id="pysbr.config.sport.TeamLeague.team_id">
+<code class="sig-name descname">team_id</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">term</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>int<span class="p">, </span>str<span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pysbr.config.sport.TeamLeague.team_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given provided search term, return matching team id.</p>
+<p>If search term is string, search for matching team. If search term is
+int, assume that it is the ID, and return it.</p>
+<p>This method is provided as a convenience so that you don’t need to
+remember team id numbers. Case is ignored for search terms.</p>
+<dl class="simple">
+<dt>Example search terms:</dt><dd><p>Seattle
+Seahawks
+Seattle Seahawks
+sea
+SEA</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>TypeError</strong> – If a search term is not an int or str.</p></li>
+<li><p><strong>ValueError</strong> – If a search term is ambiguous, or cannot be matched with a team.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py method">
 <dt id="pysbr.config.sport.TeamLeague.team_ids">
 <code class="sig-name descname">team_ids</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">terms</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>int<span class="p">, </span>str<span class="p">, </span>List<span class="p">[</span>Union<span class="p">[</span>str<span class="p">, </span>int<span class="p">]</span><span class="p">]</span><span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; List<span class="p">[</span>int<span class="p">]</span><a class="headerlink" href="#pysbr.config.sport.TeamLeague.team_ids" title="Permalink to this definition">¶</a></dt>
@@ -557,6 +623,32 @@ Query.dataframe() in order to translate from id to name.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt id="pysbr.config.sportsbook.Sportsbook.id">
+<code class="sig-name descname">id</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">term</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>int<span class="p">, </span>str<span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span>int<span class="p">]</span><a class="headerlink" href="#pysbr.config.sportsbook.Sportsbook.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Take provided search term and return matching sportsbook id.</p>
+<p>If search term is string, search for matching sportsbook. If search term is
+int, assume that it is the ID, and return it.</p>
+<p>This method is provided as a convenience so that you don’t need to
+remember sportsbook id numbers. Case is ignored for search terms.</p>
+<dl class="simple">
+<dt>Example search terms:</dt><dd><p>‘pinnacle’
+‘PINNACLE’
+‘bodog’
+‘bodog sportsbook’
+20</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>TypeError</strong> – If a provided search term is not an int or str.</p></li>
+<li><p><strong>ValueError</strong> – If a provided search term string cannot be matched with a sportsbook.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt id="pysbr.config.sportsbook.Sportsbook.ids">
 <code class="sig-name descname">ids</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">terms</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>List<span class="p">[</span>Union<span class="p">[</span>str<span class="p">, </span>int<span class="p">]</span><span class="p">]</span><span class="p">, </span>int<span class="p">, </span>str<span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; List<span class="p">[</span>int<span class="p">]</span><a class="headerlink" href="#pysbr.config.sportsbook.Sportsbook.ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>Take provided search terms and return list of matching sportsbook ids.</p>
@@ -603,37 +695,29 @@ n ‘short name’, ‘sportsbook id’ and ‘system sportsbook id’ as keys.<
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="pysbr.queries.html" class="btn btn-neutral float-right" title="pysbr.queries package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="pysbr.html" class="btn btn-neutral float-left" title="pysbr package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="pysbr.queries.html" class="btn btn-neutral float-right" title="pysbr.queries package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="pysbr.html" class="btn btn-neutral float-left" title="pysbr package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020, Jeremy Morrison
+        &#169; Copyright 2020, Jeremy Morrison.
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

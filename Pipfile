@@ -13,12 +13,16 @@ tzlocal = "*"
 pytest-lazy-fixture = "*"
 pandasgui = "*"
 python-sbr = {editable = true, path = "."}
+sphinx = "*"
+sphinx-rtd-theme = "*"
+twine = "*"
 
 [packages]
 gql = "*"
 pytz = "*"
 pyyaml = "*"
 pandas = "*"
+jupyterlab = "*"
 
 [requires]
 python_version = "3.9"

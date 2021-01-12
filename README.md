@@ -418,6 +418,9 @@ pipenv run pytest --cov=pysbr tests/
 
 ## Release History
 
+- 0.2.0
+  - FIX: LineHistory bug
+  - ADD: id methods for Query and Config classes
 - 0.1.3
   - CHANGE: Update docs
 - 0.1.0
