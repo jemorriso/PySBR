@@ -9,7 +9,9 @@ This library allows you to get odds and other information from [Sportsbook Revie
 
 The SBR GraphQL endpoint is undocumented and subject to change, so use at your own risk. Try and avoid getting rate limited so we can keep this available for everyone to use!
 
-Project documentation found on [ReadTheDocs][readthedocs].
+Project documentation found on [ReadTheDocs][readthedocs]
+
+There is also a [discord channel][discord] set up for this project that may be helpful.
 
 ![example-img](https://raw.githubusercontent.com/JeMorriso/PySBR/main/docs/img/readme250.gif)
 
@@ -416,8 +418,12 @@ To run the test suite:
 pipenv run pytest --cov=pysbr tests/
 ```
 
+Inside `conftest.py` there are 3 global variables, `QUERY_SERVER`, `WAIT_MEAN` and `WAIT_DEVIATION` that you can change to actually query the SBR server when testing, otherwise the test suite will **not** query the server, it will use the saved cassettes.
+
 ## Release History
 
+- 0.2.1
+  - CHANGE: Update README
 - 0.2.0
   - FIX: LineHistory bug
   - ADD: id methods for Query and Config classes
@@ -449,3 +455,4 @@ Distributed under the MIT license. See `LICENSE` for more information.
 [circleci-image]: https://img.shields.io/circleci/build/github/JeMorriso/PySBR?token=9edfd6cf500869db3c74fc7691b80a0701b38b64
 [circleci-url]: https://app.circleci.com/pipelines/github/JeMorriso
 [readthedocs]: https://pysbr.readthedocs.io/
+[discord]: https://discord.gg/kwWDt6kP
