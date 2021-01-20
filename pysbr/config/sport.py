@@ -572,6 +572,12 @@ class Eredivisie(League):
 
     def __init__(self):
         super().__init__("soccer", "eredivisie")
+        
+class BrasileiroSerieA(League):
+    """Provides access to Brasileiro Serie A config files."""
+
+    def __init__(self):
+        super().__init__("soccer", "brasileiroseriea")
 
 
 class Bundesliga(League):
