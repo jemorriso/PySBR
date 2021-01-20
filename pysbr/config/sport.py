@@ -560,6 +560,12 @@ class PrimeiraLiga(League):
 
     def __init__(self):
         super().__init__("soccer", "primeiraliga")
+        
+class SerieA(League):
+    """Provides access to Serie A config files."""
+
+    def __init__(self):
+        super().__init__("soccer", "seriea")
 
 
 class Bundesliga(League):
