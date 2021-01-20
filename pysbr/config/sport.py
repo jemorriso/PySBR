@@ -584,6 +584,12 @@ class BrasileiroSerieA(League):
 
     def __init__(self):
         super().__init__("soccer", "brasileiroseriea")
+        
+class LeagueOne(League):
+    """Provides access to League One config files."""
+
+    def __init__(self):
+        super().__init__("soccer", "leagueone")
 
 
 class Bundesliga(League):
