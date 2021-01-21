@@ -19,8 +19,10 @@ class Sportsbook(Config):
     parts of the application.
 
     Attributes:
-        names (Dict[int, str]): Map sportsbook id to name. Used by Query.list() and
-            Query.dataframe() in order to translate from id to name.
+        names (Dict[int, List[str]]): Map sportsbook id to name. Used by Query.list() and
+            Query.dataframe() in order to translate from id to name. The values are lists
+            because some ids may point to multiple sportsbooks. In this case, the
+            sportsbooks should be aliases for one another, and have equivalent lines.
     """
 
     def __init__(self):
@@ -31,9 +33,17 @@ class Sportsbook(Config):
         )
         self._sportsbook_ids = self._build_sportsbook_ids()
 
-        self.names = {
-            x["sportsbook id"]: x["name"] for x in self._sportsbooks["sportsbooks"]
-        }
+        self.names = {}
+        for sb in self._sportsbooks["sportsbooks"]:
+            id_ = sb["sportsbook id"]
+            name = sb["name"]
+            if id_ not in self.names:
+                self.names[id_] = [name]
+            else:
+                self.names[id_].append(name)
+        # self.names = {
+        #     x["sportsbook id"]: x["name"] for x in self._sportsbooks["sportsbooks"]
+        # }
 
     def _build_sportsbook_ids(self) -> Dict[str, Dict[str, int]]:
         """Build sportsbook id search dictionary."""

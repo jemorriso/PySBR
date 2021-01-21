@@ -46,8 +46,10 @@ class Lines(Query):
         self._event_sports = {}
         self._event_scores = {}
         self._event_statuses = {}
+
         # these are the participant ids for Over/Under lines for all sports I checked
         self._participants = {15143: "over", 15144: "under"}
+
         self._leagues = {
             16: NFL,
             6: NCAAF,
@@ -151,6 +153,7 @@ class Lines(Query):
             self._event_scores[e.get("event id")] = e.get("scores")
             self._event_statuses[e.get("event id")] = e.get("event status")
             try:
+                # TODO: disambiguate name, abbreviation, team name
                 for p in e["participants"]:
                     participant_id = p.get("participant id")
                     source = p.get("source")
@@ -351,7 +354,23 @@ class Lines(Query):
                 line["profit"] = profit
             if points is not None:
                 line["participant score"] = points
-            line["sportsbook"] = self._sportsbooks.get(line.get("sportsbook id"))
+            # TODO: for loop insert multiple columns for each sportsbook alias
+            sb_names = self._sportsbooks.get(line.get("sportsbook id"))
+            if sb_names is not None:
+                line["sportsbook"] = sb_names[0]
+                # Slicing out of range does not raise error.
+                for i, name in enumerate(sb_names[1:]):
+                    alias = "sportsbook alias"
+                    if i == 0:
+                        line[alias] = name
+                    else:
+                        line[f"{alias} {i+1}"] = name
+            else:
+                # BestLines may return sportsbooks that aren't active on SBR.
+                line["sportsbook"] = "N/A"
+
+            # line["sportsbook"] = self._sportsbooks.get(line.get("sportsbook id"))
+            # TODO: participant split into abbreviation and full name
             line["participant"] = self._participants.get(line.get("participant id"))
 
         self._with_ids_translated = data

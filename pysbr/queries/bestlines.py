@@ -13,7 +13,8 @@ class BestLines(Lines):
     offered is also recorded. Both American and decimal odds are included.
 
     Sometimes the best line returned is from a sportsbook that is not active on SBR. In
-    this case it is not easy to figure out which book it came from.
+    this case you can try searching in the network manager to determine which sportsbook
+    it came from.
 
     Args:
         event_ids: SBR event id or list of event ids.
