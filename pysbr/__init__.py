@@ -44,5 +44,11 @@ from pysbr.config.sport import (
     UEFANationsLeague,
     ATP,
     UFC,
+    BrasileiroSerieA,
+    Eredivisie,
+    EFLLeagueOne,
+    Ligue1,
+    PrimeiraLiga,
+    SerieA,
 )
 from pysbr.config.sportsbook import Sportsbook

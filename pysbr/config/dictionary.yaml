@@ -14,7 +14,7 @@ lid: league id
 
 # event
 eid: event id
-cit: city
+# cit: city
 cou: country
 es: event status
 dt: datetime

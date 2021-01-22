@@ -19,9 +19,9 @@ class Sportsbook(Config):
     parts of the application.
 
     Attributes:
-        names (Dict[int, List[str]]): Map sportsbook id to name. Used by Query.list() and
-            Query.dataframe() in order to translate from id to name. The values are lists
-            because some ids may point to multiple sportsbooks. In this case, the
+        names (Dict[int, List[str]]): Map sportsbook id to name. Used by Query.list()
+            and Query.dataframe() in order to translate from id to name. The values are
+            lists because some ids may point to multiple sportsbooks. In this case, the
             sportsbooks should be aliases for one another, and have equivalent lines.
     """
 

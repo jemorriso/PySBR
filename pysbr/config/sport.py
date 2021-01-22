@@ -554,39 +554,45 @@ class LaLiga(League):
 
     def __init__(self):
         super().__init__("soccer", "laliga")
-        
+
+
 class PrimeiraLiga(League):
     """Provides access to Primeira Liga config files."""
 
     def __init__(self):
         super().__init__("soccer", "primeiraliga")
-        
+
+
 class SerieA(League):
     """Provides access to Serie A config files."""
 
     def __init__(self):
         super().__init__("soccer", "seriea")
-        
+
+
 class Ligue1(League):
     """Provides access to Ligue 1 config files."""
 
     def __init__(self):
         super().__init__("soccer", "ligue1")
-        
+
+
 class Eredivisie(League):
     """Provides access to Eredivisie config files."""
 
     def __init__(self):
         super().__init__("soccer", "eredivisie")
-        
+
+
 class BrasileiroSerieA(League):
     """Provides access to Brasileiro Serie A config files."""
 
     def __init__(self):
         super().__init__("soccer", "brasileiroseriea")
-        
-class LeagueOne(League):
-    """Provides access to League One config files."""
+
+
+class EFLLeagueOne(League):
+    """Provides access to EFL League One config files."""
 
     def __init__(self):
         super().__init__("soccer", "leagueone")
