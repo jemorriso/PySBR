@@ -5,7 +5,7 @@ class SearchLeagues(Query):
     """Get up to 5 leagues matching a given search term.
 
     The search term can be part of a league's full name or abbreviation. Case is
-    ignored. The max number of upcoming events returned is enforced by the server.
+    ignored. The max number of results returned is enforced by the server.
 
     The query response includes league name, region, and id, as well as sport id.
 
