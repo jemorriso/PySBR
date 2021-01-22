@@ -422,6 +422,9 @@ Inside `conftest.py` there are 3 global variables, `QUERY_SERVER`, `WAIT_MEAN` a
 
 ## Release History
 
+- 0.3.0
+  - ADD: 'participant full name' and 'sportsbook alias' keys on lines lists / dataframes
+  - ADD: New league config classes
 - 0.2.1
   - CHANGE: Update README
 - 0.2.0
