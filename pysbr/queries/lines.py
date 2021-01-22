@@ -49,6 +49,7 @@ class Lines(Query):
 
         # these are the participant ids for Over/Under lines for all sports I checked
         self._participants = {15143: "over", 15144: "under"}
+        self._participants_full = {}
 
         self._leagues = {
             16: NFL,
@@ -129,6 +130,10 @@ class Lines(Query):
         classes. Other private instance variables map event and participant ids to their
         translations.
         """
+        # TODO: All these Dict.get() calls are unnecessary because the GQL query
+        # structure should have key with empty string at least.
+        # GraphQL types implementing an interface are guaranteed to implement those
+        # fields.
         if self._sportsbooks is None:
             self._sportsbooks = Sportsbook().names
 
@@ -152,25 +157,38 @@ class Lines(Query):
             self._event_sports[e.get("event id")] = e.get("sport id")
             self._event_scores[e.get("event id")] = e.get("scores")
             self._event_statuses[e.get("event id")] = e.get("event status")
-            try:
-                # TODO: disambiguate name, abbreviation, team name
-                for p in e["participants"]:
-                    participant_id = p.get("participant id")
-                    source = p.get("source")
-                    if "last name" in source and source.get("last name") is not None:
-                        self._participants[participant_id] = source.get("last name")
-                    elif (
-                        "abbreviation" in source
-                        and source.get("abbreviation") is not None
-                    ):
-                        self._participants[participant_id] = source.get("abbreviation")
-                    elif "name" in source and source.get("name") is not None:
-                        self._participants[participant_id] = source.get("name")
 
-            except KeyError:
-                # Should not reach here; e['participants'] should be empty list at
-                # least.
-                pass
+            for p in e["participants"]:
+                participant_id = p["participant id"]
+                source = p["source"]
+
+                if "abbreviation" in source:
+                    # case 1, team: abbr, full name
+                    self._participants[participant_id] = source["abbreviation"]
+                    # Using short name instead of location because SearchEvents don't
+                    # have location. Also college sports use short name.
+                    short_name = source["short name"]
+                    nickname = source["nickname"]
+                    if short_name and nickname:
+                        # American leagues have these filled out.
+                        self._participants_full[
+                            participant_id
+                        ] = f"{short_name} {nickname}"
+                    else:
+                        # Other leagues should have full name available.
+                        self._participants_full[participant_id] = source["name"]
+
+                elif "last name" in source:
+                    # case 2, individual: lname, full name
+                    fname = source["first name"]
+                    lname = source["last name"]
+                    self._participants[participant_id] = lname
+                    self._participants_full[participant_id] = f"{fname} {lname}"
+
+                elif "participant group id" in source:
+                    # case 3, pairs (eg doubles tennis): None, full name
+                    self._participants[participant_id] = None
+                    self._participants_full[participant_id] = source["name"]
 
     def _get_config(self, line: List[Dict]) -> Sport:
         """Get league or sport config class.
@@ -354,7 +372,7 @@ class Lines(Query):
                 line["profit"] = profit
             if points is not None:
                 line["participant score"] = points
-            # TODO: for loop insert multiple columns for each sportsbook alias
+
             sb_names = self._sportsbooks.get(line.get("sportsbook id"))
             if sb_names is not None:
                 line["sportsbook"] = sb_names[0]
@@ -369,9 +387,10 @@ class Lines(Query):
                 # BestLines may return sportsbooks that aren't active on SBR.
                 line["sportsbook"] = "N/A"
 
-            # line["sportsbook"] = self._sportsbooks.get(line.get("sportsbook id"))
-            # TODO: participant split into abbreviation and full name
             line["participant"] = self._participants.get(line.get("participant id"))
+            line["participant full name"] = self._participants_full.get(
+                line.get("participant id")
+            )
 
         self._with_ids_translated = data
         return data

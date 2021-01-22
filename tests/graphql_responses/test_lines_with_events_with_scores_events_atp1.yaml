@@ -1,0 +1,408 @@
+eventsByDateNew:
+  events:
+  - cit: Melbourne
+    cou: Australia
+    des: Federer, Roger@Fucsovics, Marton
+    dt: 1580032800000
+    eid: 4062223
+    es: complete
+    eventGroup:
+      alias: null
+      egid: 23847
+      nam: Australian Open Men Singles
+    lid: 23
+    participants:
+    - ih: false
+      partid: 5417
+      source:
+        fn: Roger
+        lnam: Federer
+    - ih: true
+      partid: 5441
+      source:
+        fn: Marton
+        lnam: Fucsovics
+    scores:
+    - partid: 5417
+      pn: 4
+      val: '6'
+    - partid: 5441
+      pn: 4
+      val: '2'
+    - partid: 5417
+      pn: 3
+      val: '6'
+    - partid: 5441
+      pn: 3
+      val: '2'
+    - partid: 5417
+      pn: 2
+      val: '6'
+    - partid: 5441
+      pn: 2
+      val: '1'
+    - partid: 5441
+      pn: 1
+      val: '6'
+    - partid: 5417
+      pn: 1
+      val: '4'
+    seid: 5562
+    spid: 8
+    st: Undefined
+  - cit: ''
+    cou: ''
+    des: Gonzalez, S / Skupski, K@Skugor, F / Krajicek, A
+    dt: 1580109900000
+    eid: 4062254
+    es: complete
+    eventGroup:
+      alias: null
+      egid: 23633
+      nam: Australian Open Men Doubles
+    lid: 23
+    participants:
+    - ih: false
+      partid: 420166
+      source:
+        nam: Gonzalez, S / Skupski, K
+        partgid: 52971
+        participants:
+        - ih: false
+          partid: 7085
+          source:
+            fn: null
+            lnam: null
+    - ih: true
+      partid: 420170
+      source:
+        nam: Krajicek, A / Skugor, F
+        partgid: 52975
+        participants:
+        - ih: true
+          partid: 29523
+          source:
+            fn: null
+            lnam: null
+    scores:
+    - partid: 420166
+      pn: 2
+      val: '6'
+    - partid: 420170
+      pn: 2
+      val: '4'
+    - partid: 420170
+      pn: 1
+      val: '3'
+    - partid: 420166
+      pn: 1
+      val: '6'
+    seid: 5562
+    spid: 8
+    st: Undefined
+  - cit: ''
+    cou: ''
+    des: Hsieh, S / Skupski, N@Zheng, S / Vliegen, J
+    dt: 1580103900000
+    eid: 4062441
+    es: complete
+    eventGroup:
+      alias: null
+      egid: 23634
+      nam: Australian Open Mixed Doubles
+    lid: 23
+    participants:
+    - ih: true
+      partid: 379152
+      source:
+        nam: Zheng, S / Vliegen, J
+        partgid: 43549
+        participants:
+        - ih: true
+          partid: 68226
+          source:
+            fn: null
+            lnam: null
+    - ih: false
+      partid: 423041
+      source:
+        nam: Hsieh, S / Skupski, N
+        partgid: 53336
+        participants:
+        - ih: false
+          partid: 7021
+          source:
+            fn: null
+            lnam: null
+    scores:
+    - partid: 423041
+      pn: 3
+      val: '9'
+    - partid: 379152
+      pn: 3
+      val: '11'
+    - partid: 379152
+      pn: 2
+      val: '6'
+    - partid: 423041
+      pn: 2
+      val: '3'
+    - partid: 423041
+      pn: 1
+      val: '6'
+    - partid: 379152
+      pn: 1
+      val: '3'
+    seid: 5562
+    spid: 8
+    st: Undefined
+  - cit: Melbourne
+    cou: Australia
+    des: Kontinen, H / Struff, J@Bolelli, S / Paire, B
+    dt: 1580088300000
+    eid: 4062444
+    es: complete
+    eventGroup:
+      alias: null
+      egid: 23633
+      nam: Australian Open Men Doubles
+    lid: 23
+    participants:
+    - ih: true
+      partid: 421935
+      source:
+        nam: Bolelli, S / Paire, B
+        partgid: 53153
+        participants:
+        - ih: true
+          partid: 5278
+          source:
+            fn: null
+            lnam: null
+    - ih: false
+      partid: 421946
+      source:
+        nam: Kontinen, H / Struff, J
+        partgid: 53164
+        participants:
+        - ih: false
+          partid: 5570
+          source:
+            fn: null
+            lnam: null
+    scores:
+    - partid: 421946
+      pn: 2
+      val: '6'
+    - partid: 421935
+      pn: 2
+      val: '3'
+    - partid: 421946
+      pn: 1
+      val: '7'
+    - partid: 421935
+      pn: 1
+      val: '5'
+    seid: 5562
+    spid: 8
+    st: Undefined
+  - cit: Melbourne
+    cou: Australia
+    des: Granollers, M / Zeballos, H@Ram, R / Salisbury, J
+    dt: 1580083200000
+    eid: 4062445
+    es: complete
+    eventGroup:
+      alias: null
+      egid: 23633
+      nam: Australian Open Men Doubles
+    lid: 23
+    participants:
+    - ih: true
+      partid: 305836
+      source:
+        nam: Ram, R / Salisbury, J
+        partgid: 34988
+        participants:
+        - ih: true
+          partid: 5751
+          source:
+            fn: null
+            lnam: null
+    - ih: false
+      partid: 369364
+      source:
+        nam: Granollers, M / Zeballos, H
+        partgid: 42439
+        participants:
+        - ih: false
+          partid: 5477
+          source:
+            fn: null
+            lnam: null
+    scores:
+    - partid: 305836
+      pn: 2
+      val: '7'
+    - partid: 369364
+      pn: 2
+      val: '6'
+    - partid: 305836
+      pn: 1
+      val: '6'
+    - partid: 369364
+      pn: 1
+      val: '4'
+    seid: 5562
+    spid: 8
+    st: Undefined
+  - cit: Melbourne
+    cou: Australia
+    des: Thiem, Dominic@Monfils, Gael
+    dt: 1580090400000
+    eid: 4062560
+    es: complete
+    eventGroup:
+      alias: null
+      egid: 23847
+      nam: Australian Open Men Singles
+    lid: 23
+    participants:
+    - ih: false
+      partid: 5874
+      source:
+        fn: Dominic
+        lnam: Thiem
+    - ih: true
+      partid: 35558
+      source:
+        fn: Gael
+        lnam: Monfils
+    scores:
+    - partid: 5874
+      pn: 3
+      val: '6'
+    - partid: 35558
+      pn: 3
+      val: '4'
+    - partid: 5874
+      pn: 2
+      val: '6'
+    - partid: 35558
+      pn: 2
+      val: '4'
+    - partid: 5874
+      pn: 1
+      val: '6'
+    - partid: 35558
+      pn: 1
+      val: '2'
+    seid: 5562
+    spid: 8
+    st: Undefined
+  - cit: Melbourne
+    cou: Australia
+    des: Wawrinka, Stan@Medvedev, Daniil
+    dt: 1580097600000
+    eid: 4062562
+    es: complete
+    eventGroup:
+      alias: null
+      egid: 23847
+      nam: Australian Open Men Singles
+    lid: 23
+    participants:
+    - ih: false
+      partid: 5926
+      source:
+        fn: Stan
+        lnam: Wawrinka
+    - ih: true
+      partid: 34209
+      source:
+        fn: Daniil
+        lnam: Medvedev
+    scores:
+    - partid: 5926
+      pn: 5
+      val: '6'
+    - partid: 34209
+      pn: 5
+      val: '2'
+    - partid: 5926
+      pn: 4
+      val: '7'
+    - partid: 34209
+      pn: 4
+      val: '6'
+    - partid: 34209
+      pn: 3
+      val: '6'
+    - partid: 5926
+      pn: 3
+      val: '4'
+    - partid: 34209
+      pn: 2
+      val: '6'
+    - partid: 5926
+      pn: 2
+      val: '2'
+    - partid: 5926
+      pn: 1
+      val: '6'
+    - partid: 34209
+      pn: 1
+      val: '2'
+    seid: 5562
+    spid: 8
+    st: Undefined
+  - cit: Melbourne
+    cou: Australia
+    des: Dodig, I / Polasek, F@Bryan, B / Bryan, M
+    dt: 1580099700000
+    eid: 4063373
+    es: complete
+    eventGroup:
+      alias: null
+      egid: 23633
+      nam: Australian Open Men Doubles
+    lid: 23
+    participants:
+    - ih: true
+      partid: 29028
+      source:
+        nam: Bryan, B / Bryan, M
+        partgid: 62
+        participants:
+        - ih: true
+          partid: 76077
+          source:
+            fn: null
+            lnam: null
+    - ih: false
+      partid: 357949
+      source:
+        nam: Dodig, I / Polasek, F
+        partgid: 40542
+        participants:
+        - ih: false
+          partid: 5375
+          source:
+            fn: null
+            lnam: null
+    scores:
+    - partid: 357949
+      pn: 2
+      val: '6'
+    - partid: 29028
+      pn: 2
+      val: '4'
+    - partid: 357949
+      pn: 1
+      val: '6'
+    - partid: 29028
+      pn: 1
+      val: '3'
+    seid: 5562
+    spid: 8
+    st: Undefined

@@ -1028,6 +1028,22 @@ class TestQuery:
                 "test_lines_with_events_with_scores_lines_nfl2",
                 None,
             ),
+            (
+                2,
+                "2021-01-26",
+                [1, 395, 396],
+                "test_lines_with_events_with_scores_events_epl1",
+                "test_lines_with_events_with_scores_lines_epl1",
+                None,
+            ),
+            (
+                23,
+                "2020-01-26",
+                [126, 395, 396],
+                "test_lines_with_events_with_scores_events_atp1",
+                "test_lines_with_events_with_scores_lines_atp1",
+                None,
+            ),
         ],
     )
     def test_lines_with_events_with_scores(

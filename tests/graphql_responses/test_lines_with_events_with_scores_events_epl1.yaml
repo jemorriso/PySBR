@@ -1,0 +1,130 @@
+eventsByDateNew:
+  events:
+  - cit: West Bromwich
+    cou: England
+    des: Manchester City FC@West Bromwich Albion
+    dt: 1611692100000
+    eid: 4210978
+    es: scheduled
+    eventGroup:
+      alias: null
+      egid: 994
+      nam: Premier League
+    lid: 2
+    participants:
+    - ih: false
+      partid: 49229
+      source:
+        abbr: MNC
+        cit: ''
+        nam: Manchester City FC
+        nn: ''
+        sn: ''
+    - ih: true
+      partid: 65101
+      source:
+        abbr: WBA
+        cit: ''
+        nam: West Bromwich Albion
+        nn: ''
+        sn: ''
+    scores: []
+    seid: 25889
+    spid: 2
+    st: Undefined
+  - cit: Newcastle upon Tyne
+    cou: England
+    des: Leeds United@Newcastle United FC
+    dt: 1611684000000
+    eid: 4210980
+    es: scheduled
+    eventGroup:
+      alias: null
+      egid: 994
+      nam: Premier League
+    lid: 2
+    participants:
+    - ih: false
+      partid: 49246
+      source:
+        abbr: LU
+        cit: ''
+        nam: Leeds United
+        nn: ''
+        sn: ''
+    - ih: true
+      partid: 49250
+      source:
+        abbr: NEW
+        cit: ''
+        nam: Newcastle United FC
+        nn: ''
+        sn: ''
+    scores: []
+    seid: 25889
+    spid: 2
+    st: Undefined
+  - cit: Southampton
+    cou: England
+    des: Arsenal FC@Southampton FC
+    dt: 1611692100000
+    eid: 4210981
+    es: scheduled
+    eventGroup:
+      alias: null
+      egid: 994
+      nam: Premier League
+    lid: 2
+    participants:
+    - ih: false
+      partid: 49253
+      source:
+        abbr: ARS
+        cit: ''
+        nam: Arsenal FC
+        nn: ''
+        sn: ''
+    - ih: true
+      partid: 49256
+      source:
+        abbr: SOT
+        cit: ''
+        nam: Southampton FC
+        nn: ''
+        sn: ''
+    scores: []
+    seid: 25889
+    spid: 2
+    st: Undefined
+  - cit: London
+    cou: England
+    des: West Ham United FC@Crystal Palace FC
+    dt: 1611684000000
+    eid: 4210983
+    es: scheduled
+    eventGroup:
+      alias: null
+      egid: 994
+      nam: Premier League
+    lid: 2
+    participants:
+    - ih: true
+      partid: 49219
+      source:
+        abbr: PAL
+        cit: ''
+        nam: Crystal Palace FC
+        nn: ''
+        sn: ''
+    - ih: false
+      partid: 56337
+      source:
+        abbr: WHU
+        cit: ''
+        nam: West Ham United FC
+        nn: ''
+        sn: ''
+    scores: []
+    seid: 25889
+    spid: 2
+    st: Undefined
