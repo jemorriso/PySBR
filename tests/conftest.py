@@ -55,6 +55,9 @@ from pysbr.config.sportsbook import Sportsbook
 QUERY_SERVER = False
 WAIT_MEAN = 69
 WAIT_DEVIATION = 42
+# QUERY_SERVER = True
+# WAIT_MEAN = 1
+# WAIT_DEVIATION = 1
 
 
 class TestEventsByDate(EventsByDate):

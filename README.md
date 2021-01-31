@@ -422,6 +422,8 @@ Inside `conftest.py` there are 3 global variables, `QUERY_SERVER`, `WAIT_MEAN` a
 
 ## Release History
 
+- 0.3.1
+  - FIX: HTTP error 463
 - 0.3.0
   - ADD: 'participant full name' and 'sportsbook alias' keys on lines lists / dataframes
   - ADD: New league config classes
@@ -458,4 +460,4 @@ Distributed under the MIT license. See `LICENSE` for more information.
 [circleci-image]: https://img.shields.io/circleci/build/github/JeMorriso/PySBR?token=9edfd6cf500869db3c74fc7691b80a0701b38b64
 [circleci-url]: https://app.circleci.com/pipelines/github/JeMorriso
 [readthedocs]: https://pysbr.readthedocs.io/
-[discord]: https://discord.gg/kwWDt6kP
+[discord]: https://discord.com/invite/X2RvzHeBWf
