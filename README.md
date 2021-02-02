@@ -422,6 +422,8 @@ Inside `conftest.py` there are 3 global variables, `QUERY_SERVER`, `WAIT_MEAN` a
 
 ## Release History
 
+- 0.3.2
+  - FIX: Add fake-useragent to install-requires
 - 0.3.1
   - FIX: HTTP error 463
 - 0.3.0

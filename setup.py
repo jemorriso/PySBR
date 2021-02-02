@@ -7,7 +7,7 @@ README = (HERE / "README.md").read_text()
 
 setup(
     name="python-sbr",
-    version="0.3.1",
+    version="0.3.2",
     description="Access the SportsbookReview GraphQL endpoint.",
     long_description=README,
     long_description_content_type="text/markdown",
@@ -27,5 +27,5 @@ setup(
         lines moneyline
     """,
     include_package_data=True,
-    install_requires=["gql", "pandas", "pytz", "pyyaml"],
+    install_requires=["gql", "pandas", "pytz", "pyyaml", "fake-useragent"],
 )
