@@ -619,6 +619,13 @@ class ATP(League):
         super().__init__("tennis", "atp")
 
 
+class WTA(League):
+    """Provides access to WTA config files."""
+
+    def __init__(self):
+        super().__init__("tennis", "wta")
+
+
 class UFC(League):
     """Provides access to UFC config files."""
 
