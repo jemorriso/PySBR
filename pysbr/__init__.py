@@ -43,6 +43,7 @@ from pysbr.config.sport import (
     Bundesliga,
     UEFANationsLeague,
     ATP,
+    WTA,
     UFC,
     BrasileiroSerieA,
     Eredivisie,
